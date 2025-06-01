@@ -1,0 +1,1 @@
+# osoul-odoo
