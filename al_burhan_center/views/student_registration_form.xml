@@ -1,0 +1,128 @@
+<!-- views/student_registration_form_views.xml -->
+<odoo>
+    <record id="action_student_registration" model="ir.actions.act_window">
+        <field name="name">Student Registrations</field>
+        <field name="res_model">student.registration.form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first student registration record
+            </p>
+        </field>
+    </record>
+
+    <record id="view_tree_student_registration" model="ir.ui.view">
+        <field name="name">student.registration.form.tree</field>
+        <field name="model">student.registration.form</field>
+        <field name="arch" type="xml">
+            <tree string="Student Registrations">
+                <field name="student_identity_no" optional="show"/>
+                <field name="student_name" optional="show"/>
+                <field name="nationality" optional="show"/>
+                <field name="date_of_birth" optional="show"/>
+                <field name="age" optional="show"/>
+                <field name="residence_location" optional="show"/>
+                <field name="circle_id" optional="show"/>
+                <field name="stage_id" optional="show"/>
+                <field name="parent_mobile" optional="show"/>
+                <field name="other_mobile" optional="show"/>
+                <field name="academic_level" optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_form_student_registration" model="ir.ui.view">
+        <field name="name">student.registration.form.form</field>
+        <field name="model">student.registration.form</field>
+        <field name="arch" type="xml">
+            <form string="Student Registration">
+                <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="open_student_stage_tested_form"
+                                    type="object"
+                                    class="oe_stat_button"
+                                    icon="fa-graduation-cap"
+                                    string="Stage Tests"/>
+                            <button name="open_student_review_form"
+                                    type="object"
+                                    icon="fa-book"
+                                    string="Review Details"/>
+                            <button name="open_student_hearing_form"
+                                    type="object"
+                                    icon="fa-headphones"
+                                    string="Hearing Details"/>
+                        </div>
+                    <div class="oe_title">
+                        <h2>
+                            <field name="student_name"
+                                readonly="1"
+                                options="{'no_open': True, 'no_create': True}"
+                                attrs="{'readonly': True}"/>
+                        </h2>
+                        <h5> 
+                            <field name="circle_id"
+                                readonly="1"
+                                attrs="{'readonly': True}"/>
+                        </h5>
+                        <h4>    
+                            <field name="stage_id"
+                                readonly="1"
+                                attrs="{'readonly': True}"/>
+                        </h4>
+                    </div>
+                    <group> 
+                        <group name="name" string="Student Info">
+                                <field name="student_name"/>
+                                <field name="student_identity_no"/>
+                                <field name="nationality"/>
+                                <field name="date_of_birth"/>
+                                <field name="age"/>
+                                <field name="circle_id" options="{'no_open': True, 'no_create': True}"/> 
+                        </group>            
+                        <group name="name" string="Other Info">
+                                <field name="residence_location"/>
+                                <field name="parent_mobile"/>
+                                <field name="other_mobile"/>
+                                <field name="academic_level"/>
+                                <field name="stage_id" options="{'no_open': True, 'no_create': True}"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="tikets_student_search_view" model="ir.ui.view">
+            <field name="name">student.registration.form View</field>
+            <field name="model">student.registration.form</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="student_name"/>
+                    <field name="student_identity_no"/>
+                    <field name="nationality"/>
+                    <field name="academic_level"/>
+                    <!-- <field name="housing_date"/> -->
+                    <!-- <searchpanel> 
+                        <field name="issue_location_id" icon="fa-exclamation-triangle" enable_counters="1"/>
+                        <field name="responsible_unit" icon="fa-users" enable_counters="1"/>
+                        <field name="state" icon="fa-tasks" enable_counters="1"/>
+                        <field name="priority" icon="fa-star" enable_counters="1"/>
+                    </searchpanel> -->
+
+                </search>
+               
+            </field>
+    </record>
+
+    <record id="menu_student_registration_form" model="ir.ui.menu">
+        <field name="name">Students</field>
+        <field name="sequence" eval="4"/>
+        <field name="action" ref="action_student_registration"/>
+        <field name="parent_id" ref="menu_root_burhan_center"/>
+    </record>
+</odoo>

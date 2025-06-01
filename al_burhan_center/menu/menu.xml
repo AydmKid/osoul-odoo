@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+   <record id="menu_root_burhan_center" model="ir.ui.menu">
+        <field name="name">AL Burhan Center</field>
+        <field name="sequence" eval="-11"/>
+    </record>
+
+    <record id="menu_details_burhan_center" model="ir.ui.menu">
+        <field name="name">Students Details</field>
+        <field name="sequence" eval="4"/>
+        <field name="parent_id" ref="menu_root_burhan_center"/>
+    </record>
+
+    <record id="menu_setings_burhan_center" model="ir.ui.menu">
+        <field name="name">Settings</field>
+        <field name="sequence" eval="6"/>
+        <field name="parent_id" ref="menu_root_burhan_center"/>
+    </record>
+
+</odoo>

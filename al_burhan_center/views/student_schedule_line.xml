@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>  
+
+    <record id="action_student_schedule_line" model="ir.actions.act_window">
+        <field name="name">Hearing Details</field>
+        <field name="res_model">student.schedule.line</field>
+        <field name="view_mode">tree</field>
+        
+    </record>
+
+
+    <record id="view_student_schedule_line_tree" model="ir.ui.view">
+        <field name="name">student.schedule.line.tree</field>
+        <field name="model">student.schedule.line</field>
+        <field name="arch" type="xml">
+            <tree create="false" edit="false" delete="false" 
+                decoration-success="state == 'done'" decoration-warning="state == 'in_progress'" decoration-info="state == 'draft'">
+                <field name="create_date" optional="show"/>
+                 <field name="stage_id" invisible="1"/> 
+                <field name="schedule_id" optional="show"/>
+                <field name="teacher_id" optional="show"/>
+                <field name="student_id" optional="show"/>
+                <field name="student_identity_no_id" optional="show"/>
+                <field name="start_surah_id" optional="show"/>
+                <field name="start_ayah_number" optional="show"/>
+                <field name="end_surah_id" optional="show"/>
+                <field name="end_ayah_number" optional="show"/>
+                <field name="teacher_comments" widget="badge" decoration-success="is_recited" decoration-danger="teacher_comments == 'weak'" decoration-warning="not is_recited and teacher_comments" optional="show"/>
+                <field name="is_recited"/>
+                <field name="recited_pages"/>
+                <field name="is_present"/>
+                <field name="state" widget="badge" decoration-success="state == 'done'" decoration-warning="state == 'in_progress'" decoration-info="state == 'draft'" optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="security_student_schedule_lineS_view" model="ir.ui.view">
+            <field name="name">student.schedule.line Search View</field>
+            <field name="model">student.schedule.line</field>
+            <field name="arch" type="xml">
+                <search >
+                    <field name="student_identity_no_id"/>
+                    <field name="student_id"/>
+                        <group expand="0" string="Group By">
+                             <!-- <filter string="create_date" name="Group" context="{'group_by': 'create_date:day', 'default_group': True}"/> -->
+                        </group>
+                </search>
+                <!-- <searchpanel> 
+                    <field name="emp_department_id" icon="fa-users" enable_counters="1"/>
+                </searchpanel> -->
+            </field>
+        </record>
+
+
+    <record id="menu_student_schedule_line_form" model="ir.ui.menu">
+        <field name="name">Hearing Details</field>
+        <field name="sequence" eval="1"/>
+        <field name="action" ref="action_student_schedule_line"/>
+        <field name="parent_id" ref="menu_details_burhan_center"/>
+    </record>
+
+</odoo>

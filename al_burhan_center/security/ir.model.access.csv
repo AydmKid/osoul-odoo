@@ -1,0 +1,10 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+access_student_registration_form_system_manager,student_registration_form_system_manager,model_student_registration_form,,1,1,1,1
+access_model_school_teacher_system_manager,school_teacher,model_school_teacher,,1,1,1,1
+access_model_quran_surah_system_manager,quran_surah,model_quran_surah,,1,1,1,1
+access_student_circles_system_manager,student.circles.system.manager,model_student_circles,,1,1,1,1
+access_quran_stage_system_manager,quran.stage,model_quran_stage,,1,1,1,1
+access_student_schedule_line_system_manager,student_schedule_line,model_student_schedule_line,,1,1,1,1
+access_student_review_line_system_manager,student_review_line,model_student_review_line,,1,1,1,1
+access_student_memorization_schedule_system_manager,student_memorization_schedule,model_student_memorization_schedule,,1,1,1,1
+access_student_stage_transition_test_system_manager,student_stage_transition_test,model_student_stage_transition_test,,1,1,1,1

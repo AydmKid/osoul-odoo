@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Action -->
+    <record id="action_student_memorization_schedule" model="ir.actions.act_window">
+        <field name="name">Sessions</field>
+        <field name="res_model">student.memorization.schedule</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Tree View -->
+    <record id="view_student_memorization_schedule_tree" model="ir.ui.view">
+        <field name="name">student.memorization.schedule.tree</field>
+        <field name="model">student.memorization.schedule</field>
+        <field name="arch" type="xml">
+            <tree default_order="id desc"
+                decoration-success="state == 'done'"
+                decoration-warning="state == 'in_progress'"
+                decoration-danger="state == 'cancelled'">
+                <field name="sequence" optional="show"/>
+                <field name="date_assigned" optional="show"/>
+                <field name="teacher_id" optional="show"/>
+                <field name="state" widget="badge" decoration-success="state == 'done'" decoration-warning="state == 'in_progress'" decoration-info="state == 'draft'" optional="show"/>
+
+            </tree>
+        </field>
+    </record>
+    <!-- Form View -->
+    <record id="view_student_memorization_schedule_form" model="ir.ui.view">
+        <field name="name">student.memorization.schedule.form</field>
+        <field name="model">student.memorization.schedule</field>
+        <field name="arch" type="xml">
+            <form string="Memorization Schedule">
+
+                <header>
+                  
+                        <field name="state" widget="statusbar" options="{'clickable': True}" />
+                   
+                </header>
+                <sheet>
+                    <div>
+                            <h2>
+                                <field name="sequence" readonly="1"/>
+                            </h2>
+                            <h5>
+                                
+                                <field name="day_name" readonly="1"/>
+                            </h5>
+                            <h4>    
+                                <field name="date_assigned" readonly="1"/>
+                            </h4>
+                            <h3>
+                                <field name="teacher_id" readonly="1" options="{'no_open': True, 'no_create': True}"/>
+                            </h3>  
+                    </div>
+                    <group>
+                        <group string="Circle Info">
+                            <field name="circle_id"/>
+                            <field name="teacher_id" readonly="1" options="{'no_open': True, 'no_create': True}"/>
+                        </group>
+                        <group string="More Info"> 
+                            <field name="student_count"/>
+                            <field name="stage_count"/>
+                        </group>    
+                    </group>
+                   <notebook>
+                        <page string="Students Hearing">
+                           <field name="line_ids" widget="one2many_list">
+                                <tree editable="bottom" create="false" delete="false"
+                                    decoration-success="is_recited"
+                                    decoration-danger="teacher_comments == 'weak'"
+                                    decoration-warning="not is_recited and teacher_comments">
+                                    <!-- <field name="circle_id"/> -->
+                                    <field name="student_id"/>
+                                    <field name="stage_id"/>
+                                    <field name="start_surah_id" required="1"/>
+                                    <field name="start_ayah_number"/>
+                                    <field name="end_surah_id"/>
+                                    <field name="end_ayah_number"/> 
+                                    <field name="teacher_comments"/>
+                                    <field name="recited_pages"/>
+                                    <field name="is_recited"/>
+                                    <field name="is_present"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Students Review">
+                            <field name="line_review_ids">
+                                <tree editable="bottom" create="false" delete="false"
+                                    decoration-success="is_review"
+                                    decoration-danger="teacher_comments_review == 'weak'"
+                                    decoration-warning="not is_review and teacher_comments_review">
+                                    <!-- <field name="circle_id"/> -->
+                                    <field name="student_id"/>
+                                    <field name="stage_id"/>
+                                    <field name="start_surah_review_id"/>
+                                    <field name="start_ayah_review_number"/>
+                                    <field name="end_surah_review_id"/>
+                                    <field name="end_ayah_review_number"/>
+                                    <field name="teacher_comments_review"/>
+                                    <field name="recited_pages"/>
+                                    <field name="is_review"/>
+                                    <field name="is_present"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                        <field name="message_follower_ids" />
+                        <field name="activity_ids" />
+                        <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="menu_student_memorization_schedule_form" model="ir.ui.menu">
+        <field name="name">Sessions</field>
+        <field name="sequence" eval="1"/>
+        <field name="action" ref="action_student_memorization_schedule"/>
+        <field name="parent_id" ref="menu_root_burhan_center"/>
+    </record>
+
+</odoo>
+
+    

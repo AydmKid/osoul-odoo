@@ -1,0 +1,93 @@
+<odoo>
+
+     <!-- Action -->
+    <record id="action_report_one" model="ir.actions.act_window">
+        <field name="name">Report One</field>
+        <field name="res_model">osoul.report.one</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+   <!-- Tree View -->
+    <record id="view_report_one_tree" model="ir.ui.view">
+        <field name="name">report_one_tree</field>
+        <field name="model">osoul.report.one</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="inspection_type"/>
+                <field name="time"/>
+                <field name="location" attrs="{'invisible': [('inspection_type', '=', 'machines')]}"/>
+                <field name="machine" attrs="{'invisible': [('inspection_type', '!=', 'machines')]}"/>
+                <field name="type_of_extinguisher" attrs="{'invisible': [('inspection_type', '!=', 'extinguishers')]}"/>
+                <field name="examines"/>
+                <field name="checking" attrs="{'invisible': [('inspection_type', 'not in', ['fire_boxes', 'outlet_panels', 'emergency_exits'])]}"/>
+                <field name="reading" attrs="{'invisible': [('inspection_type', '!=', 'fire_alarm_panel')]}"/>
+                <field name="note"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_report_one_form" model="ir.ui.view">
+        <field name="name">report_one_form</field>
+        <field name="model">osoul.report.one</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                  <field name="state" widget="statusbar" readonly="1"/>
+                </header>
+                <sheet>
+                    <div class="ticket-form-header">
+                        <A4 class="ticket-form-title">
+                            <field name="inspection_type" readonly="1"/>
+                            
+                        </A4>
+                        <A3>
+                            <field name="employee_id" readonly="1"/>
+                        </A3>
+                    </div>
+                    <div class="group-container">
+                        <group class="o_group">
+                            <group string="Employee Info" class="o_group">
+                                <field name="employee_id"/>
+                                <field name="department"/>
+                                <field name="employement_no"/>
+                                
+                            </group>
+
+                            <group string="Examines Type" class="o_group">
+                                <field name="inspection_type"/>
+                                <field name="time"/>
+                                <field name="location" attrs="{'invisible': [('inspection_type', '=', 'machines')]}"/>
+                                <field name="machine" attrs="{'invisible': [('inspection_type', '!=', 'machines')]}"/>
+                                <field name="type_of_extinguisher" attrs="{'invisible': [('inspection_type', '!=', 'extinguishers')]}"/>
+                                <field name="examines" attrs="{'invisible': [('inspection_type', 'not in', ['machines', 'extinguishers'])]}"/>
+                                <field name="checking" attrs="{'invisible': [('inspection_type', 'not in', ['fire_boxes', 'outlet_panels', 'emergency_exits'])]}"/>
+                                <field name="reading" attrs="{'invisible': [('inspection_type', '!=', 'fire_alarm_panel')]}"/>
+                                <field name="note"/>
+                                
+                            </group>
+                            <group  string="Date and Time" class="o_group">
+                            <field name="report_time"/>
+                            </group>
+                            <group  string="attachments" class="o_group">
+                                <field name="attachments" widget="image" style="width: 50px; height: 50px; text-align: center;"/>
+                            </group>
+                        </group>
+                    </div>
+                </sheet>
+                   <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Menu -->
+    <record id="menu_report_one" model="ir.ui.menu">
+        <field name="name">Report One</field>
+        <field name="action" ref="action_report_one"/>
+        <field name="parent_id" ref="osoul_menu_report_one"/> <!-- Adjust parent menu -->
+    </record>
+</odoo>

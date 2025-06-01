@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <odoo>
+
+        <record id="osoul_root_menu_reports" model="ir.ui.menu" >
+            <field name="name">Saftey and Security</field>
+            <field name="sequence" eval="10" />
+            
+        </record>
+        
+        <record id="osoul_menu_report_one" model="ir.ui.menu" >
+            <field name="name">Report One</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent_id" ref="osoul_root_menu_reports" />
+        </record>
+
+        <record id="osoul_menu_report_two" model="ir.ui.menu" >
+            <field name="name">Report Two</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent_id" ref="osoul_root_menu_reports" />
+        </record>
+      
+
+    </odoo>

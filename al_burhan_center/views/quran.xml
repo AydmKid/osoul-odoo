@@ -1,0 +1,56 @@
+<odoo>
+
+    <record id="action_quran_surah" model="ir.actions.act_window">
+        <field name="name">Quran Surahs</field>
+        <field name="res_model">quran.surah</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="view_quran_surah_tree" model="ir.ui.view">
+        <field name="name">quran.surah.tree</field>
+        <field name="model">quran.surah</field>
+        <field name="arch" type="xml">
+            <tree string="Quran Surahs" multi_edit="1">
+                <field name="surah_number"/>
+                <field name="name"/>
+                <field name="ayah_count"/>
+                <field name="place_of_revelation"/>
+                <field name="stage_id"/>
+                <!-- <field name="start_ayah"/>
+                <field name="end_ayah"/> -->
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_quran_surah_form" model="ir.ui.view">
+        <field name="name">quran.surah.form</field>
+        <field name="model">quran.surah</field>
+        <field name="arch" type="xml">
+            <form string="Quran Surah">
+                <sheet>
+                    <group>
+                        <field name="surah_number"/>
+                        <field name="name"/>
+                        <field name="ayah_count"/>
+                        <field name="place_of_revelation"/>
+                        <field name="stage_id"/>
+                        <!-- <field name="start_ayah"/>
+                        <field name="end_ayah"/> -->
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="menu_quran_registration_form" model="ir.ui.menu">
+        <field name="name">Quran</field>
+        <field name="sequence" eval="4"/>
+        <field name="action" ref="action_quran_surah"/>
+        <field name="parent_id" ref="menu_setings_burhan_center"/>
+    </record>
+</odoo>

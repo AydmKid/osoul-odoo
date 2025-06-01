@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Teacher Action -->
+    <record id="action_school_teacher" model="ir.actions.act_window">
+        <field name="name">Teachers</field>
+        <field name="res_model">school.teacher</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+    <!-- Kanban View -->
+    <record id="view_school_teacher_kanban" model="ir.ui.view">
+        <field name="name">school.teacher.kanban</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="id"/>
+                <field name="name"/>
+                <field name="photo"/>
+                <field name="mobile"/>
+                <field name="circle_count"/>
+                <field name="active"/>
+                <field name="identification_number"/>
+
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_card oe_kanban_global_click o_kanban_teacher_card" style="padding: 10px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); text-align: center;">
+                            <div class="o_kanban_image" style="margin-bottom: 10px;">
+                                <t t-if="record.photo.raw_value">
+                                    <img t-att-src="kanban_image('school.teacher', 'photo', record.id.value)" style="width: 90px; height: 80px; object-fit: cover; border-radius: 50%; border: 2px solid #ccc;"/>
+                                </t>
+                                <t t-if="!record.photo.raw_value">
+                                    <img src="/web/static/src/img/placeholder.png" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; border: 2px solid #ccc;"/>
+                                </t>
+                            </div>
+                            <div class="oe_kanban_details">
+                                <div class="o_kanban_primary">
+                                    <strong style="font-size: 16px;"><t t-esc="record.name.value"/></strong>
+                                </div>
+                                <div style="font-size: 13px; color: #888;">ID: <t t-esc="record.identification_number.value or '-'"/></div>
+                                <div style="font-size: 13px; color: #888;">Mobile: <t t-esc="record.mobile.value or '-'"/></div>
+                                <div style="font-size: 13px; color: #888;">Circles: <t t-esc="record.circle_count.value or 0"/></div>
+                                <div style="margin-top: 5px;">
+                                    <span t-if="record.active.raw_value" class="badge bg-success">Active</span>
+                                    <span t-if="!record.active.raw_value" class="badge bg-danger">Archived</span>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+
+    <!-- Teacher Tree View -->
+    <record id="view_school_teacher_tree" model="ir.ui.view">
+        <field name="name">school.teacher.tree</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <tree decoration-success="active" decoration-danger="not active">
+                <field name="name"/>
+                <field name="identification_number"/>
+                <field name="mobile"/>
+                <field name="circle_count"/>
+                <field name="active" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Teacher Form View -->
+    <record id="view_school_teacher_form" model="ir.ui.view">
+        <field name="name">school.teacher.form</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <form string="Teacher">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive" confirm="Are you sure?">
+                            <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                        </button>
+                    </div>
+
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Teacher Name"/>
+                        </h1>
+                    </div>
+
+                    <group>
+                        <group>
+                            <field name="identification_number"/>
+                            <field name="mobile"/>
+                            <field name="email"/>
+                            <field name="address"/>
+                        </group>
+
+                        <group>
+                            <field name="photo" widget="image" class="oe_avatar"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Circles">
+                            <field name="circle_ids">
+                                <tree create="false">
+                                    <field name="name"/>
+                                    <field name="code"/>
+                                    <field name="student_count"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="menu_teacher_form" model="ir.ui.menu">
+        <field name="name">Teachers</field>
+        <field name="sequence" eval="1"/>
+        <field name="action" ref="action_school_teacher"/>
+        <field name="parent_id" ref="menu_root_burhan_center"/>
+    </record>
+   
+</odoo>

@@ -1,0 +1,22 @@
+{
+    'name': 'Osoul Safety and Security',
+    'version': '1.0.0',
+    'summary': 'Manage inspections',
+    'author': 'Osoul Information Technology',
+    'website': '',
+    'category':'Osoul',
+    'depends':['base', 'project','hr',
+               'board',
+               'osoul_human_resources',
+               'mail',
+               'web'], 
+    'data': [
+        'security/ir.model.access.csv',
+        'data/sequence.xml',
+        'menu/menu.xml',
+        'views/osoul_report_one.xml',
+    ],
+    'installable': True,
+    'application': True,
+    'sequence': 5,
+}

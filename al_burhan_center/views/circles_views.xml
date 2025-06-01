@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Action -->
+    <record id="action_student_circles" model="ir.actions.act_window">
+        <field name="name">Circles</field>
+        <field name="res_model">student.circles</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Tree View -->
+    <record id="view_student_circles_tree" model="ir.ui.view">
+        <field name="name">student.circles.tree</field>
+        <field name="model">student.circles</field>
+        <field name="arch" type="xml">
+            <tree decoration-success="active" decoration-danger="not active">
+                <field name="sequence" widget="handle"/>
+                <field name="name" optional="show"/>
+                <field name="circle_type" optional="show"/>
+                <field name="code" optional="show"/>
+                <field name="teacher_id" optional="show"/>
+                <field name="student_count" optional="show"/>
+                <field name="max_students" optional="show"/>
+                <field name="active" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_student_circles_form" model="ir.ui.view">
+        <field name="name">student.circles.form</field>
+        <field name="model">student.circles</field>
+        <field name="arch" type="xml">
+            <form string="Circle">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <!-- <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                        </button> -->
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Circle Name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group> 
+                            <field name="code"/>
+                            <field name="circle_type"/>
+                            <field name="teacher_id" options="{'no_create': True, 'no_open': True}"/>
+                        </group>
+                        <group>
+                            <field name="sequence"/>
+                            <field name="max_students"/>
+                            <field name="student_count"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description">
+                            <field name="description"/>
+                        </page>
+                        <page string="Students">
+                            <field name="student_ids" mode="tree" context="{'default_circle_id': active_id}">
+                                <tree create="false" delete="false" edit="true" editable="bottom">
+                                    <field name="student_name"/>
+                                    <field name="student_identity_no"/>
+                                    <field name="parent_mobile"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Menu Item -->
+    <record id="menu_student_circles" model="ir.ui.menu">
+        <field name="name">Circles</field>
+        <field name="sequence" eval="3"/>
+        <field name="action" ref="action_student_circles"/>
+        <field name="parent_id" ref="menu_setings_burhan_center"/>
+    </record>
+</odoo>

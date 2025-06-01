@@ -1,0 +1,4 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+
+
+access_report_one_manager,Report One Manager,model_osoul_report_one,,1,1,1,1

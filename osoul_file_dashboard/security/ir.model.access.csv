@@ -1,0 +1,4 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+
+access_file_dashboard,file_dashboard,model_file_dashboard,,1,1,1,1
+access_file_dashboardline,file_dashboard Line,model_file_dashboard_line,,1,1,1,1
