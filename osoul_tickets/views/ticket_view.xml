@@ -86,16 +86,16 @@
                     decoration-success="state == 'done'" 
                     decoration-warning="state == 'under_progress'"
                     decoration-danger="state == 'canceled'" optional="show"/>
-                <!-- <field name="department" widget="badge"  decoration-info="state == 'job_created'"
+                <field name="department" widget="badge"  decoration-info="state == 'job_created'"
                     decoration-primary="state == 'hold'"
                     decoration-success="state == 'done'" 
                     decoration-warning="state == 'under_progress'"
-                    decoration-danger="state == 'canceled'" optional="show"/> -->
-                <!-- <field name="location" widget="badge"  decoration-info="state == 'job_created'"
+                    decoration-danger="state == 'canceled'" optional="show"/>
+                <field name="location" widget="badge"  decoration-info="state == 'job_created'"
                     decoration-primary="state == 'hold'"
                     decoration-success="state == 'done'" 
                     decoration-warning="state == 'under_progress'"
-                    decoration-danger="state == 'canceled'" optional="show"/> -->
+                    decoration-danger="state == 'canceled'" optional="show"/>
                 <field name="state" widget="badge"
                     decoration-info="state == 'job_created'"
                     decoration-primary="state == 'hold'"
