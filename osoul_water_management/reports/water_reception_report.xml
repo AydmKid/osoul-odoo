@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report 
+        id="osoul_water_reception_pdf_report"
+        model="osoul.water.reception"
+        string="Water Reception Report"
+        report_type="qweb-pdf"
+        name="osoul_water_management.report_water_reception_document"
+        file="osoul_water_management.report_water_reception_document"
+        attachment_use="False"
+    />
+
+    <template id="report_water_reception_document">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page" style="padding: 20px; font-family: 'Arial', sans-serif;">
+                    <h2 style="text-align: center; margin-bottom: 20px; color: #4A90E2;">Water Reception Report</h2>
+                    <t t-foreach="docs" t-as="o">
+                        <table class="table table-bordered" style="width: 100%; border-collapse: collapse; margin-bottom: 30px;">
+                            <tr>
+                                <th style="padding: 10px; text-align: left; border: 1px solid #ddd; width: 30%;">Trip Number</th>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #ddd;"><span t-field="o.trip_no"/></td>
+                            </tr>
+                            <tr>
+                                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Vehicle Information</th>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #ddd;"><span t-field="o.vehicle_id.display_name"/></td>
+                            </tr>
+                            <tr>
+                                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Plate Number</th>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #ddd;"><span t-field="o.plate_no"/></td>
+                            </tr>
+                            <tr>
+                                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Owner Name</th>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #ddd;"><span t-field="o.owner_name"/></td>
+                            </tr>
+                            <tr>
+                                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Driver Name</th>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #ddd;"><span t-field="o.driver_name_id.display_name"/></td>
+                            </tr>
+                            <tr>
+                                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Driver Phone</th>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #ddd;"><span t-field="o.driver_phone"/></td>
+                            </tr>
+                            <tr>
+                                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Entry Time</th>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #ddd;"><span t-field="o.entry_time"/></td>
+                            </tr>
+                            <tr>
+                                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Exiting Time</th>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #ddd;"><span t-field="o.exiting_time"/></td>
+                            </tr>
+                            <tr>
+                                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Meter Before Filling</th>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #ddd;"><span t-field="o.meter_before_filling"/></td>
+                            </tr>
+                            <tr>
+                                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Meter After Filling</th>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #ddd;"><span t-field="o.meter_after_filling"/></td>
+                            </tr>
+                            <tr>
+                                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Filling Start Time</th>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #ddd;"><span t-field="o.filling_tank_start"/></td>
+                            </tr>
+                            <tr>
+                                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Filling End Time</th>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #ddd;"><span t-field="o.filling_tank_finish"/></td>
+                            </tr>
+                            <tr>
+                                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Filling Time (Hours)</th>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #ddd;"><span t-field="o.filling_time"/></td>
+                            </tr>
+                            <tr>
+                                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Permission Status</th>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #ddd;">
+                                    <span t-field="o.permission" t-att-class="[
+                                        'badge',
+                                        'badge-success' if o.permission in ['authorized_in', 'authorized_out'] else '',
+                                        'badge-danger' if o.permission == 'draft' else ''
+                                    ]" style="padding: 5px; font-weight: bold;"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Filling Status</th>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #ddd;">
+                                    <span t-field="o.filling_status" t-att-class="[
+                                        'badge',
+                                        'badge-success' if o.filling_status == 'filling_over' else '',
+                                        'badge-danger' if o.filling_status == 'filling_start' else ''
+                                    ]" style="padding: 5px; font-weight: bold;"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Current State</th>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #ddd;">
+                                    <span t-field="o.state" t-att-class="[
+                                        'badge',
+                                        'badge-success' if o.state == 'outside_company' else '',
+                                        'badge-danger' if o.state == 'inside_company' else ''
+                                    ]" style="padding: 5px; font-weight: bold;"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </t>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

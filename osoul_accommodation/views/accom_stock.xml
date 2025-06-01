@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_accommodation_stock" model="ir.actions.act_window">
+        <field name="name">Stock</field>
+        <field name="res_model">osoul.accommodation.stock</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="building_model_osoul_accommodation_stock_kanban" model="ir.ui.view">
+        <field name="name">Stock</field>
+        <field name="model">osoul.accommodation.stock</field>
+        <field name="arch" type="xml">
+            
+            <kanban>
+            <!-- default_group_by="location" -->
+                    
+                <field name="image"/> 
+                <field name="id"/>
+                <field name="product_name"/>
+                <field name="quantity"/>
+                 <templates>
+                         
+                         <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click" style="display: flex; align-items: center; animation: fade-in 0.3s;">
+                                <div class="o_kanban_image" style="width: 25%; height: auto; max-width: 90px; max-height: 90px;">
+                                    <img t-att-src="kanban_image('osoul.accommodation.stock', 'image', record.id.raw_value)"/>
+                                </div>
+                                <div style="text-align: left; width: 80%;">
+                                    <div class="custom-text" style="font-size: 15px; color: skyblue; filter: brightness(70%) contrast(150%); text-align: left;">
+                                        <strong><field name="product_name"/></strong>
+                                    </div>
+                                    <div style="margin-top: 5px; color: skyblue; filter: brightness(70%) contrast(150%)">
+                                        <strong>Quantity :</strong> <span t-esc="record.quantity.value" style="font-weight: bold;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                        
+                    </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_accommodation_stock_tree" model="ir.ui.view">
+        <field name="name">osoul.accommodation.stock.form</field>
+        <field name="model">osoul.accommodation.stock</field>
+        <field name="arch" type="xml">
+            <tree string="Accommodation Stock" multi_edit="1" decoration-success="quantity &gt;= 99" decoration-warning="quantity &lt;= 70" decoration-danger="quantity &lt;= 15" >
+                <!-- <field name="create_date"/> -->
+                <field name="product_name" widget="badge" decoration-success="quantity &gt;= 99" decoration-warning="quantity &lt;= 70" decoration-danger="quantity &lt;= 15" />
+                <field name="permission_code" widget="badge"/>
+                <field name="quantity"/>
+                <field name="product_type" />
+                <field name="quantity_spent" widget="badge"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_accommodation_stock_form" model="ir.ui.view">
+        <field name="name">osoul.accommodation.stock.form</field>
+        <field name="model">osoul.accommodation.stock</field>
+        <field name="arch" type="xml">
+            <form string="Accommodation Stock">
+                <sheet>
+                    <div class="oe_button_box" name="button_box" style="">
+                            <div style="display: flex; align-items: center; justify-content: space-between;">
+                                <field name="image" widget="image" style="width: 50px; height: 50px; text-align: center;"/>
+                            </div>
+                        </div>
+                    <div>
+                        <h4>
+                        <field name="permission_code" readonly="1"/>
+                        </h4>
+                        <h3>
+                        <field name="product_name" readonly="1"/>
+                        </h3>
+                    </div>  
+                   
+                        
+                   
+                    <group name="" string="">
+                        <group name="name" string="Product Details">
+                            <field name="create_date"/>
+                            <field name="product_name" required="1"/>
+                            <field name="product_useage" required="1"/>
+                            <field name="product_type"/>
+                            <field name="product_size"/>
+                             
+                        </group>
+                        <group name="name" string="Quantity Details">
+                            <field name="quantity" required="1"/>
+                            <field name="quantity_spent"/>
+                           
+                        </group>
+                    </group>
+                    
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="menu_accommodation_stock" model="ir.ui.menu">
+        <field name="name">Stock</field>
+        <field name="sequence" eval="11" />
+        <field name="action" ref="action_accommodation_stock" />
+        <field name="parent_id" ref="menu_accommodation_configuration"/>
+    </record>
+    
+
+</odoo>

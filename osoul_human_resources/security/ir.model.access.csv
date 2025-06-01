@@ -1,0 +1,18 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+
+access_osoul_hr_managements_manager,Managements Manager,model_osoul_hr_managements,group_hr_manager,1,1,1,1
+access_osoul_hr_managements_supervisor,Managements Supervisor,model_osoul_hr_managements,group_hr_supervisor,1,1,1,0
+access_osoul_hr_managements_employee,Managements Employee,model_osoul_hr_managements,group_hr_emp,1,0,0,0
+
+access_osoul_hr_departments_manager,Department Manager,model_hr_department,group_hr_manager,1,1,1,1
+access_osoul_hr_departments_supervisor,Department Supervisor,model_hr_department,group_hr_supervisor,1,1,1,0
+access_osoul_hr_departments_employee,Department Employee,model_hr_department,group_hr_emp,1,0,0,0
+
+
+access_osoul_hr_employees_manager,Employee Manager,model_hr_employee,group_hr_manager,1,1,1,1
+access_osoul_hr_employees_supervisor,Employee Supervisor,model_hr_employee,group_hr_supervisor,1,1,1,0
+access_osoul_hr_employees_employee,Employee Employee,model_hr_employee,group_hr_emp,1,0,0,0
+
+access_osoul_hr_units_manager,Units Manager,model_osoul_hr_unit,group_hr_manager,1,1,1,1
+access_osoul_hr_units_supervisor,Units Supervisor,model_osoul_hr_unit,group_hr_supervisor,1,1,1,0
+access_osoul_hr_units_employee,Units Employee,model_osoul_hr_unit,group_hr_emp,0,1,1,0

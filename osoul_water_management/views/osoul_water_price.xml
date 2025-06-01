@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View osoul.water.price View Tree -->
+    <record id="view_osoul_water_price_tree" model="ir.ui.view">
+        <field name="name">view.osoul.water.price.tree</field>
+        <field name="model">osoul.water.price</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="price_per_liter" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_osoul_water_price_form" model="ir.ui.view">
+        <field name="name">view.osoul.water.price.form</field>
+        <field name="model">osoul.water.price</field>
+        <field name="arch" type="xml">
+            <form string="Osoul Water Price">
+                <sheet>
+                    <group string="Water Price Information">
+                        <field name="name" placeholder="Select Water Type"/>
+                        <field name="price_per_liter" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                        <field name="currency_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View osoul.water.price search -->
+    <record id="view_osoul_water_price_search" model="ir.ui.view">
+        <field name="name">view.osoul.water.price.search</field>
+        <field name="model">osoul.water.price</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="1" string="Group By">
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action osoul.water.price -->
+    <record id="action_osoul_water_price" model="ir.actions.act_window">
+        <field name="name">Osoul Water Price</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">osoul.water.price</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Osoul Water Price.
+            </p>
+        </field>
+    </record>
+
+</odoo>

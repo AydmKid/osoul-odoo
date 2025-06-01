@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_accommodation_room" model="ir.actions.act_window">
+        <field name="name">Rooms</field>
+        <field name="res_model">osoul.accommodation.room</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+
+    <record id="model_name_view_kanban" model="ir.ui.view">
+        <field name="name">model_name.view.kanban</field>
+        <field name="model">osoul.accommodation.room</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="room_no"/>
+                <!-- <field name="building_id"/> -->
+                <field name="building_name"/>
+                <field name="building_location"/>
+                <field name="floor_id"/>
+                <field name="apartment_id"/>
+                <field name="total_beds"/>
+                <field name="total_residents"/>
+                <field name="housing_percentage" widget="progressbar"/>
+                <field name="state"/>
+                 <templates >
+
+                        <style>
+                            .oe_bg_image {
+                                background-image: url('/osoul_accommodation/static/src/img/room.png');
+                                background-size: 15% auto;
+                                background-position: right center;
+                                animation: moveBackground 10s linear infinite;
+                                     }
+
+                           @keyframes moveBackground {
+                                        0% {
+                                        background-position: right center;
+                                        }
+                                        100% {
+                                        background-position: left center;
+                                        }   
+                                    }
+
+                            .o_form_view .o_field_widget[name=""]::after {
+                                    content: "Text after";
+                                    display: block;
+                                    text-align: center;
+                                    margin-bottom: 10px;
+                                    color: #FF0000; 
+                                    font-size: 16px;
+                                    font-weight: bold; 
+                                    text-transform: uppercase;
+                                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+                                    
+                                   animation: showHide 2s linear infinite;
+                                   opacity: 0; /* Initially hide the text */
+                                    }
+                               @keyframes showHide {
+                                            0%, 100% {
+                                                opacity: 0; /* Hide the text at the beginning and end of the animation */
+                                            }
+                                            50% {
+                                                opacity: 1; /* Show the text in the middle of the animation */
+                                            }
+                                }
+
+                                .custom-header {
+                                        color: #FF0000; 
+                                        text-align: center;
+                                        font-size: 18px;
+                                        font-weight: bold;
+                                        margin-bottom: 10px;
+                                }
+
+                        </style>
+                        
+                        
+                      <t t-name="kanban-box">
+                            <div t-if="record.total_residents.value > 0" class="oe_kanban_global_click light-mode" style="display: flex; flex-direction: row; align-items: center;">
+                                <!-- Lamp On (Total Residents > 0) -->
+                                <img t-att-src="'/osoul_accommodation/static/src/img/beds.png'" 
+                                    alt="Lamp Image" 
+                                    class="lamp-image lamp-on" 
+                                    style="max-width: 50%; max-height: 90%; margin-left: 10px;" />
+                                <div style="text-align: right;">
+                                    <div class="row" style="margin-bottom: 2px;">
+                                        <div class="col-6" style="font-size: 20px; color: skyblue; filter: brightness(70%) contrast(150%)">
+                                            <strong><field name="building_location"/></strong>
+                                        </div>
+                                        <div class="col-6" style="font-size: 30px; color: skyblue; filter: brightness(70%) contrast(150%)">
+                                            <strong><field name="building_name"/></strong>
+                                            <strong><field name="room_no"/></strong>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 3px; color: skyblue; filter: brightness(70%) contrast(150%)">
+                                        <strong>Building Name: </strong><t t-esc="' : ' + ' ' + record.building_name.value" />
+                                    </div>
+                                    <div style="margin-top: 1px; color: skyblue; filter: brightness(70%) contrast(150%)">
+                                        <strong>Floor No: </strong><t t-esc="' : ' + ' ' + record.floor_id.value" />
+                                    </div>
+                                    <div style="margin-top: 1px; color: skyblue; filter: brightness(70%) contrast(150%)">
+                                        <strong>Apartment No: </strong><t t-esc="' : ' + ' ' + record.apartment_id.value" />
+                                    </div>
+                                    <div style="margin-top: 1px; color: skyblue; filter: brightness(70%) contrast(150%)">
+                                        <strong>Residents No: </strong><t t-esc="' : ' + ' ' + record.total_residents.value" />
+                                    </div>
+                                    <div style="margin-top: 1px; color: skyblue; filter: brightness(70%) contrast(150%)">
+                                        <strong>Beds No: </strong><t t-esc="' : ' + ' ' + record.total_beds.value" />
+                                    </div>
+                                    <div style="margin-top: 1px; color: skyblue; filter: brightness(70%) contrast(150%)">
+                                        <strong>State: </strong><t t-esc="' : ' + ' ' + record.state.value" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div t-else="" class="oe_kanban_global_click night-mode" style="display: flex; flex-direction: row; align-items: center;">
+                                <!-- Lamp Off (Total Residents = 0) -->
+                                <img t-att-src="'/osoul_accommodation/static/src/img/beds.png'" 
+                                    alt="Lamp Image" 
+                                    class="lamp-image lamp-off" 
+                                    style="max-width: 50%; max-height: 90%; margin-left: 10px;" />
+                                <div style="text-align: right;">
+                                    <div class="row" style="margin-bottom: 2px;">
+                                        <div class="col-6" style="font-size: 20px; color: skyblue; filter: brightness(70%) contrast(150%)">
+                                            <strong><field name="building_location"/></strong>
+                                        </div>
+                                        <div class="col-6" style="font-size: 30px; color: skyblue; filter: brightness(70%) contrast(150%)">
+                                            <strong><field name="building_name"/></strong>
+                                            <strong><field name="room_no"/></strong>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 3px; color: skyblue; filter: brightness(70%) contrast(150%)">
+                                        <strong>Building Name: </strong><t t-esc="' : ' + ' ' + record.building_name.value" />
+                                    </div>
+                                    <div style="margin-top: 1px; color: skyblue; filter: brightness(70%) contrast(150%)">
+                                        <strong>Floor No: </strong><t t-esc="' : ' + ' ' + record.floor_id.value" />
+                                    </div>
+                                    <div style="margin-top: 1px; color: skyblue; filter: brightness(70%) contrast(150%)">
+                                        <strong>Apartment No: </strong><t t-esc="' : ' + ' ' + record.apartment_id.value" />
+                                    </div>
+                                    <div style="margin-top: 1px; color: skyblue; filter: brightness(70%) contrast(150%)">
+                                        <strong>Residents No: </strong><t t-esc="' : ' + ' ' + record.total_residents.value" />
+                                    </div>
+                                    <div style="margin-top: 1px; color: skyblue; filter: brightness(70%) contrast(150%)">
+                                        <strong>Beds No: </strong><t t-esc="' : ' + ' ' + record.total_beds.value" />
+                                    </div>
+                                    <div style="margin-top: 1px; color: skyblue; filter: brightness(70%) contrast(150%)">
+                                        <strong>State: </strong><t t-esc="' : ' + ' ' + record.state.value" />
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="tree_accommodation_room" model="ir.ui.view">
+        <field name="name">Rooms</field>
+        <field name="model">osoul.accommodation.room</field>
+        <field name="arch" type="xml">
+            <tree string="" default_order="room_no asc ,create_date desc" 
+                decoration-info="housing_percentage &lt;= 0 and housing_percentage &lt; 1"
+                            decoration-warning="housing_percentage &gt;= 1 and housing_percentage &lt; 99"
+                            decoration-success="housing_percentage &gt;= 100" 
+                            decoration-danger="housing_percentage &gt;= 101 and housing_percentage &lt; 400">
+                <field name="room_no"  widget="badge" 
+                            decoration-info="housing_percentage &lt;= 0 and housing_percentage &lt; 1"
+                            decoration-warning="housing_percentage &gt;= 1 and housing_percentage &lt; 99"
+                            decoration-success="housing_percentage &gt;= 100" 
+                            decoration-danger="housing_percentage &gt;= 101 and housing_percentage &lt; 400"/>
+                <!-- <field name="building_id"/> -->
+                <field name="building_name"  widget="badge" 
+                decoration-info="housing_percentage &lt;= 0 and housing_percentage &lt; 1"
+                            decoration-warning="housing_percentage &gt;= 1 and housing_percentage &lt; 99"
+                            decoration-success="housing_percentage &gt;= 100" 
+                            decoration-danger="housing_percentage &gt;= 101 and housing_percentage &lt; 400"/>
+                <field name="building_location"  widget="badge"
+                decoration-info="housing_percentage &lt;= 0 and housing_percentage &lt; 1"
+                            decoration-warning="housing_percentage &gt;= 1 and housing_percentage &lt; 99"
+                            decoration-success="housing_percentage &gt;= 100" 
+                            decoration-danger="housing_percentage &gt;= 101 and housing_percentage &lt; 400"/>
+                <field name="floor_id"  widget="badge" 
+                decoration-info="housing_percentage &lt;= 0 and housing_percentage &lt; 1"
+                            decoration-warning="housing_percentage &gt;= 1 and housing_percentage &lt; 99"
+                            decoration-success="housing_percentage &gt;= 100" 
+                            decoration-danger="housing_percentage &gt;= 101 and housing_percentage &lt; 400"/>
+                <field name="apartment_id"  widget="badge" 
+                decoration-info="housing_percentage &lt;= 0 and housing_percentage &lt; 1"
+                            decoration-warning="housing_percentage &gt;= 1 and housing_percentage &lt; 99"
+                            decoration-success="housing_percentage &gt;= 100" 
+                            decoration-danger="housing_percentage &gt;= 101 and housing_percentage &lt; 400"/>
+                <field name="total_beds"  widget="badge" 
+                decoration-info="housing_percentage &lt;= 0 and housing_percentage &lt; 1"
+                            decoration-warning="housing_percentage &gt;= 1 and housing_percentage &lt; 99"
+                            decoration-success="housing_percentage &gt;= 100" 
+                            decoration-danger="housing_percentage &gt;= 101 and housing_percentage &lt; 400"/>
+                <field name="empty_beds" widget="badge"
+                decoration-info="housing_percentage &lt;= 0 and housing_percentage &lt; 1"
+                            decoration-warning="housing_percentage &gt;= 1 and housing_percentage &lt; 99"
+                            decoration-success="housing_percentage &gt;= 100" 
+                            decoration-danger="housing_percentage &gt;= 101 and housing_percentage &lt; 400"/>
+                <field name="total_residents"  widget="badge" 
+                decoration-info="housing_percentage &lt;= 0 and housing_percentage &lt; 1"
+                            decoration-warning="housing_percentage &gt;= 1 and housing_percentage &lt; 99"
+                            decoration-success="housing_percentage &gt;= 100" 
+                            decoration-danger="housing_percentage &gt;= 101 and housing_percentage &lt; 400"/>
+                <field name="housing_percentage" widget="progressbar" 
+                decoration-info="housing_percentage &lt;= 0 and housing_percentage &lt; 1"
+                            decoration-warning="housing_percentage &gt;= 1 and housing_percentage &lt; 99"
+                            decoration-success="housing_percentage &gt;= 100" 
+                            decoration-danger="housing_percentage &gt;= 101 and housing_percentage &lt; 400"/>
+                <field name="state" widget="badge" 
+                decoration-info="housing_percentage &lt;= 0 and housing_percentage &lt; 1"
+                            decoration-warning="housing_percentage &gt;= 1 and housing_percentage &lt; 99"
+                            decoration-success="housing_percentage &gt;= 100" 
+                            decoration-danger="housing_percentage &gt;= 101 and housing_percentage &lt; 400"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="form_accommodation_room" model="ir.ui.view">
+        <field name="name">Rooms</field>
+        <field name="model">osoul.accommodation.room</field>
+        <field name="arch" type="xml">
+            <form string="">
+
+                    <style>
+                            .oe_bg_image {
+                                background-image: url('/osoul_accommodation/static/src/img/aaa.jpg');
+                                background-size: 15% auto;
+                                background-position: right center;
+                                animation: moveBackground 10s linear infinite;
+                                     }
+
+                           @keyframes moveBackground {
+                                        0% {
+                                        background-position: right center;
+                                        }
+                                        100% {
+                                        background-position: left center;
+                                        }   
+                                    }
+
+                            .o_form_view .o_field_widget[name=""]::after {
+                                    content: "Text after";
+                                    display: block;
+                                    text-align: center;
+                                    margin-bottom: 10px;
+                                    color: #FF0000; 
+                                    font-size: 16px;
+                                    font-weight: bold; 
+                                    text-transform: uppercase;
+                                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+                                    
+                                   animation: showHide 2s linear infinite;
+                                   opacity: 0; /* Initially hide the text */
+                                    }
+                               @keyframes showHide {
+                                            0%, 100% {
+                                                opacity: 0; /* Hide the text at the beginning and end of the animation */
+                                            }
+                                            50% {
+                                                opacity: 1; /* Show the text in the middle of the animation */
+                                            }
+                                }
+
+                                .custom-header {
+                                        color: #FF0000; 
+                                        text-align: center;
+                                        font-size: 18px;
+                                        font-weight: bold;
+                                        margin-bottom: 10px;
+                                }
+
+                        </style>
+
+
+                <header>
+                    <field name="state" widget="statusbar"/>
+                    <button name="open_bed_wizard" string="Modify Beds" type="object" class="oe_highlight" attrs="{'invisible':[('state', 'in', 'unhoused')]}"/>
+                    <button name="action_button_housing_ready" string="Start Housing" type="object" class="btn-success" confirm="Are you sure ?" attrs="{'invisible':[('housing_status', '=', 'ready')]}"/>
+                    <button name="action_button_housing_not_ready" string="Stop Housing" type="object" class="btn-danger" confirm="Are you sure ?" attrs="{'invisible':[('housing_status', '=', 'not_ready')]}"/>
+                </header>
+                <sheet>
+                    <div>
+                        <h4 style="font-size: 34px; color: #3498db;">
+                            <field name="building_name" readonly="1"/>
+                        </h4>
+                        <h3 style="font-size: 22px; color: #3498db;">
+                            <field name="room_no" readonly="1"/>
+                        </h3>
+                    </div>
+                    <group name="name" string="">
+                        <group name="name" string="Building Details">
+                            <field name="building_location"/>
+                            <field name="building_id" placeholder="Choose Building No" options="{'no_open': True, 'no_create': True}" attrs="{'required':[('housing_status', '=', 'not_ready')], 'readonly':[('housing_status', '=', 'ready')]}"/>
+                            <field name="floor_ids" invisible="1"/>
+                            <field name="floor_id" placeholder="Enter Floor" options="{'no_open': True, 'no_create': True}" domain="[('id', 'in', floor_ids)]"
+                                                    attrs="{'readonly':[('housing_status', '=', 'ready')]}"/>
+                            <field name="apartment_ids" invisible="1"/>
+                            <field name="apartment_id" placeholder="Enter Apartment" options="{'no_open': True, 'no_create': True}" domain="[('id', 'in', apartment_ids)]"
+                                                    attrs="{'readonly':[('housing_status', '=', 'ready')]}"/>
+                            <field name="room_no" placeholder="Enter Room No" attrs="{'required':[('housing_status', '=', 'not_ready')], 'readonly':[('housing_status', '=', 'ready')]}"/>
+                            <field name="total_residents"/>
+                            <!-- <field name="building_name"/> -->
+                            
+                           
+                        </group>
+                        <group name="name" string="Room Details"> 
+                            <field name="standard_bed" attrs="{'required':[('housing_status', '=', 'not_ready')], 'readonly':[('housing_status', '=', 'ready')]}"/>
+                            <field name="total_beds" attrs="{'required':[('housing_status', '=', 'not_ready')], 'readonly':[('housing_status', '=', 'ready')]}"/>
+                            <field name="empty_beds" readonly="1"/>
+                            <field name="housing_status" widget="badge" decoration-warning="housing_status == 'not_ready'" decoration-success="housing_status == 'ready'"/>
+                            <field name="housing_percentage" widget="progressbar"/>
+                            <!-- <field name="stock_ids" widget="many2many_tags" options="{'no_create': True, 'color_field': 'color'}"/> -->
+                        </group>
+                        
+                           <field name="log_line_ids">
+                                <tree string="Stock Items">
+                                    <field name="stock_id" widget="many2one_color"/>
+                                    <field name="quantity_used" required="1"/>
+                                    <field name="current_date"/>
+                                    
+                                </tree>
+                            </field>
+                        
+                    </group>
+                    <notebook>
+                        <page name="name" string="Hosted Employees">
+                            <field name="housing_relation_ids" mode="tree"  options="{'no_open': True, 'no_create': True}" attrs="{'readonly':[('housing_status', '=', 'not_ready')]}">
+                                <tree string="Caption" create="true" delete="false" edit="true" editable="bottom">
+                                    <field name="employee_id" domain="[('host_accom', '=', 'not_hosted')]"
+                                                              placeholder="Choose Employee Name" options="{'no_open': True, 'no_create': True}" required="1"/>
+                                    <field name="employement_no"/>
+                                    <field name="job_title"/>
+                                    <field name="management_name"/>
+                                    <field name="department" readonly="1"/>
+                                    <!-- <field name="mobile_phone"/> -->
+                                    <field name="country_id"/>
+                                    <field name="housing_status"/>
+                                    <field name="housing_date"/>
+                                    <button name="action_button_delete" class="btn-danger" type="object" string="Remove" confirm="Are you sure ?"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="accommodation_search_room_view" model="ir.ui.view">
+            <field name="name">Room View</field>
+            <field name="model">osoul.accommodation.room</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="room_no"/>
+                    <field name="building_location"/>
+                    <field name="building_name"/>
+                    <field name="floor_id"/>
+                    <field name="apartment_id"/>
+                    <field name="building_id"/>
+                    <searchpanel> 
+                        <filter string="Building" name="building_filter" context="{'group_by':'building_id'}"/>
+                        <field name="building_location"/>
+                    </searchpanel>
+                </search>
+                
+            </field>
+    </record>
+
+    <record id="menu_accommodation_room" model="ir.ui.menu">
+        <field name="name">Rooms</field>
+        <field name="sequence" eval="10" />
+        <field name="action" ref="action_accommodation_room" />
+        <field name="parent_id" ref="menu_accommodation_rooms_housing"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="seq_order" model="ir.sequence">
+        <field name="name">Buffet Order Sequence</field>
+        <field name="code">osoul.buffet.order</field>
+        <field name="prefix">ORD-</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+</odoo>

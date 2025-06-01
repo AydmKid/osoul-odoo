@@ -1,0 +1,149 @@
+<odoo>
+
+    <!-- Action -->
+    <record id="action_security_visitor" model="ir.actions.act_window">
+        <field name="name">Visitor Entry/Exit</field>
+        <field name="res_model">osoul.security.visitor.enter.exit</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create the first visitor entry record
+            </p>
+        </field>
+    </record>
+    <!-- Tree View -->
+    <record id="view_security_visitor_tree" model="ir.ui.view">
+        <field name="name">security.visitor.tree</field>
+        <field name="model">osoul.security.visitor.enter.exit</field>
+        <field name="arch" type="xml">
+            <tree string="Visitor Entry/Exit"
+                decoration-success="state == 'inside'"
+                decoration-danger="state == 'exited'"
+                decoration-muted="state == 'draft'" multi_edit="1">
+                
+                <!--  Visitor Info -->
+                <field name="sequence" readonly="1" />
+                <field name="create_date" optional="show"/>
+                <field name="day_name" optional="show"/>
+                <field name="visitor_name" optional="show"/>
+                <field name="visitor_id_no" optional="show"/>
+                <field name="v_type_id" optional="show"/>
+                <field name="visitor_card_no" optional="show"/>
+                
+                <!-- Company Info -->
+                <field name="visit_company" optional="show"/>
+                <field name="visitor_mobile" optional="show"/>
+                
+                <!--  Enter Info  -->
+                <field name="time_in" optional="show"/>
+                <field name="time_out" optional="show"/>
+                <field name="time_spent_inside" optional="show"/>
+                
+                <!--  Host employee Info  -->
+                <field name="emp_name_id" optional="show"/>
+                <field name="emp_department_id" optional="show"/>
+                
+                <!--  State -->
+                <field name="state"
+                    widget="badge"
+                    optional="show"
+                    decoration-success="state == 'inside'"
+                    decoration-danger="state == 'exited'"
+                    decoration-muted="state == 'draft'"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_security_visitor_form" model="ir.ui.view">
+        <field name="name">security.visitor.form</field>
+        <field name="model">osoul.security.visitor.enter.exit</field>
+        <field name="arch" type="xml">
+            <form string="Visitor Entry/Exit">
+                <header>
+                    <field name="state" widget="statusbar"/>
+                    <button name="action_enter_osoul" type="object" string="Enter Osoul" class="btn-primary" 
+                    attrs="{'invisible': [('state', '!=', 'draft')]}" confirm="Are You Sure ?"/>
+
+                    <button name="action_exit_osoul" type="object" string="Exit Osoul" class="btn-danger" 
+                    attrs="{'invisible': [('state', '!=', 'inside')]}" confirm="Are You Sure ?"/>
+
+                    <!-- <button name="action_send_to_housing_manager" type="object" string="Referral to the housing manager" class="btn-secondary"
+                            attrs="{'invisible': [('state', '!=', 'inside')]}" confirm="Are You Sure ?"/> -->
+                </header>
+                
+                <sheet>
+                    <div>
+                            <h4>
+                                <field name="sequence" readonly="1" />
+                            </h4>
+                            <h3>
+                                <field name="visitor_name" readonly="1" />
+                            </h3>
+                            <h2>
+                               <field name="day_name" readonly="1"/>
+                            </h2>
+                    </div>
+                        <group>
+                            <group string="Vistor Info">
+                                <field name="visitor_name" attrs="{'readonly': [('state', '!=', 'draft')]}"/> 
+                                <field name="visitor_id_no" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="visitor_mobile" attrs="{'readonly': [('state', '!=', 'draft')]}"/> 
+                                <field name="visit_company" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="visitor_card_no" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="v_type_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <!-- <field name="stay_days"/> -->
+                            </group>
+
+                            <group string="Employee Info"> 
+                                <field name="emp_name_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="emp_department_id"  readonly="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="note"/>
+                            </group>
+
+                            <group string="Entry Info">
+                                <field name="time_in" readonly="1"/> 
+                                <field name="entry_gate_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="guard_entry_id" readonly="1"/>
+                            </group>
+
+                            <group string="Exit Info">
+                                <field name="time_out" readonly="1"/>
+                                <field name="exit_gate_id" attrs="{'readonly': [('state', '!=', 'inside')]}"/>
+                                <field name="guard_exit_id" readonly="1"/>
+                                <field name="time_spent_inside" readonly="1"/>
+                            </group>
+                        </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="security_visitor_enter_exit_search_view" model="ir.ui.view">
+            <field name="name">osoul security visitor enter exit Search View</field>
+            <field name="model">osoul.security.visitor.enter.exit</field>
+            <field name="arch" type="xml">
+                <search >
+                    <field name="visitor_name"/>
+                    <field name="visitor_id_no"/>
+                    <field name="create_date" context="{'group_by': 'create_date:day', 'default_group': True}"/>
+                    <field name="emp_name_id"/>
+                        <group expand="0" string="Group By">
+                             <!-- <filter string="create_date" name="Group" context="{'group_by': 'create_date:day', 'default_group': True}"/> -->
+                        </group>
+                </search>
+                <!-- <searchpanel> 
+                    <field name="emp_department_id" icon="fa-users" enable_counters="1"/>
+                </searchpanel> -->
+            </field>
+    </record>
+
+    <!-- Menu -->
+    <record id="security_visitor_menu" model="ir.ui.menu" >
+        <field name="name">Visitor Records</field>
+        <field name="sequence" eval="1" />
+        <field name="action" ref="action_security_visitor" />
+        <field name="parent_id" ref="menu_security_guards" />
+    </record>
+    
+</odoo>

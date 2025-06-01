@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_accommodation_contract" model="ir.actions.act_window">
+        <field name="name">Contracts</field>
+        <field name="res_model">osoul.accommodation.contrats.wizard</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_contracts_wizard_tree" model="ir.ui.view">
+        <field name="name">contrats</field>
+        <field name="model">osoul.accommodation.contrats.wizard</field>
+        <field name="arch" type="xml">
+            <tree default_order="create_date desc" string="Contrats Tree View" 
+                                                    decoration-danger="state == 'contract_expired'" 
+                                                    decoration-warning="state == 'contract_running'" 
+                                                    decoration-info="state == 'draft'" >
+                <field name="create_date"/>
+                <field name="building_location"/>
+                <field name="start_date_decade"/>
+                <field name="end_date_decade"/>
+                <field name="difference_in_days" widget="badge" />
+                <field name="payment_mechanism" widget="badge" />
+                <field name="promissory_note_copy" widget="badge" />
+                <field name="rent_value" widget="badge" />
+                <field name="state" widget="badge" decoration-danger="state == 'contract_expired'" 
+                decoration-warning="state == 'contract_running'" decoration-info="state == 'draft'"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_contracts_wizard_form" model="ir.ui.view">
+        <field name="name">osoul.accommodation.contrats.wizard.form</field>
+        <field name="model">osoul.accommodation.contrats.wizard</field>
+        <field name="arch" type="xml">
+                <form string="Contrats Form View" create="false" sample = "1" >
+                    
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                        <button name="action_running_contract" confirm="Are You Sure" class="btn-success" type="object" states="draft" string="Running"
+                        attrs="{'invisible': [('state', 'in', ('contract_running', 'contract_expired'))]}"/>
+                        <button name="action_finsh_contract" confirm="Are You Sure" class="btn-success" type="object" icon="" string="Finsh" 
+                        attrs="{'invisible': [('state', 'in', ('contract_expired', 'draft'))]}"/>
+                    </header>
+                    
+                    <sheet>
+                        <group>
+                        <group name="" string="Date Details">
+                                <field name="building_location"     readonly="1" decoration-success="1" widget="badge"/>
+                                <field name="start_date_decade"     attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                                <field name="end_date_decade"       attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                                <field name="difference_in_days"    readonly="1"/>
+                        </group>
+                                
+
+                        <group name="" string="Payment Details">
+                                <field name="payment_mechanism"           attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                                <field name="rent_value"                  attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                                <field name="promissory_note_copy"        attrs="{'readonly': [('state', 'not in', ['draft'])]}" 
+                                                                          widget="image"  style="width: 20%; height: auto; max-width: 50px; max-height: 50px;"/>
+                        </group>
+                                
+                        </group>
+                        
+                    </sheet>
+                     <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            
+        </field>
+    </record>
+    <!-- <record id="menu_location_contracts" model="ir.ui.menu">
+        <field name="name">Contracts</field>
+        <field name="sequence" eval="10" />
+        <field name="action" ref="action_accommodation_contract" />
+        <field name="parent_id" ref="menu_accommodation_configuration"/>
+    </record> -->
+
+</odoo>

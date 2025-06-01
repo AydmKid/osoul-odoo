@@ -1,0 +1,44 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+
+access_ticket_job_order_system_manager,ticket.job.order System Manager,model_ticket_job_order,osoul_tickets.group_tickets_system_manager,1,1,1,1
+access_ticket_job_order_approval_system_manager,ticket.job.approval System,model_ticket_approval,osoul_tickets.group_tickets_system_manager,1,1,1,1
+
+access_ticket_job_order_newtwork,ticket.job.order Newtwork,model_ticket_job_order,osoul_tickets.group_tickets_network,1,1,0,0
+access_ticket_job_order_technical,ticket.job.order Technicla Support,model_ticket_job_order,osoul_tickets.group_tickets_technical_support,1,1,0,0
+access_ticket_job_order_systems,ticket.job.order Systems,model_ticket_job_order,osoul_tickets.group_tickets_systems,1,1,0,0
+access_ticket_job_order_operation,ticket.job.order operation,model_ticket_job_order,osoul_tickets.group_tickets_operation,1,1,0,0
+access_ticket_job_order_developers,ticket.job.order Developers,model_ticket_job_order,osoul_tickets.group_tickets_deveolper,1,1,0,0
+access_ticket_job_order_information_office,ticket.job.order Information Office,model_ticket_job_order,osoul_tickets.group_tickets_information_office,1,1,1,0
+
+access_ticket_job_order_approval_network,ticket.job.approval Newtwork,model_ticket_approval,osoul_tickets.group_tickets_network,1,1,0,0
+access_ticket_job_order_approval_techniclal_support,ticket.job.approval Technicla Support,model_ticket_approval,osoul_tickets.group_tickets_technical_support,1,1,0,0
+access_ticket_job_order_approval_systems,ticket.job.approval Systems,model_ticket_approval,osoul_tickets.group_tickets_systems,1,1,0,0
+access_ticket_job_order_approval_operation,ticket.job.approval operation,model_ticket_approval,osoul_tickets.group_tickets_operation,1,1,0,0
+access_ticket_job_order_approval_developers,ticket.job.approval Developers,model_ticket_approval,osoul_tickets.group_tickets_deveolper,1,1,0,0
+access_ticket_job_order_approval_information_office,ticket.job.approval Information Office,model_ticket_approval,osoul_tickets.group_tickets_information_office,1,1,0,0
+
+access_ticket_job_order_manager,ticket.job.order Manager,model_ticket_job_order,osoul_tickets.group_tickets_manager,1,1,1,0
+access_ticket_job_order_approval_manager,ticket.job.approval Manager,model_ticket_approval,osoul_tickets.group_tickets_manager,1,1,1,0
+
+
+access_ticket_job_order_supervisor,ticket.job.order Supervisor,model_ticket_job_order,osoul_tickets.group_tickets_supervisor,1,1,1,1
+access_ticket_job_order_approval_supervisor,ticket.job.approval Supervisor,model_ticket_approval,osoul_tickets.group_tickets_supervisor,1,1,1,1
+
+access_ticket_job_order_employee,ticket.job.order Employee,model_ticket_job_order,osoul_tickets.group_tickets_employees,1,1,0,0
+access_ticket_job_order_approval_employee,ticket.job.approval Employee,model_ticket_approval,osoul_tickets.group_tickets_employees,1,1,0,0
+
+
+
+access_ticket_osoul_tickets_settings_manager,osoul.tickets.settings Manager,model_osoul_tickets_settings,osoul_tickets.group_tickets_manager,1,1,1,1
+
+
+access_ticket_osoul_tickets_team_member_manager,osoul.tickets.team.member Manager,model_osoul_tickets_team_member,osoul_tickets.group_tickets_manager,1,1,1,1
+
+
+
+access_ticket_osoul_tickets_team_member_network,osoul.tickets.team.member network,model_osoul_tickets_team_member,osoul_tickets.group_tickets_network,1,1,1,1
+access_ticket_osoul_tickets_team_member_technical_support,osoul.tickets.team.member technical support,model_osoul_tickets_team_member,osoul_tickets.group_tickets_technical_support,1,1,1,1
+access_ticket_osoul_tickets_team_member_tickets_systems,osoul.tickets.team.member tickets systems,model_osoul_tickets_team_member,osoul_tickets.group_tickets_systems,1,1,1,1
+access_ticket_osoul_tickets_team_member_technical_operation,osoul.tickets.team.member operation,model_osoul_tickets_team_member,osoul_tickets.group_tickets_operation,1,1,1,1
+access_ticket_osoul_tickets_team_member_technical_deveolper,osoul.tickets.team.member deveolper,model_osoul_tickets_team_member,osoul_tickets.group_tickets_deveolper,1,1,1,1
+access_ticket_osoul_tickets_team_member_technical_information_office,osoul.tickets.team.member Information Office,model_osoul_tickets_team_member,osoul_tickets.group_tickets_information_office,1,1,1,1

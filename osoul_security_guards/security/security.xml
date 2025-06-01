@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="module_category_security_guards" model="ir.module.category">
+        <field name="name">Security Guards Permission Groups</field>
+        <field name="sequence" eval="10" />
+        <field name="description">Security Guards</field>
+    </record>
+    
+    <record id="group_security_guards_system_manager" model="res.groups">
+        <field name="name">System Manager</field>
+        <field name="category_id" ref="module_category_security_guards" />
+    </record>
+
+    <record id="group_security_guards_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="module_category_security_guards" />
+    </record>
+
+    <record id="group_security_supervisor" model="res.groups">
+        <field name="name">Supervisor</field>
+        <field name="category_id" ref="module_category_security_guards" />
+    </record>
+
+    <record id="group_security_employee" model="res.groups">
+        <field name="name">Employee</field>
+        <field name="category_id" ref="module_category_security_guards" />
+    </record>
+    
+    <record id="group_security_supplier_permission" model="res.groups">
+        <field name="name">Supplier Entry Permission</field>
+        <field name="category_id" ref="module_category_security_guards"/>
+    </record>  
+
+    <record id="group_security_guards_supplier_permission" model="res.groups">
+        <field name="name">Guards Supplier Enter Permission</field>
+        <field name="category_id" ref="module_category_security_guards"/>
+    </record>   
+
+    <record id="group_security_visitor_permission" model="res.groups">
+        <field name="name">Visitor Entry Permission</field>
+        <field name="category_id" ref="module_category_security_guards" />
+    </record>
+
+    <record id="group_security_guards_visitor_permission" model="res.groups">
+        <field name="name">Guards Visitor Permission</field>
+        <field name="category_id" ref="module_category_security_guards" />
+    </record>
+
+    <record id="group_security_permission_access" model="res.groups">
+        <field name="name">Access Permission</field>
+        <field name="category_id" ref="module_category_security_guards"/>
+    </record>
+    
+     <record id="guard_security_permission_rule" model="ir.rule">
+        <field name="name">Security Guards Supplier Permission</field>
+        <field name="model_id" ref="model_osoul_security_supplier_enter_permission"/>
+        <field name="domain_force">[('permit_issuer_id', '=', user.id)]</field>
+        <field name="groups" eval="[(4, ref('osoul_security_guards.group_security_supplier_permission'))]"/>
+        <field name="perm_read"   eval="True"/>
+        <field name="perm_write"  eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <record id="guard_security_visit_permission_rule" model="ir.rule">
+        <field name="name">Security Guards Visit Permission</field>
+        <field name="model_id" ref="model_osoul_security_visitor_enter_permission"/>
+        <field name="domain_force">[('permit_issuer_id', '=', user.id)]</field>
+        <field name="groups" eval="[(4, ref('osoul_security_guards.group_security_visitor_permission'))]"/>
+        <field name="perm_read"   eval="True"/>
+        <field name="perm_write"  eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+
+</odoo>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View osoul.fleet.plate.type View Tree -->
+    <record id="view_osoul_fleet_plate_type_tree" model="ir.ui.view">
+        <field name="name">view.osoul.fleet.plate.type.tree</field>
+        <field name="model">osoul.fleet.plate.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View osoul.fleet.plate.type form -->
+    <record id="view_osoul_fleet_plate_type_form" model="ir.ui.view">
+        <field name="name">view.osoul.fleet.plate.type.form</field>
+        <field name="model">osoul.fleet.plate.type</field>
+        <field name="arch" type="xml">
+            <form string="Osoul Fleet Plate Type">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                        </h1>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View osoul.fleet.plate.type search -->
+    <record id="view_osoul_fleet_plate_type_search" model="ir.ui.view">
+        <field name="name">view.osoul.fleet.plate.type.search</field>
+        <field name="model">osoul.fleet.plate.type</field>
+        <field name="arch" type="xml">
+            <search>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action osoul.fleet.plate.type -->
+    <record id="action_osoul_fleet_plate_type" model="ir.actions.act_window">
+        <field name="name">Osoul Fleet Plate Type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">osoul.fleet.plate.type</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Osoul Fleet Plate Type.
+            </p>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="inherit_users_form">
+            <field name="name">nama.model.users</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <field name="login" position="after">
+                    <field name="tokeen" placeholder="Token"/>
+                    <field name="responsible_unit" placeholder="Unit"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

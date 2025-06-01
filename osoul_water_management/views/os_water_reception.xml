@@ -1,0 +1,107 @@
+<odoo>
+    <record id="osoul_water_reception_action" model="ir.actions.act_window">
+        <field name="name">Water Reception</field>
+        <field name="res_model">osoul.water.reception</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="osoul_water_reception_tree" model="ir.ui.view">
+        <field name="name">osoul.water.reception.tree</field>
+        <field name="model">osoul.water.reception</field>
+        <field name="arch" type="xml">
+            <tree string="Water Reception" create="false" decoration-success="state == 'outside_osoul'" decoration-warning="state == 'inside_osoul'" decoration-muted="permission == 'not_authorized'">
+                <field name="trip_no"/>
+                <field name="vehicle_id"/>
+                <field name="owner_id"/>
+                <field name="driver_id"/>
+                <field name="driver_phone"/>
+                <field name="entry_time"/>
+                <field name="permission" widget="badge" decoration-success="permission in ['authorized_in', 'authorized_out']" decoration-warning="permission == 'not_authorized'"/>
+                <field name="state" widget="badge" decoration-success="state == 'outside_osoul'" decoration-warning="state == 'inside_osoul'"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="osoul_water_reception_form" model="ir.ui.view">
+        <field name="name">osoul.water.reception.form</field>
+        <field name="model">osoul.water.reception</field>
+        <field name="arch" type="xml">
+            <form string="Water Reception" create="false">
+                <header>
+                    <button name="action_authorized_in" type="object" string="Permission In" class="btn-primary"
+                            attrs="{'invisible': [('permission', 'in', ('authorized_in', 'authorized_out'))]}" confirm="Are You Sure ?"/>
+                    <button name="action_start_tanker_filling" type="object" string="Start Filling" class="btn-primary"
+                            attrs="{'invisible': [('state', '!=', 'inside_osoul')]}"
+                            confirm="Are You Sure ?"/>
+                    <button name="action_stop_tanker_filling" type="object" string="Stop Filling" class="btn-primary"
+                            attrs="{'invisible': [('state', '!=', 'filling_start')]}" confirm="Are You Sure ?"/>
+                    <button name="action_authorized_out" type="object" string="Permission Out" class="btn-primary"
+                            attrs="{'invisible': [('state', '!=', 'filling_over')]}" confirm="Are You Sure ?"/>
+                    <field name="state" widget="statusbar" readonly="1"/>
+                </header>
+                <sheet>
+                    <div>
+                        <h3>
+                            <field name="trip_no" readonly="1"/>
+                        </h3>
+                        <h3>
+                            <field name="vehicle_id"/>
+                        </h3>
+                    </div>
+                    <group name="name" string="">
+                        <group string="Load Information">
+                            <field name="trip_no" readonly="1"/>
+                            <field name="vehicle_id" readonly="1" options="{ 'no_open': True}"/>
+                            <field name="capacity" widget="badge" class="info-badge"/>
+                            <field name="owner_id" readonly="1" options="{ 'no_open': True}"/>
+                            <field name="driver_id" readonly="1" options="{ 'no_open': True}"/>
+                            <field name="driver_phone" readonly="1"/>
+                        </group>
+                        <group string="Permission And Timing">
+                            <field name="permission" widget="badge" decoration-warning="permission == 'authorized_in'" decoration-success="permission == 'authorized_out'"/>
+                            <field name="security_guard"/>
+                            <field name="security_phone"/>
+                            <field name="entry_time" readonly="1"/>
+                            <field name="start_tanker_filling"/>
+                            <field name="stop_tanker_filling"/>
+                        </group>
+                        <group name="name" string="Water Information">
+                            <field name="water_type" placeholder="Choose Water Type" attrs="{'readonly': [('state', '!=', 'inside_osoul')],'required': [('state', '=', 'inside_osoul')]}"/>
+                            <field name="filling_tanker" placeholder="Choose Tanker Type" attrs="{'readonly': [('state', '!=', 'inside_osoul')],'required': [('state', '=', 'inside_osoul')]}"/>
+                            <field name="water_tds" attrs="{'readonly': [('state', '!=', 'inside_osoul')],'required': [('state', '=', 'inside_osoul')]}"/>
+                            <field name="filling_station" placeholder="Choose Water Flow Station" attrs="{'readonly': [('state', '!=', 'inside_osoul')],'required': [('state', '=', 'inside_osoul')]}"/>
+                        </group>
+                        <group name="name" string="Load and Cost">
+                        <field name="load_difference" widget="badge" class="info-badge"/>
+                            <field name="water_price_id" widget="badge" class="info-badge" options="{ 'no_open': True}"/>
+                            <field name="total_cost" widget="badge" class="info-money"/>
+                            <field name="tank_filling_period"/>
+                        </group>
+                    </group>
+                    <div class="group-container">
+                        <group name="name" string="Last Couter Reading" class="o_group">
+                            <field name="prev_read_cone" widget="badge" class="info-badge"/>
+                            <field name="prev_read_ctwo" widget="badge" class="info-badge"/>
+                            <field name="prev_read_cthree" widget="badge" class="info-badge"/>
+                        </group>
+                        <group name="name" string="Water Flow Counter" class="o_group">
+                            <field name="curr_read_cone" attrs="{'readonly': [('state', '!=', 'filling_start')], 'required': [('state', '=', 'filling_start')]}"/>
+                            <field name="curr_read_ctwo" attrs="{'readonly': [('state', '!=', 'filling_start')], 'required': [('state', '=', 'filling_start')]}"/>
+                            <field name="curr_read_cthree" attrs="{'readonly': [('state', '!=', 'filling_start')], 'required': [('state', '=', 'filling_start')]}"/>
+                        </group>
+                        <group name="name" string="Last Couter Reading" class="o_group">
+                            <field name="filled_water_cone" widget="badge" class="info-badge"/>
+                            <field name="filled_water_ctwo" widget="badge" class="info-badge"/>
+                            <field name="filled_water_cthree" widget="badge" class="info-badge"/>
+                            <field name="total_filled_water" widget="badge" class="info-badge"/>
+                        </group>
+                    </div>    
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_ids" widget="mail_thread"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                </div>
+            </form>
+        </field>
+    </record>
+</odoo>

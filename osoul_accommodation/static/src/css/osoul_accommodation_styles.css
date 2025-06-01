@@ -1,0 +1,11 @@
+.my_background_class {
+    background-image: url('/osoul_accommodation/static/src/img/pp.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+li a[data-menu-xmlid="osoul_accommodation.menu_accommodation_housing_view"] {
+    font-size: 88px; /* Adjust the size as needed */
+    font-weight: bold; /* Optional: makes the text bold */
+}
+

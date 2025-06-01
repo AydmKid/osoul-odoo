@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Report Action -->
+    <report
+        id="osoul_occu_violation_report"
+        model="osoul.occu.violation"
+        string="Violation Report"
+        report_type="qweb-pdf"
+        name="osoul_occupational_health.osoul_occu_violation_report"
+        file="osoul_occupational_health.osoul_occu_violation_report"
+    />
+
+
+
+    <!-- Report Template -->
+    <template id="report_violation">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <div class="page">
+                    <!-- Header Section -->
+                    <div class="text-center">
+                        <img t-if="doc.company_id.logo" t-att-src="'data:image/png;base64,%s' % (doc.company_id.logo.decode())" class="img-fluid" style="max-height: 80px;"/>
+                        <h3>Occupational Violation Report</h3>
+                        <p><strong>Violation No:</strong> <span t-esc="doc.violation_no"/></p>
+                        <p><strong>Date:</strong> <span t-esc="doc.violation_date.strftime('%Y-%m-%d %H:%M:%S')"/></p>
+                    </div>
+
+                    <!-- Employee Information -->
+                    <h4>Employee Information</h4>
+                    <table class="table table-sm table-bordered">
+                        <tr>
+                            <td><strong>Employee Name:</strong></td>
+                            <td t-esc="doc.emp_name_id.name or 'N/A'"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Department:</strong></td>
+                            <td t-esc="doc.emp_department_id.name or 'N/A'"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Manager:</strong></td>
+                            <td t-esc="doc.emp_manager.name or 'N/A'"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Phone:</strong></td>
+                            <td t-esc="doc.emp_phone or 'N/A'"/></td>
+                        </tr>
+                    </table>
+
+                    <!-- Violation Information -->
+                    <h4>Violation Details</h4>
+                    <table class="table table-sm table-bordered">
+                        <tr>
+                            <td><strong>Violation Types:</strong></td>
+                            <td>
+                                <ul>
+                                    <t t-foreach="doc.violation_type" t-as="v_type">
+                                        <li t-esc="v_type.name"/>
+                                    </t>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Site:</strong></td>
+                            <td t-esc="doc.violation_site or 'N/A'"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Location:</strong></td>
+                            <td t-esc="doc.violation_location or 'N/A'"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Violation Impact:</strong></td>
+                            <td t-esc="doc.violation_impact_summary or 'N/A'"/></td>
+                        </tr>
+                    </table>
+
+                    <!-- Recommendations -->
+                    <h4>Recommendation</h4>
+                    <p t-esc="doc.recommendation or 'No recommendations provided.'"/>
+
+                    <!-- Attachments -->
+                    <h4>Evidence</h4>
+                    <t t-if="doc.attachment_ids">
+                        <ul>
+                            <t t-foreach="doc.attachment_ids" t-as="attachment">
+                                <li>
+                                    <a t-att-href="'/web/content/%s' % attachment.id" t-esc="attachment.name" target="_blank"/>
+                                </li>
+                            </t>
+                        </ul>
+                    </t>
+                    <t t-else="">
+                        <p>No evidence provided.</p>
+                    </t>
+
+                    <!-- Confirmation Section -->
+                    <h4>Employee Acknowledgment</h4>
+                    <p><strong>Signature Date:</strong> <span t-esc="doc.confirmed_date.strftime('%Y-%m-%d %H:%M:%S') if doc.confirmed_date else 'N/A'"/></p>
+                    <p t-if="doc.signature">
+                        <strong>Employee Signature:</strong>
+                        <img t-att-src="'data:image/png;base64,%s' % doc.signature.decode()" style="max-width: 200px; border: 1px solid #000;"/>
+                    </p>
+                    <t t-else="">
+                        <p><strong>No signature provided.</strong></p>
+                    </t>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

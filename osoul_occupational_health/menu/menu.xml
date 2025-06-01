@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="osoul_occ_root_menu" model="ir.ui.menu">
+        <field name="name">Occupational Health</field>
+        <field name="sequence" eval="10" />
+    </record>
+
+    <!-- VIOLATIONS MENU -->
+    <record id="osoul_occu_violation_menu" model="ir.ui.menu">
+        <field name="name">Violations</field>
+        <field name="sequence" eval="0" />
+        <field name="action" ref="action_osoul_occu_violation" />
+        <field name="parent_id" ref="osoul_occ_root_menu" />
+    </record>
+
+    <!-- INCIDENTS MENU -->
+    <record id="osoul_occu_incident_menu" model="ir.ui.menu">
+        <field name="name">Incidents</field>
+        <field name="sequence" eval="1" />
+        <field name="action" ref="action_osoul_occu_incident" />
+        <field name="parent_id" ref="osoul_occ_root_menu" />
+    </record>
+
+    <!-- WORK PERMIT -->
+    <record id="osoul_occu_work_permit_menu" model="ir.ui.menu">
+        <field name="name">Work Permit</field>
+        <field name="sequence" eval="2" />
+        <field name="action" ref="action_osoul_occu_work_permit" />
+        <field name="parent_id" ref="osoul_occ_root_menu" />
+    </record>
+
+    <!-- CHECKUP MENU -->
+    <record id="osoul_occu_operations_menu" model="ir.ui.menu">
+        <field name="name">Operations</field>
+        <field name="sequence" eval="3" />
+        <field name="parent_id" ref="osoul_occ_root_menu" />
+    </record>
+
+    <record id="osoul_occu_daily_checkup_menu" model="ir.ui.menu" >
+        <field name="name">Daily Checkup</field>
+        <field name="sequence" eval="0" />
+        <field name="action" ref="action_osoul_occu_daily_checkup" />
+        <field name="parent_id" ref="osoul_occu_operations_menu" />
+    </record>
+    
+
+    <!-- CONFIGURATION MAIN MENU -->
+    <record id="osoul_occu_configurations_menu" model="ir.ui.menu">
+        <field name="name">Configurations</field>
+        <field name="sequence" eval="4" />
+        <field name="parent_id" ref="osoul_occ_root_menu" />
+    </record>
+
+    <!-- EQUIPMENT SUB MENU -->
+    <record id="osoul_occu_equipments_sub_menu" model="ir.ui.menu">
+        <field name="name">Equipment Configuration</field>
+        <field name="sequence" eval="0" />
+        <field name="parent_id" ref="osoul_occu_configurations_menu" />
+    </record>
+
+    <record id="osoul_occu_pump_menu" model="ir.ui.menu" >
+        <field name="name">Pumps</field>
+        <field name="sequence" eval="0" />
+        <field name="action" ref="action_osoul_occu_pump" />
+        <field name="parent_id" ref="osoul_occu_equipments_sub_menu" />
+    </record>
+
+    <record id="osoul_occu_fap_menu" model="ir.ui.menu" >
+        <field name="name">Fire Panels</field>
+        <field name="sequence" eval="1" />
+        <field name="action" ref="action_osoul_occu_fap" />
+        <field name="parent_id" ref="osoul_occu_equipments_sub_menu" />
+    </record>
+
+    <record id="osoul_occu_tank_menu" model="ir.ui.menu" >
+        <field name="name">Tanks</field>
+        <field name="sequence" eval="2" />
+        <field name="action" ref="action_osoul_occu_tank" />
+        <field name="parent_id" ref="osoul_occu_equipments_sub_menu" />
+    </record>
+
+    <!-- VIOLATION SUB MENU-->
+    <record id="osou_violation_sub_menu" model="ir.ui.menu" >
+        <field name="name">Violation Configuration</field>
+        <field name="sequence" eval="1" />
+        <field name="parent_id" ref="osoul_occu_configurations_menu" />
+    </record>
+    
+    <record id="osoul_occu_violation_type_menu" model="ir.ui.menu">
+        <field name="name">Violation Type</field>
+        <field name="sequence" eval="0" />
+        <field name="action" ref="action_osoul_occu_violation_type" />
+        <field name="parent_id" ref="osou_violation_sub_menu" />
+    </record>
+
+    <!-- LOCATION SUB MENU -->
+    <record id="osou_location_sub_menu" model="ir.ui.menu" >
+        <field name="name">Location Configuration</field>
+        <field name="sequence" eval="2" />
+        <field name="parent_id" ref="osoul_occu_configurations_menu" />
+    </record>
+
+    <record id="osoul_occu_location_menu" model="ir.ui.menu">
+        <field name="name">Site and Locations</field>
+        <field name="sequence" eval="0" />
+        <field name="action" ref="action_osoul_occu_site" />
+        <field name="parent_id" ref="osou_location_sub_menu" />
+    </record>
+
+    <!--  -->
+    <record id="osoul_occu_team_configuration_menu" model="ir.ui.menu" >
+        <field name="name">Team Configuration</field>
+        <field name="sequence" eval="3" />
+        <field name="parent_id" ref="osoul_occu_configurations_menu" />
+    </record>
+    
+    <record id="osoul_occu_team_menu" model="ir.ui.menu" >
+        <field name="name">Team</field>
+        <field name="sequence" eval="0" />
+        <field name="action" ref="action_osoul_occu_team" />
+        <field name="parent_id" ref="osoul_occu_team_configuration_menu" />
+    </record>
+    
+</odoo>

@@ -1,0 +1,15 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+
+access_transportation_driver_manager,Transportation Manager,model_osoul_transportation_driver,osoul_transportation.group_transportation_manager,1,1,1,1
+
+
+
+access_transportation_vehicle_manager,Vehicle Manager,model_transportation_vehicle,osoul_transportation.group_transportation_manager,1,1,1,1
+
+
+
+access_transportation_permit_manager,Transportation Permit Manager,model_osoul_transportation_exit_permit,osoul_transportation.group_transportation_manager,1,1,1,1
+
+
+
+access_transportation_osoul_consent,Consent Permit Manager,model_osoul_transportation_consent,osoul_transportation.group_transportation_manager,1,1,1,1

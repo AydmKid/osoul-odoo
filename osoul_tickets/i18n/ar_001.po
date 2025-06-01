@@ -1,0 +1,887 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* osoul_tickets
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-10 08:13+0000\n"
+"PO-Revision-Date: 2024-11-10 08:13+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__message_needaction
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__activity_ids
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__activity_ids
+msgid "Activities"
+msgstr "النشاطات"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__activity_state
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__approval_date
+msgid "Approval Date"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__approved_by
+msgid "Approved By"
+msgstr ""
+
+#. module: osoul_tickets
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_approval_form
+msgid "Are you sure ?"
+msgstr "هل أنت متأكد ؟"
+
+#. module: osoul_tickets
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_form
+msgid "Are you sure?"
+msgstr "هل أنت متأكد ؟"
+
+#. module: osoul_tickets
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_approval_form
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_form
+msgid "Assignees Name"
+msgstr "أسماء المكلفون"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: osoul_tickets
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: osoul_tickets
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_approval__state__canceled
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_job_order__state__canceled
+msgid "Canceled"
+msgstr "ملغي"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_osoul_tickets_settings__color
+#: model:ir.model.fields,field_description:osoul_tickets.field_osoul_tickets_team_member__color
+msgid "Color"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__requester_no
+msgid "Contact No"
+msgstr "رقم التواصل"
+
+#. module: osoul_tickets
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_form
+msgid "Create Job Order"
+msgstr "طلب جديد"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_osoul_tickets_settings__create_uid
+#: model:ir.model.fields,field_description:osoul_tickets.field_osoul_tickets_team_member__create_uid
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__create_uid
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_osoul_tickets_settings__create_date
+#: model:ir.model.fields,field_description:osoul_tickets.field_osoul_tickets_team_member__create_date
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__create_date
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:res.groups,comment:osoul_tickets.group_tickets_deveolper
+msgid "Developer Group"
+msgstr "مجموعة المطورين"
+
+#. module: osoul_tickets
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__osoul_tickets_team_member__unit_name__developers
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_approval__responsible_unit__developers
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_job_order__responsible_unit__developers
+#: model:res.groups,name:osoul_tickets.group_tickets_deveolper
+msgid "Developers"
+msgstr "المطورين"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_osoul_tickets_settings__display_name
+#: model:ir.model.fields,field_description:osoul_tickets.field_osoul_tickets_team_member__display_name
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__display_name
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_approval__state__done
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_job_order__state__done
+msgid "Done"
+msgstr "تم"
+
+#. module: osoul_tickets
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_job_order__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: osoul_tickets
+#: model:res.groups,name:osoul_tickets.group_tickets_employees
+msgid "Employee"
+msgstr "موظف"
+
+#. module: osoul_tickets
+#: model:res.groups,comment:osoul_tickets.group_tickets_employees
+msgid "Employees Group"
+msgstr ""
+
+#. module: osoul_tickets
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_approval_form
+msgid "Finish"
+msgstr "إنهاء"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__finish_date
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__finish_date
+msgid "Finish Date"
+msgstr "إنتهاء التنفيذ"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_approval__activity_type_icon
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_job_order__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: osoul_tickets
+#: code:addons/osoul_tickets/models/ticket.py:0
+#, python-format
+msgid "Good Job Order Created"
+msgstr "جيد تم إنشاء طلب جديد"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__has_message
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_approval__priority__high
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_job_order__priority__high
+msgid "High"
+msgstr "عالي"
+
+#. module: osoul_tickets
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_approval__state__hold
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_job_order__state__hold
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_approval_form
+msgid "Hold"
+msgstr "تأجيل"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__hold_date
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__hold_date
+msgid "Hold Date"
+msgstr "بدء التأجيل"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__hold_reason
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__hold_reason
+msgid "Hold Reason"
+msgstr "سبب التأجيل"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_osoul_tickets_settings__id
+#: model:ir.model.fields,field_description:osoul_tickets.field_osoul_tickets_team_member__id
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__id
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__id
+msgid "ID"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_approval__activity_exception_icon
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_job_order__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_approval__message_needaction
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_approval__message_unread
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_job_order__message_needaction
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_job_order__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_approval__message_has_error
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_approval__message_has_sms_error
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_job_order__message_has_error
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_job_order__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: osoul_tickets
+#: model:res.groups,name:osoul_tickets.group_tickets_information_office
+msgid "Information Office"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:res.groups,comment:osoul_tickets.group_tickets_information_office
+msgid "Information Office Group"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__osoul_tickets_team_member__unit_name__information_technology_office
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_approval__responsible_unit__information_technology_office
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_job_order__responsible_unit__information_technology_office
+msgid "Information Technology Office"
+msgstr "مكتب تقنية المعلومات"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__message_is_follower
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__is_readonly_for_user
+msgid "Is Readonly for User"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__description
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__description
+msgid "Issue Description"
+msgstr "وصف المشكلة"
+
+#. module: osoul_tickets
+#: model:ir.actions.act_window,name:osoul_tickets.osoul_tickets_settings_action
+#: model:ir.model.fields,field_description:osoul_tickets.field_osoul_tickets_settings__issue_location
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__issue_location_id
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__issue_location_id
+#: model:ir.ui.menu,name:osoul_tickets.osoul_tickets_settings_menu
+msgid "Issue Location"
+msgstr "موقع المشكلة"
+
+#. module: osoul_tickets
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_approval__state__job_created
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_job_order__state__job_created
+msgid "Job Created"
+msgstr "تم الطلب"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__job_order_sequence
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__job_order_id
+msgid "Job Order"
+msgstr "امر الطلب"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__ticket_date
+msgid "Job Order Date"
+msgstr "إنشاء الطلب"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__job_order_sequence
+msgid "Job Order Sequence"
+msgstr "رقم الطلب"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_osoul_tickets_settings____last_update
+#: model:ir.model.fields,field_description:osoul_tickets.field_osoul_tickets_team_member____last_update
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval____last_update
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_osoul_tickets_settings__write_uid
+#: model:ir.model.fields,field_description:osoul_tickets.field_osoul_tickets_team_member__write_uid
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__write_uid
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_osoul_tickets_settings__write_date
+#: model:ir.model.fields,field_description:osoul_tickets.field_osoul_tickets_team_member__write_date
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__write_date
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: osoul_tickets
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_approval_form
+msgid "Location Info"
+msgstr "معلومات الموقع"
+
+#. module: osoul_tickets
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_form
+msgid "Location and Issue Info"
+msgstr "معلومات الموقع والمشكلة"
+
+#. module: osoul_tickets
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_approval__priority__low
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_job_order__priority__low
+msgid "Low"
+msgstr "ضعيف"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:res.groups,name:osoul_tickets.group_tickets_manager
+msgid "Manager"
+msgstr "مدير"
+
+#. module: osoul_tickets
+#: model:res.groups,comment:osoul_tickets.group_tickets_manager
+msgid "Managers Group"
+msgstr "مجموعة المدراء"
+
+#. module: osoul_tickets
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_approval__priority__medium
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_job_order__priority__medium
+msgid "Medium"
+msgstr "وسط"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_osoul_tickets_team_member__member_name
+msgid "Member Name"
+msgstr "إسم العضو"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__message_has_error
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__message_ids
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:res.groups,name:osoul_tickets.group_tickets_network
+msgid "Network"
+msgstr "الشبكات"
+
+#. module: osoul_tickets
+#: model:res.groups,comment:osoul_tickets.group_tickets_network
+msgid "Network Group"
+msgstr "مجموعة الشبكات"
+
+#. module: osoul_tickets
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__osoul_tickets_team_member__unit_name__networks
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_approval__responsible_unit__networks
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_job_order__responsible_unit__networks
+msgid "Networks"
+msgstr "الشبكات"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__activity_calendar_event_id
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__activity_summary
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__activity_type_id
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: osoul_tickets
+#: code:addons/osoul_tickets/models/ticket_approval.py:0
+#, python-format
+msgid "Nice Job"
+msgstr "عمل جيد"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_approval__message_needaction_counter
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_job_order__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_approval__message_has_error_counter
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_job_order__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_approval__message_unread_counter
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_job_order__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__osoul_tickets_team_member__unit_name__operation
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_approval__responsible_unit__operation
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_job_order__responsible_unit__operation
+#: model:res.groups,name:osoul_tickets.group_tickets_operation
+msgid "Operation"
+msgstr "التشغيل"
+
+#. module: osoul_tickets
+#: model:res.groups,comment:osoul_tickets.group_tickets_operation
+msgid "Operation Group"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_approval__location__osoul_abha
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_job_order__location__osoul_abha
+msgid "Osoul Abha"
+msgstr "مكتب أبها"
+
+#. module: osoul_tickets
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_approval__location__osoul_hatchery
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_job_order__location__osoul_hatchery
+msgid "Osoul Hatchery"
+msgstr "فقاسة تعاونية عسير"
+
+#. module: osoul_tickets
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_approval__location__osoul_jeddah
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_job_order__location__osoul_jeddah
+msgid "Osoul Jeddah"
+msgstr "مكتب جده"
+
+#. module: osoul_tickets
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_approval__location__osoul_jizan
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_job_order__location__osoul_jizan
+msgid "Osoul Jizan"
+msgstr "مكتب جيزان"
+
+#. module: osoul_tickets
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_approval__location__osoul_poultry
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_job_order__location__osoul_poultry
+msgid "Osoul Poultry"
+msgstr "مصنع تعاونية عسير"
+
+#. module: osoul_tickets
+#: model:ir.ui.menu,name:osoul_tickets.menu_root_osoul_tickets
+msgid "Osoul Tickets"
+msgstr "طلبات الصيانه"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__permit_issuer_id
+msgid "Permit Issuer"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__priority
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__priority
+msgid "Priority"
+msgstr "الأولوية"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__approval_id
+msgid "Related"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__ticket_id
+msgid "Related Ticket"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__department
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__department
+msgid "Requester Department"
+msgstr "قسم مقدم الطلب"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__employement_no
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__employement_no
+msgid "Requester Id"
+msgstr "الرقم الوظيفي"
+
+#. module: osoul_tickets
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_approval_form
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_form
+msgid "Requester Info"
+msgstr "معلومات مقدم الطلب"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__employee_id
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__employee_id
+msgid "Requester Name"
+msgstr "مقدم الطلب"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__requester_no
+msgid "Requester No"
+msgstr "رقم مقدم الطلب"
+
+#. module: osoul_tickets
+#: model:ir.actions.act_window,name:osoul_tickets.action_ticket_approval
+#: model:ir.ui.menu,name:osoul_tickets.menu_osoul_tickets_approval
+#: model:ir.ui.menu,name:osoul_tickets.menu_ticket_approval
+msgid "Requests"
+msgstr "الطلبات"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__activity_user_id
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__message_has_sms_error
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.ui.menu,name:osoul_tickets.menu_osoul_osoul_tickets_settings
+msgid "Settings"
+msgstr "الإعدادات"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__location
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__location
+msgid "Site"
+msgstr "موقع"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__solution
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__solution
+msgid "Solution"
+msgstr "الإجراء المتخذ"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__state
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__state
+msgid "Status"
+msgstr "الحاله"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_approval__activity_state
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_job_order__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: osoul_tickets
+#: model:res.groups,name:osoul_tickets.group_tickets_supervisor
+msgid "Supervisor"
+msgstr "مشرف"
+
+#. module: osoul_tickets
+#: model:res.groups,comment:osoul_tickets.group_tickets_supervisor
+msgid "Supervisors Group"
+msgstr "مجموعة المشرفين"
+
+#. module: osoul_tickets
+#: model:res.groups,name:osoul_tickets.group_tickets_system_manager
+msgid "System Manager"
+msgstr "مدير النظام"
+
+#. module: osoul_tickets
+#: model:res.groups,comment:osoul_tickets.group_tickets_system_manager
+msgid "System Manager Group"
+msgstr "مجموعة المدراء"
+
+#. module: osoul_tickets
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__osoul_tickets_team_member__unit_name__systems
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_approval__responsible_unit__systems
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_job_order__responsible_unit__systems
+#: model:res.groups,name:osoul_tickets.group_tickets_systems
+msgid "Systems"
+msgstr "النظم"
+
+#. module: osoul_tickets
+#: model:res.groups,comment:osoul_tickets.group_tickets_systems
+msgid "Systems Group"
+msgstr "مجموعة النظم"
+
+#. module: osoul_tickets
+#: model:ir.actions.act_window,name:osoul_tickets.action_osoul_tickets_team_member
+#: model:ir.ui.menu,name:osoul_tickets.osoul_tickets_team_member_menu
+msgid "Team Member"
+msgstr "أعضاء الفريق"
+
+#. module: osoul_tickets
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__osoul_tickets_team_member__unit_name__technical_support
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_approval__responsible_unit__technical_support
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_job_order__responsible_unit__technical_support
+#: model:res.groups,name:osoul_tickets.group_tickets_technical_support
+msgid "Technical Support"
+msgstr "الدعم التقني"
+
+#. module: osoul_tickets
+#: model:res.groups,comment:osoul_tickets.group_tickets_technical_support
+msgid "Technical Support Group"
+msgstr "مجموعة الدعم التقني"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__assignees_name
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__assignees_name
+msgid "Technician Assignees"
+msgstr "المكلفون"
+
+#. module: osoul_tickets
+#: model:ir.model.constraint,message:osoul_tickets.constraint_ticket_job_order_job_order_sequence_unique
+msgid "The Job Order Sequence must be unique."
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.constraint,message:osoul_tickets.constraint_osoul_tickets_settings_unique_issue_location
+msgid "The issue location must be unique."
+msgstr "يجب ان لايتكرر الإسم"
+
+#. module: osoul_tickets
+#: model:ir.ui.menu,name:osoul_tickets.menu_osoul_tickets
+#: model:ir.ui.menu,name:osoul_tickets.menu_tickets
+msgid "Ticket"
+msgstr "التذاكر"
+
+#. module: osoul_tickets
+#: model:ir.model,name:osoul_tickets.model_ticket_approval
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_approval_form
+msgid "Ticket Approval"
+msgstr "الطلبات"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__ticket_date
+msgid "Ticket Date"
+msgstr "إنشاء الطلب"
+
+#. module: osoul_tickets
+#: model:ir.model,name:osoul_tickets.model_ticket_job_order
+msgid "Ticket Job Order"
+msgstr "طلب جديد"
+
+#. module: osoul_tickets
+#: model:ir.actions.act_window,name:osoul_tickets.action_ticket_job_order
+msgid "Ticket Job Orders"
+msgstr "التذاكر"
+
+#. module: osoul_tickets
+#: model:ir.module.category,name:osoul_tickets.module_category_tickets
+msgid "Tickets"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.module.category,description:osoul_tickets.module_category_tickets
+msgid "Tickets category"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__time_difference
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__time_difference
+msgid "Time Taken"
+msgstr "الوقت المستغرق"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__time_to_start
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__time_to_start
+msgid "Time to Under Progress"
+msgstr "الوقت المستغرق للبدء"
+
+#. module: osoul_tickets
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_approval_form
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_form
+msgid "Timing Info"
+msgstr "معلومات التوقيت"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_approval__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_job_order__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_approval__state__under_progress
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_job_order__state__under_progress
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_approval_form
+msgid "Under Progress"
+msgstr "قيد العمل"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__under_progress_date
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__under_progress_date
+msgid "Under Progress Date"
+msgstr "بدء التنفيذ"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_job_order__job_order_sequence
+msgid "Unique sequence generated only once when a job order is created."
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__responsible_unit
+msgid "Unit"
+msgstr "إسم الوحدة"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__unit_head
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__unit_head
+msgid "Unit Head"
+msgstr "رئيس الوحدة"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_osoul_tickets_team_member__unit_name
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__responsible_unit
+msgid "Unit Name"
+msgstr "إسم الوحدة"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__message_unread
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_approval__priority__urgent
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_job_order__priority__urgent
+msgid "Urgent"
+msgstr "عاجل"
+
+#. module: osoul_tickets
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_approval__priority__very_high
+#: model:ir.model.fields.selection,name:osoul_tickets.selection__ticket_job_order__priority__very_high
+msgid "Very High"
+msgstr "عالي جدا"
+
+#. module: osoul_tickets
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_approval__website_message_ids
+#: model:ir.model.fields,field_description:osoul_tickets.field_ticket_job_order__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_approval__website_message_ids
+#: model:ir.model.fields,help:osoul_tickets.field_ticket_job_order__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: osoul_tickets
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.products
+msgid "Welcome Tekno"
+msgstr ""
+
+#. module: osoul_tickets
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_approval_kanban
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_kanban
+msgid "oe_kanban_color_1"
+msgstr ""
+
+#. module: osoul_tickets
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_approval_kanban
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_kanban
+msgid "oe_kanban_color_2"
+msgstr ""
+
+#. module: osoul_tickets
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_approval_kanban
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_kanban
+msgid "oe_kanban_color_3"
+msgstr ""
+
+#. module: osoul_tickets
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_approval_kanban
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_kanban
+msgid "oe_kanban_color_4"
+msgstr ""
+
+#. module: osoul_tickets
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_approval_kanban
+#: model_terms:ir.ui.view,arch_db:osoul_tickets.view_ticket_kanban
+msgid "oe_kanban_color_5"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model,name:osoul_tickets.model_osoul_tickets_settings
+msgid "osoul.tickets.settings"
+msgstr ""
+
+#. module: osoul_tickets
+#: model:ir.model,name:osoul_tickets.model_osoul_tickets_team_member
+msgid "osoul.tickets.team.member"
+msgstr ""

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>  
+
+        <report 
+            string="Housing Report"
+            id="action_housing_report"
+            model="osoul.accommodation.housing"
+            report_type="qweb-pdf"
+            name="osoul_accommodation.report_housing_qweb_form"
+            file="osoul_accommodation.report_housing_qweb_form"
+        />
+
+            <template id="report_housing_qweb_form">
+                <t t-call="web.html_container">
+                    <t t-foreach="docs" t-as="o">
+                        <t t-call="web.external_layout">
+                            <div class="page">
+                              
+
+                                 <style>
+                                        .report-table {
+                                            width: 100%;
+                                            border-collapse: collapse;
+                                            margin: 20px 0;
+                                            font-size: 14px;
+                                            font-family: Arial, sans-serif;
+                                        }
+                                        .report-table th, .report-table td {
+                                            border: 1px solid #dddddd;
+                                            text-align: left;
+                                            padding: 8px;
+                                        }
+                                        .report-table th {
+                                            background-color: #f2f2f2;
+                                            font-weight: bold;
+                                        }
+                                        .report-table tr:nth-child(even) {
+                                            background-color: #f9f9f9;
+                                        }
+                                        .report-title {
+                                            text-align: center;
+                                            margin-bottom: 20px;
+                                            font-size: 24px;
+                                            font-family: Arial, sans-serif;
+                                            color: #333;
+                                        }
+                                </style>
+                                <div class="report-title"> Reports</div>
+                                    <table class="report-table">
+                                            <tr>
+                                                <th>Employee Name</th>
+                                                <td><t t-esc="o.employee_id.name"/></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Employee No</th>
+                                                <td><t t-esc="o.employement_no"/></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Nationality</th>
+                                                <td><t t-esc="o.country_id.name"/></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Department</th>
+                                                <td><t t-esc="o.department.name"/></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Housing Date</th>
+                                                <td><t t-esc="o.housing_date"/></td>
+                                            </tr>
+                                             <tr>
+                                                <th>Building Name</th>
+                                                <td><t t-esc="o.building_name"/></td>
+                                             </tr>
+                                              <tr>
+                                                <th>Floor No</th>
+                                                <td><t t-esc="o.floor_id.id"/></td>
+                                             </tr>
+                                              <tr>
+                                                <th>Apartment No</th>
+                                                <td><t t-esc="o.apartment_id.apartment_no"/></td>
+                                             </tr>
+                                              <tr>
+                                                <th>Room No</th>
+                                                <td><t t-esc="o.room_no"/></td>
+                                             </tr>
+                                              <tr>
+                                                <th>Housing Status</th>
+                                                <td><t t-esc="o.housing"/></td>
+                                             </tr>
+                                    </table>
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </template>
+
+
+
+    </data>
+
+</odoo>

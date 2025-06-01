@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Tree View -->
+    <record id="view_osoul_fleet_vehicle_tree" model="ir.ui.view">
+        <field name="name">view.osoul.fleet.vehicle.tree</field>
+        <field name="model">osoul.fleet.vehicle</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="license_plate"/>
+                <field name="category"/>
+                <field name="brand"/>
+                <field name="chassis_no"/>
+                <field name="plate_type"/>
+                <field name="classification"/>
+                <field name="work_location"/>
+                <field name="owner"/>
+                <field name="activation" widget="badge" decoration-success="activation == 'active'" decoration-danger="activation == 'not_active'"/>
+                <button name="action_active" type="object" string="Active" class="btn-success" attrs="{'invisible': [('activation', '=', 'active')]}"
+                                             confirm="Are you sure you want to activate this vehicle?"/>
+                <button name="action_not_active" type="object" string="Not Active" class="btn-danger" attrs="{'invisible': [('activation', '=', 'not_active')]}"
+                                                 confirm="Are you sure you want to deactivate this vehicle?"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_osoul_fleet_vehicle_form" model="ir.ui.view">
+        <field name="name">view.osoul.fleet.vehicle.form</field>
+        <field name="model">osoul.fleet.vehicle</field>
+        <field name="arch" type="xml">
+            <form string="Osoul Fleet Vehicle">
+            <header>
+                <button name="action_generate_qr_code" type="object" string="Create QR" class="btn-dark" confirm="Are You Sure ?"/>
+            </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h3>
+                            <field name="brand" readonly="1" options="{ 'no_open': True}"/>
+                        </h3>
+                        <h1>
+                            <field name="license_plate" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group name="name" string="">
+                        <group name="name" string="Vehicle Information">
+                            <field name="brand" placeholder="Choose vehicle Brand"/>
+                            <field name="fuel_type" placeholder="Choose Fuel Type"/>
+                            <field name="chassis_no" placeholder="Enter Cassis Number"/>
+                            <field name="serial_no" placeholder="Enter Serial Number"/>
+                            <field name="weight"/>
+                            <field name="manufacture_year"/>
+                        </group>
+                        <group name="name" string="Owner Information">
+                            <field name="qr_code" widget="image" class="oe_avatar" options="{'preview_image': 'qr_code'}"/>
+                            <field name="owner" placeholder="Choose Vehicle Owner"/>
+                        </group>
+                        <group name="name" string="Plate Information">
+                            <field name="plate_letters" placeholder="Enter Plate Letters"/>
+                            <field name="plate_numbers" placeholder="Enter Plate Number"/>
+                            <field name="plate_type" placeholder="Choose Reqistration Type"/>
+                        </group>
+                        <group name="name" string="Work Category">
+                            <field name="category" placeholder="Choose Category"/>
+                            <field name="classification" placeholder="Choose Classification"/>
+                            <field name="work_role" placeholder="Choose Work Role"/>
+                            <field name="work_location" placeholder="Choose Work Location"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_osoul_fleet_vehicle_search" model="ir.ui.view">
+        <field name="name">view.osoul.fleet.vehicle.search</field>
+        <field name="model">osoul.fleet.vehicle</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="license_plate"/>
+                <field name="category"/>
+                <field name="brand"/>
+                <field name="fuel_type"/>
+                <group expand="1" string="Group By">
+                    <filter name="category" string="Category" context="{'group_by': 'category'}"/>
+                    <filter name="brand" string="Brand" context="{'group_by': 'brand'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_osoul_fleet_vehicle" model="ir.actions.act_window">
+        <field name="name">Osoul Fleet Vehicle</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">osoul.fleet.vehicle</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There are no vehicles currently. Click here to create a new Osoul Fleet Vehicle.
+            </p>
+        </field>
+    </record>
+
+</odoo>

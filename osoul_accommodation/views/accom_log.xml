@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+     <record id="action_accommodation_log" model="ir.actions.act_window">
+        <field name="name">Logs</field>
+        <field name="res_model">osoul.accommodation.log</field>
+        <field name="view_mode">tree,form</field>
+     </record>
+
+    <record id="accommodation_log_view_tree" model="ir.ui.view">
+        <field name="name">Logs</field>
+        <field name="model">osoul.accommodation.log</field>
+        <field name="arch" type="xml">
+            <tree string="" default_order="create_date desc" create="false"   
+                            decoration-success="housing == 'hosted'" decoration-danger="housing_exit_date" sample = "1" multi_edit="1">
+                <field name="employee_id"/>
+                <field name="employement_no"/>
+                <field name="job_title"/>
+                <field name="country_id"  />
+                <field name="department"  />
+                <!-- <field name="housing_status"/> -->
+                <field name="building_name" />
+                <field name="floor_id"/>
+                <field name="apartment_id"/>
+                <field name="room_no"/>
+                <field name="housing_date"/>
+                <!-- <field name="building_id"/> -->
+                <field name="building_location"  widget="badge" decoration-success="housing == 'hosted'" decoration-danger="housing_exit_date"/>
+                <!-- <field name="time_spent_inside" widget="badge" decoration-success="housing == 'hosted'" decoration-danger="housing_exit_date"/> -->
+                <!-- <field name="current_date"/> -->
+                <field name="housing" invisible="1" widget="badge" decoration-success="housing == 'hosted'" decoration-danger="housing == 'not_hosted'"/>
+                <!-- <field name="current_date" widget="badge"/> --> 
+                <field name="housing_exit_date" />
+                <field name="log_line_ids">
+                    <tree>
+                        <field name="stock_id"/>
+                    </tree>
+                </field>
+                
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="accommodation_log_view_form" model="ir.ui.view">
+        <field name="name">Floors</field>
+        <field name="model">osoul.accommodation.log</field>
+        <field name="arch" type="xml">
+            <form string="" create="false">
+                
+                <style>
+                
+                  .custom-text {
+                            font-weight: bold;
+                            color: blue;
+                            }
+                </style>
+                <sheet>
+
+
+                    <div class="oe_button_box" name="button_box">
+                            <button name="open_emp_record"  class="oe_stat_button" icon="fa-user" type="object">
+                                <field name="counts_atten" string="Records" widget="statinfo"/>
+                            </button>
+                             <button name="open_emp_profile"  class="oe_stat_button" icon="fa-user" type="object"
+                                groups="osoul_accommodation.group_accommodation_system_manager">
+                                <field name="employee_id" string="Records" widget="profile" readonly="1"/>
+                            </button>
+                    </div>
+                    <div>
+                        <h4>
+                           <field name="employee_id" readonly="1"/>
+                        </h4>
+                         <h4>
+                            <field name="employement_no" readonly="1"/>
+                        </h4>
+                    </div>
+                    <group>
+                        <group string="Employee Information">
+                            <field name="employee_id" readonly="1" widget="badge" decoration-success="housing == 'hosted'" options="{'no_open': True, 'no_create': True}" />
+                            <field name="employement_no" readonly="1" widget="badge"  decoration-success="housing == 'hosted'"/>
+                            <field name="department" readonly="1" widget="badge" options="{'no_open': True, 'no_create': True}" decoration-success="housing == 'hosted'"/>
+                            <field name="country_id" readonly="1" widget="badge" options="{'no_open': True, 'no_create': True}" decoration-success="housing == 'hosted'"/>
+                            <field name="housing" readonly="1" widget="badge" decoration-success="housing == 'hosted'"/>
+                        </group>
+                        <group string="Building Information">
+                            <field name="building_name" widget="badge" decoration-success="housing == 'hosted'"/>
+                            <field name="floor_id"  widget="badge" decoration-success="housing == 'hosted'"/>
+                            <field name="apartment_id" widget="badge" decoration-success="housing == 'hosted'"/>
+                            <field name="room_no" widget="badge" decoration-success="housing == 'hosted'"/>
+                            
+                        </group>
+                        
+                           <field name="log_line_ids">
+                                <tree string="Stock Items" >
+                                    <field name="stock_id" required="1" options="{'no_create': True}"/>
+                                    <field name="quantity_used" required="1"/>
+                                    <field name="current_date"/> 
+                                </tree>
+                            </field>
+                        
+                    </group>
+                    
+
+                </sheet>
+                 <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="accommodation_search_log_view" model="ir.ui.view">
+            <field name="name">Logs View</field>
+            <field name="model">osoul.accommodation.log</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="building_location"/>
+                    <field name="employee_id"/>
+                    <field name="job_title"/>
+                    <field name="employement_no"/>
+                    <field name="building_name"/>
+                    <field name="apartment_id"/>
+                    <field name="room_no"/>
+                    <field name="country_id"/>
+                    <field name="department"/>
+                    <!-- <field name="housing_date"/> -->
+                    <searchpanel> 
+                        <field name="department" icon="fa-users" enable_counters="1"/>
+                    </searchpanel>
+
+                </search>
+               
+            </field>
+    </record>
+
+    <record id="menu_accommodation_log" model="ir.ui.menu">
+        <field name="name">Logs</field>
+        <field name="sequence" eval="2"/>
+        <field name="action" ref="action_accommodation_log"/>
+        <field name="parent_id" ref="menu_accommodation_housing_view"/>
+    </record>
+
+</odoo>

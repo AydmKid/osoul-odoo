@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Action osoul.occu.daily.checkup -->
+    <record id="action_osoul_occu_daily_checkup" model="ir.actions.act_window">
+        <field name="name">Osoul Occu Daily Checkup</field>
+        <field name="res_model">osoul.occu.daily.checkup</field>
+        <field name="view_mode">kanban,tree,form</field>
+        
+    </record>
+
+    <record id="view_osoul_occu_daily_checkup_kanban" model="ir.ui.view">
+        <field name="name">osoul.occu.daily.checkup.kanban</field>
+        <field name="model">osoul.occu.daily.checkup</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_small_column" create="true">
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_card oe_kanban_global_click oe_kanban_color_#{kanban_color}">
+                            <div class="o_kanban_primary_left">
+                                <strong>
+                                    <span style="margin: 0 auto;"><field name="sequence"/></span>
+                                    
+                                </strong>
+
+                                <!-- Flex container for site_id (left) and date (center) -->
+                                <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                    <span style="margin: 0 auto;"><field name="employee_id"/></span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                    <span style="margin: 0 auto;"><field name="site_id"/></span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                    <span style="margin: 0 auto;"><field name="date"/></span>
+                                </div>
+                            </div>
+
+                            <div class="oe_kanban_details mt8">
+                                <div class="o_kanban_label">
+                                    🛠 Pumps:
+                                    <field name="checked_pumps" widget="badge" class="badge badge-info"/>
+                                </div>
+                                <div class="o_kanban_label">
+                                    ⚡ Panels:
+                                    <field name="checked_panels" widget="badge" class="badge badge-info"/>
+                                </div>
+                                <div class="o_kanban_label">
+                                    🛢 Tanks:
+                                    <field name="checked_tanks" widget="badge" class="badge badge-info"/>
+                                </div>
+                                <div class="o_kanban_label">
+                                    ✅ Progress:
+                                    <field name="completion_percentage" widget="progressbar"/>
+                                </div>
+                                <div class="o_kanban_label">
+                                    📝 Status:
+                                    <field name="state" widget="badge"
+                                        decoration-warning="state == 'open'"
+                                        decoration-success="state == 'close'"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+
+    
+    <!-- View osoul.occu.daily.checkup View Tree -->
+    <record id="view_osoul_occu_daily_checkup_tree" model="ir.ui.view">
+        <field name="name">view.osoul.occu.daily.checkup.tree</field>
+        <field name="model">osoul.occu.daily.checkup</field>
+        <field name="arch" type="xml">
+            <tree decoration-warning="state == 'open'" decoration-success="state == 'close'">
+                <field name="sequence" optional="show"/>
+                <field name="employee_id" optional="show"/>
+                <field name="date" optional="show"/>
+                <field name="site_id" optional="show"/>
+                <field name="location_id" optional="show" widget="many2many_tags" decoration-warning="state == 'open'" decoration-success="state == 'close'"/>
+                <field name="checked_pumps" optional="show" widget="badge" class="info-badge"/>
+                <field name="checked_panels" optional="show" widget="badge" class="info-badge"/>
+                <field name="checked_tanks" optional="show" widget="badge" class="info-badge"/>
+                <field name="completion_percentage" optional="show" widget="progressbar"/>
+                <field name="state" optional="show" widget="badge" decoration-warning="state == 'open'" decoration-success="state == 'close'"/>
+                <!-- <button name="buttonClick" string="Click" type="object" class="btn-primary" confirm="Are You sure ?"/> -->
+            </tree>
+        </field>
+    </record>
+
+    <!-- View osoul.occu.daily.checkup form -->
+    <record id="view_osoul_occu_daily_checkup_form" model="ir.ui.view">
+        <field name="name">view.osoul.occu.daily.checkup.form</field>
+        <field name="model">osoul.occu.daily.checkup</field>
+        <field name="arch" type="xml">
+            <form string="Osoul Occu Daily Checkup">
+                <header>
+                    <field name="state" widget="statusbar"/>
+                    <button name="action_open_checkup" type="object" string="Check Begun" class="btn-primary" confirm="Are You Sure ?"
+                                                       attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                    <button name="action_close_checkup" type="object" string="Check End" class="btn-primary" confirm="Are You Sure ?"
+                                                        attrs="{'invisible': [('state', '!=', 'open')]}"/>
+                </header>
+                <sheet>
+                    <div>
+                        <h3>
+                            <field name="sequence"/>
+                        </h3>
+                        <h3>
+                            <field name="employee_id" readonly="1"/>
+                        </h3>
+                    </div>
+                    <group name="name" string="">
+                        <group string="Checkup Information">
+                            <field name="sequence"/>
+                            <field name="employee_id" readonly="1" options="{'no_create': True, 'no_open': True}"/>
+                            <field name="date" string="Checkup Date"/>
+                        </group>
+                        <group string="Site and Location">
+                            <field name="site_id" string="Site" placeholder="Select Site" options="{'no_create': True, 'no_open': True}"
+                                                  attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="location_id" string="Location" placeholder="Select Location" widget='many2many_tags' options="{'no_create': True, 'no_open': True}"
+                                                      attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="completion_percentage" string="Com.Percentage"/>
+                        </group>
+                    </group>
+                    <group  string="">
+                        <div class="group-container">
+                           <group string="Pumps Status" class="custom-box">
+                                <field name="total_pumps" widget="badge" class="info-badge"/>
+                                <field name="checked_pumps" widget="badge" class="info-badge"/>
+                            </group>
+
+                            <group string="FAP Status" class="custom-box">
+                                <field name="total_panels" widget="badge" class="info-badge"/>
+                                <field name="checked_panels" widget="badge" class="info-badge"/>
+                            </group>
+
+                            <group string="Tanks Status" class="custom-box">
+                                <field name="total_tanks" widget="badge" class="info-badge"/>
+                                <field name="checked_tanks" widget="badge" class="info-badge"/>
+                            </group>
+                        </div>
+                    </group>
+                    <notebook>
+                        <page name="name" string="Pumps Checkup">
+                            <field name="line_pump_ids" attrs="{'readonly': [('state', '!=', 'open')]}">
+                                <tree editable="bottom" decoration-danger="status == 'not_ok'" decoration-success="status == 'ok'">
+                                    <field name="sequence"/>
+                                    <field name="pump_id"/>
+                                    <field name="nfc_code"/>
+                                    <field name="location_id"/>
+                                    <field name="remarks" placeholder="Add You Remarks Here"/>
+                                    <field name="status" widget="badge" decoration-danger="status == 'not_ok'" decoration-success="status == 'ok'"/>
+                                    <field name="state" widget="badge" decoration-warning="state == 'not_checked'" decoration-success="state == 'checked'"/>
+                                    <button name="action_status_ok" type="object" string="OK" class="btn-primary" confirm="Are You Sure ?" attrs="{'invisible': [('status', '!=', 'draft')]}"/>
+                                    <button name="action_status_not_ok" type="object" string="NOT OK" class="btn-primary" confirm="Are You Sure ?" attrs="{'invisible': [('status', '!=', 'draft')]}"/>
+                                    <button name="action_checked" type="object" string="Checked" class="btn-primary" confirm="Are You Sure ?" attrs="{'invisible': [('state', '=', 'checked')]}"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page name="name" string="FAP Checkup">
+                            <field name="line_fap_ids" attrs="{'readonly': [('state', '!=', 'open')]}">
+                                <tree editable="bottom" decoration-danger="status == 'not_ok'" decoration-success="status == 'ok'">
+                                    <field name="sequence"/>
+                                    <field name="panel_id"/>
+                                    <field name="nfc_code"/>
+                                    <field name="location_id"/>
+                                    <field name="fire"/>
+                                    <field name="troubles"/>
+                                    <field name="remarks"/>
+                                    <field name="status" widget="badge" decoration-danger="status == 'not_ok'" decoration-success="status == 'ok'"/>
+                                    <field name="state" widget="badge" decoration-warning="state == 'not_checked'" decoration-success="state == 'checked'"/>
+                                    <button name="action_status_ok" type="object" string="OK" class="btn-primary" confirm="Are You Sure ?" attrs="{'invisible': [('status', '!=', 'draft')]}"/>
+                                    <button name="action_status_not_ok" type="object" string="NOT OK" class="btn-primary" confirm="Are You Sure ?" attrs="{'invisible': [('status', '!=', 'draft')]}"/>
+                                    <button name="action_checked" type="object" string="Checked" class="btn-primary" confirm="Are You Sure ?" attrs="{'invisible': [('state', '=', 'checked')]}"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page name="name" string="Tanks Checkup">
+                            <field name="line_tank_ids" attrs="{'readonly': [('state', '!=', 'open')]}">
+                                <tree editable="bottom" decoration-danger="status == 'not_ok'" decoration-success="status == 'ok'">
+                                    <field name="sequence"/>
+                                    <field name="tank_id"/>
+                                    <field name="nfc_code"/>
+                                    <field name="location_id"/>
+                                    <field name="remarks"/>
+                                    <field name="status" widget="badge" decoration-danger="status == 'not_ok'" decoration-success="status == 'ok'"/>
+                                    <field name="state" widget="badge" decoration-warning="state == 'not_checked'" decoration-success="state == 'checked'"/>
+                                    <button name="action_status_ok" type="object" string="OK" class="btn-primary" confirm="Are You Sure ?" attrs="{'invisible': [('status', '!=', 'draft')]}"/>
+                                    <button name="action_status_not_ok" type="object" string="NOT OK" class="btn-primary" confirm="Are You Sure ?" attrs="{'invisible': [('status', '!=', 'draft')]}"/>
+                                    <button name="action_checked" type="object" string="Checked" class="btn-primary" confirm="Are You Sure ?" attrs="{'invisible': [('state', '=', 'checked')]}"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- View osoul.occu.daily.checkup search -->
+    <record id="view_osoul_occu_daily_checkup_search" model="ir.ui.view">
+        <field name="name">view.osoul.occu.daily.checkup.search</field>
+        <field name="model">osoul.occu.daily.checkup</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="sequence"/> 
+                <field name="location_id"/>
+                <field name="employee_id"/>
+                <group expand="1" string="Group By">
+                </group>
+                 <searchpanel> 
+                        <field name="site_id" icon="fa-users" enable_counters="1"/> 
+                        <field name="state" icon="fa-tasks" enable_counters="1"/>
+                    </searchpanel>
+            </search>
+        </field>
+    </record>
+</odoo>

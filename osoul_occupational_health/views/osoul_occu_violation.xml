@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View osoul.occu.violation View Tree -->
+    <record id="view_osoul_occu_violation_tree" model="ir.ui.view">
+        <field name="name">view.osoul.occu.violation.tree</field>
+        <field name="model">osoul.occu.violation</field>
+        <field name="arch" type="xml">
+            <tree decoration-info="state == 'draft'"  decoration-warning="state == 'submitted'"  decoration-success="state == 'confirmed'">
+                <field name="violation_no"/>
+                <field name="violation_date"/>
+                <field name="violation_site"/>
+                <field name="violation_location"/>
+                <field name="emp_name_id"/>
+                <field name="emp_department_id"/>
+                <field name="violation_issuer"/>
+                <field name="state" widget="badge" decoration-info="state == 'draft'"  decoration-warning="state == 'submitted'"  decoration-success="state == 'confirmed'"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View osoul.occu.violation form -->
+    <record id="view_osoul_occu_violation_form" model="ir.ui.view">
+        <field name="name">view.osoul.occu.violation.form</field>
+        <field name="model">osoul.occu.violation</field>
+        <field name="arch" type="xml">
+            <form string="Osoul Occu Violation">
+            <header>
+                <field name="state" widget="statusbar"/>
+                <button name="action_submitted" type="object" class="btn-primary" string="Submit" confirm="Are you sure ?"
+                                                attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                <button name="action_confirmed" type="object" class="btn-primary" string="Confirm" confirm="Are you sure ?"
+                                                attrs="{'invisible': [('state', '!=', 'submitted')]}"/>
+            </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h3>
+                            <field name="violation_no"/>
+                        </h3>
+                        <h3>
+                            <field name="emp_name_id" readonly="1"/>
+                        </h3>
+                    </div>
+                    <group name="name" string="">
+                        <group name="name" string="Employee Information">
+                            <field name="emp_name_id" placeholder="Choose Employee" options="{'no_create': True, 'no_open': True}"
+                                                      attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="emp_department_id" options="{'no_create': True, 'no_open': True}"/>
+                            <field name="emp_manager" options="{'no_create': True, 'no_open': True}"/>
+                            <field name="emp_phone"/>
+                            <field name="manager_phone"/>
+                        </group>
+                        <group name="name" string="Violation Information">
+                            <field name="violation_type" widget="many2many_tags" placeholder="Choose Violation Type"
+                                                         attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="violation_date" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="violation_site" placeholder="Select Violation Site" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="violation_location" placeholder="Select Violation Location" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="violation_impact_summary" placeholder="Violation Impact"/>
+                        </group>
+                        <group name="name" string="Recommendation and Confirmation">
+                            <field name="violation_issuer" options="{'no_create': True, 'no_open': True}"/>
+                            <field name="recommendation" placeholder="Enter Your Recommendation" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="confirmed_date" readonly="1"/>
+                                    <field name="signature" widget="signature" options="{'color': '#000000'}"
+                                                            attrs="{'required': [('state', '=', 'submitted')], 'readonly': [('state', '!=', 'submitted')]}"/>
+                        </group>
+                        <group name="name" string="Evidence">
+                            <field name="attachment"/>
+                            <field name="attachment_ids" widget="many2many_binary"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- View osoul.occu.violation search -->
+    <record id="view_osoul_occu_violation_search" model="ir.ui.view">
+        <field name="name">view.osoul.occu.violation.search</field>
+        <field name="model">osoul.occu.violation</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="1" string="Group By">
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action osoul.occu.violation -->
+    <record id="action_osoul_occu_violation" model="ir.actions.act_window">
+        <field name="name">Osoul Occu Violation</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">osoul.occu.violation</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Osoul Occu Violation.
+            </p>
+        </field>
+    </record>
+
+</odoo>

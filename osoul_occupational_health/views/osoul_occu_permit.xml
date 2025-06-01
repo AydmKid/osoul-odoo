@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View osoul.occu.work.permit View Tree -->
+    <record id="view_osoul_occu_work_permit_tree" model="ir.ui.view">
+        <field name="name">view.osoul.occu.work.permit.tree</field>
+        <field name="model">osoul.occu.work.permit</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="permit_no"/>
+                <field name="name"/>
+                <field name="permit_site"/>
+                <field name="permit_location"/>
+                <field name="permit_for"/>
+                <field name="valid_from"/>
+                <field name="valid_to"/>
+                <field name="work_executor"/>
+                <field name="agreement_date"/>
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- View osoul.occu.work.permit form -->
+    <record id="view_osoul_occu_work_permit_form" model="ir.ui.view">
+        <field name="name">view.osoul.occu.work.permit.form</field>
+        <field name="model">osoul.occu.work.permit</field>
+        <field name="arch" type="xml">
+            <form string="Osoul Occu Work Permit">
+                <header>
+                    <field name="state" widget="statusbar"/>
+                    <button name="action_submit" type="object" string="Submit" class="btn-primary" confirm="Are you sure ?"
+                                                 attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                    <button name="action_approve" type="object" string="Approve" class="btn-primary" confirm="Are you sure ?"
+                                                  attrs="{'invisible': [('state', '!=', 'submitted')]}"/>
+                    <button name="action_reject" type="object" string="Reject" class="btn-primary" confirm="Are you sure ?"
+                                                 attrs="{'invisible': [('state', '!=', 'submitted')]}"/>
+                    <button name="action_close" type="object" string="Close" class="btn-primary" confirm="Are you sure ?"
+                                                attrs="{'invisible': [('state', '!=', 'approved')]}"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h3>
+                            <field name="permit_no" placeholder="Enter the permit number"/>
+                        </h3>
+                        <h3>
+                            <field name="name" readonly="1" placeholder="Enter the permit name"/>
+                        </h3>
+                    </div>
+                    <group name="name" string="">
+                        <group name="name" string="Permit Information">
+                            <field name="permit_no" placeholder="Generated permit number" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="name" placeholder="Enter the name of the permit" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="permit_site" placeholder="Select the permit site" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="permit_location" placeholder="Select the permit location" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="permit_for" placeholder="Select the department for this permit" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                        </group>
+                        <group name="name" string="Validation and Description">
+                            <field name="valid_from" placeholder="Start date and time" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="valid_to" placeholder="End date and time" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="permit_duration" placeholder="Calculated duration" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="description" placeholder="Describe the work for this permit" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                        </group>
+                        <group string="Preparation">
+                            <field name="work_type" widget="many2many_tags" placeholder="Select types of work" 
+                                                    attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="hazard_risk" widget="many2many_tags" placeholder="Select applicable hazards and risks" 
+                                                      attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="action_taken" widget="many2many_tags" placeholder="Select actions taken to mitigate risks"
+                                                       attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="protective_equips" widget="many2many_tags" placeholder="Select required protective equipment"
+                                                            attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <!-- <field name="permit_image"/> -->
+                        </group>
+                        <group name="name" string="Excutor and Agreement">
+                            <field name="work_executor" placeholder="Enter the executor responsible for the work"
+                                                        attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="agreement_date" placeholder="Agreement date"/>
+                            <field name="executor_signature" widget="signature" options="{'color': '#000000'}"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="name" string="Checkup Before">
+                            <group name="name" string="Checkup Before">
+                                <field name="checkup_ids" attrs="{'required': [('state', '=', 'submitted')], 'readonly': [('state', '!=', 'submitted')]}">
+                                    <tree editable="bottom" create="false" unlink="false">
+                                        <field name="permit_no"/>
+                                        <field name="check"/>
+                                        <field name="answer"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page name="name" string="Work Agreement">
+                            <group name="name" string="Work Agreement">
+                                <field name="work_agreement" placeholder="Work agreement details will appear here"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- View osoul.occu.work.permit search -->
+    <record id="view_osoul_occu_work_permit_search" model="ir.ui.view">
+        <field name="name">view.osoul.occu.work.permit.search</field>
+        <field name="model">osoul.occu.work.permit</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="1" string="Group By">
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action osoul.occu.work.permit -->
+    <record id="action_osoul_occu_work_permit" model="ir.actions.act_window">
+        <field name="name">Osoul Occu Work Permit</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">osoul.occu.work.permit</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There are no examples. Click here to add a new Osoul Occu Work Permit.
+            </p>
+        </field>
+    </record>
+
+</odoo>

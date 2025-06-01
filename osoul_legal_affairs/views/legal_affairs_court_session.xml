@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_legal_affairs_court_session" model="ir.actions.act_window">
+        <field name="name">Court Sessions View</field>
+        <field name="res_model">legal.affairs.court.session</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="tree_legal_affairs_court_session" model="ir.ui.view">
+        <field name="name">Court Sessions View</field>
+        <field name="model">legal.affairs.court.session</field>
+        <field name="arch" type="xml">
+            <tree string="" create="false" edit="false" delete="false" decoration-success="session_state == 'open'" decoration-danger="session_state == 'closed'">
+                <field name="la_employee_id" width=".8"/>
+                <field name="case_no_id" width=".8"/>
+                <field name="session_type" width=".8"/>
+                <field name="session_date" width=".8"/>
+                <field name="session_subject" width=".8"/>
+                <field name="session_reminder_date" width=".8"/>
+                <field name="session_state" widget="badge" decoration-success="session_state == 'open'" decoration-danger="session_state == 'closed'"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record id="menu_legal_affairs_court_session" model="ir.ui.menu" >
+        <field name="name">Court Sessions View</field>
+        <field name="sequence" eval="1" />
+        <field name="action" ref="action_legal_affairs_court_session" />
+        <field name="parent_id" ref="legal_affairs_cases_and_sessions_menu" />
+    </record>
+
+</odoo>

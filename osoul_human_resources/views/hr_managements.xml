@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="human_resources_managements_action" model="ir.actions.act_window">
+        <field name="name">Managements</field>
+        <field name="res_model">osoul.hr.managements</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <record id="human_resources_managements_tree" model="ir.ui.view">
+        <field name="name">Managements</field>
+        <field name="model">osoul.hr.managements</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="management_name"/>
+                <field name="manager_name_id"/>
+                <field name="department_counter"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="human_resources_managements_form" model="ir.ui.view">
+        <field name="name">Managements</field>
+        <field name="model">osoul.hr.managements</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <header>
+                </header>
+                <sheet>
+                    <group name="name" string="">
+                        <group name="name" string="">
+                            <field name="management_name" required="1"/>
+                            <field name="department_counter"/>
+                        </group>
+                        <group name="name" string="">
+                            <field name="manager_name_id" required="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="human_resources_managements_kanban" model="ir.ui.view">
+        <field name="name">Managements</field>
+        <field name="model">osoul.hr.managements</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <templates>
+                    <field name="management_name"/>
+                    <field name="management_code"/>
+                    <field name="manager_name_id"/>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="oe_kanban_details">
+                                <ul>
+                                    <strong>
+                                        <li>
+                                            Management Name: <field name="management_name"/>
+                                        </li>
+                                    </strong>
+                                    <li>
+                                        Management Code: <field name="management_code"/>
+                                    </li>
+                                    <li>
+                                        Management Name: <field name="manager_name_id"/>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <menuitem
+        id="human_resources_managements_menu"
+        name="Managements"
+        action="human_resources_managements_action"
+        sequence="8"
+        parent="hr.menu_hr_root"/>
+
+</odoo>

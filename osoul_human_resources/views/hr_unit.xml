@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+   <record id="human_resources_unit_action" model="ir.actions.act_window">
+        <field name="name">Units</field>
+        <field name="res_model">osoul.hr.unit</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <record id="human_resources_units_tree" model="ir.ui.view">
+        <field name="name">Units</field>
+        <field name="model">osoul.hr.unit</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="unit_name"/>
+                <field name="department_name_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="human_resources_units_form" model="ir.ui.view">
+        <field name="name">Managements</field>
+        <field name="model">osoul.hr.unit</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <header>
+                </header>
+                <sheet>
+                    <group name="name" string="">
+                        <group name="name" string="">
+                            <field name="unit_name" required="1"/>
+                            <!-- <field name="department_counter"/> -->
+                        </group>
+                         <group name="name" string="">
+                            <field name="department_name_id" />
+                            <!-- <field name="department_counter"/> -->
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <menuitem
+        id="human_resources_unitss_menu"
+        name="Units"
+        action="human_resources_unit_action"
+        parent="hr.menu_hr_root"/>
+
+
+</odoo>

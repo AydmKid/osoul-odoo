@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View osoul.occu.tank View Tree -->
+    <record id="view_osoul_occu_tank_tree" model="ir.ui.view">
+        <field name="name">view.osoul.occu.tank.tree</field>
+        <field name="model">osoul.occu.tank</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence"/>
+                <field name="name"/>
+                <field name="nfc_code"/>
+                <field name="type"/>
+                <field name="site_id"/>
+                <field name="location_id"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View osoul.occu.tank form -->
+    <record id="view_osoul_occu_tank_form" model="ir.ui.view">
+        <field name="name">view.osoul.occu.tank.form</field>
+        <field name="model">osoul.occu.tank</field>
+        <field name="arch" type="xml">
+            <form string="Osoul Occu Tank">
+                <sheet>
+                    <div>
+                        <h3>
+                            <field name="sequence"/>
+                        </h3>
+                        <h3>
+                            <field name="name" readonly="1"/>
+                        </h3>
+                    </div>
+                    <group name="name" string="">
+                        <group name="name" string="Tank Information">
+                            <field name="sequence"/>
+                            <field name="name" placeholder="Enter Tank Name"/>
+                            <field name="nfc_code" placeholder="Use NFC Scanner"/>
+                            <field name="type" placeholder="Select Tank Type"/>
+                        </group>
+                        <group name="name" string="Site and Location">
+                            <field name="site_id" placeholder="Select Site"/>
+                            <field name="location_id" placeholder="Select Locaion"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- View osoul.occu.tank search -->
+    <record id="view_osoul_occu_tank_search" model="ir.ui.view">
+        <field name="name">view.osoul.occu.tank.search</field>
+        <field name="model">osoul.occu.tank</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="1" string="Group By">
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action osoul.occu.tank -->
+    <record id="action_osoul_occu_tank" model="ir.actions.act_window">
+        <field name="name">Osoul Occu Tank</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">osoul.occu.tank</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Osoul Occu Tank.
+            </p>
+        </field>
+    </record>
+
+</odoo>

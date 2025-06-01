@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="osoul_site_poultry" model="osoul.occu.site">
+        <field name="name">Osoul Poultry</field>
+    </record>
+
+    <record id="osoul_site_hatchery" model="osoul.occu.site">
+        <field name="name">Osoul Hatchery</field>
+    </record>
+
+    <record id="osoul_site_farms" model="osoul.occu.site">
+        <field name="name">Loading Farms</field>
+    </record>
+
+    <!-- TYPE OF WORK-->
+    <record id="osoul_work_type_excavation" model="osoul.occu.work.type">
+        <field name="name">Excavations Works</field>
+    </record>
+
+    <record id="osoul_work_type_closed_space" model="osoul.occu.work.type">
+        <field name="name">Closed Space</field>
+    </record>
+
+    <record id="osoul_work_type_high_place" model="osoul.occu.work.type">
+        <field name="name">High Place</field>
+    </record>
+
+    <record id="osoul_work_type_emission" model="osoul.occu.work.type">
+        <field name="name">Emission Places</field>
+    </record>
+
+    <record id="osoul_work_type_electrical" model="osoul.occu.work.type">
+        <field name="name">Electrical Works</field>
+    </record>
+
+    <record id="osoul_work_type_chemical" model="osoul.occu.work.type">
+        <field name="name">Chemical Works</field>
+    </record>
+
+    <record id="osoul_work_type_lifting" model="osoul.occu.work.type">
+        <field name="name">Lefting Works</field>
+    </record>
+
+    <record id="osoul_work_type_welding" model="osoul.occu.work.type">
+        <field name="name">Welding Works</field>
+    </record>
+
+    <record id="osoul_work_type_cutting" model="osoul.occu.work.type">
+        <field name="name">Cutting Works</field>
+    </record>
+
+    <!-- HAZARD AND RISK -->
+    <record id="osoul_hazard_suffocation" model="osoul.occu.hazard">
+        <field name="name">Suffocation</field>
+    </record>
+
+    <record id="osoul_hazard_cut" model="osoul.occu.hazard">
+        <field name="name">Cut</field>
+    </record>
+
+    <record id="osoul_hazard_falling" model="osoul.occu.hazard">
+        <field name="name">Falling From Hight</field>
+    </record>
+
+    <record id="osoul_hazard_electricsal" model="osoul.occu.hazard">
+        <field name="name">Electrical Hazzards</field>
+    </record>
+
+    <record id="osoul_hazard_sliding" model="osoul.occu.hazard">
+        <field name="name">Sliding</field>
+    </record>
+
+    <record id="osoul_hazard_emissions" model="osoul.occu.hazard">
+        <field name="name">Emissions</field>
+    </record>
+
+    <record id="osoul_hazard_noise" model="osoul.occu.hazard">
+        <field name="name">Noise</field>
+    </record>
+
+    <record id="osoul_hazard_fire" model="osoul.occu.hazard">
+        <field name="name">Fire Hazzards</field>
+    </record>
+
+    <record id="osoul_hazard_chemical" model="osoul.occu.hazard">
+        <field name="name">Chemical Hazzards</field>
+    </record>
+
+    <!-- actions TAKEN -->
+    <record id="osoul_measuers_isolation" model="osoul.occu.actions">
+        <field name="name">Isolating Energy Sources</field>
+    </record>
+
+    <record id="osoul_measuers_wear" model="osoul.occu.actions">
+        <field name="name">Wear Safety Gear</field>
+    </record>
+
+    <record id="osoul_measuers_supervision" model="osoul.occu.actions">
+        <field name="name">Permanent Supervision</field>
+    </record>
+
+    <record id="osoul_measuers_blanket" model="osoul.occu.actions">
+        <field name="name">Fire Blanket</field>
+    </record>
+
+    <record id="osoul_measuers_extinguisher" model="osoul.occu.actions">
+        <field name="name">Fire Extinguisher</field>
+    </record>
+
+    <record id="osoul_measuers_barriers" model="osoul.occu.actions">
+        <field name="name">Safety Barriers</field>
+    </record>
+
+    <record id="osoul_measuers_setting" model="osoul.occu.actions">
+        <field name="name">Setting Warning Signs</field>
+    </record>
+
+    <record id="osoul_measuers_gas" model="osoul.occu.actions">
+        <field name="name">Gas Test</field>
+    </record>
+
+    <!-- PERSONAL PROTECTIVE -->
+    <record id="osoul_protective_helmet" model="osoul.occu.personal.protective">
+        <field name="name">Helmet</field>
+    </record>
+
+    <record id="osoul_protective_safety" model="osoul.occu.personal.protective">
+        <field name="name">Safety Belt</field>
+    </record>
+
+    <record id="osoul_protective_glasses" model="osoul.occu.personal.protective">
+        <field name="name">Safety Glasses</field>
+    </record>
+
+    <record id="osoul_protective_mask" model="osoul.occu.personal.protective">
+        <field name="name">Mask</field>
+    </record>
+
+    <record id="osoul_protective_welding" model="osoul.occu.personal.protective">
+        <field name="name">Welding Mask</field>
+    </record>
+
+    <record id="osoul_protective_gloves" model="osoul.occu.personal.protective">
+        <field name="name">Work Gloves</field>
+    </record>
+
+    <record id="osoul_protective_ear" model="osoul.occu.personal.protective">
+        <field name="name">Ear Plugs</field>
+    </record>
+
+    <record id="osoul_protective_full" model="osoul.occu.personal.protective">
+        <field name="name">Full Face Mask</field>
+    </record>
+
+    <record id="osoul_protective_shoes" model="osoul.occu.personal.protective">
+        <field name="name">Safety Shoes</field>
+    </record>
+
+</odoo>

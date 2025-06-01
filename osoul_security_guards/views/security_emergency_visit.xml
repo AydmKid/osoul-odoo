@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.actions.act_window" id="security_emergency_visit_action">
+        <field name="name">Emergency Visits</field>
+        <field name="res_model">osoul.security.emergency.visit</field>
+        <field name="view_mode">tree,form</field>
+        <!-- <field name="context">{'search_default_visitor_name':1}</field> -->
+    </record>
+
+    <record id="security_emergency_visit_search" model="ir.ui.view">
+        <field name="name">security.emergency.visit.search</field>
+        <field name="model">osoul.security.emergency.visit</field>
+        <field name="arch" type="xml">
+                    <search string="">
+                        <field name="record_no"/>
+                        <field name="company_name"/>
+                        <field name="visitor_type_id"/>
+                    </search>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="security_emergency_visits_tree_view">
+        <field name="name">osoul.security.emergency.visit.tree</field>
+        <field name="model">osoul.security.emergency.visit</field>
+        <field name="arch" type="xml">
+            <tree default_order="create_date desc" decoration-warning="state == 'inside_osoul'" decoration-success="state == 'outside_osoul'" sample = "1">
+                <field name="create_date" width=".8"/>
+                <field name="create_uid"/>
+                <field name="record_no" readonly="1"/>
+                <field name="visitor_name"/>
+                <field name="position"/>
+                <field name="company_name"/>
+                <field name="visitor_type_id"/>
+                <field name="time_in" />
+                <field name="entry_gate_id" />
+                <field name="guard_in_entry_id" />
+                <field name="time_out" />
+                <field name="exit_gate_id" />
+                <field name="guard_in_exiting_id" />
+                <field name="time_spent_inside" />
+                <!-- <field name="purpose"/> -->
+                <field name="state" widget="badge" decoration-warning="state == 'inside_osoul'" decoration-success="state == 'outside_osoul'" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="security_emergency_visits_form_view">
+        <field name="name">osoul.security.emergency.visit.form</field>
+        <field name="model">osoul.security.emergency.visit</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state" widget="statusbar" />
+                    <button name="action_button_inside_osoul" type="object" states="draft" class="btn-warning" string="Enter" icon="fa-sign-in" confirm="Are You Sure" />
+                    <button name="action_button_outside_osoul" type="object" states="inside_osoul" class="btn-success" string="Exit" icon="fa-sign-out" confirm="Are You Sure"/>
+                </header>
+                <sheet>
+                    <div>
+                        <h4>
+                            <field name="record_no" readonly="1"/> 
+                        </h4>
+                        <h3>
+                            <field name="visitor_name" readonly="1"/>
+                        </h3>
+                    </div>
+                    <group>
+                        <group string="Visitor Information">
+                           <field name="visitor_name" placeholder="Choose Visitor Name" options="{'no_open': True, 'no_create': True}" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                           <field name="position" placeholder="Position Name" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                           <field name="company_name" placeholder="Company Name" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                           <field name="visitor_type_id" options="{'no_open': True, 'no_create': True}" placeholder="Choose Visit Type" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                          
+                        </group>
+                        <group  string="Extra Informations">
+                            <field name="purpose" attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
+                        </group>
+                        <group string="Entry and Timing Informations">
+                            <field name="entry_gate_id" widget="selection" placeholder="Choose Entry Gate"  options="{'no_open': True, 'no_create': True}" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                            <field name="time_in"/>
+                            <field name="guard_in_entry_id" readonly="1" options="{'no_open': True, 'no_create': True}"/>
+                        </group>
+                        <group string="Exit and Timing Informations">
+                            <field name="exit_gate_id" widget="selection" placeholder="Choose Exit Gate"  options="{'no_open': True, 'no_create': True}" attrs="{'required': [('state', 'in', ['inside_osoul'])], 'readonly': [('state', 'not in', ['inside_osoul'])]}"/>
+                            <field name="time_out"/>
+                            <field name="guard_in_exiting_id" readonly="1" options="{'no_open': True, 'no_create': True}"/>
+                            <field name="time_spent_inside"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="security_emergency_visit_menu" model="ir.ui.menu" >
+        <field name="name">Emergency Visit</field>
+        <field name="sequence" eval="1" />
+        <field name="action" ref="security_emergency_visit_action" />
+        <field name="parent_id" ref="menu_security_guards" />
+    </record>
+
+</odoo>

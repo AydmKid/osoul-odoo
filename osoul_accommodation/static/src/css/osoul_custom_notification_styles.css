@@ -1,0 +1,13 @@
+.custom-notification {
+    position: fixed;
+    top: 20px;  /* Adjust this value to position vertically */
+    left: 20px;  /* Adjust this value to position horizontally */
+    z-index: 1050;
+    /* Add any additional styles as needed */
+    background-color: #e0f7fa;
+    padding: 10px;
+    border: 1px solid #00796b;
+    border-radius: 5px;
+    color: #00796b;
+    font-weight: bold;
+}

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Window action for Ticket Job Orders -->
+    <record id="action_ticket_job_order" model="ir.actions.act_window">
+        <field name="name">Ticket Job Orders</field>
+        <field name="res_model">ticket.job.order</field>
+        <field name="view_mode">kanban,tree,form,calendar,activity</field> <!-- Add 'kanban' to view_mode -->
+    </record>
+
+    <!-- Calendar Search View -->
+    <record id="view_ticket_calendar_search" model="ir.ui.view">
+            <field name="name">ticket.job.order.calendar.search</field>
+            <field name="model">ticket.job.order</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="employee_id"/>
+                    <field name="assignees_name"/>
+                    <filter string="Current Employee" 
+                            name="current_employee_filter" 
+                            domain="[('employee_id', '=', employee_id)]"/>
+                </search>
+            </field>
+    </record>
+
+    <!-- Calendar View -->
+    <record id="view_ticket_calendar" model="ir.ui.view">
+            <field name="name">ticket.job.order.calendar</field>
+            <field name="model">ticket.job.order</field>
+            <field name="arch" type="xml">
+                <calendar string="Ticket Calendar" 
+                        date_start="ticket_date"
+                        color="state"
+                        mode="month"
+                        event_open_popup="true">
+                    <field name="responsible_unit"/>
+                    <field name="assignees_name"/>
+                    <field name="employee_id" options="{'no_open': True, 'no_create': True}"/>
+                    <field name="department" options="{'no_open': True, 'no_create': True}"/>
+                    <field name="description"/>
+                    <field name="issue_location_id"/>
+                    <field name="under_progress_date"/> 
+                    <field name="finish_date"/>
+                    <field name="state"/>
+                </calendar>
+            </field>
+    </record>
+
+    <!-- Calendar Action -->
+    <record id="action_ticket_calendar" model="ir.actions.act_window">
+            <field name="name">Ticket Calendar</field>
+            <field name="res_model">ticket.job.order</field>
+            <field name="view_mode">calendar</field>
+            <field name="view_id" ref="view_ticket_calendar"/>
+            <field name="search_view_id" ref="view_ticket_calendar_search"/>
+            <field name="context">{}</field>
+    </record>
+
+    <!-- Tree view for Ticket Job Orders -->
+    <record id="view_ticket_tree" model="ir.ui.view">
+        <field name="name">ticket.tree</field>
+        <field name="model">ticket.job.order</field>
+        <field name="arch" type="xml">
+            <tree default_order="create_date desc" sample="1" multi_edit="1"
+                    decoration-info="state == 'job_created'"
+                    decoration-muted="state == 'hold'"
+                    decoration-success="state == 'done'" 
+                    decoration-warning="state == 'under_progress'"
+                    decoration-danger="state == 'canceled'">
+                <field name="job_order_sequence" widget="badge"  decoration-info="state == 'job_created'"
+                    decoration-primary="state == 'hold'"
+                    decoration-success="state == 'done'" 
+                    decoration-warning="state == 'under_progress'"
+                    decoration-danger="state == 'canceled'" optional="show"/>
+                <field name="ticket_date" widget="badge"  decoration-info="state == 'job_created'"
+                    decoration-primary="state == 'hold'"
+                    decoration-success="state == 'done'" 
+                    decoration-warning="state == 'under_progress'"
+                    decoration-danger="state == 'canceled'" optional="show"/>
+                <field name="responsible_unit" widget="badge"  decoration-info="state == 'job_created'"
+                    decoration-primary="state == 'hold'"
+                    decoration-success="state == 'done'" 
+                    decoration-warning="state == 'under_progress'"
+                    decoration-danger="state == 'canceled'" optional="show"/>
+                <field name="finish_date" widget="badge"  decoration-info="state == 'job_created'"
+                    decoration-primary="state == 'hold'"
+                    decoration-success="state == 'done'" 
+                    decoration-warning="state == 'under_progress'"
+                    decoration-danger="state == 'canceled'" optional="show"/>
+                <field name="department" widget="badge"  decoration-info="state == 'job_created'"
+                    decoration-primary="state == 'hold'"
+                    decoration-success="state == 'done'" 
+                    decoration-warning="state == 'under_progress'"
+                    decoration-danger="state == 'canceled'" optional="show"/>
+                <field name="location" widget="badge"  decoration-info="state == 'job_created'"
+                    decoration-primary="state == 'hold'"
+                    decoration-success="state == 'done'" 
+                    decoration-warning="state == 'under_progress'"
+                    decoration-danger="state == 'canceled'" optional="show"/>
+                <field name="state" widget="badge"
+                    decoration-info="state == 'job_created'"
+                    decoration-primary="state == 'hold'"
+                    decoration-success="state == 'done'" 
+                    decoration-warning="state == 'under_progress'"
+                    decoration-danger="state == 'canceled'" optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form view for Ticket Job Orders -->
+    <record id="view_ticket_form" model="ir.ui.view">
+        <field name="name">ticket.form</field>
+        <field name="model">ticket.job.order</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state" widget="statusbar" readonly="1"/>
+                    <button name="action_create_job_order"
+                            type="object"
+                            string="Create Job Order"
+                            class="oe_highlight"
+                            attrs="{'invisible': [('state', '!=', 'draft')]}"
+                            confirm="Are you sure?"/>
+                    <button name="action_cancel"
+                            type="object"
+                            string="Cancel"
+                            class="btn btn-info"
+                            attrs="{'invisible': [('state', '!=', 'job_created')]}"
+                            confirm="Are you sure?"/>
+                    <button name="trigger_fcm_notification"
+                            type="object"
+                            string="Notification"
+                            groups="osoul_tickets.group_tickets_system_manager"
+                            class="btn btn-info"/>
+                     <button name="action_whatsapp"
+                            type="object"
+                            string="Whats"
+                            groups="osoul_tickets.group_tickets_system_manager"
+                            class="btn btn-info"/>
+                    
+                </header>
+                <sheet>
+                    <div class="ticket-form-header">
+                        <h4 class="ticket-form-title">
+                            <field name="job_order_sequence" readonly="1"/>
+                        </h4>
+                        <h3 class="ticket-form-title">
+                            <field name="responsible_unit" readonly="1"/>
+                        </h3>
+                        <div class="priority-selection">
+                            <field name="priority" widget="selection" style="width: 80px; height: auto; max-height: 40px;"
+                                options="{'no_open': True, 'no_create': True}" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        </div>
+                    </div>
+                    <div class="group-container">
+                        <group string="Location and Issue Info" class="o_group">
+                            <field name="location" widget="selection" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="responsible_unit" widget="selection" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="unit_head" options="{'no_open': True, 'no_create': True}" readonly="1"/>
+                            <field name="issue_location_id" options="{'no_open': True, 'no_create': True}"  attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="description" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        </group>
+                        <group string="Requester Info" class="o_group">
+                            <field name="employee_id" options="{'no_open': True, 'no_create': True}" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="employement_no" readonly="1"/>
+                            <field name="department" readonly="1"/>
+                            <field name="requester_no" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        </group>
+                        <group string="Timing Info" class="o_group">
+                            <field name="ticket_date" attrs="{'invisible': [('state', 'in', ['draft'])]}"/>
+                            <field name="under_progress_date" attrs="{'invisible': [('state', 'in', ['draft','job_created','canceled', 'hold'])]}"/>
+                            <field name="time_to_start" attrs="{'invisible': [('state', 'in', ['draft','job_created','canceled', 'hold'])]}"/>
+                            <field name="hold_date" attrs="{'invisible': [('state', 'in', ['draft','job_created','canceled', 'under_progress'])]}"/>
+                            <field name="finish_date" attrs="{'invisible': [('state', 'in', ['draft','job_created','canceled', 'hold','under_progress'])]}"/>
+                            <field name="time_difference" attrs="{'invisible': [('state', 'in', ['draft','job_created','canceled', 'hold','under_progress'])]}"/>
+                        </group>
+                    </div>                        
+                        <group string="Assignees Name" class="o_group assignees-tags">
+                            <field name="assignees_name" widget="many2many_tags" 
+                                attrs="{'readonly': [('state', 'in', ['canceled', 'done'])],'invisible': [('state', 'in', ['draft','job_created','canceled'])]}" 
+                                class="custom-assignees-tags" 
+                                readonly="1"/>
+                            <field name="hold_reason" attrs="{'readonly': [('state', '!=', 'hold')], 'required': [('state', '=', 'hold')], 'invisible': [('state', 'in', ['canceled', 'draft', 'job_created'])]}"/>  
+                            <field name="solution" attrs="{'invisible': [('state', 'in', ['draft','job_created','canceled', 'hold','under_progress'])]}" readonly="1"/>
+                        </group>
+                   
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Kanban view for Ticket Job Orders -->
+    <record id="view_ticket_kanban" model="ir.ui.view">
+        <field name="name">ticket.job.order.kanban</field>
+        <field name="model">ticket.job.order</field>
+        <field name="arch" type="xml">
+            <kanban default_order="create_date desc" sample="1" multi_edit="1">
+                <field name="responsible_unit"/>
+                <field name="state"/>
+                <field name="department"/>
+                <field name="ticket_date"/>
+                <field name="issue_location_id"/>
+                <field name="priority"/>
+                
+
+                <templates>
+                    <t t-name="kanban-box">
+                        <!-- Set the color based on the state -->
+                        <t t-set="kanban_color">
+                            <t t-if="record.state.raw_value == 'job_created'">oe_kanban_color_3</t>
+                            <t t-if="record.state.raw_value == 'under_progress'">oe_kanban_color_2</t>
+                            <t t-if="record.state.raw_value == 'canceled'">oe_kanban_color_1</t>
+                            <t t-if="record.state.raw_value == 'hold'">oe_kanban_color_4</t>
+                            <t t-if="record.state.raw_value == 'done'">oe_kanban_color_5</t>
+                        </t>
+
+                        <div t-attf-class="oe_kanban_card oe_kanban_global_click oe_kanban_color_#{kanban_color}">
+                            <!-- Header with Job Order Sequence and Priority -->
+                            <div class="oe_kanban_header" style="display: flex; justify-content: space-between; padding: 5px;">
+                                <div class="job-order-sequence" style="font-weight: bold;">
+                                    <field name="job_order_sequence"/>
+                                </div>
+                                <div class="priority-badge" style="font-weight: bold;">
+                                    <field name="priority" widget="priority" readonly="1"/>
+                                </div>
+                            </div>
+
+                            <!-- Centered details in a vertical layout -->
+                            <div class="oe_kanban_details" style="text-align: center; margin-top: 10px;">
+                                <div><field name="ticket_date" widget="badge"/></div>
+                                <div><field name="responsible_unit" widget="badge"/></div>
+                                <div><field name="issue_location_id" widget="badge"/></div>
+                                <div><field name="assignees_name" widget="many2many_tags"/></div>
+                                <div><field name="description" widget="badge" decoration-warning="1"/></div>
+                            </div>
+
+                            <!-- Status Badge below other details -->
+                            <div class="status-badge" style="text-align: center; margin-top: 8px;">
+                                <span t-att-class="'status-badge ' +
+                                                (record.state.raw_value == 'job_created' ? 'status-badge-job_created' : '') +
+                                                (record.state.raw_value == 'under_progress' ? 'status-badge-under_progress' : '') +
+                                                (record.state.raw_value == 'hold' ? 'status-badge-hold' : '') +
+                                                (record.state.raw_value == 'done' ? 'status-badge-done' : '') +
+                                                (record.state.raw_value == 'canceled' ? 'status-badge-canceled' : '')">
+                                    <field name="state"/>
+                                </span>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+
+    <record id="tikets_search_view" model="ir.ui.view">
+            <field name="name">ticket.job.order View</field>
+            <field name="model">ticket.job.order</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="job_order_sequence"/>
+                    <field name="location"/>
+                    <field name="employee_id"/>
+                    <field name="department"/>
+                    <field name="issue_location_id"/>
+                    <field name="priority"/>
+                    <field name="state"/>
+                    <!-- <field name="housing_date"/> -->
+                    <searchpanel> 
+                        <field name="issue_location_id" icon="fa-exclamation-triangle" enable_counters="1"/>
+                        <field name="responsible_unit" icon="fa-users" enable_counters="1"/>
+                        <field name="state" icon="fa-tasks" enable_counters="1"/>
+                        <field name="priority" icon="fa-star" enable_counters="1"/>
+                    </searchpanel>
+
+                </search>
+               
+            </field>
+    </record>
+
+
+    <!-- Menu item for Ticket Job Orders -->
+    <record id="menu_tickets" model="ir.ui.menu">
+        <field name="name">Ticket</field>
+        <field name="sequence" eval="4" />
+        <field name="action" ref="action_ticket_job_order" />
+        <field name="parent_id" ref="menu_osoul_tickets" />
+    </record>
+</odoo>

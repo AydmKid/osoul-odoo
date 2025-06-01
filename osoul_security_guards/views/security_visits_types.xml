@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.actions.act_window" id="security_visits_types_action">
+        <field name="name">Visits Types</field>
+        <field name="res_model">osoul.security.visits.types</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.ui.view" id="security_visits_types_tree_view">
+        <field name="name">osoul.security.visits.types.tree</field>
+        <field name="model">osoul.security.visits.types</field>
+        <field name="arch" type="xml">
+            <tree sample = "1">
+                <field name="visit_code" />
+                <field name="visit_type" decoration-bf="1" decoration-success="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="security_visits_types_form_view">
+        <field name="name">osoul.security.visits.types.form</field>
+        <field name="model">osoul.security.visits.types</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div>
+                        <h4>
+                            <field name="visit_code" readonly="1" />
+                        </h4>
+                        <h3>
+                            <field name="visit_type" readonly="1" decoration-bf="10" decoration-success="1" />
+                        </h3>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="visit_code" readonly="1" />
+                            <field name="visit_type" required="1" placeholder="Enter Visit Type Name" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="security_visits_types_menu" model="ir.ui.menu" >
+        <field name="name">Visits Types</field>
+        <field name="sequence" eval="1" />
+        <field name="action" ref="security_visits_types_action" />
+        <field name="parent_id" ref="security_guards_configurations_menu" />
+    </record>
+
+</odoo>

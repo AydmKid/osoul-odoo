@@ -1,0 +1,3 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_osoul_buffet_category_manager,osoul_buffet_category_manager,model_osoul_buffet_category,,1,1,1,1
+access_osoul_buffet_subcategory_manager,osoul_buffet_subcategory_manager,model_osoul_buffet_subcategory,,1,1,1,1

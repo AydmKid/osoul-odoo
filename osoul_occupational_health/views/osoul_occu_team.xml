@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View osoul.occu.team View Tree -->
+    <record id="view_osoul_occu_team_tree" model="ir.ui.view">
+        <field name="name">view.osoul.occu.team.tree</field>
+        <field name="model">osoul.occu.team</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name_id"/>
+                <field name="job_id"/>
+                <field name="join_date"/>
+                <field name="end_date"/>
+                <field name="total_days" widget="badge" class="badge-info"/>
+                <field name="end_date" widget="badge" class="badge-info"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View osoul.occu.team form -->
+    <record id="view_osoul_occu_team_form" model="ir.ui.view">
+        <field name="name">view.osoul.occu.team.form</field>
+        <field name="model">osoul.occu.team</field>
+        <field name="arch" type="xml">
+            <form string="Osoul Occu Team">
+                <header>
+                    <button name="action_active" type="object" string="Active" class="btn-primary" confirm="Are You Sure ?" attrs="{'invisible': [('state', '=', 'active')]}"/>
+                    <button name="action_inactive" type="object" string="Inactive" class="btn-danger" confirm="Are You Sure ?" attrs="{'invisible': [('state', '!=', 'active')]}"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div>
+                        <h3>
+                            <field name="name_id" readonly="1"/>
+                        </h3>
+                        <h3>
+                            <field name="job_id"/>
+                        </h3>
+                    </div>
+                    <group name="name" string="">
+                        <group name="name" string="Employee Information">
+                            <field name="name_id" placeholder="Select Employee Name" options="{'no_create': True, 'no_open': True}" 
+                                                  attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="phone"/>
+                            <field name="job_id" options="{'no_create': True, 'no_open': True}"/>
+                            <field name="join_date"/>
+                            <field name="end_date"/>
+                        </group>
+                        <group name="name" string="Joind and State">
+                            <field name="total_days" widget="badge" class="info-badge"/>
+                            <field name="total_checkups" widget="badge" class="info-badge"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- View osoul.occu.team search -->
+    <record id="view_osoul_occu_team_search" model="ir.ui.view">
+        <field name="name">view.osoul.occu.team.search</field>
+        <field name="model">osoul.occu.team</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="1" string="Group By">
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action osoul.occu.team -->
+    <record id="action_osoul_occu_team" model="ir.actions.act_window">
+        <field name="name">Osoul Occu Team</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">osoul.occu.team</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Osoul Occu Team.
+            </p>
+        </field>
+    </record>
+
+</odoo>

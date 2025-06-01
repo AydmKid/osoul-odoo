@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- Report Action -->
+        <report
+            id="osoul_fleet_vehicle_report"
+            model="osoul.fleet.vehicle"
+            string="Fleet Vehicle Report"
+            report_type="qweb-pdf"
+            name="osoul_fleet_management.report_fleet_vehicle"
+            file="osoul_fleet_management.report_fleet_vehicle"
+            print_report_name="(object.license_plate or 'Fleet_Vehicle_Report')"/>
+
+        <!-- Report Template -->
+        <template id="report_fleet_vehicle">
+            <t t-call="web.html_container">
+                <t t-call="web.internal_layout">
+                    <div class="page">
+                        <t t-foreach="docs" t-as="o">
+                            <h2 style="text-align:center; margin-bottom: 20px;">Fleet Vehicle Report</h2>
+
+                            <!-- General Information -->
+                            <div style="margin-bottom: 30px;">
+                                <h4 style="text-decoration: underline;">General Information</h4>
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td><strong>License Plate:</strong></td>
+                                        <td><t t-esc="o.license_plate"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Manufacture Year:</strong></td>
+                                        <td><t t-esc="o.manufacture_year"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Fuel Type:</strong></td>
+                                        <td><t t-esc="o.fuel_type"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Weight (kg):</strong></td>
+                                        <td><t t-esc="o.weight"/></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <!-- Categorization -->
+                            <div style="margin-bottom: 30px;">
+                                <h4 style="text-decoration: underline;">Categorization</h4>
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td><strong>Plate Type:</strong></td>
+                                        <td><t t-esc="o.plate_type.name"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Category:</strong></td>
+                                        <td><t t-esc="o.category.name"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Brand:</strong></td>
+                                        <td><t t-esc="o.brand.name"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Classification:</strong></td>
+                                        <td><t t-esc="o.classification.name"/></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <!-- Ownership and Location -->
+                            <div style="margin-bottom: 30px;">
+                                <h4 style="text-decoration: underline;">Ownership and Location</h4>
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td><strong>Owner:</strong></td>
+                                        <td><t t-esc="o.owner.name"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Work Location:</strong></td>
+                                        <td><t t-esc="o.work_location.name"/></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <!-- QR Code -->
+                            <div style="margin-bottom: 30px; text-align: center;">
+                                <h4 style="text-decoration: underline;">QR Code</h4>
+                                <t t-if="o.qr_code">
+                                    <img t-att-src="'/web/image?model=osoul.fleet.vehicle&amp;id=%d&amp;field=qr_code' % o.id" 
+                                         style="max-width:200px; max-height:200px; border: 1px solid #ddd; padding: 10px;"/>
+                                </t>
+                                <t t-else="">
+                                    <p style="color: red; font-style: italic;">No QR Code Available</p>
+                                </t>
+                            </div>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

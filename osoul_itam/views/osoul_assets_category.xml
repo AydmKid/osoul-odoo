@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View osoul.itam.assets.category View Tree -->
+    <record id="view_osoul_itam_assets_category_tree" model="ir.ui.view">
+        <field name="name">view.osoul.itam.assets.category.tree</field>
+        <field name="model">osoul.itam.assets.category</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="total_sub_category"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View osoul.itam.assets.category form -->
+    <record id="view_osoul_itam_assets_category_form" model="ir.ui.view">
+        <field name="name">view.osoul.itam.assets.category.form</field>
+        <field name="model">osoul.itam.assets.category</field>
+        <field name="arch" type="xml">
+            <form string="Osoul itam Assets Category">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly='1'/>
+                        </h1>
+                    </div>
+                    <group name="name" string="">
+                        <group name="name" string="">
+                            <field name="name" placeholder='Enter Category Name'/>
+                            <field name="total_sub_category"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- View osoul.itam.assets.category search -->
+    <record id="view_osoul_itam_assets_category_search" model="ir.ui.view">
+        <field name="name">view.osoul.itam.assets.category.search</field>
+        <field name="model">osoul.itam.assets.category</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="1" string="Group By">
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action osoul.itam.assets.category -->
+    <record id="action_osoul_itam_assets_category" model="ir.actions.act_window">
+        <field name="name">Assets Category</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">osoul.itam.assets.category</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Osoul itam Assets Category.
+            </p>
+        </field>
+    </record>
+
+</odoo>

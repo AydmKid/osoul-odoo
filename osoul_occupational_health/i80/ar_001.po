@@ -1,0 +1,1630 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* osoul_occupational_health
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-16 10:33+0000\n"
+"PO-Revision-Date: 2025-01-16 10:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields.selection,name:osoul_occupational_health.selection__osoul_occu_incident__incident_type__accident
+msgid "Accident"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__message_needaction
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__message_needaction
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__message_needaction
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__message_needaction
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__message_needaction
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__message_needaction
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__message_needaction
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__message_needaction
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__message_needaction
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__action_taken
+msgid "Action Taken"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_incident__corrective_actions
+msgid "Actions taken or planned to prevent recurrence."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__activity_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__activity_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__activity_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__activity_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__activity_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__activity_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__activity_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__activity_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__activity_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__activity_state
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__activity_state
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__activity_state
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__activity_state
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__activity_state
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__activity_state
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__activity_state
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__activity_state
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__activity_state
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_incident__attachment_ids
+msgid "Add any evidence or supporting documentation."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__agreement_date
+msgid "Agreement Date"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Agreement date"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_checkup__answer
+msgid "Answer"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__injuries
+msgid "Any Injuries?"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_incident__witness_ids
+msgid "Any employees who witnessed the incident."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields.selection,name:osoul_occupational_health.selection__osoul_occu_work_permit__state__approved
+msgid "Approved"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_form
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_violation_form
+msgid "Are you sure ?"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__attachment
+msgid "Attachment"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__attachment_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__attachment_ids
+msgid "Attachments"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: code:addons/osoul_occupational_health/models/osoul_occu_work_permit.py:0
+#, python-format
+msgid "Both 'Valid From' and 'Valid To' dates must be provided."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Calculated duration"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_checkup__check
+msgid "Check"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_incident__injuries
+msgid "Check if the incident resulted in any injuries."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__checkup_ids
+msgid "Checkup"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Checkup Before"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_violation_form
+msgid "Choose Employee"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_violation_form
+msgid "Choose Violation Type"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields.selection,name:osoul_occupational_health.selection__osoul_occu_incident__state__closed
+#: model:ir.model.fields.selection,name:osoul_occupational_health.selection__osoul_occu_work_permit__state__closed
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_form
+msgid "Closed"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_violation_form
+msgid "Confirm"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: code:addons/osoul_occupational_health/models/osoul_occu_violation.py:0
+#, python-format
+msgid "Confirmation date cannot be earlier than the violation date."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields.selection,name:osoul_occupational_health.selection__osoul_occu_violation__state__confirmed
+msgid "Confirmed"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__corrective_actions
+msgid "Corrective Actions"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__create_uid
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_checkup__create_uid
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__create_uid
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__create_uid
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__create_uid
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__create_uid
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__create_uid
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__create_uid
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__create_uid
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__create_uid
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__create_date
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_checkup__create_date
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__create_date
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__create_date
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__create_date
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__create_date
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__create_date
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__create_date
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__create_date
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__create_date
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__damages
+msgid "Damages"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__confirmed_date
+msgid "Date/Time"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__department_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__emp_department_id
+msgid "Department"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_incident__damages
+msgid "Describe property or equipment damages, if any."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_incident__description
+msgid "Describe the incident in detail."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_incident__injury_details
+msgid "Describe the injuries, if any."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_violation_type__impact
+msgid "Describe the potential or actual impact of this type of violation."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Describe the work for this permit"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__display_name
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_checkup__display_name
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__display_name
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__display_name
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__display_name
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__display_name
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__display_name
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__display_name
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__display_name
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__display_name
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields.selection,name:osoul_occupational_health.selection__osoul_occu_incident__state__draft
+#: model:ir.model.fields.selection,name:osoul_occupational_health.selection__osoul_occu_violation__state__draft
+#: model:ir.model.fields.selection,name:osoul_occupational_health.selection__osoul_occu_work_permit__state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_violation_form
+msgid "Employee Information"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__emp_name_id
+msgid "Employee Name"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__emp_phone
+msgid "Employee Phone"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_violation__signature
+msgid "Employee acknowledgment signature for receiving the violation ticket."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "End date and time"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_form
+msgid "Enter Corrective Actions"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_form
+msgid "Enter Damages Details"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_form
+msgid "Enter Incident Description"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_form
+msgid "Enter Incident Name"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_form
+msgid "Enter Injury Details"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_form
+msgid "Enter Root Cause"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_violation_form
+msgid "Enter Your Recommendation"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Enter the executor responsible for the work"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Enter the name of the permit"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Enter the permit name"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Enter the permit number"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: code:addons/osoul_occupational_health/models/osoul_occu_violation.py:0
+#: code:addons/osoul_occupational_health/models/osoul_occu_violation.py:0
+#, python-format
+msgid "Error while sending WhatsApp message to %s: %s"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: code:addons/osoul_occupational_health/models/osoul_occu_incident.py:0
+#, python-format
+msgid "Error while sending WhatsApp message to {}: {}"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_violation_form
+msgid "Evidence"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Excutor and Agreement"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__executor_signature
+msgid "Executor Signature"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_incident__root_cause
+msgid "Explain the root cause of the incident."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: code:addons/osoul_occupational_health/models/osoul_occu_violation.py:0
+#: code:addons/osoul_occupational_health/models/osoul_occu_violation.py:0
+#, python-format
+msgid "Failed to send WhatsApp message to %s. Response: %s"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: code:addons/osoul_occupational_health/models/osoul_occu_incident.py:0
+#, python-format
+msgid "Failed to send WhatsApp message to {}. Response: {}"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields.selection,name:osoul_occupational_health.selection__osoul_occu_incident__incident_type__fatality
+msgid "Fatality"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_actions__activity_type_icon
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_hazard__activity_type_icon
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_incident__activity_type_icon
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_location__activity_type_icon
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_personal_protective__activity_type_icon
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_site__activity_type_icon
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_violation__activity_type_icon
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_violation_type__activity_type_icon
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_work_permit__activity_type_icon
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_work_type__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Generated permit number"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_search
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_location_search
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_site_search
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_violation_search
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_violation_type_search
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_search
+msgid "Group By"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__has_message
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__has_message
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__has_message
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__has_message
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__has_message
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__has_message
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__has_message
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__has_message
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__has_message
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__name
+msgid "Hazard"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__hazard_risk
+msgid "Hazards & Risks"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_checkup__id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__id
+msgid "ID"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_actions__activity_exception_icon
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_hazard__activity_exception_icon
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_incident__activity_exception_icon
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_location__activity_exception_icon
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_personal_protective__activity_exception_icon
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_site__activity_exception_icon
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_violation__activity_exception_icon
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_violation_type__activity_exception_icon
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_work_permit__activity_exception_icon
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_work_type__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_actions__message_needaction
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_actions__message_unread
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_hazard__message_needaction
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_hazard__message_unread
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_incident__message_needaction
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_incident__message_unread
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_location__message_needaction
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_location__message_unread
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_personal_protective__message_needaction
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_personal_protective__message_unread
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_site__message_needaction
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_site__message_unread
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_violation__message_needaction
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_violation__message_unread
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_violation_type__message_needaction
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_violation_type__message_unread
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_work_permit__message_needaction
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_work_permit__message_unread
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_work_type__message_needaction
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_work_type__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_actions__message_has_error
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_hazard__message_has_error
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_incident__message_has_error
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_location__message_has_error
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_personal_protective__message_has_error
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_site__message_has_error
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_violation__message_has_error
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_violation_type__message_has_error
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_work_permit__message_has_error
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_work_type__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__incident_close_date
+msgid "Incident Closed Date"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__incident_date
+msgid "Incident Date/Time"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__description
+msgid "Incident Description"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_form
+msgid "Incident Information"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__incident_location_id
+msgid "Incident Location"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__name
+msgid "Incident Name"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__incident_no
+msgid "Incident No"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__incident_site_id
+msgid "Incident Site"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__incident_type
+msgid "Incident Type"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: code:addons/osoul_occupational_health/models/osoul_occu_incident.py:0
+#, python-format
+msgid "Incident date cannot be in the future."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: code:addons/osoul_occupational_health/models/osoul_occu_incident.py:0
+#, python-format
+msgid "Incident has been resolved with corrective actions."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: code:addons/osoul_occupational_health/models/osoul_occu_incident.py:0
+#, python-format
+msgid "Incident is closed. No further actions required."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: code:addons/osoul_occupational_health/models/osoul_occu_incident.py:0
+#, python-format
+msgid "Incident is now under investigation."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.ui.menu,name:osoul_occupational_health.osoul_occu_incident_menu
+msgid "Incidents"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__injury_people
+msgid "Injured People"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_form
+msgid "Injuries and Damages"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields.selection,name:osoul_occupational_health.selection__osoul_occu_incident__incident_type__injury
+msgid "Injury"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__injury_details
+msgid "Injury Details"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_form
+msgid "Investigation"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__investigator_duration
+msgid "Investigation Duration"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__Investigation_ends_date
+msgid "Investigation Ends"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__Investigation_start_date
+msgid "Investigation Start"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_form
+msgid "Investigation and Corrective"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__investigator_id
+msgid "Investigator"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__message_is_follower
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__message_is_follower
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__message_is_follower
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__message_is_follower
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__message_is_follower
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__message_is_follower
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__message_is_follower
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__message_is_follower
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__message_is_follower
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions____last_update
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_checkup____last_update
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard____last_update
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident____last_update
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location____last_update
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective____last_update
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site____last_update
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation____last_update
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type____last_update
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit____last_update
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__write_uid
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_checkup__write_uid
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__write_uid
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__write_uid
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__write_uid
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__write_uid
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__write_uid
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__write_uid
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__write_uid
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__write_uid
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__write_date
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_checkup__write_date
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__write_date
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__write_date
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__write_date
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__write_date
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__write_date
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__write_date
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__write_date
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__write_date
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_location_form
+msgid "Lcations and Sites"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__name
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__location_ids
+msgid "Location"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__manager_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__emp_manager
+msgid "Manager"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__manager_phone
+msgid "Manager Phone"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__message_has_error
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__message_has_error
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__message_has_error
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__message_has_error
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__message_has_error
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__message_has_error
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__message_has_error
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__message_has_error
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__message_has_error
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__message_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__message_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__message_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__message_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__message_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__message_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__message_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__message_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__message_ids
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_search
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_location_search
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_site_search
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_violation_type_search
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_search
+msgid "Name"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields.selection,name:osoul_occupational_health.selection__osoul_occu_incident__incident_type__near_miss
+msgid "Near Miss"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: code:addons/osoul_occupational_health/models/osoul_occu_incident.py:0
+#: code:addons/osoul_occupational_health/models/osoul_occu_violation.py:0
+#: code:addons/osoul_occupational_health/models/osoul_occu_work_permit.py:0
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__activity_summary
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__activity_summary
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__activity_summary
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__activity_summary
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__activity_summary
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__activity_summary
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__activity_summary
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__activity_summary
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__activity_summary
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__activity_type_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__activity_type_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__activity_type_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__activity_type_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__activity_type_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__activity_type_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__activity_type_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__activity_type_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__activity_type_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields.selection,name:osoul_occupational_health.selection__osoul_occu_checkup__answer__no
+msgid "No"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_actions__message_needaction_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_hazard__message_needaction_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_incident__message_needaction_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_location__message_needaction_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_personal_protective__message_needaction_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_site__message_needaction_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_violation__message_needaction_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_violation_type__message_needaction_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_work_permit__message_needaction_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_work_type__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_actions__message_has_error_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_hazard__message_has_error_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_incident__message_has_error_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_location__message_has_error_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_personal_protective__message_has_error_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_site__message_has_error_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_violation__message_has_error_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_violation_type__message_has_error_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_work_permit__message_has_error_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_work_type__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_actions__message_unread_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_hazard__message_unread_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_incident__message_unread_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_location__message_unread_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_personal_protective__message_unread_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_site__message_unread_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_violation__message_unread_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_violation_type__message_unread_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_work_permit__message_unread_counter
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_work_type__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.ui.menu,name:osoul_occupational_health.osoul_occ_root_menu
+msgid "Occupational Health"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model,name:osoul_occupational_health.model_osoul_occu_incident
+msgid "Occupational Health and Safety Incident"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model,name:osoul_occupational_health.model_osoul_occu_violation
+msgid "Occupational Violation Record"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model,name:osoul_occupational_health.model_osoul_occu_violation_type
+msgid "Occupational Violation Type"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model,name:osoul_occupational_health.model_osoul_occu_work_permit
+msgid "Occupational Work Permit"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.actions.act_window,name:osoul_occupational_health.action_osoul_occu_incident
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_form
+msgid "Osoul Occu Incident"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.actions.act_window,name:osoul_occupational_health.action_osoul_occu_location
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_location_form
+msgid "Osoul Occu Location"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.actions.act_window,name:osoul_occupational_health.action_osoul_occu_site
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_site_form
+msgid "Osoul Occu Site"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.actions.act_window,name:osoul_occupational_health.action_osoul_occu_violation
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_violation_form
+msgid "Osoul Occu Violation"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.actions.act_window,name:osoul_occupational_health.action_osoul_occu_violation_type
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_violation_type_form
+msgid "Osoul Occu Violation Type"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.actions.act_window,name:osoul_occupational_health.action_osoul_occu_work_permit
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Osoul Occu Work Permit"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__name
+msgid "PPE"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__permit_duration
+msgid "Permit Duration"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__permit_for
+msgid "Permit For"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Permit Information"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__permit_location
+msgid "Permit Location"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__name
+msgid "Permit Name"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_checkup__permit_no
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__permit_no
+msgid "Permit No"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__permit_site
+msgid "Permit Site"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Preparation"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields.selection,name:osoul_occupational_health.selection__osoul_occu_incident__incident_type__property_damage
+msgid "Property Damage"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__protective_equips
+msgid "Protective Equipments"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__recommendation
+msgid "Recommendation"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_violation_form
+msgid "Recommendation and Confirmation"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields.selection,name:osoul_occupational_health.selection__osoul_occu_work_permit__state__rejected
+msgid "Rejected"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__reported_by
+msgid "Reported By"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_form
+msgid "Reporter Information"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields.selection,name:osoul_occupational_health.selection__osoul_occu_incident__state__resolved
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_form
+msgid "Resolved"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__activity_user_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__activity_user_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__activity_user_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__activity_user_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__activity_user_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__activity_user_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__activity_user_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__activity_user_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__activity_user_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__root_cause
+msgid "Root Cause Analysis"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_form
+msgid "Select Incident Location"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_form
+msgid "Select Incident Site"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_form
+msgid "Select Incident Type"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_form
+msgid "Select Injured People"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_form
+msgid "Select Reporter Name"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_violation_form
+msgid "Select Violation Location"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_violation_form
+msgid "Select Violation Site"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_form
+msgid "Select Witness Name"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Select actions taken to mitigate risks"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Select applicable hazards and risks"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Select required protective equipment"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Select the department for this permit"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Select the permit location"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Select the permit site"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Select types of work"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__signature
+msgid "Signature"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__site_id
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__name
+msgid "Site"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_site_form
+msgid "Site and Locations"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_violation_type__name
+msgid "Specify the name of the violation type."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Start date and time"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__state
+msgid "State"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__state
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__state
+msgid "Status"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_actions__activity_state
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_hazard__activity_state
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_incident__activity_state
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_location__activity_state
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_personal_protective__activity_state
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_site__activity_state
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_violation__activity_state
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_violation_type__activity_state
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_work_permit__activity_state
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_work_type__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.ui.menu,name:osoul_occupational_health.osoul_occu_location
+msgid "Stie and Locations"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_incident_form
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_violation_form
+msgid "Submit"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields.selection,name:osoul_occupational_health.selection__osoul_occu_incident__state__submitted
+#: model:ir.model.fields.selection,name:osoul_occupational_health.selection__osoul_occu_violation__state__submitted
+#: model:ir.model.fields.selection,name:osoul_occupational_health.selection__osoul_occu_work_permit__state__submitted
+msgid "Submitted"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__name
+msgid "Taken Action"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: code:addons/osoul_occupational_health/models/osoul_occu_work_permit.py:0
+#, python-format
+msgid "The 'Valid To' date must be later than the 'Valid From' date."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_incident__incident_site_id
+msgid "The site where the incident occurred."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_incident__incident_location_id
+msgid "The specific location within the site."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.actions.act_window,help:osoul_occupational_health.action_osoul_occu_work_permit
+msgid "There are no examples. Click here to add a new Osoul Occu Work Permit."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.actions.act_window,help:osoul_occupational_health.action_osoul_occu_incident
+msgid "There is no examples click here to add new Osoul Occu Incident."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.actions.act_window,help:osoul_occupational_health.action_osoul_occu_location
+msgid "There is no examples click here to add new Osoul Occu Location."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.actions.act_window,help:osoul_occupational_health.action_osoul_occu_site
+msgid "There is no examples click here to add new Osoul Occu Site."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.actions.act_window,help:osoul_occupational_health.action_osoul_occu_violation_type
+msgid "There is no examples click here to add new Osoul Occu Violation Type."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.actions.act_window,help:osoul_occupational_health.action_osoul_occu_violation
+msgid "There is no examples click here to add new Osoul Occu Violation."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_actions__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_hazard__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_incident__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_location__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_personal_protective__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_site__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_violation__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_violation_type__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_work_permit__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_occupational_health.field_osoul_occu_work_type__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields.selection,name:osoul_occupational_health.selection__osoul_occu_incident__state__investigation
+msgid "Under Investigation"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__message_unread
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__message_unread
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__message_unread
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__message_unread
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__message_unread
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__message_unread
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__message_unread
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__message_unread
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__message_unread
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_actions__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_hazard__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_location__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_personal_protective__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_site__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__valid_from
+msgid "Valid From"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__valid_to
+msgid "Valid To"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Validation and Description"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__violation_date
+msgid "Violation Date/Time"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__violation_impact_summary
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__impact
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_violation_form
+msgid "Violation Impact"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_violation_form
+msgid "Violation Information"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__violation_issuer
+msgid "Violation Issuer"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__violation_location
+msgid "Violation Location"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__violation_no
+msgid "Violation No"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: code:addons/osoul_occupational_health/models/osoul_occu_violation.py:0
+#, python-format
+msgid "Violation Ticket has not been signed yet."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__violation_type
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation_type__name
+#: model:ir.ui.menu,name:osoul_occupational_health.osoul_occu_violation_type_menu
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_violation_type_form
+msgid "Violation Type"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: code:addons/osoul_occupational_health/models/osoul_occu_violation.py:0
+#, python-format
+msgid "Violation has been confirmed and acknowledged."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: code:addons/osoul_occupational_health/models/osoul_occu_violation.py:0
+#, python-format
+msgid "Violation has been submitted."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.ui.menu,name:osoul_occupational_health.osoul_occu_violation_menu
+msgid "Violations"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_violation__violation_site
+msgid "Violtion Site"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_incident__witness_ids
+msgid "Witnesses"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Work Agreement"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__work_agreement
+msgid "Work Approval"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__description
+msgid "Work Description"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__work_executor
+msgid "Work Executor"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_checkup__permit_id
+#: model:ir.ui.menu,name:osoul_occupational_health.osoul_occu_work_permit
+msgid "Work Permit"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model,name:osoul_occupational_health.model_osoul_occu_checkup
+msgid "Work Permit Quiz"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: code:addons/osoul_occupational_health/models/osoul_occu_work_permit.py:0
+#, python-format
+msgid "Work Permit has been approved."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: code:addons/osoul_occupational_health/models/osoul_occu_work_permit.py:0
+#, python-format
+msgid "Work Permit has been closed."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: code:addons/osoul_occupational_health/models/osoul_occu_work_permit.py:0
+#, python-format
+msgid "Work Permit has been rejected."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: code:addons/osoul_occupational_health/models/osoul_occu_work_permit.py:0
+#, python-format
+msgid "Work Permit has been submitted for approval."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_permit__work_type
+#: model:ir.model.fields,field_description:osoul_occupational_health.field_osoul_occu_work_type__name
+msgid "Work Type"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model_terms:ir.ui.view,arch_db:osoul_occupational_health.view_osoul_occu_work_permit_form
+msgid "Work agreement details will appear here"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model.fields.selection,name:osoul_occupational_health.selection__osoul_occu_checkup__answer__yes
+msgid "Yes"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: code:addons/osoul_occupational_health/models/osoul_occu_work_permit.py:0
+#, python-format
+msgid "You cannot delete checkups."
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model,name:osoul_occupational_health.model_osoul_occu_actions
+msgid "osoul.occu.actions"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model,name:osoul_occupational_health.model_osoul_occu_hazard
+msgid "osoul.occu.hazard"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model,name:osoul_occupational_health.model_osoul_occu_location
+msgid "osoul.occu.location"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model,name:osoul_occupational_health.model_osoul_occu_personal_protective
+msgid "osoul.occu.personal.protective"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model,name:osoul_occupational_health.model_osoul_occu_site
+msgid "osoul.occu.site"
+msgstr ""
+
+#. module: osoul_occupational_health
+#: model:ir.model,name:osoul_occupational_health.model_osoul_occu_work_type
+msgid "osoul.occu.work.type"
+msgstr ""

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>  
+        <report 
+            string="Daily Checkup FAP Report"
+            id="action_occu_report"
+            model="osoul.occu.daily.checkup"
+            report_type="qweb-pdf"
+            name="osoul_occupational_health.report_occu_qweb_form"
+            file="osoul_occupational_health.report_occu_qweb_form"
+        />
+        <template id="report_occu_qweb_form">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <style>
+                                .report-container {
+                                    width: 90%;
+                                    margin: auto;
+                                    padding: 20px;
+                                    font-family: "Arial", sans-serif;
+                                    color: #333;
+                                    background: #f4f7f9;
+                                    border-radius: 10px;
+                                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                                }
+                                .report-header {
+                                    text-align: center;
+                                    font-size: 28px;
+                                    font-weight: bold;
+                                    color: #003366;
+                                    text-transform: uppercase;
+                                    border-bottom: 3px solid #003366;
+                                    padding-bottom: 10px;
+                                    margin-bottom: 20px;
+                                }
+                                .report-info {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    font-size: 14px;
+                                    margin-bottom: 20px;
+                                    color: #555;
+                                    font-weight: bold;
+                                }
+                                .location-box {
+                                    background: #fff;
+                                    padding: 15px;
+                                    margin-bottom: 20px;
+                                    border-radius: 8px;
+                                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                                    border-left: 5px solid #003366;
+                                }
+                                .location-title {
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    color: #003366;
+                                    margin-bottom: 10px;
+                                }
+                                .report-table {
+                                    width: 100%;
+                                    border-collapse: collapse;
+                                    font-size: 14px;
+                                    background: #fff;
+                                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                                    border-radius: 8px;
+                                    overflow: hidden;
+                                }
+                                .report-table th {
+                                    background-color: #003366;
+                                    color: #fff;
+                                    font-weight: bold;
+                                    text-align: left;
+                                    padding: 12px;
+                                    border-bottom: 2px solid #fff;
+                                }
+                                .report-table td {
+                                    padding: 12px;
+                                    border-bottom: 1px solid #ddd;
+                                }
+                                .report-table tr:nth-child(even) {
+                                    background-color: #f9f9f9;
+                                }
+                                .fire-text {
+                                    color: #d32f2f;
+                                    font-weight: bold;
+                                }
+                                .trouble-text {
+                                    color: #ff9800;
+                                    font-weight: bold;
+                                }
+                                .report-table {
+                                    table-layout: fixed; /* Ensures consistent column widths */
+                                }
+                                
+                                .report-table th,
+                                .report-table td {
+                                    height: 45px; /* Fixed row height */
+                                    vertical-align: middle; /* Proper content alignment */
+                                    line-height: 1.4; /* Consistent line spacing */
+                                    overflow: hidden; /* Handle overflow content */
+                                    padding: 8px 12px; /* Standardized padding */
+                                }
+
+                                .emoji-wrapper {
+                                    display: inline-block;
+                                    width: 24px; /* Fixed emoji container width */
+                                    text-align: center;
+                                }
+
+                                .content-wrapper {
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    width: calc(100% - 30px); /* Account for emoji width */
+                                }
+                                .page {
+                                    margin: 20px 0;
+                                }
+
+                                .location-box {
+                                    page-break-inside: avoid;
+                                    break-inside: avoid-page;
+                                    margin-bottom: 15px;
+                                }
+
+                                @media print {
+                                    .report-container {
+                                        background: none;
+                                        box-shadow: none;
+                                        padding: 0;
+                                    }
+                                    .location-box {
+                                        border-left: 3px solid #003366;
+                                    }
+                                }
+                                 .safe-status {
+                                    color: #2196F3 !important;  /* Blue color */
+                                    font-weight: bold;
+                                }
+                                .alert-status {
+                                    color: #d32f2f !important;  /* Red color */
+                                    font-weight: bold;
+                                }
+                                                            .status-indicator {
+                                    display: inline-block;
+                                    width: 24px;
+                                    height: 24px;
+                                    border-radius: 50%;
+                                    text-align: center;
+                                    line-height: 24px;
+                                    margin-right: 8px;
+                                }
+                                .success-mark {
+                                    background-color: #4CAF50; /* Green */
+                                    color: white;
+                                }
+                                .warning-mark {
+                                    background-color: #d32f2f; /* Original blue */
+                                    color: white;
+                                }
+                            </style>
+
+                            <div class="report-container">
+                                <!-- Report Title -->
+                                <div class="report-header">🔥 Daily Checkup FAP Report</div>
+
+                                <!-- Report Information -->
+                                <div class="report-info">
+                                    <span>📅 Report Date: <t t-esc="o.date"/></span>
+                                    <span>👤 Reported By: <t t-esc="o.create_uid.name"/></span>
+                                </div>
+
+                                <!-- Location Details -->
+                                <t t-foreach="o.line_fap_ids" t-as="line">
+                                    <div class="location-box">
+                                        <div class="location-title">
+                                            <span t-att-class="'status-indicator success-mark' if line.fire == 0 and line.troubles == 0 else 'status-indicator warning-mark'">
+                                                <t t-if="line.fire == 0 and line.troubles == 0">✓</t>
+                                                <t t-else="">!</t>
+                                            </span>
+                                            Location: <t t-esc="line.location_id.name"/>
+                                        </div>
+                                        <table class="report-table">
+                                        <tr>
+                                            <th>Panel Name</th>
+                                            <td t-att-class="'safe-status' if line.fire == 0 and line.troubles == 0 else 'alert-status'">
+                                                🔥 <t t-esc="line.panel_id.name"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Fire Incidents</th>
+                                            <td t-att-class="'safe-status' if line.fire == 0 else 'alert-status'">
+                                                🔥 <t t-esc="line.fire"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Troubles</th>
+                                            <td t-att-class="'safe-status' if line.troubles == 0 else 'alert-status'">
+                                                ⚠️ <t t-esc="line.troubles"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Action Taken</th>
+                                            <td t-att-class="'safe-status' if line.fire == 0 and line.troubles == 0 else 'alert-status'">
+                                                ⚠️ <t t-esc="line.remarks"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

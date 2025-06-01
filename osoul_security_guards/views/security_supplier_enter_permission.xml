@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_security_supplier_enter_permission" model="ir.actions.act_window">
+        <field name="name">Supplier Enter Permission</field>
+        <field name="res_model">osoul.security.supplier.enter.permission</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="security_supplier_enter_permission_search" model="ir.ui.view">
+        <field name="name">security.supplier.enter.permission.search</field>
+        <field name="model">osoul.security.supplier.enter.permission</field>
+        <field name="arch" type="xml">
+                    <search string="">
+                        <field name="permission_code"/>
+                        <field name="identity_no"/>
+                        <field name="employment_no_id"/>
+                    </search>
+            </field>
+    </record>
+
+    <record id="tree_security_supplier_enter_permission" model="ir.ui.view">
+        <field name="name">Supplier Enter Permission</field>
+        <field name="model">osoul.security.supplier.enter.permission</field>
+        <field name="arch" type="xml">
+            <tree string="" default_order="create_date desc" decoration-info="state == 'draft'" 
+                                                             decoration-success="state == 'running'" 
+                                                             decoration-danger="state =='expired'" decoration-muted="state == 'cancel'" sample = "1">
+                
+                <field name="create_date" width=".8"/>
+                <field name="permission_code" width=".8"/>
+                <field name="create_uid"/>
+                <field name="employment_no_id" width=".8"/>
+                <field name="department_id" width=".8"/>
+                <field name="supplier_name" width=".8"/>
+                <field name="identity_no" width=".8"/>
+                <field name="mobile" width=".8"/>
+                <field name="supply_type_id" width=".8"/>
+                <field name="operation_type" width=".8"/>
+                <field name="enter_exit_permission" width=".8"/>
+                <!-- <field name="permit_issuer_id" width=".8"/> -->
+                <!-- <field name="gate_entry_record" width=".8"/> -->
+                <!-- <field name="progress" widget="progressbar" width=".8"/> -->
+                <field name="state" widget="badge" decoration-info="state == 'draft'" decoration-success="state == 'running'" 
+                decoration-danger="state =='expired'" decoration-muted="state == 'cancel'"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="form_security_supplier_enter_permission" model="ir.ui.view">
+        <field name="name">Supplier Enter Permission</field>
+        <field name="model">osoul.security.supplier.enter.permission</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <header>
+                    <field name="state" widget="statusbar"/>
+                    <button name="action_running_permission" confirm="Are You Sure" class="btn-success" type="object" states="draft" string="Running"/>
+                    
+                    <button name="action_allowed_exit" class="btn-success" type="object" string="Allowed Supplier Exit" icon="fa-sign-out" attrs="{'invisible': [('enter_exit_permission', '!=', 'exit_not_allowed')]}" confirm="You Will Approved Supplier Exiting From Osoul ?"/>
+                </header>
+                <sheet>
+                    <header>
+                     
+                    </header>
+                <div>
+                        <h4>
+                            <field name="permission_code" readonly="1"/>
+                        </h4>
+                        <h3>
+                            <field name="supplier_name" readonly="1" options="{'no_open': True}"/>
+                        </h3>
+                 </div>
+                    <group name="name" string="">
+                        <group name="name" string="Permit Information">
+                            <field name="create_date"/>
+                            <field name="permit_issuer_id" options="{'no_open': True}"/>
+                            <field name="employment_no_id"/>
+                            <field name="department_id" options="{'no_open': True, 'no_create': True}"/>
+                        </group>
+                        <group name="name" string="Supplier Information">
+                            <field name="supplier_name" options="{'no_open': True, 'no_create': True}" placeholder="Choose Supplier Name" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                            <field name="identity_no" options="{'no_open': True, 'no_create': True}"/>
+                            <field name="mobile" widget="phone"/>
+                            <field name="supply_type_id" options="{'no_open': True, 'no_create': True}" placeholder="Choose Supply Type" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                            <field name="operation_type" widget="selection" placeholder="Choose Operation Type" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                            <!-- <field name="gate_entry_record" /> -->
+                            <field name="note" placeholder="Add Extra Informations if Needed" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                            <field name="enter_exit_permission" readonly="1" widget="badge" decoration-success="enter_exit_permission == 'allowed_enter'" 
+                            decoration-danger="enter_exit_permission == 'exit_not_allowed'" decoration-warning="enter_exit_permission == 'allowed_exit'"
+                            decoration-info="enter_exit_permission == 'visitor_out'"/>  
+                        </group>
+                        <group name="name" string="Vehicle Information">
+                            <field name="vehicle_available" eval="True" attrs="{'required': [('vehicle_available', '=', True)], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                            <field name="plate_letters" placeholder="Enter Vehicle Plate Letters" attrs="{'invisible': [('vehicle_available', '=', False)], 'readonly': [('state', 'not in', ['draft'])],'required': [('vehicle_available', '=', True)]}"/>
+                            <field name="plate_no" placeholder="Enter Vehicle Plate No"  attrs="{'invisible': [('vehicle_available', '=', False)], 'readonly': [('state', 'not in', ['draft'])],'required': [('vehicle_available', '=', True)]}"/>    
+                        </group>
+                        <group name="name" string="">
+                           
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="menu_security_supplier_enter_permission" model="ir.ui.menu">
+        <field name="name">Supplier Enter Permission</field>
+        <field name="sequence" eval="0" />
+        <field name="action" ref="action_security_supplier_enter_permission" />
+        <field name="parent_id" ref="security_gate_permissions_menu"/>
+    </record>
+
+</odoo>

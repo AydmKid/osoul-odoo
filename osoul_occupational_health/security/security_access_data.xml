@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!--======================================================================================-->
+                                <!-- CATEGORY ACCESS RIGHTS -->
+        <!--======================================================================================-->
+
+        <record id="osoul_occupational_health_groups_category" model="ir.module.category">
+            <field name="name">Occupational HS</field>
+            <field name="description">Occupational Health and Safety Security Category</field>
+        </record>
+
+        <!--======================================================================================-->
+                                <!-- GROUP ACCESS RIGHTS -->
+        <!--======================================================================================-->
+        
+        <!-- ACCESS RIGHTS GROUPS -->
+        <record id="occupational_health_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="osoul_occupational_health_groups_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="comment">Comment</field>
+        </record>
+
+        <record id="occupational_health_supervisor" model="res.groups">
+            <field name="name">Supervisor</field>
+            <field name="category_id" ref="osoul_occupational_health_groups_category"/>
+            <field name="implied_ids" eval="[(4, ref('occupational_health_manager'))]"/>
+            <field name="comment">Comment</field>
+        </record>
+
+        <record id="occupational_health_technician" model="res.groups">
+            <field name="name">Technician</field>
+            <field name="category_id" ref="osoul_occupational_health_groups_category"/>
+            <field name="implied_ids" eval="[(4, ref('occupational_health_supervisor'))]"/>
+            <field name="comment">Comment</field>
+        </record>
+
+        <!--======================================================================================-->
+                                <!-- MODEL ACCESS RIGHTS -->
+        <!--======================================================================================-->
+
+        <record id="access_osoul_occu_violation_manager" model="ir.model.access">
+            <field name="name">Occupational Violation Manager</field>
+            <field name="model_id" ref="model_osoul_occu_violation"/>
+            <field name="group_id" ref="occupational_health_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+        
+        <record id="access_osoul_occu_violation_supervisor" model="ir.model.access">
+            <field name="name">Occupational Violation Supervisor</field>
+            <field name="model_id" ref="model_osoul_occu_violation"/>
+            <field name="group_id" ref="occupational_health_supervisor"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_violation_technician" model="ir.model.access">
+            <field name="name">Occupational Violation Technician</field>
+            <field name="model_id" ref="model_osoul_occu_violation"/>
+            <field name="group_id" ref="occupational_health_technician"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <!--  Generate all other records following the same pattern  -->
+        <record id="access_osoul_occu_violation_type_manager" model="ir.model.access">
+            <field name="name">Occupational Violation Type Manager</field>
+            <field name="model_id" ref="model_osoul_occu_violation_type"/>
+            <field name="group_id" ref="occupational_health_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_occu_violation_type_supervisor" model="ir.model.access">
+            <field name="name">Occupational Violation Type Supervisor</field>
+            <field name="model_id" ref="model_osoul_occu_violation_type"/>
+            <field name="group_id" ref="occupational_health_supervisor"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_violation_type_technician" model="ir.model.access">
+            <field name="name">Occupational Violation Type Technician</field>
+            <field name="model_id" ref="model_osoul_occu_violation_type"/>
+            <field name="group_id" ref="occupational_health_technician"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_site_manager" model="ir.model.access">
+            <field name="name">Occupational Site Manager</field>
+            <field name="model_id" ref="model_osoul_occu_site"/>
+            <field name="group_id" ref="occupational_health_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_occu_site_supervisor" model="ir.model.access">
+            <field name="name">Occupational Site Supervisor</field>
+            <field name="model_id" ref="model_osoul_occu_site"/>
+            <field name="group_id" ref="occupational_health_supervisor"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_site_technician" model="ir.model.access">
+            <field name="name">Occupational Site Technician</field>
+            <field name="model_id" ref="model_osoul_occu_site"/>
+            <field name="group_id" ref="occupational_health_technician"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_location_manager" model="ir.model.access">
+            <field name="name">Occupational Location Manager</field>
+            <field name="model_id" ref="model_osoul_occu_location"/>
+            <field name="group_id" ref="occupational_health_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_occu_location_supervisor" model="ir.model.access">
+            <field name="name">Occupational Location Supervisor</field>
+            <field name="model_id" ref="model_osoul_occu_location"/>
+            <field name="group_id" ref="occupational_health_supervisor"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_location_technician" model="ir.model.access">
+            <field name="name">Occupational Location Technician</field>
+            <field name="model_id" ref="model_osoul_occu_location"/>
+            <field name="group_id" ref="occupational_health_technician"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_incident_manager" model="ir.model.access">
+            <field name="name">Occupational Incident Manager</field>
+            <field name="model_id" ref="model_osoul_occu_incident"/>
+            <field name="group_id" ref="occupational_health_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_occu_incident_supervisor" model="ir.model.access">
+            <field name="name">Occupational Incident Supervisor</field>
+            <field name="model_id" ref="model_osoul_occu_incident"/>
+            <field name="group_id" ref="occupational_health_supervisor"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_incident_technician" model="ir.model.access">
+            <field name="name">Occupational Incident Technician</field>
+            <field name="model_id" ref="model_osoul_occu_incident"/>
+            <field name="group_id" ref="occupational_health_technician"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_work_permit_manager" model="ir.model.access">
+            <field name="name">Occupational Work Permit Manager</field>
+            <field name="model_id" ref="model_osoul_occu_work_permit"/>
+            <field name="group_id" ref="occupational_health_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_occu_work_permit_supervisor" model="ir.model.access">
+            <field name="name">Occupational Work Permit Supervisor</field>
+            <field name="model_id" ref="model_osoul_occu_work_permit"/>
+            <field name="group_id" ref="occupational_health_supervisor"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_work_permit_technician" model="ir.model.access">
+            <field name="name">Occupational Work Permit Technician</field>
+            <field name="model_id" ref="model_osoul_occu_work_permit"/>
+            <field name="group_id" ref="occupational_health_technician"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_work_type_manager" model="ir.model.access">
+            <field name="name">Occupational Work Type Manager</field>
+            <field name="model_id" ref="model_osoul_occu_work_type"/>
+            <field name="group_id" ref="occupational_health_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_occu_work_type_supervisor" model="ir.model.access">
+            <field name="name">Occupational Work Type Supervisor</field>
+            <field name="model_id" ref="model_osoul_occu_work_type"/>
+            <field name="group_id" ref="occupational_health_supervisor"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_work_type_technician" model="ir.model.access">
+            <field name="name">Occupational Work Type Technician</field>
+            <field name="model_id" ref="model_osoul_occu_work_type"/>
+            <field name="group_id" ref="occupational_health_technician"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_hazard_manager" model="ir.model.access">
+            <field name="name">Occupational Hazard Manager</field>
+            <field name="model_id" ref="model_osoul_occu_hazard"/>
+            <field name="group_id" ref="occupational_health_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_occu_hazard_supervisor" model="ir.model.access">
+            <field name="name">Occupational Hazard Supervisor</field>
+            <field name="model_id" ref="model_osoul_occu_hazard"/>
+            <field name="group_id" ref="occupational_health_supervisor"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_hazard_technician" model="ir.model.access">
+            <field name="name">Occupational Hazard Technician</field>
+            <field name="model_id" ref="model_osoul_occu_hazard"/>
+            <field name="group_id" ref="occupational_health_technician"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_actions_manager" model="ir.model.access">
+            <field name="name">Occupational Actions Manager</field>
+            <field name="model_id" ref="model_osoul_occu_actions"/>
+            <field name="group_id" ref="occupational_health_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_occu_actions_supervisor" model="ir.model.access">
+            <field name="name">Occupational Actions Supervisor</field>
+            <field name="model_id" ref="model_osoul_occu_actions"/>
+            <field name="group_id" ref="occupational_health_supervisor"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_actions_technician" model="ir.model.access">
+            <field name="name">Occupational Actions Technician</field>
+            <field name="model_id" ref="model_osoul_occu_actions"/>
+            <field name="group_id" ref="occupational_health_technician"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_personal_protective_manager" model="ir.model.access">
+            <field name="name">Occupational Personal Protective Manager</field>
+            <field name="model_id" ref="model_osoul_occu_personal_protective"/>
+            <field name="group_id" ref="occupational_health_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_occu_personal_protective_supervisor" model="ir.model.access">
+            <field name="name">Occupational Personal Protective Supervisor</field>
+            <field name="model_id" ref="model_osoul_occu_personal_protective"/>
+            <field name="group_id" ref="occupational_health_supervisor"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_personal_protective_technician" model="ir.model.access">
+            <field name="name">Occupational Personal Protective Technician</field>
+            <field name="model_id" ref="model_osoul_occu_personal_protective"/>
+            <field name="group_id" ref="occupational_health_technician"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_checkup_manager" model="ir.model.access">
+            <field name="name">Occupational Checkup Manager</field>
+            <field name="model_id" ref="model_osoul_occu_checkup"/>
+            <field name="group_id" ref="occupational_health_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_occu_checkup_supervisor" model="ir.model.access">
+            <field name="name">Occupational Checkup Supervisor</field>
+            <field name="model_id" ref="model_osoul_occu_checkup"/>
+            <field name="group_id" ref="occupational_health_supervisor"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_checkup_technician" model="ir.model.access">
+            <field name="name">Occupational Checkup Technician</field>
+            <field name="model_id" ref="model_osoul_occu_checkup"/>
+            <field name="group_id" ref="occupational_health_technician"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_fap_manager" model="ir.model.access">
+            <field name="name">Occupational FAP Manager</field>
+            <field name="model_id" ref="model_osoul_occu_fap"/>
+            <field name="group_id" ref="occupational_health_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_occu_fap_supervisor" model="ir.model.access">
+            <field name="name">Occupational FAP Supervisor</field>
+            <field name="model_id" ref="model_osoul_occu_fap"/>
+            <field name="group_id" ref="occupational_health_supervisor"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_fap_technician" model="ir.model.access">
+            <field name="name">Occupational FAP Technician</field>
+            <field name="model_id" ref="model_osoul_occu_fap"/>
+            <field name="group_id" ref="occupational_health_technician"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_fap_line_manager" model="ir.model.access">
+            <field name="name">Occupational FAP Line Manager</field>
+            <field name="model_id" ref="model_osoul_occu_fap_line"/>
+            <field name="group_id" ref="occupational_health_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_occu_fap_line_supervisor" model="ir.model.access">
+            <field name="name">Occupational FAP Line Supervisor</field>
+            <field name="model_id" ref="model_osoul_occu_fap_line"/>
+            <field name="group_id" ref="occupational_health_supervisor"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_occu_fap_line_technician" model="ir.model.access">
+            <field name="name">Occupational FAP Line Technician</field>
+            <field name="model_id" ref="model_osoul_occu_fap_line"/>
+            <field name="group_id" ref="occupational_health_technician"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+    </data>
+</odoo>

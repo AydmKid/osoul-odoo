@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_legal_affairs_contract" model="ir.actions.act_window">
+        <field name="name">Contracts</field>
+        <field name="res_model">osoul.legal.affairs.contract</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="tree_legal_affairs_contract" model="ir.ui.view">
+        <field name="name">Contracts</field>
+        <field name="model">osoul.legal.affairs.contract</field>
+        <field name="arch" type="xml">
+            <tree string="" decoration-warning="state == 'approvals'" decoration-success="state == 'running'" decoration-danger="state in ['expire','cancel']">
+                <field name="contract_no"/>
+                <field name="contract_subject"/>
+                <field name="first_party"/>
+                <field name="second_party_id"/>
+                <field name="contract_start_date"/>
+                <field name="contract_end_date"/>
+                <field name="contract_value" widget="monetary"/>
+                <field name="payment_method"/>
+                <field name="state" widget="badge" decoration-warning="state == 'approvals'" decoration-success="state == 'running'" decoration-danger="state in ['expire','cancel']"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="form_legal_affairs_contract" model="ir.ui.view">
+        <field name="name">Contracts</field>
+        <field name="model">osoul.legal.affairs.contract</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <header>
+                    <field name="state" widget="statusbar"/>
+                    <button name="action_button_approvals" class="btn-danger" states="draft" type="object" string="Approvals" icon="fa-sign-in" confirm="Are You Sure"/>
+                    <button name="action_contract_responsable_approval" class="oe_highlight" type="object" string="Contract Responsable Approval" confirm="Are You Sure ?" attrs="{'invisible': ['|', ('state', 'not in', ['approvals']), ('contract_responsable_approval', '=', 'approved')]}"/>
+                    <button name="action_legal_affairs_approval" class="oe_highlight" string="Legal Affairs Approval" type="object" confirm="Are You Sure ?" attrs="{'invisible': ['|', ('contract_responsable_approval', '!=', 'approved'), ('legal_affairs_approval', '=', 'approved')]}" groups="osoul_legal_affairs.group_legal_affairs_manager"/>
+                    <button name="action_vice_president_approval" class="oe_highlight" type="object" string="Vice President Approval" confirm="Are You Sure ?" attrs="{'invisible': ['|', ('legal_affairs_approval', '!=', 'approved'), ('vice_president_approval', '=', 'approved')]}" groups="osoul_legal_affairs.group_legal_affairs_vice_president"/>
+                    <button name="action_button_end" class="oe_highlight" states="running" type="object" string="Contract Expire" confirm="You are about to end this contract, Are you sure ?" groups="osoul_legal_affairs.group_legal_affairs_manager"/>
+                    <button name="action_button_cancel" class="oe_highlight" states="running" type="object" string="Contract Cancelation" confirm="You are about to cancel this contract, Are you sure ?" groups="osoul_legal_affairs.group_legal_affairs_manager"/>
+                </header>
+                <sheet>
+                    <div>
+                        <h4>
+                            <field name="record_no" readonly="1"/>
+                        </h4>
+                        <h3>
+                            <field name="contract_subject" readonly="1"/>
+                        </h3>
+                    </div>
+                    <group name="name" string="">
+                        <group name="name" string="Contract and Contractors Information">
+                            <field name="create_date"/>
+                            <field name="record_no" readonly="1"/>
+                            <field name="contract_no" placeholder="Enter Contract No" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                            <field name="contract_subject" placeholder="Enter Contract Subject" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                        </group>
+                        <group name="name" string="Contract Timing Details">
+                            <field name="first_party" placeholder="Choose First Party" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                            <field name="fp_representative_id" placeholder="Choose First Party Responsable" options="{'no_open': True, 'no_create': True}" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                            <field name="second_party_id" placeholder="Choose Contract Second Party" options="{'no_open': True, 'no_create': True}" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                            <field name="sp_representative_id" placeholder="Choose Second Party Responsable" options="{'no_open': True, 'no_create': True}" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                        </group>
+                        <group name="name" string="Contract Value and Payment Terms">
+                            <field name="contract_value" widget="monetary" placeholder="Enter Cotract Value" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                            <field name="contract_currency_id" placeholder="Choose Contract Currency" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                            <field name="contract_terms" placeholder="Enter Contract Terms" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                            <field name="payment_terms" placeholder="Choose Payment Terms" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                            <field name="payment_method" placeholder="Choose Payment Method" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                            <field name="contract_file" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                        </group>
+                        <group name="name" string="Contract Timing and Dates">
+                            <field name="open_cantract" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                            <field name="contract_signing_date" placeholder="Choose Signing Date" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                            <field name="contract_start_date" placeholder="Choose Contract Start Date" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                            <field name="contract_end_date" placeholder="Choose Contract End Date" attrs="{'required': [('open_cantract', '!=',True)], 'invisible': ['|', ('open_cantract', '=',True), ('state','not in',['draft'])]}"/>
+                            <field name="contract_end_alarm" placeholder="Choose Contract End Alarm Date" attrs="{'required': [('open_cantract', '!=',True)], 'invisible': ['|', ('open_cantract', '=',True), ('state','not in',['draft'])]}"/>
+                            <field name="contract_duration"/>
+                            <field name="duration_to_end" attrs="{'invisible': [('open_cantract', '=',True)]}"/>
+                            <field name="contract_manual_end_date"/>
+                            <field name="contract_cancel_date"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Approvals">
+                            <group name="name" string="">
+                                <group name="name" string="Authorized User">
+                                    <field name="contract_responsable_authorized_id" placeholder="Choose Authorized Contract Responsable" options="{'no_open': True, 'no_create': True}" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                                    <field name="legal_affairs_authorized_id" placeholder="Choose Authorized Legal Affairs Responsable" options="{'no_open': True, 'no_create': True}"/>
+                                    <field name="vice_president_authorized_id" placeholder="Choose Authorized Vice President" options="{'no_open': True, 'no_create': True}"/>
+                                </group>
+                                <group name="name" string="Approvals Status">
+                                    <field name="contract_responsable_approval" readonly="1" widget="badge" decoration-warning="contract_responsable_approval == 'waiting_for_approval'" decoration-success="contract_responsable_approval == 'approved'"/>
+                                    <field name="legal_affairs_approval" readonly="1" widget="badge" decoration-warning="legal_affairs_approval == 'waiting_for_approval'" decoration-success="legal_affairs_approval == 'approved'"/>
+                                    <field name="vice_president_approval" readonly="1" widget="badge" decoration-warning="vice_president_approval == 'waiting_for_approval'" decoration-success="vice_president_approval == 'approved'"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="menu_legal_affairs_contract" model="ir.ui.menu">
+        <field name="name">Contracts</field>
+        <field name="sequence" eval="0" />
+        <field name="action" ref="action_legal_affairs_contract" />
+        <field name="parent_id" ref="legal_affairs_root_menu" />
+    </record>
+
+</odoo>

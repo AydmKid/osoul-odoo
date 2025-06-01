@@ -1,0 +1,17 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+
+access_legal_affairs_contract_vice_president,Legal Affairs Contracts,model_osoul_legal_affairs_contract,group_legal_affairs_vice_president,1,0,0,0
+access_legal_affairs_contract_manager,Legal Affairs Contracts,model_osoul_legal_affairs_contract,group_legal_affairs_manager,1,1,1,1
+access_legal_affairs_contract_employee,Legal Affairs Contracts,model_osoul_legal_affairs_contract,group_legal_affairs_employee,1,0,1,0
+
+access_legal_affairs_court_case_manager,Legal Affairs Court Cases,model_legal_affairs_court_case,group_legal_affairs_manager,1,1,1,1
+access_legal_affairs_court_case_employee,Legal Affairs Court Cases,model_legal_affairs_court_case,group_legal_affairs_employee,1,0,1,0
+
+access_legal_affairs_court_session_manager,Legal Affairs Court Sessions,model_legal_affairs_court_session,group_legal_affairs_manager,1,1,1,1
+access_legal_affairs_court_session_employee,Legal Affairs Court Sessions,model_legal_affairs_court_session,group_legal_affairs_employee,1,1,1,0
+
+access_legal_affairs_promissory_note_manager,Legal Affairs Promissory Note,model_legal_affairs_promissory_note,group_legal_affairs_manager,1,1,1,1
+access_legal_affairs_promissory_note_employee,Legal Affairs Promissory Note,model_legal_affairs_promissory_note,group_legal_affairs_employee,1,0,1,0
+
+access_countries_cities_manager, Countries Cities,model_countries_cities,group_legal_affairs_manager,1,1,1,1
+access_countries_cities_employee, Countries Cities,model_countries_cities,group_legal_affairs_employee,1,0,0,0

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_transportation_vehicle" model="ir.actions.act_window">
+        <field name="name">Vehicles</field>
+        <field name="res_model">transportation.vehicle</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first vehicle
+            </p>
+        </field>
+    </record>
+
+    <record id="view_transportation_vehicle_form" model="ir.ui.view">
+        <field name="name">transportation.vehicle.form</field>
+        <field name="model">transportation.vehicle</field>
+        <field name="arch" type="xml">
+            <form string="Vehicle">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="license_plate"/>
+                            <field name="vehicle_type"/>
+                            <field name="driver_id"/>
+                        </group>
+                        <group>
+                            <field name="vehicle_image" widget="image"/>
+                        </group>
+                        <group>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_transportation_vehicle_tree" model="ir.ui.view">
+        <field name="name">transportation.vehicle.tree</field>
+        <field name="model">transportation.vehicle</field>
+        <field name="arch" type="xml">
+            <tree string="Vehicles">
+                <field name="name"/>
+                <field name="license_plate"/>
+                <field name="vehicle_type"/>
+                <field name="driver_id"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    
+
+    <record id="menu_transportation_vehicle" model="ir.ui.menu">
+        <field name="name">Vehicle</field>
+        <field name="sequence" eval="11" />
+        <field name="action" ref="action_transportation_vehicle" />
+        <field name="parent_id" ref="menu_root_osoul_transportation"/>
+    </record>
+</odoo>

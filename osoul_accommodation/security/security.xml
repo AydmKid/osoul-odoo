@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="module_category_accommodation" model="ir.module.category">
+        <field name="name">Accommodation</field>
+        <field name="description">Accommodation category</field>
+        <field name="sequence" eval="10" />
+    </record>
+
+    <record id="group_accommodation_system_manager" model="res.groups">
+        <field name="name">System Manager</field>
+        <field name="comment">System Manager Group</field>
+        <field name="category_id" ref="module_category_accommodation" />
+    </record>
+
+    <record id="group_accommodation_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="comment">Managers Group</field>
+        <field name="category_id" ref="module_category_accommodation"/>
+    </record>
+
+    <record id="group_accommodation_supervisor" model="res.groups">
+        <field name="name">Supervisor</field>
+        <field name="comment">Supervisors Group</field>
+        <field name="category_id" ref="module_category_accommodation"/>
+    </record>
+
+    <record id="group_accommodation_employees" model="res.groups">
+        <field name="name">Employee</field>
+        <field name="comment">Employees Group</field>
+        <field name="category_id" ref="module_category_accommodation"/>
+    </record>
+
+</odoo>

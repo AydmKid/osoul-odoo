@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <odoo>
+
+        <record model="ir.actions.act_window" id="security_emp_enter_exit_action">
+            <field name="name">Employee Enter and Exit</field>
+            <field name="res_model">osoul.security.emp.enter.exit</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{"search_default_create_date":0}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click the "Create" button to add new employee entry and exit records.
+                </p>
+            </field>
+        </record>
+
+        <!-- Calendar Search View -->
+        <record id="view_security_emp_calendar_search" model="ir.ui.view">
+            <field name="name">osoul.security.emp.enter.exit.calendar.search</field>
+            <field name="model">osoul.security.emp.enter.exit</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="emp_name_id"/>
+                    <field name="exit_reason"/>
+                    <filter string="Current Employee" 
+                            name="current_employee_filter" 
+                            domain="[('emp_name_id', '=', emp_name_id)]"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Calendar View -->
+        <record id="view_security_emp_calendar" model="ir.ui.view">
+            <field name="name">osoul.security.emp.enter.exit.calendar</field>
+            <field name="model">osoul.security.emp.enter.exit</field>
+            <field name="arch" type="xml">
+                <calendar string="Employee Absences Calendar" 
+                        date_start="time_in"
+                        color="state"
+                        mode="month"
+                        event_open_popup="true">
+                    <field name="emp_name_id" options="{'no_open': True, 'no_create': True}"/>
+                    <field name="time_in"/>
+                    <field name="time_out"/>
+                    <field name="guard_in_entry_id"/>
+                    <field name="time_spent_inside"/>
+                    <field name="exit_reason"/>
+                    <field name="state"/>
+                </calendar>
+            </field>
+        </record>
+
+        <!-- Calendar Action -->
+        <record id="action_security_emp_calendar" model="ir.actions.act_window">
+            <field name="name">Absences Calendar</field>
+            <field name="res_model">osoul.security.emp.enter.exit</field>
+            <field name="view_mode">calendar</field>
+            <field name="view_id" ref="view_security_emp_calendar"/>
+            <field name="search_view_id" ref="view_security_emp_calendar_search"/>
+            <field name="domain">
+                [('state', 'in', ['draft', 'outside_osoul'])]
+            </field>
+            <field name="context">{}</field>
+        </record>
+
+       
+
+
+        <record model="ir.ui.view" id="security_emp_enter_exit_tree_view">
+            <field name="name">Security Employee Entry and Exit Tree View</field>
+            <field name="model">osoul.security.emp.enter.exit</field>
+            <field name="arch" type="xml">
+                <tree default_order="state asc ,create_date desc" 
+                decoration-info="state == 'out_permission'"
+                decoration-warning="state == 'inside_osoul'" 
+                decoration-success="state == 'outside_osoul'" sample = "1">
+                    <!-- <field name="record_no"/> -->
+                    <field name="emp_id_no" optional="show"/>
+                    <field name="emp_name_id" optional="show"/>
+                    <field name="emp_housing" readonly="1" groups="osoul_security_guards.group_security_guards_system_manager" optional="show"/>
+                    <field name="emp_department_id" optional="show"/>
+                    <!-- <field name="country_id"/> -->
+                    <!-- <field name="emp_phone"/> -->
+                    <field name="time_in" widget="badge" optional="show"/>
+                    <field name="entry_gate_id" attrs="{'invisible': [('state', '=', 'draft')]}" optional="show"/>
+                    <field name="guard_in_entry_id" optional="show"/>
+                    <field name="entry_reason" attrs="{'invisible': [('state', '=', 'draft')]}" optional="show"/>
+                    <field name="time_out" widget="badge" optional="show"/>
+                    <field name="exit_gate_id" attrs="{'invisible': ['|', ('state', '=', 'inside_osoul'), ('state', '=', 'draft')]}" optional="show"/>
+                    <field name="guard_in_exiting_id" optional="show"/>
+                    <field name="exit_reason" attrs="{'invisible': ['|', ('state', '=', 'inside_osoul'), ('state', '=', 'draft')]}" optional="show"/>
+                    <field name="hours_on_permission" optional="show"/>
+                    <field name="time_spent_inside" attrs="{'invisible': ['|', ('state', '=', 'inside_osoul'), ('state', '=', 'draft')]}" optional="show"/>
+                    <!-- <field name="Expiration_of_working_hours" widget="badge" decoration-danger="Expiration_of_working_hours == 'incomplete'"
+                                                                             decoration-success="Expiration_of_working_hours == 'complete'" 
+                                                                             attrs="{'invisible': ['|', ('state', '=', 'inside_osoul'), ('state', '=', 'draft')]}"/> -->
+                    <field name="state" widget="badge" decoration-info="state == 'out_permission'" decoration-warning="state == 'inside_osoul'" decoration-success="state == 'outside_osoul'" optional="show"/>
+                    <!-- <button name="action_button_outside_osoul" type="object" 
+                     states="inside_osoul" class="btn-success" string="Exit" icon="fa-sign-out" confirm="Are You Sure" /> -->
+                    <!-- <field name="progress" widget="progressbar"/> -->
+                </tree>
+                
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="security_emp_enter_exit_form_view">
+            <field name="name">Security Employee Entry and Exit Form View</field>
+            <field name="model">osoul.security.emp.enter.exit</field>
+            <field name="arch" type="xml">
+                <form>
+
+                    <style>
+                            .oe_bg_image {
+                                background-image: url('/osoul_accommodation/static/src/img/aaa.jpg');
+                                background-size: 10% auto;
+                                background-position: right center;
+                                animation: moveBackground 90s linear infinite;
+                                     }
+
+                           @keyframes moveBackground {
+                                        0% {
+                                        background-position: right center;
+                                        }
+                                        100% {
+                                        background-position: left center;
+                                        }   
+                                    }
+
+                            .o_form_view .o_field_widget[name=""]::after {
+                                    content: "تعاونية عسير";
+                                    display: block;
+                                    text-align: center;
+                                    margin-bottom: 10px;
+                                    color: #FF0000; 
+                                    font-size: 16px;
+                                    font-weight: bold; 
+                                    text-transform: uppercase;
+                                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+                                    
+                                   animation: showHide 5s linear infinite;
+                                   opacity: 0; /* Initially hide the text */
+                                    }
+                               @keyframes showHide {
+                                            0%, 100% {
+                                                opacity: 0; /* Hide the text at the beginning and end of the animation */
+                                            }
+                                            50% {
+                                                opacity: 1; /* Show the text in the middle of the animation */
+                                            }
+                                }
+
+                                .custom-header {
+                                        color: #FF0000; 
+                                        text-align: center;
+                                        font-size: 18px;
+                                        font-weight: bold;
+                                        margin-bottom: 10px;
+                                }
+
+                                .oe_bgt_image {
+                                    background-image: url('/osoul_accommodation/static/src/img/asir.jpg');
+                                    background-size: 30%;
+                                    background-position: top;
+                                    background-repeat: no-repeat;
+                                    background-attachment: fixed;
+                                    }
+                                        
+
+                        </style>
+
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                        <button name="action_button_inside_osoul" type="object" states="draft" class="btn-warning" string="Enter" icon="fa-sign-in" confirm="Are You Sure" />
+                        <button name="action_button_outside_osoul" 
+                                type="object"
+                                states="inside_osoul" 
+                                class="btn-success" 
+                                string="Exit" 
+                                icon="fa-sign-out" 
+                                confirm="Are You Sure ?"
+                                attrs="{'invisible': ['|',('state', '=', 'outside_osoul'),('back_permission', '=', 'draft')]}"/>
+
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="%(action_security_emp_calendar)d"
+                                    type="action"
+                                    class="oe_stat_button"
+                                    icon="fa-calendar"
+                                    context="{'search_default_emp_name_id': emp_name_id}"
+                                    domain="[('emp_name_id', '=', emp_name_id)]"
+                                    groups="osoul_security_guards.group_security_guards_manager"
+                                    target="current">
+                                <field name="emp_name_id" widget="statinfo" string="Absence Calendar"/>
+                            </button>
+                            <button name="open_records" class="oe_stat_button" icon="fa-list" type="object">
+                                <field name="counts_atten" string="Records" widget="statinfo"/>
+                            </button>
+                            <button name="open_emp_record"  class="oe_stat_button" icon="fa-user" type="object" 
+                            groups="osoul_security_guards.group_security_guards_manager">
+                                <field name="emp_name_id" string="Records" widget="profile" readonly="1"/>
+                            </button>
+                        </div>
+                        <div>
+                            
+                               <field name="emp_housing" widget="profile" readonly="1" groups="osoul_security_guards.group_security_guards_system_manager"/>
+                           
+                        </div>
+                        
+                                                                    
+                        <div>
+                            <h4>
+                                <field name="record_no" readonly="1"/>
+                                
+                            </h4>
+                            <h3>
+                                <field name="emp_name_id" readonly="1" />
+                            </h3>
+                            <!-- <h2>
+                                <field name="emp_housing" widget="profile" readonly="1" groups="osoul_security_guards.group_security_guards_system_manager"/>
+                            </h2> -->
+                        </div>
+                        <group>
+                            <group name="name" string="Employee Informations">
+                                <!-- <field name="record_no" readonly="1" /> -->
+                                <field name="emp_name_id"  placeholder="Choose Employee Name" options="{'no_open': True, 'no_create': True}" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}" />
+                                <field name="emp_id_no" options="{'no_open': True, 'no_create': True}"/>
+                                <field name="emp_department_id" options="{'no_open':True}"/>
+                                <field name="time_spent_inside"/> 
+                                <!-- <field name="emp_phone" options="{'no_open': True, 'no_create': True}" /> -->
+                            </group>
+                            <!-- <group name="name" string="">
+                               <field name="event_date" widget="calendar" default="False"/>
+                            </group> -->
+
+                             <group name="name" string="Exit and Timing Informations">
+                                <field name="time_out"/>
+                                <field name="guard_in_exiting_id" readonly="1" options="{'no_open': True, 'no_create': True}"/> 
+                                <field name="exit_reason" widget="selection" options="{'no_open': True, 'no_create': True}" attrs="{'invisible': [('state', '=', 'draft')], 'required':[('state','=','inside_osoul')], 'readonly':[('state','=','outside_osoul')]}"/>
+                                
+                                <field name="hours_on_permission" widget="selection" 
+                                            attrs="{'invisible': [('exit_reason', '!=', 'permission')], 
+                                            'required': [('exit_reason', '=', 'permission')], 
+                                            'readonly': [('state', '=', 'outside_osoul')]}"/>
+                                <field name="permission_time" attrs="{'invisible': [('exit_reason', '!=', 'permission')]}"/>
+                                <field name="back_permission" widget="selection"
+                                            attrs="{'invisible': [('exit_reason', '!=', 'permission')],  
+                                            'readonly': [('state', '=', 'outside_osoul')]}"/>
+                                <field name="back_permission_time" attrs="{'invisible': [('exit_reason', '!=', 'permission')]}"/>
+                                <field name="time_difference" attrs="{'invisible': ['|',('back_permission', '=', 'draft'),('state', '=', 'inside')]}"/>
+                            </group>
+
+                            <group name="name" string="Entry and Timing Informations">
+                                <field name="time_in"/>
+                                <field name="entry_reason" widget="selection" placeholder="Choose Entry Gate" options="{'no_open': True, 'no_create': True}" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}" />
+                                <field name="guard_in_entry_id" readonly="1" options="{'no_open': True, 'no_create': True}"/>
+                            </group>
+                            <group name="name" string="Gates Informations">
+                                <field name="entry_gate_id" widget="selection" placeholder="Choose Entry Gate" options="{'no_open': True, 'no_create': True}" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}" />
+                                <field name="exit_gate_id" widget="selection" placeholder="Choose Exit Gate" options="{'no_open': True, 'no_create': True}" attrs="{'invisible': [('state', '=', 'draft')], 'required':[('state','=','inside_osoul')], 'readonly':[('state','=','outside_osoul')]}"/>
+                            </group>
+                           
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" />
+                        <field name="activity_ids" />
+                        <field name="message_ids" />
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="security_emp_enter_exit_search_view" model="ir.ui.view">
+            <field name="name">Security Employee Entry and Exit Search View</field>
+            <field name="model">osoul.security.emp.enter.exit</field>
+            <field name="arch" type="xml">
+                <search >
+                    <field name="emp_name_id"/>
+                    <field name="emp_id_no"/>
+                    <field name="create_date" context="{'group_by': 'create_date:day', 'default_group': True}"/>
+                    <field name="emp_housing"/>
+                    <field name="country_id"/>
+                    <field name="emp_department_id"/>
+                        <group expand="0" string="Group By">
+                             <!-- <filter string="create_date" name="Group" context="{'group_by': 'create_date:day', 'default_group': True}"/> -->
+                        </group>
+                </search>
+                <!-- <searchpanel> 
+                    <field name="emp_department_id" icon="fa-users" enable_counters="1"/>
+                </searchpanel> -->
+            </field>
+        </record>
+
+        <record id="securitry_emp_enter_exit_menu" model="ir.ui.menu">
+            <field name="name">Enter and Exit</field>
+            <field name="sequence" eval="0" />
+            <field name="action" ref="security_emp_enter_exit_action" />
+            <field name="parent_id" ref="security_guards_emp_enter_exit_menu" />
+        </record>
+
+    </odoo>

@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_accommodation_building_dash" model="ir.actions.act_window">
+        <field name="name">Location</field>
+        <field name="res_model">osoul.accommodation.building.dash</field>
+        <field name="view_mode">kanban,form,tree</field>
+    </record>
+
+    <record id="building_model_name_dash_kanban" model="ir.ui.view">
+        <field name="name">Location</field>
+        <field name="model">osoul.accommodation.building.dash</field>
+        <field name="arch" type="xml">
+            
+            <kanban>
+            <!-- default_group_by="location" -->
+                        <style>
+                            .oe_bgf_image {
+                                background-image: url('/osoul_accommodation/static/src/img/os.jpg');
+                                background-size: 10% auto;
+                                background-position: center center;
+                                     }
+                        </style>
+                <!-- <field name="building_no" width=".8"/> -->
+                <!-- <field name="building_name" width=".8"/> -->
+                <field name="location" width=".8"/>
+                <field name="total_all_residents" width=".8"/>
+                <field name="total_beds_per_location" width=".8"/>
+                <field name="housing_percentage" widget="progressbar"/>
+                <field name="max_energy" widget="progressbar"/>
+                <field name="state" widget="badge"/> 
+                <field name="image"/> 
+                <field name="is_tenant"/> 
+                <field name="housing_percentage"/> 
+                <field name="standard_bed_per_location"/> 
+                <field name="empty_rooms_per_location"/>
+                <field name="total_rooms_per_location"/>
+                <field name="total_buildings_per_location"/>
+                <field name="id"/>
+                 <templates>
+                         
+
+                        
+
+                        <t t-name="kanban-box" >
+                            <div t-attf-class="oe_kanban_global_click" style="display: flex; align-items: center; animation: fade-in 0.3s;">
+                               <div class="o_kanban_image" style="width: 40%; height: auto; max-width: 90px; max-height: 90px;">
+                                    <img class="o_kanban_image_inner_pic_kanban"  t-att-src="kanban_image('osoul.accommodation.building.dash','image',record.id.raw_value)"
+                                    />
+                                </div>
+                                <div style="text-align: right;">
+                                 <div class="row" style="margin-bottom: 15px; text-align: left; width: 100%;">
+                                    <div class="col-12 custom-text" style="font-size: 15px; color: skyblue; filter: brightness(70%) contrast(150%); text-align: right;">
+                                        <strong><field name="location"/></strong>
+                                    </div>
+                                    <div class="col-6"  style="font-size: 30px; color: skyblue; filter: brightness(70%) contrast(150%)">
+                                    </div>
+                                </div>
+                                <!-- <div style="margin-top: 5px; color: skyblue; filter: brightness(70%) contrast(150%)">
+                                    <strong>Total Building  :</strong> <span t-esc="record.total_buildings_per_location.value" style="font-weight: bold;"></span>
+                                </div> -->
+                                <div style="margin-top: 5px; color: skyblue; filter: brightness(70%) contrast(150%)">
+                                    <strong>Total Rooms :</strong> <span t-esc="record.total_rooms_per_location.value" style="font-weight: bold;"></span>
+                                </div>
+                                <div style="margin-top: 5px; color: skyblue; filter: brightness(70%) contrast(150%)"> 
+                                    <strong>Standard Location :</strong> <span t-esc="record.standard_bed_per_location.value" style="font-weight: bold;"></span>
+                                </div>
+                                <div style="margin-top: 5px; color: skyblue; filter: brightness(70%) contrast(150%)"> 
+                                    <strong>Total All Residents :</strong> <span t-esc="record.total_all_residents.value" style="font-weight: bold;"></span>
+                                </div>
+                                <div t-if="record.is_tenant.raw_value" 
+                                    style="margin-top: 5px; color: skyblue; filter: brightness(70%) contrast(150%);">
+                                    <strong>Is Tenant:</strong> <span style="font-weight: bold;">Yes</span>
+                                </div>
+                                <div t-if="!record.is_tenant.raw_value" 
+                                    style="margin-top: 5px; color: skyblue; filter: brightness(70%) contrast(150%);">
+                                    <strong>Is Tenant:</strong> <span style="font-weight: bold;">Property</span>
+                                </div>
+                                <div style="margin-top: 5px; color: skyblue; filter: brightness(70%) contrast(150%)"> 
+                                    <strong></strong> <span t-esc="record.housing_percentage.value" style="font-weight: bold;"></span>%
+                                </div>
+                                <!-- <div style="margin-top: 5px; color: skyblue; filter: brightness(70%) contrast(150%)"> 
+                                    <strong>Total Beds :</strong> <span t-esc="record.total_beds_per_location.value" style="font-weight: bold;"></span>
+                                </div>
+                                 <div style="margin-top: 5px; color: skyblue; filter: brightness(70%) contrast(150%)">
+                                    <strong>Empty Rooms :</strong> <span t-esc="record.empty_rooms_per_location.value" style="font-weight: bold;"></span>
+                                </div> -->
+                            
+                                </div>
+                            </div>
+                        </t>
+                        
+                    </templates>
+            </kanban>
+        </field>
+    </record>
+
+        
+
+    <record id="tree_accommodation_building_dash" model="ir.ui.view">
+        <field name="name">Location</field>
+        <field name="model">osoul.accommodation.building.dash</field>
+        <field name="arch" type="xml">
+            <tree string="" decoration-info="housing_percentage &lt; 90"
+                            decoration-warning="housing_percentage &gt;= 90 and housing_percentage &lt; 98"
+                            decoration-danger="housing_percentage &gt;= 95">
+                <!-- <field name="building_no" width=".8"/> -->
+                <field name="location" widget="badge" decoration-info="housing_percentage &lt; 90"
+                            decoration-warning="housing_percentage &gt;= 90 and housing_percentage &lt; 98"
+                            decoration-danger="housing_percentage &gt;= 95"/>
+                <field name="total_buildings_per_location" widget="badge" decoration-info="housing_percentage &lt; 90"
+                            decoration-warning="housing_percentage &gt;= 90 and housing_percentage &lt; 98"
+                            decoration-danger="housing_percentage &gt;= 95"/>
+                <field name="total_all_residents" widget="badge" decoration-info="housing_percentage &lt; 90"
+                            decoration-warning="housing_percentage &gt;= 90 and housing_percentage &lt; 98"
+                            decoration-danger="housing_percentage &gt;= 95"/>
+                <!-- <field name="total_beds"/> -->
+                <field name="total_beds_per_location" widget="badge" decoration-info="housing_percentage &lt; 90"
+                            decoration-warning="housing_percentage &gt;= 90 and housing_percentage &lt; 98"
+                            decoration-danger="housing_percentage &gt;= 95"/>
+                <field name="housing_percentage" widget="progressbar" decoration-info="housing_percentage &lt; 90"
+                            decoration-warning="housing_percentage &gt;= 90 and housing_percentage &lt; 98"
+                            decoration-danger="housing_percentage &gt;= 95"/>
+                <field name="state" widget="badge" decoration-info="housing_percentage &lt; 90"
+                            decoration-warning="housing_percentage &gt;= 90 and housing_percentage &lt; 98"
+                            decoration-danger="housing_percentage &gt;= 95" />  
+                <!-- <field name="max_energy" widget="badge" decoration-info="housing_percentage &lt; 90"
+                            decoration-warning="housing_percentage &gt;= 90 and housing_percentage &lt; 98"
+                            decoration-danger="housing_percentage &gt;= 95"/> -->
+            </tree>
+        </field>
+    </record>
+
+    
+
+    <record id="form_accommodation_building_dash" model="ir.ui.view">
+        <field name="name">Location</field>
+        <field name="model">osoul.accommodation.building.dash</field>
+        <field name="arch" type="xml">
+            <form string="">
+                    
+                        <style>
+                            .oe_bg_image {
+                                background-image: url('/osoul_accommodation/static/src/img/aaa.jpg');
+                                background-size: 10% auto;
+                                background-position: right center;
+                                animation: moveBackground 90s linear infinite;
+                                     }
+
+                           @keyframes moveBackground {
+                                        0% {
+                                        background-position: right center;
+                                        }
+                                        100% {
+                                        background-position: left center;
+                                        }   
+                                    }
+
+                            .o_form_view .o_field_widget[name=""]::after {
+                                    content: "تعاونية عسير";
+                                    display: block;
+                                    text-align: center;
+                                    margin-bottom: 10px;
+                                    color: #FF0000; 
+                                    font-size: 16px;
+                                    font-weight: bold; 
+                                    text-transform: uppercase;
+                                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+                                    
+                                   animation: showHide 5s linear infinite;
+                                   opacity: 0; /* Initially hide the text */
+                                    }
+                               @keyframes showHide {
+                                            0%, 100% {
+                                                opacity: 0; /* Hide the text at the beginning and end of the animation */
+                                            }
+                                            50% {
+                                                opacity: 1; /* Show the text in the middle of the animation */
+                                            }
+                                }
+
+                                .custom-header {
+                                        color: #FF0000; 
+                                        text-align: center;
+                                        font-size: 18px;
+                                        font-weight: bold;
+                                        margin-bottom: 10px;
+                                }
+
+                                .oe_bgt_image {
+                                    background-image: url('/osoul_accommodation/static/src/img/asir.jpg');
+                                    background-size: 30%;
+                                    background-position: top;
+                                    background-repeat: no-repeat;
+                                    background-attachment: fixed;
+                                    }
+                                
+                                .custom-text {
+                                        font-weight: bold;
+                                        color: blue;
+                                    }
+
+                        </style>
+
+
+                   
+                           
+                    
+                    
+                <sheet>
+                        
+                       <div class="oe_button_box" name="button_box" style="">
+                            <div style="display: flex; align-items: center; justify-content: space-between;">
+                                <field name="image" widget="image" style="width: 50px; height: 50px; text-align: center;"/>
+                                <button name="open_contract" string="Contracts"
+                                        style="width: 200%; height: auto; max-width: 120px; max-height: 100px; margin-left: 10px;"
+                                        attrs="{'invisible': [('is_tenant', '=', False)]}"
+                                        class="oe_stat_button" type="object">
+                                    <img src="/osoul_accommodation/static/src/img/contract.png" 
+                                        style="width: 60%; height: auto; max-width: 50px; max-height: 50px;" readonly="1"/>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div style="text-align: center;">
+                            <!-- <img src="/osoul_accommodation/static/src/img/eye.png" 
+                                        class="o_kanban_image_inner_pic" 
+                                        groups="osoul_accommodation.group_accommodation_manager"
+                                        style="width: 20%; height: auto; max-width: 50px; max-height: 50px;"  readonly="1"/> -->
+                        </div>
+                      
+                    
+                        <div>
+                        
+                             <h4>
+                                <field name="location" readonly="1"/>
+                                 
+                            </h4>
+
+                            <h3>
+                                
+                                <field name="housing_percentage" widget="progressbar" readonly="1"/>
+                            </h3>
+                        </div>
+                           
+                       <group name="name" string="">
+                            <group name="name" string="Location Details"> 
+                                <field name="location" placeholder="Choose Building Location" required="1"/> 
+                                <field name="city_name" required="1"/>
+                                <field name="total_buildings_per_location" decoration-success="1" widget="badge"/>
+                                <field name="total_all_residents" decoration-success="1" widget="badge"/>
+                            </group>
+                             <group name="name" string="Rooms Details"> 
+                                <field name="total_rooms_per_location" decoration-success="1" widget="badge"/> 
+                                <field name="host_rooms_per_location"  decoration-success="1" widget="badge"/>
+                                <field name="empty_rooms_per_location" decoration-success="1" widget="badge"/> 
+                            </group>
+                            <group name="name" string="Beds Details"> 
+                                <field name="standard_bed_per_location" decoration-success="1" widget="badge"/> 
+                                <field name="total_beds_per_location" decoration-success="1" widget="badge"/> 
+                                <field name="host_beds_per_location"  decoration-success="1" widget="badge"/>
+                                <field name="empty_beds_per_location" decoration-success="1" widget="badge"/>
+                            </group>
+                            <group name="name" string="Tenant Details"> 
+                                <field name="is_tenant" eval="True" attrs="{'required': [('is_tenant', '=', True)]}"/>
+                                
+                            </group>
+                      </group>
+                                            
+                </sheet>
+
+                    
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids"         widget="mail_activity"/>
+                    <field name="message_ids"          widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="building_graph" model="ir.ui.view">
+        <field name="name">Buildings.graph</field>
+        <field name="model">osoul.accommodation.building.dash</field>
+        <field name="arch" type="xml">
+            <graph string="Building Graph" type="line">
+                <field name="building_name" />
+                
+                <field name="totals_floors" type="measure"/>
+            </graph>
+        </field> 
+    </record>
+
+    <record id="building_graph_pie" model="ir.ui.view">
+        <field name="name">Buildings.graph</field>
+        <field name="model">osoul.accommodation.building.dash</field>
+        <field name="arch" type="xml">
+            <graph string="Building Graph" type="pie"> 
+                <field name="location"/>
+                <field name="building_name"/>
+                <field name="totals_rooms"/>
+                <field name="totals_rooms" type="measure" />
+            </graph>
+        </field> 
+    </record>
+
+    <record id="building_graph_bar" model="ir.ui.view">
+        <field name="name">Buildings.graph</field>
+        <field name="model">osoul.accommodation.building.dash</field>
+        <field name="arch" type="xml">
+            <graph string="Building Graph" type="bar">
+                <field name="location"/>
+                <field name="building_name"/>
+                <!-- <field name="totals_beds"/> -->
+                <field name="totals_residents"/>
+                <field name="totals_residents" type="measure"/>
+            </graph>
+        </field> 
+    </record>
+
+
+    <record id="building_graph_pie_dash" model="ir.ui.view">
+        <field name="name">Buildings.graph</field>
+        <field name="model">osoul.accommodation.building.dash</field>
+        <field name="arch" type="xml">
+            <graph string="Building Graph" type="pie">
+                 <field name="location"/>
+                 <field name="total_all_residents"/>
+            </graph>
+        </field> 
+    </record>
+
+   
+
+    
+    <record id="menu_accommodation_building_dash" model="ir.ui.menu">
+        <field name="name">Location</field>
+        <field name="sequence" eval="4" />
+        <field name="action" ref="action_accommodation_building_dash" />
+        <field name="parent_id" ref="menu_accommodation_configuration" />
+        <field name="web_icon_data" type="base64" file="osoul_accommodation/static/src/img/eyr.png" />
+    </record>
+
+</odoo>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View osoul.water.contract View Tree -->
+    <record id="view_osoul_water_contract_tree" model="ir.ui.view">
+        <field name="name">view.osoul.water.contract.tree</field>
+        <field name="model">osoul.water.contract</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence"/>
+                <field name="name"/>
+                <field name="first_party"/>
+                <field name="second_party"/>
+                <field name="contract_start"/>
+                <field name="contract_ends"/>
+                <field name="remaining_days"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View osoul.water.contract form -->
+    <record id="view_osoul_water_contract_form" model="ir.ui.view">
+        <field name="name">view.osoul.water.contract.form</field>
+        <field name="model">osoul.water.contract</field>
+        <field name="arch" type="xml">
+            <form string="Osoul Water Contract">
+                <header>
+                    <field name="state" widget="statusbar" readonly="1"/>
+                </header>
+                <sheet>
+                    <div>
+                        <h3>
+                            <field name="sequence"/>
+                        </h3>
+                        <h3>
+                            <field name="name" readonly="1"/>
+                        </h3>
+                    </div>
+                    <group name="name" string="">
+                        <group name="name" string="Parties Information">
+                            <field name="sequence"/>
+                            <field name="name" placeholder="Enter Contract Name"/>
+                            <field name="first_party" placeholder="Select First Patry"/>
+                            <field name="second_party" placeholder="Select Second Party" options="{'no_create': True, 'no_open': True}"/>
+                        </group>
+                        <group name="name" string="Timing Details">
+                            <field name="contract_start" placeholder="Select Start Contract Date"/>
+                            <field name="contract_ends" placeholder="Select End Contract Date"/>
+                            <field name="remaining_days"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- View osoul.water.contract search -->
+    <record id="view_osoul_water_contract_search" model="ir.ui.view">
+        <field name="name">view.osoul.water.contract.search</field>
+        <field name="model">osoul.water.contract</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="1" string="Group By">
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action osoul.water.contract -->
+    <record id="action_osoul_water_contract" model="ir.actions.act_window">
+        <field name="name">Osoul Water Contract</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">osoul.water.contract</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Osoul Water Contract.
+            </p>
+        </field>
+    </record>
+
+</odoo>

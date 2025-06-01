@@ -1,0 +1,7 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_osoul_occu_daily_checkup_manager,osoul_occu_daily_checkup_manager,model_osoul_occu_daily_checkup,,1,1,1,1
+access_osoul_occu_pump_manager,osoul_occu_pump_manager,model_osoul_occu_pump,,1,1,1,1
+access_osoul_occu_pump_line_manager,osoul_occu_pump_line_manager,model_osoul_occu_pump_line,,1,1,1,1
+access_osoul_occu_tank_manager,osoul_occu_tank_manager,model_osoul_occu_tank,,1,1,1,1
+access_osoul_occu_tank_line_manager,osoul_occu_tank_line_manager,model_osoul_occu_tank_line,,1,1,1,1
+access_osoul_occu_team_manager,osoul_occu_team_manager,model_osoul_occu_team,,1,1,1,1

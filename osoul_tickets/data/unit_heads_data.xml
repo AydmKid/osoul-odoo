@@ -1,0 +1,39 @@
+<!-- data/unit_heads_data.xml -->
+<odoo>
+    <!-- Define Unit Heads -->
+    <record id="user_network_head" model="res.users">
+        <field name="name">هاشم عبدالرحيم</field>
+        <field name="login">network.head</field>
+        <field name="groups_id" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+    
+    <record id="user_systems_head" model="res.users">
+        <field name="name">براسانت كادونجال</field>
+        <field name="login">systems.head</field>
+        <field name="groups_id" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+    
+    <record id="user_technical_support_head" model="res.users">
+        <field name="name">سعيد سالم</field>
+        <field name="login">technical_support.head</field>
+        <field name="groups_id" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+    
+    <record id="user_developers_head" model="res.users">
+        <field name="name">علي يوسف</field>
+        <field name="login">developers.head</field>
+        <field name="groups_id" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="user_operation_head" model="res.users">
+        <field name="name">يحى نجم</field>
+        <field name="login">operation.head</field>
+        <field name="groups_id" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="user_information_head" model="res.users">
+        <field name="name">أحمد التجاني</field>
+        <field name="login">information.head</field>
+        <field name="groups_id" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+</odoo>

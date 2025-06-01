@@ -1,0 +1,126 @@
+/* ================================================================================================= */
+/* MAIN HEADER AND GENERAL STYLING */
+/* ================================================================================================= */
+.o_main_navbar {
+    background-color: #3e92cc; /* Dark blue for the main navbar */
+}
+
+/* Style the main header row of tables */
+.o_list_view .table th {
+    background-color: #3e92cc !important; /* Dark blue for table header */
+    color: white !important; /* White text for contrast */
+}
+
+/* Optional: Hover Effects for the Header Row */
+.o_list_view .table th:hover {
+    background-color: #2e7ba6 !important; /* Slightly darker blue on hover */
+}
+
+/* Customize sheet appearance: Rounded edges and border */
+.o_form_sheet {
+    background-color: #eaeff1 !important; /* Light gray background for the sheet */
+    border-radius: 2px !important; /* Rounded edges */
+    border: 1px solid #3e92cc !important; /* Blue border around the sheet */
+    padding: 20px !important; /* Add padding inside the sheet */
+    overflow: hidden !important; /* Ensure content respects the rounded edges */
+    box-shadow: 0px 4px 20px #3e92cc !important; /* Subtle shadow for depth */
+}
+
+/* Customize the control panel */
+.o_control_panel {
+    background-color: #eaeff1; /* Light gray for the control panel */
+}
+
+.breadcrumb {
+    background-color: #eaeff1; /* Match the control panel background */
+}
+
+/* ================================================================================================= */
+/* FONT CONTROL */
+/* ================================================================================================= */
+/* Apply a custom font to the entire application */
+// body, .o_form_view, .o_list_view, .o_main_navbar, .o_control_panel, .o_content {
+//     font-family: 'Liberation Sans Narrow', sans-serif !important; /* Replace 'Roboto' with your desired font */
+// }
+
+// /* Font styling for headers */
+// h1, h2, h3, h4, h5, h6 {
+//     font-family: 'Liberation Sans Narrow', sans-serif !important;
+//     font-weight: 600; /* Adjust the weight for headers */
+// }
+
+// /* Font styling for buttons */
+// button, .btn {
+//     font-family: 'Liberation Sans Narrow', sans-serif !important;
+//     font-size: 16px !important; /* Ensure font size consistency */
+// }
+
+// /* Font styling for forms and inputs */
+// .o_form_sheet input, 
+// .o_form_sheet select, 
+// .o_form_sheet textarea {
+//     font-family: 'Liberation Sans Narrow', sans-serif !important;
+//     font-size: 16px !important;
+// }
+
+/* ================================================================================================= */
+/* BUTTONS */
+/* ================================================================================================= */
+/* Primary button styling */
+.btn-primary {
+    background-color: #3e92cc !important; /* Blue background */
+    color: white !important; /* White text */
+    border: 1px solid #3e92cc !important; /* Matching border */
+    font-size: 14px !important;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out !important; /* Smooth hover animation */
+}
+
+/* Hover effect for buttons */
+.btn-primary:hover {
+    background-color: #abcde6 !important; /* Lighter blue-gray on hover */
+    color: #f0f0f0 !important; /* Slightly lighter text color */
+    border-color: #55677a !important; /* Darker border on hover */
+    transform: translateY(-2px) !important; /* Lift button slightly on hover */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2) !important; /* Subtle shadow */
+}
+
+.os_stat_button {
+    background-color: #3e92cc;
+    color: #ffffff;
+    
+}
+
+/* ================================================================================================= */
+/* CUSTOM WIDGET BADGE*/
+/* ================================================================================================= */
+.info-badge {
+    background-color: #8dd7f5 !important;
+    color: #000 !important;
+    border-radius: 5px;
+    padding: 5px 30px;
+    border-color: #000;
+}
+
+.info-money {
+    background-color: #e45757 !important;
+    color: #ffffff !important;
+    border-radius: 5px;
+    padding: 5px 30px;
+    border-color: #000;
+}
+/* ================================================================================================= */
+/* OPTIONAL ANIMATIONS */
+/* ================================================================================================= */
+/* Add a shake effect to invalid fields */
+.o_field_widget.o_field_invalid {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}

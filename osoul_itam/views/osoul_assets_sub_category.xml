@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View osoul.itam.assets.sub.category View Tree -->
+    <record id="view_osoul_itam_assets_sub_category_tree" model="ir.ui.view">
+        <field name="name">view.osoul.itam.assets.sub.category.tree</field>
+        <field name="model">osoul.itam.assets.sub.category</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="category_id"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View osoul.itam.assets.sub.category form -->
+    <record id="view_osoul_itam_assets_sub_category_form" model="ir.ui.view">
+        <field name="name">view.osoul.itam.assets.sub.category.form</field>
+        <field name="model">osoul.itam.assets.sub.category</field>
+        <field name="arch" type="xml">
+            <form string="Osoul itam Assets Sub Category">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly='1'/>
+                        </h1>
+                    </div>
+                    <group name="name" string="">
+                        <group name="name" string="Sub Category Information">
+                            <field name="category_id" placeholder="Choose Main Category" options="{'no_create': True, 'no_open': True}"/>
+                            <field name="name" placeholder="Enter Sub Category Name"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- View osoul.itam.assets.sub.category search -->
+    <record id="view_osoul_itam_assets_sub_category_search" model="ir.ui.view">
+        <field name="name">view.osoul.itam.assets.sub.category.search</field>
+        <field name="model">osoul.itam.assets.sub.category</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="1" string="Group By">
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action osoul.itam.assets.sub.category -->
+    <record id="action_osoul_itam_assets_sub_category" model="ir.actions.act_window">
+        <field name="name">Assets Sub Category</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">osoul.itam.assets.sub.category</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Osoul itam Assets Sub Category.
+            </p>
+        </field>
+    </record>
+
+</odoo>

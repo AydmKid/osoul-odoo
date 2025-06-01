@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- XML Action -->
+    <record id="action_legal_affairs_court_case" model="ir.actions.act_window">
+        <field name="name">Court Sessions</field>
+        <field name="res_model">legal.affairs.court.case</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+            Click to create a new court session.
+            </p>
+        </field>
+    </record>
+
+    <!-- XML Tree View -->
+    <record id="view_legal_affairs_court_session_tree" model="ir.ui.view">
+        <field name="name">Court Session Tree</field>
+        <field name="model">legal.affairs.court.case</field>
+        <field name="arch" type="xml">
+            <tree string="Court Sessions" decoration-success="state == 'open'" decoration-danger="state == 'closed'">
+                <field name="record_no"/>
+                <field name="case_no"/>
+                <field name="case_subject"/>
+                <field name="case_open_date"/>
+                <field name="position_in_case"/>
+                <field name="plaintiff_name_id"/>
+                <field name="respondent_name_id"/>
+                <field name="state" widget="badge" decoration-success="state == 'open'" decoration-danger="state == 'closed'"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- XML Form View -->
+    <record id="view_legal_affairs_court_session_form" model="ir.ui.view">
+        <field name="name">Court Session Form</field>
+        <field name="model">legal.affairs.court.case</field>
+        <field name="arch" type="xml">
+            <form string="Court Session">
+                <header>
+                    <field name="state" widget="statusbar"/>
+                    <button name="action_case_open" states="draft" class="oe_highlight" type="object" string="Case Open" confirm="You are about to open the case, Are you sure ?"/>
+                    <button name="action_case_close" states="open" class="oe_highlight" type="object" string="Case Close" confirm="You are about to close the case, Are you sure ?"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_open_sessions" type="object" class="oe_stat_button" icon="fa-folder-open">
+                            <field name="open_sessions_counter" string="Open Sessions" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <div>
+                        <h4>
+                            <field name="case_no" readonly="1"/>
+                        </h4>
+                        <h3>
+                            <field name="case_subject" readonly="1"/>
+                        </h3>
+                    </div>
+                    <group>
+                        <group name="name" string="">
+                            <field name="create_date"/>
+                            <field name="record_no" readonly="1"/>
+                            <field name="la_employee_id" options="{'no_open': True, 'no_create': True}"/>
+                            <!-- <field name="open_sessions_counter"/> -->
+                        </group>
+                        <group name="name" string="">
+                            <field name="case_no" placeholder="Enter Case No" attrs="{'required':[('state','in',['draft'])], 'readonly':[('state','not in',['draft'])]}"/>
+                            <field name="case_subject" placeholder="Enter Case Subjet" attrs="{'required':[('state','in',['draft'])], 'readonly':[('state','not in',['draft'])]}"/>
+                            <field name="case_open_date" placeholder="Choose Case Open Date" attrs="{'required':[('state','in',['draft'])], 'readonly':[('state','not in',['draft'])]}"/>
+                            <field name="position_in_case" placeholder="Choose Position" attrs="{'required':[('state','in',['draft'])], 'readonly':[('state','not in',['draft'])]}"/>
+                            <field name="plaintiff_name_id" placeholder="Choose Plaintiff Name" options="{'no_open': True, 'no_create': True}" attrs="{'required':[('position_in_case','=','respondent')], 'invisible':[('position_in_case','!=','respondent')], 'readonly':[('state','not in',['draft'])]}"/>
+                            <field name="respondent_name_id" placeholder="Choose Respondent Name" options="{'no_open': True, 'no_create': True}" attrs="{'required':[('position_in_case','=','plaintiff')], 'invisible':[('position_in_case','!=','plaintiff')], 'readonly':[('state','not in',['draft'])]}"/>
+                        </group>
+                        <group name="name" string="">
+
+                        </group>
+                        <group name="name" string="">
+
+                        </group>
+
+                    </group>
+                    <notebook>
+                        <page string="Next Court Sessions">
+                            <field name="session_ids" mode="tree" attrs="{'readonly':['|',('state','in',['closed']),('state','in',['draft'])]}">
+                                <tree editable="bottom" decoration-success="session_state == 'open'" decoration-danger="session_state == 'closed'">
+                                    <field name="la_employee_id"/>
+                                    <field name="case_no_id" placeholder="Auto Fill"/>
+                                    <field name="session_date" width="1.3" colspan="2" placeholder="Choose Session Date" required="1" attrs="{'readonly':[('session_state','=','closed')]}"/>
+                                    <field name="session_type" width="1" colspan="2" placeholder="Choose Session Present Type" required="1" attrs="{'readonly':[('session_state','=','closed')]}"/>
+                                    <field name="session_subject" width="1.3" colspan="2" placeholder="Enter Session Subject" required="1" attrs="{'readonly':[('session_state','=','closed')]}"/>
+                                    <field name="session_details" width="1.7" colspan="2" placeholder="Enter Session Short Details" attrs="{'readonly':[('session_state','=','closed')]}"/>
+                                    <field name="session_reminder_date" width="1.3" colspan="2" placeholder="Choose Session Remainder Date" required="1" attrs="{'readonly':[('session_state','=','closed')]}"/>
+                                    <field name="session_state" width="0.9" colspan="2" style="text-align: center;" widget="badge" decoration-success="session_state == 'open'" decoration-danger="session_state == 'closed'"/>
+                                    <button name="action_close_open_session" colspan="2" class="btn-danger" type="object" string="Close Session" attrs="{'invisible':[('session_state','=','closed')]}" confirm="You are about to close session, Are you sure ?"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="menu_lega_affairs_court_case" model="ir.ui.menu">
+        <field name="name">Court Case</field>
+        <field name="sequence" eval="0"/>
+        <field name="action" ref="action_legal_affairs_court_case"/>
+        <field name="parent_id" ref="legal_affairs_cases_and_sessions_menu"/>
+    </record>
+
+</odoo>

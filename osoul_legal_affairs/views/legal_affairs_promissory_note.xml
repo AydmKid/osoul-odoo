@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_legal_affairs_promissory_note" model="ir.actions.act_window">
+        <field name="name">Promissory Note</field>
+        <field name="res_model">legal.affairs.promissory.note</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="tree_legal_affairs_promissory_note" model="ir.ui.view">
+        <field name="name">Promissory Note</field>
+        <field name="model">legal.affairs.promissory.note</field>
+        <field name="arch" type="xml">
+            <tree string="" decoration-warning="state == 'waiting_approval'" decoration-success="state in ['running','paid']" decoration-danger="state == 'cancel'">
+                <field name="create_date"/>
+                <field name="create_uid"/>
+                <field name="note_date"/>
+                <field name="note_value"/>
+                <field name="enfoncer_id"/>
+                <field name="enfoncer_against_id"/>
+                <field name="due_type"/>
+                <field name="due_date"/>
+                <field name="note_creation_location"/>
+                <field name="due_location"/>
+                <field name="guarantor_id"/>
+                <field name="legal_affairs_authorized_id"/>
+                <field name="legal_affairs_approval"/>
+                <field name="state" widget="badge" decoration-warning="state == 'waiting_approval'" decoration-success="state in ['running','paid']" decoration-danger="state == 'cancel'"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="form_legal_affairs_promissory_note" model="ir.ui.view">
+        <field name="name">Promissory Note</field>
+        <field name="model">legal.affairs.promissory.note</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <header>
+                    <field name="state" widget="statusbar"/>
+                    <button name="action_button_waiting_approval" states="draft" class="oe_highlight" type="object" string="Send to Approval" confirm="Are you sure ?"/>
+                    <button name="action_button_approval" states="waiting_approval" class="oe_highlight" type="object" string="Aprroval" confirm="You are about to approve creation of new promissory note, Are you sure ?" groups="osoul_legal_affairs.group_legal_affairs_manager"/>
+                    <button name="action_button_paid" states="paid" class="oe_highlight" type="object" string="Note Paid" confirm="You about to add payment to this promissory note, are you sure ?" groups="osoul_legal_affairs.group_legal_affairs_manager"/>
+                    <button name="action_button_cancel" states="running" class="oe_highlight" type="object" string="Note Cancelled" confirm="You about cancel to this promissory note, are you sure ?"/>
+                </header>
+                <sheet>
+                    <div>
+                        <h4>
+                            <field name="note_no" readonly="1"/>
+                        </h4>
+                        <h3>
+                            <field name="enfoncer_against_id" readonly="1"/>
+                        </h3>
+                    </div>
+                    <group name="name" string="">
+                        <group name="name" string="Promissory Information">
+                            <field name="create_date"/>
+                            <field name="create_uid" options="{'no_open': True, 'no_create': True}"/>
+                            <field name="note_no" placeholder="Enter Note No" attrs="{'required': [('state','in',('draft'))], 'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="note_date" placeholder="Enter Note Date" attrs="{'required': [('state','in',('draft'))], 'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="legal_affairs_authorized_id" placeholder="Choose Authorized Legal Affairs" options="{'no_open': True, 'no_create': True}"/>
+                            <field name="legal_affairs_approval" widget="badges" decoration-warning="legal_affairs_approval == 'waiting_approval'" decoration-success="legal_affairs_approval == 'approved'"/>
+                        </group>
+                        <group name="name" string="Financial Information">
+                            <field name="note_value" placeholder="Enter Note Value" widget="monetary" attrs="{'required': [('state','in',('draft'))], 'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="used_currency_id" options="{'no_open': True, 'no_create': True}" placeholder="Choose Use Currency" attrs="{'required': [('state','in',('draft'))], 'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="note_creation_location" placeholder="Choose Creation Location" attrs="{'required': [('state','in',('draft'))], 'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="promissory_note_copy" widget="pdf_viewer" attrs="{'required': [('state','in',('draft'))], 'readonly': [('state','not in',('draft'))]}"/>
+                        </group>
+                        <group name="name" string="Due Details">
+                            <field name="due_type" placeholder="Choose Due Type" attrs="{'required': [('state','in',('draft'))], 'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="due_date" placeholder="Choose Due Date" attrs="{'required': [('due_type','=',('on_date'))],'invisible': [('due_type','!=','on_date')],'readonly': [('state','not in',['draft'])]}"/>
+                            <field name="due_location" attrs="{'required': [('state','in',('draft'))], 'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="due_days_left" attrs="{'invisible': [('due_type','!=','on_date')]}"/>
+                        </group>
+                        <group name="name" string="Enfoncer and Enfoncer Against Details">
+                            <field name="enfoncer_id" placeholder="Choose Enfoncer" options="{'no_open': True, 'no_create': True}" attrs="{'required': [('state','in',('draft'))], 'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="enfoncer_mobile" widget="phone"/>
+                            <field name="enfoncer_against_id" placeholder="Choose Enfoncer Against" options="{'no_open': True, 'no_create': True}" attrs="{'required': [('state','in',('draft'))], 'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="enfoncer_against_mobile" widget="phone"/>
+                            <field name="guarantor_id" placeholder="Choose Guarantor" options="{'no_open': True, 'no_create': True}" attrs="{'required': [('state','in',('draft'))], 'readonly': [('state','not in',('draft'))]}"/>
+                            <field name="guarantor_mobile" widget="phone"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="legal_affairs_promissory_note_menu" model="ir.ui.menu">
+        <field name="name">Promissory Note</field>
+        <field name="sequence" eval="1"/>
+        <field name="action" ref="action_legal_affairs_promissory_note"/>
+        <field name="parent_id" ref="legal_affairs_root_menu"/>
+    </record>
+
+</odoo>

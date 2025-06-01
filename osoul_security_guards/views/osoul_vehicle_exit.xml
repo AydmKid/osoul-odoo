@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="action_security_vehicle_exit" model="ir.actions.act_window">
+        <field name="name">Vehicle Exit</field>
+        <field name="res_model">osoul.security.vehicle.exit</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_security_vehicle_exit_form" model="ir.ui.view">
+        <field name="name">security.vehicle.exit.form</field>
+        <field name="model">osoul.security.vehicle.exit</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <header>
+                    <button name="action_button_outside_osoul" type="object" class="btn-success" string="Exit" icon="fa-sign-out" confirm="Are You Sure ?" />
+                </header>
+                    <sheet>
+                        <div>
+                            <h4>
+                                <field name="vehicle_id" readonly="1"/>
+                            </h4>
+                            <h3>
+                                <field name="license_plate" readonly="1"/>
+                            </h3>
+                        </div>
+                        <group>
+                            <group string="Vehicle Informations">
+                                <field name="vehicle_id"/>
+                                <field name="license_plate"/>
+                                <!-- <field name="department_id"/> -->
+                            </group>
+                            <group string="Permit Informations">
+                                <field name="related_employee_id"/>
+                                <field name="employment_no_id"/>
+                                <field name="department_id"/>
+                            </group>
+                            <group string="Driver Informations">
+                                <field name="driver_id"/>
+                                <field name="emp_id_no"/>
+                                <field name="emp_department_id"/>
+                                <field name="country_id"/>
+                            </group>
+                            <group string="Gates Informations">
+                                <field name="exit_gate_id"/>
+                                <field name="guard_in_exiting_id" readonly="1" options="{'no_open': True, 'no_create': True}"/>
+                                <field name="time_out" readonly="1" options="{'no_open': True, 'no_create': True}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                 <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_security_vehicle_exit_tree" model="ir.ui.view">
+        <field name="name">security.vehicle.exit.tree</field>
+        <field name="model">osoul.security.vehicle.exit</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                 <field name="create_date"/>
+                 <field name="driver_id"/>
+                 <field name="emp_id_no"/>
+                 <field name="emp_department_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="security_security_vehicle_exit_menu" model="ir.ui.menu" >
+        <field name="name">Vehicle Exit</field>
+        <field name="sequence" eval="1" />
+        <field name="action" ref="action_security_vehicle_exit" />
+        <field name="parent_id" ref="menu_security_guards" />
+    </record>
+    
+
+    
+</odoo>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="osoul_itam_root_menu" model="ir.ui.menu" >
+        <field name="name">ITAM System</field>
+        <field name="sequence" eval="0" />
+    </record>
+
+    <!--Assets Section-->
+    <record id="osoul_itam_assets_management_menu" model="ir.ui.menu" >
+        <field name="name">Assets Management</field>
+        <field name="sequence" eval="0" />
+        <field name="parent_id" ref="osoul_itam_root_menu" />
+    </record>
+
+    <record id="osoul_itam_assets_hardware_menu" model="ir.ui.menu" >
+        <field name="name">Hardware Assets</field>
+        <field name="sequence" eval="0" />
+        <field name="action" ref="action_osoul_itam_assets_hardware" />
+        <field name="parent_id" ref="osoul_itam_assets_management_menu" />
+    </record>
+
+
+    <!--Assets Assignment-->
+
+
+    <!--Configuration Section-->
+    <record id="osoul_itam_assets_configuration_menu" model="ir.ui.menu" >
+        <field name="name">Configurations</field>
+        <field name="sequence" eval="2" />
+        <field name="parent_id" ref="osoul_itam_root_menu" />
+    </record>
+
+    <record id="osoul_itam_assets_category" model="ir.ui.menu" >
+        <field name="name">Categories</field>
+        <field name="sequence" eval="0" />
+        <field name="action" ref="action_osoul_itam_assets_category" />
+        <field name="parent_id" ref="osoul_itam_assets_configuration_menu" />
+    </record>
+
+    <record id="osoul_itam_assets_sub_category_menu" model="ir.ui.menu" >
+        <field name="name">Sub Category</field>
+        <field name="sequence" eval="1" />
+        <field name="action" ref="action_osoul_itam_assets_sub_category" />
+        <field name="parent_id" ref="osoul_itam_assets_configuration_menu" />
+    </record>
+
+    <record id="osoul_itam_assets_brand" model="ir.ui.menu" >
+        <field name="name">brands</field>
+        <field name="sequence" eval="2" />
+        <field name="action" ref="action_osoul_itam_assets_brand" />
+        <field name="parent_id" ref="osoul_itam_assets_configuration_menu" />
+    </record>
+
+
+    <record id="osoul_itam_assets_hardware_models" model="ir.ui.menu" >
+        <field name="name">Models</field>
+        <field name="sequence" eval="3" />
+        <field name="action" ref="action_osoul_itam_assets_hardware_model" />
+        <field name="parent_id" ref="osoul_itam_assets_configuration_menu" />
+    </record>
+    
+    
+    <record id="osoul_itam_assets_vendor" model="ir.ui.menu" >
+        <field name="name">Vendors</field>
+        <field name="sequence" eval="4" />
+        <field name="action" ref="action_osoul_itam_assets_vendor" />
+        <field name="parent_id" ref="osoul_itam_assets_configuration_menu" />
+    </record>
+    
+
+</odoo>

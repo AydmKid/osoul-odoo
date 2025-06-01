@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- MAIN BUFFET ROOT MENU -->
+    <record id="osoul_buffet_root_menu" model="ir.ui.menu">
+        <field name="name">Buffet System</field>
+        <field name="sequence" eval="10" />
+    </record>
+
+    <!-- ORDERS CONTROL -->
+    <record id="osoul_buffet_order_menu" model="ir.ui.menu">
+        <field name="name">Orders</field>
+        <field name="sequence" eval="0"/>
+        <field name="action" ref="action_osoul_buffet_order"/>
+        <field name="parent_id" ref="osoul_buffet_root_menu"/>
+    </record>
+
+
+    <!-- OPERATOR CONTROL -->
+    <record id="osoul_buffet_operator" model="ir.ui.menu" >
+        <field name="name">Operators</field>
+        <field name="sequence" eval="1" />
+        <field name="action" ref="action_osoul_buffet_operator" />
+        <field name="parent_id" ref="osoul_buffet_root_menu" />
+        <field name="groups_id" eval="[(4, ref('osoul_buffet_system.group_osoul_buffet_manager'))]"/>
+    </record>
+
+    <!-- STOCK AND STOCK MOVEMENT MENU -->
+    <record id="osoul_buffet_stock_root_menu" model="ir.ui.menu" >
+        <field name="name">Stock</field>
+        <field name="sequence" eval="2" />
+        <field name="parent_id" ref="osoul_buffet_root_menu" />
+        <field name="groups_id" eval="[(4, ref('osoul_buffet_system.group_osoul_buffet_manager'))]"/>
+    </record>
+    
+    <record id="osoul_buffet_stock_menu" model="ir.ui.menu" >
+        <field name="name">Stock Control</field>
+        <field name="sequence" eval="0" />
+        <field name="action" ref="action_osoul_buffet_stock" />
+        <field name="parent_id" ref="osoul_buffet_stock_root_menu" />
+        <field name="groups_id" eval="[(4, ref('osoul_buffet_system.group_osoul_buffet_manager'))]"/>
+    </record>
+
+    <record id="osoul_buffet_movement_menu" model="ir.ui.menu" >
+        <field name="name">Stock Movements</field>
+        <field name="sequence" eval="1" />
+        <field name="action" ref="action_buffet_stock_movement" />
+        <field name="parent_id" ref="osoul_buffet_stock_root_menu" />
+        <field name="groups_id" eval="[(4, ref('osoul_buffet_system.group_osoul_buffet_manager'))]"/>
+    </record>
+    
+
+    <!-- Configurations Menu -->
+    <record id="osoul_buffet_configuration_menu" model="ir.ui.menu">
+        <field name="name">Configurations</field>
+        <field name="sequence" eval="3" />
+        <field name="parent_id" ref="osoul_buffet_root_menu" />
+        <field name="groups_id" eval="[(4, ref('osoul_buffet_system.group_osoul_buffet_manager'))]"/>
+    </record>
+
+    <!-- Categories Sub-Menu -->
+    <record id="osoul_buffet_category_menu" model="ir.ui.menu">
+        <field name="name">Category</field>
+        <field name="sequence" eval="0" />
+        <field name="action" ref="action_osoul_buffet_category" />
+        <field name="parent_id" ref="osoul_buffet_configuration_menu" />
+        <field name="groups_id" eval="[(4, ref('osoul_buffet_system.group_osoul_buffet_manager'))]"/>
+    </record>
+    
+    <record id="osoul_buffet_subcategory_menu" model="ir.ui.menu" >
+        <field name="name">Subcategory</field>
+        <field name="sequence" eval="1" />
+        <field name="action" ref="action_osoul_buffet_subcategory" />
+        <field name="parent_id" ref="osoul_buffet_configuration_menu" />
+        <field name="groups_id" eval="[(4, ref('osoul_buffet_system.group_osoul_buffet_manager'))]"/>
+    </record>
+    
+</odoo>

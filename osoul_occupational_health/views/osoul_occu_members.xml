@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Action Window -->
+    <record model="ir.actions.act_window" id="action_osoul_occu_member">
+        <field name="name">Team Member</field>
+        <field name="res_model">osoul.occu.member</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+    <!-- Tree View -->
+    <record model="ir.ui.view" id="osoul_occu_member_tree_view">
+        <field name="name">osoul.occu.member.tree</field>
+        <field name="model">osoul.occu.member</field>
+        <field name="arch" type="xml">
+            <tree sample="1">
+                <field name="member_name_id" decoration-bf="1" decoration-success="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record model="ir.ui.view" id="osoul_occu_member_form_view">
+            <field name="name">osoul.occu.member.form</field>
+            <field name="model">osoul.occu.member</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                       
+                       <group>
+                            <group  string="Member Details">
+                                <field name="member_name_id" required="1"/>
+                                <field name="department" readonly="1"/>
+                                <field name="phone_no"/>
+                            </group>
+                            <group string="Profile">
+                                 <field name="image_1920" widget="image"
+                                        style="border-radius: 50%; width: 150px; height: 150px; border: 3px margin-bottom: 10px; xt-align: right"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+    <!-- Kanban View -->
+    <record id="view_members_kanban" model="ir.ui.view">
+        <field name="name">occu.member.kanban</field>
+        <field name="model">osoul.occu.member</field>
+        <field name="arch" type="xml">
+            <kanban default_order="create_date desc" sample="1" multi_edit="1">
+                <field name="member_name_id"/>
+                <field name="phone_no"/>
+                <field name="department"/>
+                <field name="image_1920"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_card oe_kanban_global_click oe_kanban_color_#{kanban_color}"
+                            style="border-radius: 10px; padding: 10px; background: #f9f9f9; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);">
+                            
+                            <!-- Profile Image -->
+                            <div class="oe_kanban_image" style="text-align: center; margin-bottom: 10px;">
+                               <img t-att-src="'/web/image?model=hr.employee&amp;id='+record.member_name_id.raw_value+'&amp;field=image_1920&amp;unique='+record.__last_update"
+                                style="border-radius: 100%; width: 100px; height: 100px; border: 2px solid #4CAF50;"/>
+                            </div>
+                            
+                            <!-- t-att-src="kanban_image('osoul.accommodation.building.dash','image',record.id.raw_value)" -->
+
+                            <!-- Header with Name and Phone -->
+                            <div class="oe_kanban_header" style="text-align: center; margin-top: 10px;">
+                                <div class="job-order-sequence" style="font-weight: bold;">
+                                    <field name="member_name_id"/>
+                                </div>
+                            </div>
+
+                            <!-- Centered details -->
+                            <div class="oe_kanban_details" style="text-align: center; margin-top: 10px;">
+                                <div><field name="department" widget="badge"/></div>
+                                <div><field name="phone_no" widget="badge"/></div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="tikets_search_occu_member_view" model="ir.ui.view">
+        <field name="name">osoul.occu.member View</field>
+        <field name="model">osoul.occu.member</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="member_name_id"/>
+                <filter name="search_default_unit_name" string="Default Unit Name" domain="[('member_name_id', '!=', False)]"/>
+                <group expand="1" string="Group By">
+                    <filter name="member_name_id" string="Unit Name" context="{'group_by': 'member_name_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    
+</odoo>

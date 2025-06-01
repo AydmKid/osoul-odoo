@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_security_supplier_enter" model="ir.actions.act_window">
+        <field name="name">Supplier Enter</field>
+        <field name="res_model">osoul.security.supplier.enter</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="security_supplier_enter_search" model="ir.ui.view">
+        <field name="name">security.supplier.enter.search</field>
+        <field name="model">osoul.security.supplier.enter</field>
+        <field name="arch" type="xml">
+                    <search string="">
+                        <field name="record_no"/>
+                        <field name="identity_no_id"/>
+                        <field name="employment_no_id"/>
+                    </search>
+            </field>
+    </record>
+
+    <record id="tree_security_supplier_enter" model="ir.ui.view">
+        <field name="name">Supplier Enter</field>
+        <field name="model">osoul.security.supplier.enter</field>
+        <field name="arch" type="xml">
+            <tree string="" default_order="create_date desc" create="false" delete="false" decoration-info="state == 'draft'" 
+            decoration-warning="state == 'inside_osoul'" decoration-success="state == 'outside_osoul'" >
+                <field name="record_no"/>
+                <field name="create_date"/>
+                <field name="permission_code_id"/>
+                <field name="permit_issuer_id"/>
+                <field name="employment_no_id"/>
+                <field name="department_id"/>
+                <field name="supplier_name"/>
+                <field name="identity_no_id"/>
+                <field name="mobile"/>
+                <field name="supply_type_id"/>
+                <field name="operation_type"/>
+                <field name="enter_exit_permission"/>
+                <!-- <field name="progress" widget="progressbar" width=".8"/> -->
+                <field name="state" widget="badge" decoration-info="state == 'draft'" decoration-warning="state == 'inside_osoul'" decoration-success="state == 'outside_osoul'"/>
+                <field name="permission_state" widget="badge" decoration-info="state == 'draft'" decoration-danger="state == 'outside_osoul' or state == 'inside_osoul'"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="form_security_supplier_enter" model="ir.ui.view">
+        <field name="name">Supplier enter</field>
+        <field name="model">osoul.security.supplier.enter</field>
+        <field name="arch" type="xml">
+            <form string="" create="false" delete="false">
+                <header>
+                    <field name="state" widget="statusbar"/>
+                    <button name="action_button_inside_osoul" class="btn-success" states="draft" type="object" string="Enter To Osoul" 
+                                                              confirm="With Your Approval Entery Permission Will be Expired and Supplier Will Be Allowed To Access Osoul ?"/>
+                    <button name="action_button_outside_osoul" class="btn-danger" states="inside_osoul" type="object" string="Exit From Osoul" 
+                                                               confirm="Are You Sure"/>
+                </header>
+                <sheet>
+                    <div>
+                        <h4>
+                            <field name="record_no" readonly="1"/>
+                        </h4>
+                        <h3>
+                            <field name="supplier_name" readonly="1" options="{'no_open': True}"/>
+                        </h3>
+                    </div>
+                    <group name="name" string="">
+                        <group name="name" string="Supplier Information">
+                            <field name="create_date"/>
+                            <field name="supplier_name" options="{'no_open': True, 'no_create': True}"/>
+                            <field name="identity_no_id" options="{'no_open': True, 'no_create': True}"/>
+                            <field name="mobile" options="{'no_open': True, 'no_create': True}" />
+                             <field name="plate_no" options="{'no_open': True, 'no_create': True}"/>
+                            <field name="plate_letters" options="{'no_open': True, 'no_create': True}"/>
+                            <field name="note" options="{'no_open': True, 'no_create': True}" readonly="1"/>
+                        </group>
+                        <group name="name" string="Permit Information">
+                            <field name="permission_code_id" options="{'no_open': True, 'no_create': True}"/>
+                            <field name="permit_issuer_id"   options="{'no_open': True, 'no_create': True}"/>
+                            <field name="employment_no_id" options="{'no_open': True, 'no_create': True}"/>
+                            <field name="department_id" options="{'no_open': True, 'no_create': True}"/>
+                            <field name="supply_type_id" options="{'no_open': True, 'no_create': True}"/>
+                            <field name="operation_type"/>
+                            <field name="enter_exit_permission" widget="badge" decoration-success="enter_exit_permission == 'allowed_enter'" decoration-danger="enter_exit_permission == 'exit_not_allowed'" decoration-warning="enter_exit_permission == 'allowed_exit'" decoration-info="enter_exit_permission == 'supplier_out'"/>
+                            <field name="permission_state" widget="badge" decoration-success="permission_state == 'running'" decoration-danger="permission_state == 'expired'"/>
+                        </group>
+                        <group name="name" string="Entry and Timing Informations">
+                            <field name="entry_gate_id" widget="selection" placeholder="Choose Entry Gate" options="{'no_open': True, 'no_create': True}" attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                            <field name="guard_in_entry_id" options="{'no_open': True, 'no_create': True}" readonly="1"/>
+                            <field name="time_in"/>
+                            
+                        </group>
+                        <group name="name" string="Exit and Timing Informations">
+                            <field name="exit_gate_id" widget="selection" placeholder="Choose Exit Gate" options="{'no_open': True, 'no_create': True}" attrs="{'required': [('state', 'in', ['inside_osoul'])], 'readonly': [('state', 'not in', ['inside_osoul'])]}"/>
+                            <field name="guard_in_exiting_id" options="{'no_open': True, 'no_create': True}" readonly="1"/>
+                            <field name="time_out"/>
+                            <field name="time_spent_inside"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="menu_security_supplier_enter" model="ir.ui.menu">
+        <field name="name">Supplier enter</field>
+        <field name="sequence" eval="10" />
+        <field name="action" ref="action_security_supplier_enter" />
+        <field name="parent_id" ref="security_suppliers_records_menu" />
+    </record>
+
+</odoo>

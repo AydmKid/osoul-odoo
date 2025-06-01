@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <odoo>
+
+        <!-- GATE PERMISSIONS MENU -->
+        <record id="security_gate_permissions_menu" model="ir.ui.menu" >
+            <field name="name">Gate Permissions</field>
+            <field name="sequence" eval="10" />
+            <!-- <field name="groups_id" eval="[(5,ref('osoul_security_guards.group_security_permission_access'))]"/> -->
+        </record>
+        <!-- SECURITY GUARDS MAIN MENU -->
+        <record id="menu_security_guards" model="ir.ui.menu" >
+            <field name="name">Security Guards Osoul</field>
+            <field name="sequence" eval="10"/>
+        </record>
+        <!-- Emergency Visit -->
+        <record id="security_guards_emergrncy_visit" model="ir.ui.menu" >
+            <field name="name">Emergency Visit</field>
+            <field name="sequence" eval="0" />
+            <field name="parent_id" ref="menu_security_guards" />
+        </record>
+        <!-- EMPLOYEES MENU -->
+        <record id="security_guards_emp_enter_exit_menu" model="ir.ui.menu" >
+            <field name="name">Employee Enter Exit</field>
+            <field name="sequence" eval="0" />
+            <field name="parent_id" ref="menu_security_guards" />
+        </record>
+
+        <record id="security_guards_emp_exit_enter_menu" model="ir.ui.menu" >
+            <field name="name">Employee Exit Enter</field>
+            <field name="sequence" eval="0" />
+            <field name="parent_id" ref="menu_security_guards" />
+        </record>
+        <!-- SUPPLIERS MENU -->
+        <record id="security_suppliers_records_menu" model="ir.ui.menu" >
+            <field name="name">Gates permit records</field>
+            <field name="sequence" eval="1" />
+            <field name="parent_id" ref="menu_security_guards"/>
+        </record>
+        <!-- # VISITORS MENU -->
+        <record id="security_visitors_records_menu" model="ir.ui.menu" >
+            <field name="name">Visitors Records</field>
+            <field name="sequence" eval="2" />
+            <field name="parent_id" ref="menu_security_guards" />
+        </record>
+        <!-- CONFIGURATIONS MENU -->
+        <record id="security_guards_configurations_menu" model="ir.ui.menu" >
+            <field name="name">Configurations</field>
+            <field name="sequence" eval="3" />
+            <field name="parent_id" ref="menu_security_guards" />
+        </record>
+
+    </odoo>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="osoul_water_tanker_entry_action" model="ir.actions.act_window">
+        <field name="name">Water Tanker Entries</field>
+        <field name="res_model">osoul.water.tanker.entry</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_osoul_water_tanker_entry_tree" model="ir.ui.view">
+        <field name="name">osoul.water.tanker.entry.tree</field>
+        <field name="model">osoul.water.tanker.entry</field>
+        <field name="arch" type="xml">
+            <tree string="Water Tanker Entries" decoration-success="state == 'outside_osoul'" decoration-warning="state == 'inside_osoul'">
+                <field name="trip_no"/>
+                <field name="vehicle_id"/>
+                <field name="owner_id"/>
+                <field name="driver_id"/>
+                <field name="emoployee_id_in"/>
+                <field name="entry_time"/>
+                <field name="emoployee_id_out"/>
+                <field name="exiting_time"/>
+                <field name="total_time_inside_company"/>
+                <field name="permission" widget="badge" decoration-warning="permission == 'authorized_in'" decoration-success="permission == 'authorized_out'"/>
+                <field name="state" widget="badge" decoration-success="state == 'outside_osoul'" decoration-warning="state == 'inside_osoul'"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_osoul_water_tanker_entry_form" model="ir.ui.view">
+        <field name="name">osoul.water.tanker.entry.form</field>
+        <field name="model">osoul.water.tanker.entry</field>
+        <field name="arch" type="xml">
+            <form string="Water Tanker Entry">
+                <header>
+                    <button name="action_waiting_for_permission" type="object" string="Get Permission" class="btn-success"
+                            attrs="{'invisible': [('state', '!=', 'draft')]}" confirm="Are You Sure ?"/>
+                    <button name="action_enter_osoul" type="object" string="Enter Osoul" class="btn-success"
+                            attrs="{'invisible': [('state', '!=', 'permit_enter')]}" confirm='Are You Sure ?'/>
+                    <button name="action_exit_osoul" type="object" string="Exit Osoul" class="btn-warning"
+                            attrs="{'invisible': [('state', '!=', 'permit_exit')]}" confirm='Are You Sure ?'/>
+                    <field name="state" widget="statusbar" readonly="1"/>
+                </header>
+                <sheet>
+                    <h3>
+                        <field name="trip_no" readonly='1'/>
+                    </h3>
+                    <h3>
+                        <field name="vehicle_id" readonly="1"/>
+                    </h3>
+                    <group>
+                        <group string="Vehicle Information">
+                            <field name="owner_id" placeholder="Select Vendor Name" options="{'no_create': True, 'no_open': True}"
+                                                   attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="vehicle_id" options="{'no_create': True, 'no_open': True}" placeholder="Select Vehicle Name"
+                                                     attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="driver_id" options="{'no_create': True, 'no_open': True}" placeholder="Select Driver Name"
+                                                         attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="driver_phone" readonly="1"/>
+                        </group>
+                        <group string="Enter and Exit Information">
+                            <field name="permission" readonly="1" widget="badge" decoration-warning="permission == 'authorized_in'" decoration-success="permission == 'authorized_out'"/>
+                            <field name="total_time_inside_company" readonly="1"/>
+                        </group>
+                        <group name="name" string="Entry Information">
+                            <field name="emoployee_id_in" options="{'no_create': True, 'no_open': True}" readonly="1"/>
+                            <field name="entry_time" readonly="1"/>
+                            <field name="security_phone" string="Security Phone"/>
+                        </group>
+                        <group name="name" string="Exit Information">
+                            <field name="emoployee_id_out" options="{'no_create': True, 'no_open': True}" readonly="1"/>
+                            <field name="exiting_time" readonly="1"/>
+                            
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_ids" widget="mail_thread"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+</odoo>

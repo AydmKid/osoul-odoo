@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    
+        <record id="osoul_contacts_sequence" model="ir.sequence">
+            <field name="name">Osoul Contacts Sequence</field>
+            <field name="code">osoul_contacts_sequence</field>
+            <field name="prefix">CID-</field>
+            <field name="padding">6</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="1">
+        <record id="itam_category_hardware" model="osoul.itam.assets.category">
+            <field name="name">Computing Equipment</field>
+        </record>
+        <record id="itam_category_network" model="osoul.itam.assets.category">
+            <field name="name">Network Equipment</field>
+        </record>
+        <record id="itam_category_surveillance" model="osoul.itam.assets.category">
+            <field name="name">Surveillance Equipment</field>
+        </record>
+        <record id="itam_category_fleet" model="osoul.itam.assets.category">
+            <field name="name">Fleet Equipment</field>
+        </record>
+        <record id="itam_category_software" model="osoul.itam.assets.category">
+            <field name="name">Software</field>
+        </record>
+    </data>
+
+</odoo>

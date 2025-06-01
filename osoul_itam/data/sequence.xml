@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Sequence for Asset Tag generation -->
+        <record id="osoul_itam_asset_hardware_sequence" model="ir.sequence">
+            <field name="name">Osoul itam Asset Hardware Sequence</field>
+            <field name="code">osoul.assets.hardware</field>
+            <field name="prefix">HWA-</field>
+            <field name="padding">6</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+
+    <data noupdate="1">
+        <!-- Sequence for Asset Tag generation -->
+        <record id="osoul_itam_asset_assignment_sequence" model="ir.sequence">
+            <field name="name">Osoul itam Asset assignment Sequence</field>
+            <field name="code">osoul.assets.assignment</field>
+            <field name="prefix">ASG-</field>
+            <field name="padding">6</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

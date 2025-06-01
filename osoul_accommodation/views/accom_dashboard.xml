@@ -1,0 +1,103 @@
+<odoo>
+    <data>
+
+        <record id="act_accommodation_building" model="ir.actions.act_window">
+            <field name="name">Buildings</field>
+            <field name="res_model">osoul.accommodation.building.dash</field>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="osoul_accommodation.building_model_name_dash_kanban"/>
+        </record>
+
+        <record id="act_accommodation_building_pie" model="ir.actions.act_window">
+            <field name="name">Buildings</field>
+            <field name="res_model">osoul.accommodation.building</field>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="osoul_accommodation.building_graph_pie"/>
+        </record>
+
+        <record id="act_accommodation_building_bar" model="ir.actions.act_window">
+            <field name="name">Buildings</field>
+            <field name="res_model">osoul.accommodation.building</field>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="osoul_accommodation.building_graph_bar"/>
+        </record>
+
+        <record id="act_accommodation_building_tree" model="ir.actions.act_window">
+            <field name="name">Buildings</field>
+            <field name="res_model">osoul.accommodation.building</field>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="osoul_accommodation.building_graph_pie_dash"/>
+        </record>
+
+        <record id="act_book_housing" model="ir.actions.act_window">
+            <field name="name">Book Housing</field>
+            <field name="res_model">osoul.accommodation.housing</field>
+            <field name="view_mode">calendar</field>
+            <field name="view_id" ref="osoul_accommodation.housing_calendar"/>
+        </record>
+       
+        <record id="act_rooms_list" model="ir.actions.act_window">
+            <field name="name">Logs</field>
+            <field name="res_model">osoul.accommodation.room</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+       
+
+       <record id="view_dashboard_form" model="ir.ui.view">
+            <field name="name">Form Dashboard</field>
+            <field name="model">osoul.accommodation.building</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                
+                <form string="Dashboard" create="false" edit="false" delete="false">
+                        <board style="1-2" class="custom-dashboard">
+                            <column size="0">
+                                <action
+                                string="Total Number Of Population"
+                                name="%(osoul_accommodation.act_accommodation_building_tree)d"/>
+                                <action 
+                                string="Total Rooms"
+                                name="%(osoul_accommodation.act_accommodation_building_pie)d"/>
+                                
+                            </column>
+                            <column size="1">
+                                <action 
+                                string="location Details"
+                                name="%(osoul_accommodation.act_accommodation_building)d"/>
+                                
+                                <action 
+                                string="Housing Percentage" 
+                                name="%(osoul_accommodation.act_accommodation_building_bar)d"/>
+                            
+                            </column>
+                        </board>
+                </form>
+                <style>
+                    .custom-dashboard {
+                         background-color: #f0f0f0; /* Change the background color */
+                    }
+                </style>
+            </field>
+        </record>
+
+        <!-- Define the dashboard action -->
+        <record id="action_dashboard_graph" model="ir.actions.act_window">
+            <field name="name">Dashboard</field>
+            <field name="res_model">board.board</field>
+            <field name="view_mode">form</field>  <!-- Updated field value -->
+            <field name="view_id" ref="view_dashboard_form"/>
+            <field name="target">main</field>
+            <field name="usage">menu</field>
+            
+        </record>
+
+            <!--Add the dashboard to the menu -->
+             <menuitem id="menu_dashboard_graph" 
+                name="Dashboard" 
+                parent="menu_root_osoul_accommodation"
+                groups="osoul_accommodation.group_accommodation_manager" 
+                action="action_dashboard_graph" 
+                sequence="0"/>
+    </data>
+</odoo>

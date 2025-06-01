@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    
+        <record id="security_emp_enter_exit_sequence" model="ir.sequence">
+            <field name="name">Security Employee Enter Exit Sequence</field>
+            <field name="code">security_emp_enter_exit_sequence</field>
+            <field name="prefix">EIO-</field>
+            <field name="padding">6</field>
+        </record>
+
+        <record id="security_emp_exit_enter_sequence" model="ir.sequence">
+            <field name="name">Security Employee Exit Enter Sequence</field>
+            <field name="code">security_emp_exit_enter_sequence</field>
+            <field name="prefix">EOI-</field>
+            <field name="padding">6</field>
+        </record>
+
+        <record id="security_supplier_enter_sequence" model="ir.sequence">
+            <field name="name">Security Supplier Enter Sequence</field>
+            <field name="code">security_supplier_enter_sequence</field>
+            <field name="prefix">SER-</field>
+            <field name="padding">6</field>
+        </record>
+
+        <record id="security_visits_types_sequence" model="ir.sequence">
+            <field name="name">Security Visits Types Sequence</field>
+            <field name="code">security_visits_types_sequence</field>
+            <field name="prefix">VTS-</field>
+            <field name="padding">6</field>
+        </record>
+
+        <record id="security_visits_enter_sequence" model="ir.sequence">
+            <field name="name">Security Visits Enter Sequence</field>
+            <field name="code">security_visit_enter_sequence</field>
+            <field name="prefix">VER-</field>
+            <field name="padding">6</field>
+        </record>
+
+        <record id="security_entry_permission_sequence" model="ir.sequence">
+            <field name="name">Security Entry Permission Sequence</field>
+            <field name="code">supllier_entry_permission_sequence</field>
+            <field name="prefix">SEP-</field>
+            <field name="padding">6</field>
+        </record>
+
+        <record id="security_visitor_enter_permission_sequence" model="ir.sequence">
+            <field name="name">Security Visitor Enter Permission Sequence</field>
+            <field name="code">visitor_enter_permission_sequence</field>
+            <field name="prefix">VEP-</field>
+            <field name="padding">6</field>
+        </record>
+
+        <record id="security_emergency_government_visits_sequence" model="ir.sequence">
+            <field name="name">Emergency Visits Sequence</field>
+            <field name="code">security_emergency_government_visits_sequence</field>
+            <field name="prefix">EGV-</field>
+            <field name="padding">6</field>
+        </record>
+
+        <record id="security_emergency_government_visits_sequence" model="ir.sequence">
+            <field name="name">Emergency Visits Sequence</field>
+            <field name="code">security_emergency_government_visits_sequence</field>
+            <field name="prefix">EGV-</field>
+            <field name="padding">6</field>
+        </record>
+
+        <record id="seq_security_visitor_enter_exit" model="ir.sequence">
+            <field name="name">Visitor Entry Sequence</field>
+            <field name="code">osoul.security.visitor.enter.exit</field>
+            <field name="prefix">VIS/%(year)s/%(month)s/</field>
+            <field name="padding">6</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+    
+    </data>
+    
+</odoo>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View osoul.buffet.operator View Tree -->
+    <record id="view_osoul_buffet_operator_tree" model="ir.ui.view">
+        <field name="name">view.osoul.buffet.operator.tree</field>
+        <field name="model">osoul.buffet.operator</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="phone"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View osoul.buffet.operator form -->
+    <record id="view_osoul_buffet_operator_form" model="ir.ui.view">
+        <field name="name">view.osoul.buffet.operator.form</field>
+        <field name="model">osoul.buffet.operator</field>
+        <field name="arch" type="xml">
+            <form string="Osoul Buffet Operator">
+                <sheet>
+                    <div class="oe_title">
+                        <h3>
+                            <field name="phone"/>
+                        </h3>
+                        <h3>
+                            <field name="name" readonly="1" options="{'no_create': True, 'no_open': True}"/>
+                        </h3>
+                    </div>
+                    <group name="name" string="">
+                        <group name="name" string="Operator Information">
+                            <field name="name" options="{'no_create': True, 'no_open': True}"/>
+                            <field name="phone"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View osoul.buffet.operator search -->
+    <record id="view_osoul_buffet_operator_search" model="ir.ui.view">
+        <field name="name">view.osoul.buffet.operator.search</field>
+        <field name="model">osoul.buffet.operator</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="1" string="Group By">
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action osoul.buffet.operator -->
+    <record id="action_osoul_buffet_operator" model="ir.actions.act_window">
+        <field name="name">Osoul Buffet Operator</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">osoul.buffet.operator</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Osoul Buffet Operator.
+            </p>
+        </field>
+    </record>
+
+</odoo>

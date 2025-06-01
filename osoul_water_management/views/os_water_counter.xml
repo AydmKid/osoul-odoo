@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="osoul_water_counter_action" model="ir.actions.act_window">
+        <field name="name">Water Counter</field>
+        <field name="res_model">osoul.water.counter</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="osoul_water_counter_tree" model="ir.ui.view">
+        <field name="name">Water Counter</field>
+        <field name="model">osoul.water.counter</field>
+        <field name="arch" type="xml">
+            <tree string="" create="false">
+                <field name="trip_no"/>
+                <field name="vehicle_id"/>
+                <field name="owner_id"/>
+                <field name="driver_id"/>
+                <field name="water_type"/>
+                <field name="filling_station"/>
+                <field name="filled_water_cone" widget="badge" class="info-badge"/>
+                <field name="filled_water_ctwo" widget="badge" class="info-badge"/>
+                <field name="filled_water_cthree" widget="badge" class="info-badge"/>
+                <field name="total_filled_water" widget="badge" class="info-badge"/>
+                <field name="total_cost" widget="badge" class="info-money"/>
+                <field name="filling_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="osoul_water_counter_form" model="ir.ui.view">
+        <field name="name">osoul_water_counter.form</field>
+        <field name="model">osoul.water.counter</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <header>
+                </header>
+                <sheet>
+                    <H3>
+                        <field name="trip_no"/>
+                    </H3>
+                    <H3>
+                        <field name="filling_station"/>
+                    </H3>
+                    <group name="name" string="">
+                        <group name="name" string="Owner Information">
+                            <field name="owner_id" options="{'no_create': True, 'no_open': True}"/>
+                            <field name="vehicle_id" options="{'no_create': True, 'no_open': True}"/>
+                            <field name="driver_id" options="{'no_create': True, 'no_open': True}"/>
+                        </group>
+                        <group name="name" string="Counters">
+                            <field name="curr_read_cone"/>
+                            <field name="curr_read_ctwo"/>
+                            <field name="curr_read_cthree"/>
+                        </group>
+                        <group name="name" string="Filling Information">
+                            <field name="filling_station"/>
+                            <field name="filling_date"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

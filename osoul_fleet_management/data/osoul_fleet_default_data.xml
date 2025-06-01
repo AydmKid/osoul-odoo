@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="1">
+    
+        <record id="osoul_fleet_owner_arabian" model="osoul.fleet.owner">
+            <field name="name">Arabian Cooperative Company</field>
+        </record>
+        <record id="osoul_fleet_owner_coo" model="osoul.fleet.owner">
+            <field name="name">Cooperative Association</field>
+        </record>
+        <record id="osoul_fleet_owner_cw" model="osoul.fleet.owner">
+            <field name="name">Car World</field>
+        </record>
+
+
+        <record id="fleet_work_role_live_birds" model="osoul.fleet.work.role">
+            <field name="name">Transporting Live Birds</field>
+        </record>
+        <record id="fleet_work_role_product" model="osoul.fleet.work.role">
+            <field name="name">Transporting Products</field>
+        </record>
+        <record id="fleet_work_role_subsistence" model="osoul.fleet.work.role">
+            <field name="name">Transporting Subsistence Product</field>
+        </record>
+        <record id="fleet_work_role_employee" model="osoul.fleet.work.role">
+            <field name="name">Transporting Employees</field>
+        </record>
+        <record id="fleet_work_role_sludge" model="osoul.fleet.work.role">
+            <field name="name">Transporting Sludge</field>
+        </record>
+        <record id="fleet_work_role_blood" model="osoul.fleet.work.role">
+            <field name="name">Transporting Blood</field>
+        </record>
+        <record id="fleet_work_regrigerator" model="osoul.fleet.work.role">
+            <field name="name">Refrigrator</field>
+        </record>
+        <record id="fleet_work_role_sale" model="osoul.fleet.work.role">
+            <field name="name">Sales Man</field>
+        </record>
+        <record id="fleet_work_role_dumper" model="osoul.fleet.work.role">
+            <field name="name">Dumper</field>
+        </record>
+
+
+        <record id="fleet_plate_type_public" model="osoul.fleet.plate.type">
+            <field name="name">Public Transportation</field>
+        </record>
+        <record id="fleet_plate_type_private_0" model="osoul.fleet.plate.type">
+            <field name="name">Private Transportation</field>
+        </record>
+        <record id="fleet_plate_type_private_1" model="osoul.fleet.plate.type">
+            <field name="name">Private</field>
+        </record>
+
+
+        <record id="fleet_category_heavy" model="osoul.fleet.category">
+            <field name="name">Heavy Transport</field>
+        </record>
+        <record id="fleet_category_light" model="osoul.fleet.category">
+            <field name="name">Light Transport</field>
+        </record>
+        <record id="fleet_category_private" model="osoul.fleet.category">
+            <field name="name">Private</field>
+        </record>
+
+
+        <record id="fleet_brand_man" model="osoul.fleet.brand">
+            <field name="name">MAN</field>
+        </record>
+        <record id="fleet_brand_hino" model="osoul.fleet.brand">
+            <field name="name">Hino</field>
+        </record>
+        <record id="fleet_brand_mercedes" model="osoul.fleet.brand">
+            <field name="name">Mercedes</field>
+        </record>
+        <record id="fleet_brand_isuzu" model="osoul.fleet.brand">
+            <field name="name">Isuzu</field>
+        </record>
+        <record id="fleet_brand_toyota" model="osoul.fleet.brand">
+            <field name="name">Toyota</field>
+        </record>
+        <record id="fleet_brand_nissan" model="osoul.fleet.brand">
+            <field name="name">Nissan</field>
+        </record>
+        <record id="fleet_brand_mitsubishi" model="osoul.fleet.brand">
+            <field name="name">Mitsubishi</field>
+        </record>
+        <record id="fleet_brand_huyndai" model="osoul.fleet.brand">
+            <field name="name">Huyndai</field>
+        </record>
+        <record id="fleet_brand_kia" model="osoul.fleet.brand">
+            <field name="name">KIA</field>
+        </record>
+        <record id="fleet_brand_suzuki" model="osoul.fleet.brand">
+            <field name="name">Suzuki</field>
+        </record>
+        <record id="fleet_brand_mazda" model="osoul.fleet.brand">
+            <field name="name">Mazda</field>
+        </record>
+
+
+        <record id="fleet_work_location_muhayil" model="osoul.fleet.work.location">
+            <field name="name">Muhail</field>
+        </record>
+        <record id="fleet_work_location_tathleeth" model="osoul.fleet.work.location">
+            <field name="name">Tathleeth</field>
+        </record>
+        <record id="fleet_work_location_wadi" model="osoul.fleet.work.location">
+            <field name="name">Wadi Bin Hashbal</field>
+        </record>
+        <record id="fleet_work_location_abha" model="osoul.fleet.work.location">
+            <field name="name">Abha</field>
+        </record>
+        <record id="fleet_work_location_jazan" model="osoul.fleet.work.location">
+            <field name="name">Jazan</field>
+        </record>
+        <record id="fleet_work_location_jeddah" model="osoul.fleet.work.location">
+            <field name="name">Jeddah</field>
+        </record>
+        <record id="fleet_work_location_riyadh" model="osoul.fleet.work.location">
+            <field name="name">Riyadh</field>
+        </record>
+        <record id="fleet_work_location_najran" model="osoul.fleet.work.location">
+            <field name="name">Najran</field>
+        </record>
+
+    </data>
+
+</odoo>

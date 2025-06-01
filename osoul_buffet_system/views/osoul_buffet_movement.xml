@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View buffet.stock.movement View Tree -->
+    <record id="view_buffet_stock_movement_tree" model="ir.ui.view">
+        <field name="name">view.buffet.stock.movement.tree</field>
+        <field name="model">buffet.stock.movement</field>
+        <field name="arch" type="xml">
+            <tree create="false">
+                <field name="stock_id"/>
+                <field name="quantity_change"/>
+                <field name="movement_date"/>
+                <field name="reason"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View buffet.stock.movement form -->
+    <record id="view_buffet_stock_movement_form" model="ir.ui.view">
+        <field name="name">view.buffet.stock.movement.form</field>
+        <field name="model">buffet.stock.movement</field>
+        <field name="arch" type="xml">
+            <form string="Buffet Stock Movement" create="false">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                        </h1>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View buffet.stock.movement search -->
+    <record id="view_buffet_stock_movement_search" model="ir.ui.view">
+        <field name="name">view.buffet.stock.movement.search</field>
+        <field name="model">buffet.stock.movement</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="1" string="Group By">
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action buffet.stock.movement -->
+    <record id="action_buffet_stock_movement" model="ir.actions.act_window">
+        <field name="name">Buffet Stock Movement</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">buffet.stock.movement</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Buffet Stock Movement.
+            </p>
+        </field>
+    </record>
+
+</odoo>

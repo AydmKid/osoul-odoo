@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Buffet System Module Category -->
+    <record id="module_category_osoul_buffet_system" model="ir.module.category">
+        <field name="name">Buffet System</field>
+        <field name="description">Manage Buffet Orders, Stocks, and System Operations</field>
+        <field name="sequence" eval="5"/>  <!-- Lowered sequence for higher display priority -->
+    </record>
+
+    <!-- Buffet User Group -->
+    <record id="group_osoul_buffet_user" model="res.groups">
+        <field name="name">Customer</field>
+        <field name="category_id" ref="module_category_osoul_buffet_system"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="comment">This group grants access to perform basic operations like viewing orders and stocks.</field>
+    </record>
+
+    <!-- Buffet Manager Group -->
+    <record id="group_osoul_buffet_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="module_category_osoul_buffet_system"/>
+        <field name="implied_ids" eval="[(4, ref('group_osoul_buffet_user'))]"/>
+        <field name="comment">This group grants permissions to manage buffet operations such as approving orders and updating stock levels.</field>
+    </record>
+
+    <!-- Access Controls for Buffet Manager -->
+    <record id="access_osoul_buffet_category_manager" model="ir.model.access">
+        <field name="name">Buffet Category Manager Access</field>
+        <field name="model_id" ref="model_osoul_buffet_category"/>
+        <field name="group_id" ref="group_osoul_buffet_manager"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="access_osoul_buffet_subcategory_manager" model="ir.model.access">
+        <field name="name">Buffet Subcategory Manager Access</field>
+        <field name="model_id" ref="model_osoul_buffet_subcategory"/>
+        <field name="group_id" ref="group_osoul_buffet_manager"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="access_osoul_buffet_stock_manager" model="ir.model.access">
+        <field name="name">Buffet Stock Manager Access</field>
+        <field name="model_id" ref="model_osoul_buffet_stock"/>
+        <field name="group_id" ref="group_osoul_buffet_manager"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="access_osoul_buffet_order_line_manager" model="ir.model.access">
+        <field name="name">Buffet Order Line Manager Access</field>
+        <field name="model_id" ref="model_osoul_buffet_order_line"/>
+        <field name="group_id" ref="group_osoul_buffet_manager"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="access_osoul_buffet_order_manager" model="ir.model.access">
+        <field name="name">Buffet Order Manager Access</field>
+        <field name="model_id" ref="model_osoul_buffet_order"/>
+        <field name="group_id" ref="group_osoul_buffet_manager"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <!-- Buffet Order Record Rule for Manager Access (Full Access) -->
+    <record id="rule_osoul_buffet_order_manager" model="ir.rule">
+        <field name="name">Manager Buffet Order Rule</field>
+        <field name="model_id" ref="model_osoul_buffet_order"/>
+        <field name="domain_force">[(1, '=', 1)]</field> <!-- Always True, managers can access everything -->
+        <field name="groups" eval="[(4, ref('group_osoul_buffet_manager'))]"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="access_buffet_stock_movement_manager" model="ir.model.access">
+        <field name="name">Buffet Stock Movement Manager Access</field>
+        <field name="model_id" ref="model_buffet_stock_movement"/>
+        <field name="group_id" ref="group_osoul_buffet_manager"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="access_buffet_stock_add_wizard_manager" model="ir.model.access">
+        <field name="name">Buffet Stock Add Wizard Manager Access</field>
+        <field name="model_id" ref="model_buffet_stock_add_wizard"/>
+        <field name="group_id" ref="group_osoul_buffet_manager"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="access_osoul_buffet_operator_manager" model="ir.model.access">
+        <field name="name">Buffet Operator Manager Access</field>
+        <field name="model_id" ref="model_osoul_buffet_operator"/>
+        <field name="group_id" ref="group_osoul_buffet_manager"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="access_osoul_buffet_options_manager" model="ir.model.access">
+        <field name="name">Buffet Options Manager Access</field>
+        <field name="model_id" ref="model_osoul_buffet_options"/>
+        <field name="group_id" ref="group_osoul_buffet_manager"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <!-- Access Controls for Buffet User -->
+    <record id="access_osoul_buffet_category_user" model="ir.model.access">
+        <field name="name">Buffet Category User Access</field>
+        <field name="model_id" ref="model_osoul_buffet_category"/>
+        <field name="group_id" ref="group_osoul_buffet_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="access_osoul_buffet_subcategory_user" model="ir.model.access">
+        <field name="name">Buffet Subcategory User Access</field>
+        <field name="model_id" ref="model_osoul_buffet_subcategory"/>
+        <field name="group_id" ref="group_osoul_buffet_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="access_osoul_buffet_stock_user" model="ir.model.access">
+        <field name="name">Buffet Stock User Access</field>
+        <field name="model_id" ref="model_osoul_buffet_stock"/>
+        <field name="group_id" ref="group_osoul_buffet_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="access_osoul_buffet_order_line_user" model="ir.model.access">
+        <field name="name">Buffet Order Line User Access</field>
+        <field name="model_id" ref="model_osoul_buffet_order_line"/>
+        <field name="group_id" ref="group_osoul_buffet_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="access_osoul_buffet_order_user" model="ir.model.access">
+        <field name="name">Buffet Order User Access</field>
+        <field name="model_id" ref="model_osoul_buffet_order"/>
+        <field name="group_id" ref="group_osoul_buffet_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <!-- Buffet Order Record Rule for User Access -->
+    <record id="rule_osoul_buffet_order_user" model="ir.rule">
+        <field name="name">User Buffet Order Rule</field>
+        <field name="model_id" ref="model_osoul_buffet_order"/>
+        <field name="domain_force">[('customer', '=', user.id)]</field>
+        <field name="groups" eval="[(4, ref('group_osoul_buffet_user'))]"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="access_buffet_stock_movement_user" model="ir.model.access">
+        <field name="name">Buffet Stock Movement User Access</field>
+        <field name="model_id" ref="model_buffet_stock_movement"/>
+        <field name="group_id" ref="group_osoul_buffet_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="access_buffet_stock_add_wizard_user" model="ir.model.access">
+        <field name="name">Buffet Stock Add Wizard User Access</field>
+        <field name="model_id" ref="model_buffet_stock_add_wizard"/>
+        <field name="group_id" ref="group_osoul_buffet_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="access_osoul_buffet_operator_user" model="ir.model.access">
+        <field name="name">Buffet Operator User Access</field>
+        <field name="model_id" ref="model_osoul_buffet_operator"/>
+        <field name="group_id" ref="group_osoul_buffet_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="access_osoul_buffet_options_user" model="ir.model.access">
+        <field name="name">Buffet Options User Access</field>
+        <field name="model_id" ref="model_osoul_buffet_options"/>
+        <field name="group_id" ref="group_osoul_buffet_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Root Menu -->
+    <record id="osoul_project_management_root_menu" model="ir.ui.menu">
+        <field name="name">Project Management</field>
+        <field name="sequence" eval="9"/>
+    </record>
+
+    <!-- Submenu: Projects -->
+    <record id="osoul_project_project_menu" model="ir.ui.menu">
+        <field name="name">Project List</field>
+        <field name="sequence" eval="10"/>
+        <field name="action" ref="osoul_project_project_action"/>
+        <field name="parent_id" ref="osoul_project_management_root_menu"/>
+        <field name="groups_id" eval="[(4, ref('osoul_project_management.group_osoul_project_management_manager'))]"/>
+    </record>
+
+    <!-- Submenu: Tasks -->
+    <record id="osoul_project_task_menu" model="ir.ui.menu">
+        <field name="name">Tasks</field>
+        <field name="sequence" eval="20"/>
+        <field name="action" ref="osoul_task_action"/>
+        <field name="parent_id" ref="osoul_project_management_root_menu"/>
+        <field name="groups_id" eval="[(4, ref('osoul_project_management.group_osoul_project_management_manager'))]"/>
+    </record>
+
+    <!-- Submenu: Milestones -->
+    <record id="osoul_project_milestone_menu" model="ir.ui.menu">
+        <field name="name">Milestones</field>
+        <field name="sequence" eval="30"/>
+        <field name="action" ref="osoul_milestone_action"/>
+        <field name="parent_id" ref="osoul_project_management_root_menu"/>
+        <field name="groups_id" eval="[(4, ref('osoul_project_management.group_osoul_project_management_manager'))]"/>
+    </record>
+
+    <!-- Submenu: Expenses -->
+    <record id="osoul_project_expense_menu" model="ir.ui.menu">
+        <field name="name">Expenses</field>
+        <field name="sequence" eval="40"/>
+        <field name="action" ref="osoul_project_expense_action"/>
+        <field name="parent_id" ref="osoul_project_management_root_menu"/>
+        <field name="groups_id" eval="[(4, ref('osoul_project_management.group_osoul_project_management_manager'))]"/>
+    </record>
+
+    <!-- Submenu: Quotations -->
+    <record id="osoul_project_quotation_menu" model="ir.ui.menu">
+        <field name="name">Quotations</field>
+        <field name="sequence" eval="50"/>
+        <field name="action" ref="osoul_quotation_action"/>
+        <field name="parent_id" ref="osoul_project_management_root_menu"/>
+        <field name="groups_id" eval="[(4, ref('osoul_project_management.group_osoul_project_management_manager'))]"/>
+    </record>
+
+    <!-- Submenu: Contracts -->
+    <record id="osoul_project_contract_menu" model="ir.ui.menu">
+        <field name="name">Contracts</field>
+        <field name="sequence" eval="60"/>
+        <field name="action" ref="osoul_contract_action"/>
+        <field name="parent_id" ref="osoul_project_management_root_menu"/>
+        <field name="groups_id" eval="[(4, ref('osoul_project_management.group_osoul_project_management_manager'))]"/>
+    </record>
+
+</odoo>

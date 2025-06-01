@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    
+    <record id="osoul_fleet_management_root_menu" model="ir.ui.menu" >
+        <field name="name">Fleet Management</field>
+        <field name="sequence" eval="0" />
+    </record>
+
+    <record id="osoul_fleet_vehicle_menu" model="ir.ui.menu" >
+        <field name="name">Vehicle</field>
+        <field name="sequence" eval="0" />
+        <field name="action" ref="action_osoul_fleet_vehicle" />
+        <field name="parent_id" ref="osoul_fleet_management_root_menu" />
+    </record>
+
+    <!-- Configurations -->
+
+    <record id="osoul_fleet_configuration_menu" model="ir.ui.menu" >
+        <field name="name">Configurations</field>
+        <field name="sequence" eval="1" />
+        <field name="parent_id" ref="osoul_fleet_management_root_menu" />
+    </record>
+    
+    <record id="osoul_fleet_brand_menu" model="ir.ui.menu" >
+        <field name="name">Brand</field>
+        <field name="sequence" eval="0" />
+        <field name="action" ref="action_osoul_fleet_brand" />
+        <field name="parent_id" ref="osoul_fleet_configuration_menu" />
+    </record>
+
+    <record id="osoul_fleet_owner_menu" model="ir.ui.menu" >
+        <field name="name">Owner</field>
+        <field name="sequence" eval="1" />
+        <field name="action" ref="action_osoul_fleet_owner" />
+        <field name="parent_id" ref="osoul_fleet_configuration_menu" />
+    </record>
+
+    <record id="osoul_fleet_plate_type_menu" model="ir.ui.menu" >
+        <field name="name">Plate Type</field>
+        <field name="sequence" eval="2" />
+        <field name="action" ref="action_osoul_fleet_plate_type" />
+        <field name="parent_id" ref="osoul_fleet_configuration_menu" />
+    </record>
+
+    <record id="osoul_fleet_category_menu" model="ir.ui.menu" >
+        <field name="name">Category</field>
+        <field name="sequence" eval="3" />
+        <field name="action" ref="action_osoul_fleet_category" />
+        <field name="parent_id" ref="osoul_fleet_configuration_menu" />
+    </record>
+
+    <record id="osoul_fleet_classification_menu" model="ir.ui.menu" >
+        <field name="name">Classification</field>
+        <field name="sequence" eval="4" />
+        <field name="action" ref="action_osoul_fleet_classification" />
+        <field name="parent_id" ref="osoul_fleet_configuration_menu" />
+    </record>
+
+    <record id="osoul_fleet_work_role_menu" model="ir.ui.menu" >
+        <field name="name">Work Role</field>
+        <field name="sequence" eval="5" />
+        <field name="action" ref="action_osoul_fleet_work_role" />
+        <field name="parent_id" ref="osoul_fleet_configuration_menu" />
+    </record>
+
+    <record id="osoul_fleet_work_location" model="ir.ui.menu" >
+        <field name="name">Work Location</field>
+        <field name="sequence" eval="6" />
+        <field name="action" ref="action_osoul_fleet_work_location" />
+        <field name="parent_id" ref="osoul_fleet_configuration_menu" />
+    </record>
+    
+</odoo>

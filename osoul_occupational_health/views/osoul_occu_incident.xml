@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View osoul.occu.incident View Tree -->
+    <record id="view_osoul_occu_incident_tree" model="ir.ui.view">
+        <field name="name">view.osoul.occu.incident.tree</field>
+        <field name="model">osoul.occu.incident</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="incident_no"/>
+                <field name="name"/>
+                <field name="incident_date"/>
+                <field name="reported_by"/>
+                <field name="department_id"/>
+                <field name="incident_type"/>
+                <field name="incident_site_id"/>
+                <field name="incident_location_id"/>
+                <field name="injuries"/>
+                <field name="witness_ids"/>
+                <field name="investigator_id"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View osoul.occu.incident form -->
+    <record id="view_osoul_occu_incident_form" model="ir.ui.view">
+        <field name="name">view.osoul.occu.incident.form</field>
+        <field name="model">osoul.occu.incident</field>
+        <field name="arch" type="xml">
+            <form string="Osoul Occu Incident">
+            <header>
+                <button name="action_submitted" type="object" string="Submit" class="btn-primary" confirm="Are you sure ?" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                <button name="action_investigate" type="object" string="Investigation" class="btn-primary" confirm="Are you sure ?" attrs="{'invisible': [('state', '!=', 'submitted')]}"/>
+                <button name="action_resolve" type="object" string="Resolved" class="btn-primary" confirm="Are you sure ?" attrs="{'invisible': [('state', '!=', 'investigation')]}"/>
+                <button name="action_close" type="object" string="Closed" class="btn-primary" confirm="Are you sure ?" attrs="{'invisible': [('state', '!=', 'resolved')]}"/>
+                <field name="state" widget="statusbar" readonly="1"/>
+            </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h3>
+                            <field name="incident_no"/>
+                        </h3>
+                        <h3>
+                            <field name="name" readonly="1"/>
+                        </h3>
+                    </div>
+                    <group name="name" string="">
+                        <group name="" string="Incident Information">
+                            <field name="name" placeholder="Enter Incident Name" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="incident_date" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="incident_type" placeholder="Select Incident Type" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="incident_site_id" placeholder="Select Incident Site" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="incident_location_id" placeholder="Select Incident Location" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="description" placeholder="Enter Incident Description" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                        </group>
+                        <group name="" string="Reporter Information">
+                            <field name="reported_by" placeholder="Select Reporter Name" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="department_id"/>
+                            <field name="manager_id"/>
+                            <field name="witness_ids" widget="many2many_tags" placeholder="Select Witness Name"
+                                                      attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                        </group>
+                        <group name="" string="Injuries and Damages">
+                            <field name="injuries" attrs="{'readonly': [('state', '!=', 'investigation')]}"/>
+                            <field name="injury_people" widget="many2many_tags" placeholder="Select Injured People"
+                                                        attrs="{'readonly': [('state', '!=', 'investigation')], 'required': [('injuries', '=', True)], 'invisible': [('injuries', '!=', True)]}" />
+                            <field name="injury_details" placeholder="Enter Injury Details" 
+                                                         attrs="{'readonly': [('state', '!=', 'investigation')], 'required': [('injuries', '=', True)], 'invisible': [('injuries', '!=', True)]}"/>
+                            <field name="damages" placeholder="Enter Damages Details" attrs="{'required': [('state', '=', 'investigation')], 'readonly': [('state', '!=', 'investigation')]}"/>
+                            <field name="attachment_ids" widget="many2many_binary" attrs="{'required': [('state', '=', 'investigation')], 'readonly': [('state', '!=', 'investigation')]}"/>
+                        </group>
+                        <group name="" string="Investigation and Corrective">
+                            <field name="root_cause" placeholder="Enter Root Cause" attrs="{'required': [('state', '=', 'investigation')], 'readonly': [('state', '!=', 'investigation')]}"/>
+                            <field name="corrective_actions" placeholder="Enter Corrective Actions" attrs="{'required': [('state', '=', 'investigation')], 'readonly': [('state', '!=', 'investigation')]}"/>
+                            <field name="investigator_id"/>
+                            <field name="Investigation_start_date"/>
+                            <field name="Investigation_ends_date"/>
+                            <field name="investigator_duration"/>
+                            <field name="incident_close_date"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View osoul.occu.incident search -->
+    <record id="view_osoul_occu_incident_search" model="ir.ui.view">
+        <field name="name">view.osoul.occu.incident.search</field>
+        <field name="model">osoul.occu.incident</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="1" string="Group By">
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action osoul.occu.incident -->
+    <record id="action_osoul_occu_incident" model="ir.actions.act_window">
+        <field name="name">Osoul Occu Incident</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">osoul.occu.incident</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Osoul Occu Incident.
+            </p>
+        </field>
+    </record>
+
+</odoo>

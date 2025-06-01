@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Root Menu -->
+    <record id="osoul_water_management_root_menu" model="ir.ui.menu">
+        <field name="name">Water Management</field>
+        <field name="sequence" eval="10"/>
+    </record>
+
+    <!-- Main Menus -->
+    <record id="osoul_water_tanker_entry_menu" model="ir.ui.menu">
+        <field name="name">Water Tanker Entry</field>
+        <field name="sequence" eval="1"/>
+        <field name="action" ref="osoul_water_tanker_entry_action"/>
+        <field name="parent_id" ref="osoul_water_management_root_menu"/>
+        <field name="groups_id" eval="[(4, ref('osoul_water_management.water_management_manager')), (4, ref('osoul_water_management.water_management_security'))]"/>
+    </record>
+    
+    <record id="osoul_water_reception_menu" model="ir.ui.menu">
+        <field name="name">Water Reception</field>
+        <field name="sequence" eval="2"/>
+        <field name="action" ref="osoul_water_reception_action"/>
+        <field name="parent_id" ref="osoul_water_management_root_menu"/>
+        <field name="groups_id" eval="[(4, ref('osoul_water_management.water_management_manager')), (4, ref('osoul_water_management.water_management_operator'))]"/>
+    </record>
+
+    <record id="osoul_water_counter_menu" model="ir.ui.menu">
+        <field name="name">Water Counter</field>
+        <field name="sequence" eval="3"/>
+        <field name="action" ref="osoul_water_counter_action"/>
+        <field name="parent_id" ref="osoul_water_management_root_menu"/>
+        <field name="groups_id" eval="[(4, ref('osoul_water_management.water_management_manager')), (4, ref('osoul_water_management.water_management_operator'))]"/>
+    </record>
+    
+    <!-- Configurations Submenu -->
+    <record id="osoul_water_management_configurations_menu" model="ir.ui.menu">
+        <field name="name">Configurations</field>
+        <field name="sequence" eval="4"/>
+        <field name="parent_id" ref="osoul_water_management_root_menu"/>
+        <field name="groups_id" eval="[(4, ref('osoul_water_management.water_management_manager'))]"/>
+    </record>
+
+
+    <!-- Configurations Menus -->
+    <record id="osoul_water_price_menu" model="ir.ui.menu">
+        <field name="name">Prices</field>
+        <field name="sequence" eval="1"/>
+        <field name="action" ref="action_osoul_water_price"/>
+        <field name="parent_id" ref="osoul_water_management_configurations_menu"/>
+    </record>
+
+    
+    <record id="osoul_water_management_operator_menu" model="ir.ui.menu">
+        <field name="name">Operators</field>
+        <field name="sequence" eval="2"/>
+        <field name="action" ref="action_osoul_water_operator"/>
+        <field name="parent_id" ref="osoul_water_management_configurations_menu"/>
+    </record>
+
+    <record id="osoul_vehicle_brand_menu" model="ir.ui.menu">
+        <field name="name">Vehicle Brand</field>
+        <field name="sequence" eval="3"/>
+        <field name="action" ref="osoul_vehicle_brand_action"/>
+        <field name="parent_id" ref="osoul_water_management_configurations_menu"/>
+    </record>
+
+    <record id="osoul_water_vendor_menu" model="ir.ui.menu">
+        <field name="name">Vendors Setup</field>
+        <field name="sequence" eval="4"/>
+        <field name="action" ref="osoul_water_vendor_action"/>
+        <field name="parent_id" ref="osoul_water_management_configurations_menu"/>
+    </record>
+</odoo>

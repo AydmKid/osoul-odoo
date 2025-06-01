@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="osoul_task_action" model="ir.actions.act_window">
+        <field name="name">Tasks</field>
+        <field name="res_model">osoul.task</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first task
+            </p>
+        </field>
+    </record>
+
+    <record id="osoul_task_form" model="ir.ui.view">
+        <field name="name">osoul.task.form</field>
+        <field name="model">osoul.task</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_task_start" type="object" string="Start Task" class="btn-primary" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                    <button name="action_task_complete" type="object" string="Complete Task" class="btn-success" attrs="{'invisible': [('state', '!=', 'in_progress')]}"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="priority"/>
+                        <field name="start_date"/>
+                        <field name="end_date"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>

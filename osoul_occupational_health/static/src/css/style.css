@@ -1,0 +1,17 @@
+.o_horizontal_field {
+    /* display: flex; */
+    align-items: left;
+    margin-bottom: 0px; /* Space between each row */
+}
+
+.o_horizontal_field label {
+    width: 220px; /* Adjust label width to your preference */
+    font-size: 8px; /* Adjust font size */
+    margin-right: 0px; /* Space between label and field */
+    text-align: left; /* Align label text */
+}
+
+.o_horizontal_field .o_field_widget {
+    display: -moz-inline-stack;
+    gap: 1px; /* Space between radio buttons */
+}

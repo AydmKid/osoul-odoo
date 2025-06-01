@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.actions.act_window" id="security_supply_types_action">
+        <field name="name">Supply Types</field>
+        <field name="res_model">osoul.security.supply.types</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.ui.view" id="security_visits_types_tree_view">
+        <field name="name">osoul.security.supply.types.tree</field>
+        <field name="model">osoul.security.supply.types</field>
+        <field name="arch" type="xml">
+            <tree sample = "1">
+                <field name="supply_type" decoration-bf="1" decoration-success="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="security_supply_types_form_view">
+        <field name="name">osoul.security.supply.types.form</field>
+        <field name="model">osoul.security.supply.types</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div>
+                        <h4>
+                        </h4>
+                        <h3>
+                            <field name="supply_type" readonly="1" decoration-bf="10" decoration-success="1" />
+                        </h3>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="supply_type" required="1" placeholder="Enter Supply Type Name" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="security_supply_types_menu" model="ir.ui.menu" >
+        <field name="name">Supply Types</field>
+        <field name="sequence" eval="1" />
+        <field name="action" ref="security_supply_types_action" />
+        <field name="parent_id" ref="security_guards_configurations_menu" />
+    </record>
+
+</odoo>

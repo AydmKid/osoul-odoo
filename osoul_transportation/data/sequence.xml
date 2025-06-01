@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    
+        <record id="transportation_sequence_code" model="ir.sequence">
+            <field name="name">Transportation Exit Code</field>
+            <field name="code">transportation_sequence</field>
+            <field name="prefix">TEC-</field>
+            <field name="padding">7</field>
+        </record>
+    
+    </data>
+    
+</odoo>

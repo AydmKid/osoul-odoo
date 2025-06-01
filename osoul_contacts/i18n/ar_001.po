@@ -1,0 +1,70 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* osoul_contacts
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-04 12:51+0000\n"
+"PO-Revision-Date: 2023-11-04 12:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: osoul_contacts
+#: model:ir.model,name:osoul_contacts.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: osoul_contacts
+#: model:ir.model.fields.selection,name:osoul_contacts.selection__res_partner__in_out_state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: osoul_contacts
+#: model:ir.model.fields,field_description:osoul_contacts.field_res_partner__identity_no
+#: model:ir.model.fields,field_description:osoul_contacts.field_res_users__identity_no
+msgid "Identity Number"
+msgstr "رقم الهوية"
+
+#. module: osoul_contacts
+#: model:ir.model.fields,field_description:osoul_contacts.field_res_partner__in_out_state
+#: model:ir.model.fields,field_description:osoul_contacts.field_res_users__in_out_state
+msgid "InOut Status"
+msgstr ""
+
+#. module: osoul_contacts
+#: model:ir.model.fields.selection,name:osoul_contacts.selection__res_partner__in_out_state__inside_osoul
+msgid "Inside Osoul"
+msgstr ""
+
+#. module: osoul_contacts
+#: model:ir.model.fields,field_description:osoul_contacts.field_res_partner__noti_state
+#: model:ir.model.fields,field_description:osoul_contacts.field_res_users__noti_state
+msgid "Noti State"
+msgstr ""
+
+#. module: osoul_contacts
+#: model:ir.model.fields.selection,name:osoul_contacts.selection__res_partner__noti_state__notification_off
+msgid "Notification Off"
+msgstr ""
+
+#. module: osoul_contacts
+#: model:ir.model.fields.selection,name:osoul_contacts.selection__res_partner__noti_state__notification_on
+msgid "Notification On"
+msgstr ""
+
+#. module: osoul_contacts
+#: model:ir.model.fields.selection,name:osoul_contacts.selection__res_partner__in_out_state__outside_osoul
+msgid "Out Osoul"
+msgstr ""
+
+#. module: osoul_contacts
+#: model:ir.model.fields,field_description:osoul_contacts.field_res_partner__supplier_name
+#: model:ir.model.fields,field_description:osoul_contacts.field_res_users__supplier_name
+msgid "Supplier Name"
+msgstr ""

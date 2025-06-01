@@ -1,0 +1,4 @@
+{
+    "project_id": "tekno-app",
+    "service_account_path": "notification_manager/config/service_account.json"
+}

@@ -1,0 +1,2048 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* osoul_security_guards
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-29 07:26+0000\n"
+"PO-Revision-Date: 2025-05-29 07:26+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__identity_no_id
+msgid " Identity No"
+msgstr ""
+
+#. module: osoul_security_guards
+#: code:addons/osoul_security_guards/models/osoul_security_visitor_enter_exit.py:0
+#, python-format
+msgid "A visitor with this ID No already exists."
+msgstr "!يوجد زائر يحمل هذا الرقم التعريفي بالفعل"
+
+#. module: osoul_security_guards
+#: code:addons/osoul_security_guards/models/osoul_security_visitor_enter_exit.py:0
+#, python-format
+msgid "A visitor with this mobile number already exists."
+msgstr "!يوجد زائر يحمل نفس رقم الجوال بالفعل"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_enter_exit_form_view
+msgid "Absence Calendar"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.actions.act_window,name:osoul_security_guards.action_security_emp_calendar
+msgid "Absences Calendar"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:res.groups,name:osoul_security_guards.group_security_permission_access
+msgid "Access Permission"
+msgstr "امكانية اصدار التصاريح"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__message_needaction
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__message_needaction
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__message_needaction
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__message_needaction
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__message_needaction
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__message_needaction
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__message_needaction
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__message_needaction
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__message_needaction
+msgid "Action Needed"
+msgstr "يتطلب اتخاذ إجراء "
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__activity_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__activity_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__activity_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__activity_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__activity_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__activity_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__activity_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__activity_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__activity_ids
+msgid "Activities"
+msgstr "النشاطات"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__activity_state
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__activity_state
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__activity_state
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__activity_state
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__activity_state
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__activity_state
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__activity_state
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__activity_state
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_securit_visitor_enter_permission
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_supplier_enter_permission
+msgid "Add Extra Informations if Needed"
+msgstr "إدخال معلومات إضافية"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emergency_visit__enter_exit_permission__allowed_enter
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_supplier_enter_permission__enter_exit_permission__allowed_enter
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_visitor_enter_permission__enter_exit_permission__allowed_enter
+msgid "Allowed Enter"
+msgstr "السماح بالدخول"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emergency_visit__enter_exit_permission__allowed_exit
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_supplier_enter_permission__enter_exit_permission__allowed_exit
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_visitor_enter_permission__enter_exit_permission__allowed_exit
+msgid "Allowed Exit"
+msgstr "السماح بالخروج "
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_supplier_enter_permission
+msgid "Allowed Supplier Exit"
+msgstr " السماح بخروج المورد"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_securit_visitor_enter_permission
+msgid "Allowed Visitor Exit"
+msgstr "السماح بخروج الزائر"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_securit_visitor_enter_permission
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_supplier_enter
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_supplier_enter_permission
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_visitor_enter
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emergency_visits_form_view
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_enter_exit_form_view
+msgid "Are You Sure"
+msgstr "هل أنت متأكد ؟"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_enter_exit_form_view
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_exit_enter_form
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.view_security_vehicle_exit_form
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.view_security_visitor_form
+msgid "Are You Sure ?"
+msgstr "هل أنت متأكد ؟"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_vehicle_exit__color__ashen
+msgid "Ashen"
+msgstr ""
+
+#. module: osoul_security_guards
+#: code:addons/osoul_security_guards/models/security_supplier_enter.py:0
+#, python-format
+msgid "Ask Permit Issuer to Allowed Supplier to Exit"
+msgstr "مراجعة مسؤول التصريح للسماح بخروج المورد "
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__driver_id
+msgid "Assigned Driver"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__back_permission
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__back_permission
+msgid "Back Permission"
+msgstr "عاد من الأستئذان"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__back_permission_time
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__back_permission_time_exit
+msgid "Back Permission Time"
+msgstr "زمن العودة من الأستئذان"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_vehicle_exit__color__black
+msgid "Black"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_supplier_enter_permission__operation_type__both
+msgid "Both"
+msgstr "توصيل وتحميل"
+
+#. module: osoul_security_guards
+#: code:addons/osoul_security_guards/models/osoul_security_visitor_enter_exit.py:0
+#, python-format
+msgid "Cannot delete record while visitor is still inside."
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__visitor_card_no
+msgid "Card No"
+msgstr "رقم البطاقة"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_enter_exit_form_view
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_exit_enter_form
+msgid "Choose Employee Name"
+msgstr "إختر إسم الموظف"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_supplier_enter
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emergency_visits_form_view
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_enter_exit_form_view
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_exit_enter_form
+msgid "Choose Entry Gate"
+msgstr "إختر بوابة الدخول"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_supplier_enter
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emergency_visits_form_view
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_enter_exit_form_view
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_exit_enter_form
+msgid "Choose Exit Gate"
+msgstr "إختر بوابة الخروج"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.securitry_poultry_gates_form_view
+msgid "Choose Gate Location"
+msgstr "إختر موقع البوابة"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_supplier_enter_permission
+msgid "Choose Operation Type"
+msgstr "إختر نوع العملية"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_supplier_enter_permission
+msgid "Choose Supplier Name"
+msgstr "إختر إسم المورد"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_supplier_enter_permission
+msgid "Choose Supply Type"
+msgstr "إختر نوع الخدمة"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_securit_visitor_enter_permission
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emergency_visits_form_view
+msgid "Choose Visit Type"
+msgstr "إختر نوع الزيارة"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_securit_visitor_enter_permission
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emergency_visits_form_view
+msgid "Choose Visitor Name"
+msgstr "إختر إسم الزائر"
+
+#. module: osoul_security_guards
+#: model_terms:ir.actions.act_window,help:osoul_security_guards.security_emp_enter_exit_action
+#: model_terms:ir.actions.act_window,help:osoul_security_guards.security_emp_exit_enter_action
+msgid "Click the \"Create\" button to add new employee entry and exit records."
+msgstr "السجلات"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supply_type__color
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supply_types__color
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__color
+msgid "Color"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__company_name
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emergency_visits_form_view
+msgid "Company Name"
+msgstr "اسم الشركة \\ الجهة"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__visit_company
+msgid "Company/Organization"
+msgstr "الجهة"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_enter_exit__Expiration_of_working_hours__complete
+msgid "Complete Work day"
+msgstr "يوم عمل مكتمل"
+
+#. module: osoul_security_guards
+#: model:ir.ui.menu,name:osoul_security_guards.security_guards_configurations_menu
+msgid "Configurations"
+msgstr "إعدادات"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__counts_atten
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__counts_atten
+msgid "Counts Atten"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model_terms:ir.actions.act_window,help:osoul_security_guards.action_security_visitor
+msgid "Create the first visitor entry record"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__create_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__create_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__create_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_poultry_gates__create_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__create_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__create_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supply_type__create_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supply_types__create_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__create_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__create_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__create_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__create_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visits_types__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__create_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__create_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__create_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_poultry_gates__create_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__create_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__create_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supply_type__create_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supply_types__create_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__create_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__create_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__create_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__create_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visits_types__create_date
+msgid "Created on"
+msgstr "تاريخ اﻹنشاء"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.view_security_emp_calendar_search
+msgid "Current Employee"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__day_name
+msgid "Day Name"
+msgstr "اليوم"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__stay_days
+msgid "Days No"
+msgstr ""
+
+#. module: osoul_security_guards
+#: code:addons/osoul_security_guards/models/security_emergency_visit.py:0
+#: code:addons/osoul_security_guards/models/security_emp_enter_exit.py:0
+#: code:addons/osoul_security_guards/models/security_emp_exit_enter.py:0
+#, python-format
+msgid ""
+"Deletion of records is not allowed when the state is 'inside_osoul' or "
+"'outside_osoul'."
+msgstr "خارج أصول"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_supplier_enter_permission__operation_type__delivery
+msgid "Delivery"
+msgstr "توصيل"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__emp_department_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__emp_department_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__department_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__department_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__department_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__emp_department_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__department_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__emp_department_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__display_name
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__display_name
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__display_name
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_poultry_gates__display_name
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__display_name
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__display_name
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supply_type__display_name
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supply_types__display_name
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__display_name
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__display_name
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__display_name
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__display_name
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visits_types__display_name
+msgid "Display Name"
+msgstr "اسم العرض "
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emergency_visit__enter_exit_permission__draft
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emergency_visit__state__draft
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_enter_exit__back_permission__draft
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_enter_exit__state__draft
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_exit_enter__back_permission__draft
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_exit_enter__state__draft
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_supplier_enter__state__draft
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_supplier_enter_permission__enter_exit_permission__draft
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_supplier_enter_permission__state__draft
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_visitor_enter__state__draft
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_visitor_enter_exit__state__draft
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_visitor_enter_permission__enter_exit_permission__draft
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_visitor_enter_permission__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.view_security_vehicle_exit_form
+msgid "Driver Informations"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_poultry_gates__gate_location__east_side
+msgid "East Side"
+msgstr "الجهة الشرقية"
+
+#. module: osoul_security_guards
+#: model:ir.ui.menu,name:osoul_security_guards.security_emergency_visit_menu
+#: model:ir.ui.menu,name:osoul_security_guards.security_guards_emergrncy_visit
+msgid "Emergency Visit"
+msgstr "زيارات الطوارئ"
+
+#. module: osoul_security_guards
+#: model:ir.actions.act_window,name:osoul_security_guards.security_emergency_visit_action
+msgid "Emergency Visits"
+msgstr "زيارات الطوارئ"
+
+#. module: osoul_security_guards
+#: model:res.groups,name:osoul_security_guards.group_security_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.view_security_emp_calendar
+msgid "Employee Absences Calendar"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.ui.menu,name:osoul_security_guards.security_guards_emp_enter_exit_menu
+msgid "Employee Enter Exit"
+msgstr "سجلات البوابة للموظفين"
+
+#. module: osoul_security_guards
+#: model:ir.actions.act_window,name:osoul_security_guards.security_emp_enter_exit_action
+msgid "Employee Enter and Exit"
+msgstr "دخول وخروج الموظفين"
+
+#. module: osoul_security_guards
+#: model:ir.ui.menu,name:osoul_security_guards.security_guards_emp_exit_enter_menu
+msgid "Employee Exit Enter"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.actions.act_window,name:osoul_security_guards.security_emp_exit_enter_action
+msgid "Employee Exit and Enter"
+msgstr "خروج ودخول الموظفين"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__emp_id_no
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__emp_id_no
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__emp_id_no
+msgid "Employee ID"
+msgstr "الرقم الوظيفي"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.view_security_visitor_form
+msgid "Employee Info"
+msgstr "الموظف طالب الزيارة"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_exit_enter_form
+msgid "Employee Information"
+msgstr "معلومات الموظف"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_enter_exit_form_view
+msgid "Employee Informations"
+msgstr "معلومات الموظف"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__emp_name_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__emp_name_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__emp_name_id
+msgid "Employee Name"
+msgstr "إسم الموظف"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__employment_no_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__employment_no_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__employment_no_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__employment_no_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__employment_no_id
+msgid "Employment No"
+msgstr "الرقم الوظيفي"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_enter_exit__exit_reason__end_of_work
+msgid "End of work"
+msgstr "نهاية دوام"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emergency_visits_form_view
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_enter_exit_form_view
+msgid "Enter"
+msgstr "دخول"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__enter_exit_permission
+msgid "Enter Exit Allowed"
+msgstr "موافقة الدخول"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__enter_exit_permission
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__enter_exit_permission
+msgid "Enter Exit Allowed Visitor"
+msgstr "سماحية الدخول والخروج"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_visitor_enter
+msgid "Enter Gate"
+msgstr "بوابة الدخول"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.securitry_poultry_gates_form_view
+msgid "Enter Gate Name"
+msgstr "أدخل إسم البوابة"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.securitry_poultry_gates_form_view
+msgid "Enter Gate Number"
+msgstr "أدخل رقم الموابة"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.view_security_visitor_form
+msgid "Enter Osoul"
+msgstr "الدخول الى اصول"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_supply_types_form_view
+msgid "Enter Supply Type Name"
+msgstr "أدخل نوع الخدمة"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_supplier_enter
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_visitor_enter
+msgid "Enter To Osoul"
+msgstr "الدخول إلى أصول"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_supplier_enter_permission
+msgid "Enter Vehicle Plate Letters"
+msgstr "أدخل أحرف اللوحة المرورية"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_supplier_enter_permission
+msgid "Enter Vehicle Plate No"
+msgstr "أدخل أرقم اللوحة المرورية"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_visits_types_form_view
+msgid "Enter Visit Type Name"
+msgstr "أدخل مسمى الزيارة"
+
+#. module: osoul_security_guards
+#: model:ir.ui.menu,name:osoul_security_guards.securitry_emp_enter_exit_menu
+msgid "Enter and Exit"
+msgstr "دخول و خروج"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_visitor_enter
+msgid "Enter and Exit Information"
+msgstr "معلومات الدخول والخروج"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_exit_enter_form
+msgid "Enter and Timing Information"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__entry_gate_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__entry_gate_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__entry_gate_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__entry_gate_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__entry_gate_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__entry_gate_id
+msgid "Entering Gate"
+msgstr "بوابة الدخول"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__guard_in_entry_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__guard_in_entry_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__guard_in_entry_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__guard_in_entry_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__guard_in_entry_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__guard_in_entry_id
+msgid "Entering Guard"
+msgstr "حارس بوابة الدخول"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__time_in
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__time_in
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__time_in
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__time_in
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__time_in
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__time_in
+msgid "Entering Time"
+msgstr "وقت وتاريخ الدخول"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__entry_reason
+msgid "Entery Reason"
+msgstr "سبب الدخول"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__entry_gate_id
+msgid "Entry Gate"
+msgstr "بوابة الدخول"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__guard_entry_id
+msgid "Entry Guard"
+msgstr "حارس الدخول"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.view_security_visitor_form
+msgid "Entry Info"
+msgstr "معلومات الدخول"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__time_in
+msgid "Entry Time"
+msgstr "زمن الدخول"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_supplier_enter
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emergency_visits_form_view
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_enter_exit_form_view
+msgid "Entry and Timing Informations"
+msgstr "معلومات الدخول والتوقيت"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__event_date
+msgid "Event Date"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emergency_visits_form_view
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_enter_exit_form_view
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.view_security_vehicle_exit_form
+msgid "Exit"
+msgstr "خروج"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_supplier_enter
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_visitor_enter
+msgid "Exit From Osoul"
+msgstr "الخروج من أصول"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__exit_gate_id
+msgid "Exit Gate"
+msgstr "بوابة الخروج"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__guard_exit_id
+msgid "Exit Guard"
+msgstr "حارس اخروج"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.view_security_visitor_form
+msgid "Exit Info"
+msgstr "معلومات الخروج"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emergency_visit__enter_exit_permission__exit_not_allowed
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_supplier_enter_permission__enter_exit_permission__exit_not_allowed
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_visitor_enter_permission__enter_exit_permission__exit_not_allowed
+msgid "Exit Not Allowed"
+msgstr "الخروج غير مصرح"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.view_security_visitor_form
+msgid "Exit Osoul"
+msgstr "الخروج من اصول"
+
+#. module: osoul_security_guards
+#: code:addons/osoul_security_guards/models/osoul_vehicle_exit.py:0
+#, python-format
+msgid "Exit Permit"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__exit_reason
+msgid "Exit Reason"
+msgstr "سبب الخروج"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__time_out
+msgid "Exit Time"
+msgstr "زمن الخروج"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__exit_type
+msgid "Exit Type"
+msgstr "نوع الخروج"
+
+#. module: osoul_security_guards
+#: model:ir.ui.menu,name:osoul_security_guards.security_emp_exit_enter_menu
+msgid "Exit and Entry"
+msgstr "خروج ودخول"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_visitor_enter
+msgid "Exit and Exit Information"
+msgstr "معلومات الخروج والتوقيت"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_exit_enter_form
+msgid "Exit and Timing Information"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_supplier_enter
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emergency_visits_form_view
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_enter_exit_form_view
+msgid "Exit and Timing Informations"
+msgstr "معلومات الخروج والتوقيت"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_visitor_enter_exit__state__exited
+msgid "Exited"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__exit_gate_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__exit_gate_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__exit_gate_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__exit_gate_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__exit_gate_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__exit_gate_id
+msgid "Exiting Gate"
+msgstr "بوابة الخروج"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__guard_in_exiting_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__guard_in_exiting_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__guard_in_exiting_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__guard_in_exiting_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__guard_in_exiting_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__guard_in_exiting_id
+msgid "Exiting Guard"
+msgstr "حارس بوابة الخروج"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__time_out
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__time_out
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__time_out
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__time_out
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__time_out
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__time_out
+msgid "Exiting Time"
+msgstr "وقت وتاريخ الخروج"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__Expiration_of_working_hours
+msgid "Expiration of Working Hours"
+msgstr "إكتمال يوم العمل"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_supplier_enter_permission__state__expired
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_visitor_enter_permission__state__expired
+msgid "Expired"
+msgstr "منتهي الصلاحية"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__note
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__note
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emergency_visits_form_view
+msgid "Extra Informations"
+msgstr "معلومات إضافية"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__note
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__note
+msgid "Extra Note"
+msgstr "معلومات إضافية"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_exit_enter__exit_type__final_exit
+msgid "Final Exit"
+msgstr "خروج نهائي"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__message_follower_ids
+msgid "Followers"
+msgstr "المتابعين "
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعين (الشركاء) "
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emergency_visit__activity_type_icon
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_enter_exit__activity_type_icon
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_exit_enter__activity_type_icon
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter__activity_type_icon
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter_permission__activity_type_icon
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_vehicle_exit__activity_type_icon
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter__activity_type_icon
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_exit__activity_type_icon
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_permission__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "أيقونة Font awesome مثال: fa-tasks "
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__gate_entry_record
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__gate_entry_record
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__gate_entry_record
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__gate_entry_record
+msgid "Gate Entry Record"
+msgstr "سجل دخول البوابة"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.securitry_poultry_gates_form_view
+msgid "Gate Informations"
+msgstr "معلومات البوابة"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_poultry_gates__gate_location
+msgid "Gate Location"
+msgstr "موقع البوابة"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_poultry_gates__gate_name
+msgid "Gate Name"
+msgstr "إسم البوابة"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_poultry_gates__gate_no
+msgid "Gate No"
+msgstr "رقم البوابة"
+
+#. module: osoul_security_guards
+#: model:ir.ui.menu,name:osoul_security_guards.security_gate_permissions_menu
+msgid "Gate Permissions"
+msgstr "تصاريح دخول البوابات"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_poultry_gates__gate_no
+msgid "Gate number for identification"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_exit_enter_form
+msgid "Gates Information"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_enter_exit_form_view
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.view_security_vehicle_exit_form
+msgid "Gates Informations"
+msgstr "معلومات البوابة"
+
+#. module: osoul_security_guards
+#: model:ir.ui.menu,name:osoul_security_guards.security_suppliers_records_menu
+msgid "Gates permit records"
+msgstr "سجلات تصاريح البوابات"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_exit_enter_form
+msgid "Go Inside"
+msgstr "دخول"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_exit_enter_form
+msgid "Go Outside"
+msgstr "خروج"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_enter_exit_search_view
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_exit_search_view
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_visitor_enter_exit_search_view
+msgid "Group By"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:res.groups,name:osoul_security_guards.group_security_guards_supplier_permission
+msgid "Guards Supplier Enter Permission"
+msgstr "امكانية تعديل تصريح المورد للحارس"
+
+#. module: osoul_security_guards
+#: model:res.groups,name:osoul_security_guards.group_security_guards_visitor_permission
+msgid "Guards Visitor Permission"
+msgstr "امكانية تعديل تصريح الزائر للحارس"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__has_message
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__has_message
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__has_message
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__has_message
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__has_message
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__has_message
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__has_message
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__has_message
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__has_message
+msgid "Has Message"
+msgstr "يحتوي على رسالة "
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_enter_exit__back_permission__he_is_back
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_exit_enter__back_permission__he_is_back
+msgid "He Is Back"
+msgstr "رجع من الأستئذان"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_enter_exit__back_permission__he_is_not_back
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_exit_enter__back_permission__he_is_not_back
+msgid "He Is Not Back"
+msgstr "لم يرجع من الأستئذان"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__hours_on_permission
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__hours_on_permission_exit
+msgid "Hours On Permission"
+msgstr "عدد ساعات الإستئذان"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__emp_housing
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__emp_housing
+msgid "Housing"
+msgstr "التسكين"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_poultry_gates__id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supply_type__id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supply_types__id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visits_types__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__visitor_id_no
+msgid "ID No"
+msgstr "الهوية"
+
+#. module: osoul_security_guards
+#: code:addons/osoul_security_guards/models/osoul_security_visitor_enter_exit.py:0
+#, python-format
+msgid "ID No must be exactly 10 digits and numeric."
+msgstr "!يجب أن يتكون رقم الهوية من 10 أرقام"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emergency_visit__activity_exception_icon
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_enter_exit__activity_exception_icon
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_exit_enter__activity_exception_icon
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter__activity_exception_icon
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter_permission__activity_exception_icon
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_vehicle_exit__activity_exception_icon
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter__activity_exception_icon
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_exit__activity_exception_icon
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_permission__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "الأيقونة للإشارة إلى استثناء النشاط"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__identity_no
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__identity_no
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__identity_no
+msgid "Identity No"
+msgstr "رقم الهوية"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emergency_visit__message_needaction
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emergency_visit__message_unread
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_enter_exit__message_needaction
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_enter_exit__message_unread
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_exit_enter__message_needaction
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_exit_enter__message_unread
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter__message_needaction
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter__message_unread
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter_permission__message_needaction
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter_permission__message_unread
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_vehicle_exit__message_needaction
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_vehicle_exit__message_unread
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter__message_needaction
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter__message_unread
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_exit__message_needaction
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_exit__message_unread
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_permission__message_needaction
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_permission__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emergency_visit__message_has_error
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emergency_visit__message_has_sms_error
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_enter_exit__message_has_error
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_enter_exit__message_has_sms_error
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_exit_enter__message_has_error
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_exit_enter__message_has_sms_error
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter__message_has_error
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter__message_has_sms_error
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter_permission__message_has_error
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter_permission__message_has_sms_error
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_vehicle_exit__message_has_error
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_vehicle_exit__message_has_sms_error
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter__message_has_error
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter__message_has_sms_error
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_exit__message_has_error
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_exit__message_has_sms_error
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_permission__message_has_error
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_permission__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__enter_exit_permission
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__enter_exit_permission
+msgid "In-Out Allowed Status"
+msgstr "سماحية الدخول والخروج"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_enter_exit__Expiration_of_working_hours__incomplete
+msgid "Incomplete Work day"
+msgstr "يوم عمل غير مكتمل"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emergency_visit__state__inside_osoul
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_enter_exit__state__inside_osoul
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_exit_enter__state__inside_osoul
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_supplier_enter__state__inside_osoul
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_visitor_enter__state__inside_osoul
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_visitor_enter_exit__state__inside
+msgid "Inside Osoul"
+msgstr "داخل أصول"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__message_is_follower
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__message_is_follower
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__message_is_follower
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__message_is_follower
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__message_is_follower
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__message_is_follower
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__message_is_follower
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__message_is_follower
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_enter_exit__entry_reason__job_assignment
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_enter_exit__exit_reason__job_assignment
+msgid "Job assignment"
+msgstr "مهمة عمل"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit____last_update
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit____last_update
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter____last_update
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_poultry_gates____last_update
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter____last_update
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission____last_update
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supply_type____last_update
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supply_types____last_update
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit____last_update
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter____last_update
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit____last_update
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission____last_update
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visits_types____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__write_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__write_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__write_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_poultry_gates__write_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__write_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__write_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supply_type__write_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supply_types__write_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__write_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__write_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__write_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__write_uid
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visits_types__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__write_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__write_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__write_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_poultry_gates__write_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__write_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__write_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supply_type__write_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supply_types__write_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__write_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__write_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__write_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__write_date
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visits_types__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__license_plate
+msgid "License Plate"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_supplier_enter_permission__operation_type__loading
+msgid "Loading"
+msgstr "تحميل"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_poultry_gates__gate_location
+msgid "Location of the poultry gate"
+msgstr "موقع البوابة داخل مصنع تعاونية عسير"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: osoul_security_guards
+#: model:res.groups,name:osoul_security_guards.group_security_guards_manager
+msgid "Manager"
+msgstr "مدير"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__manufacturer
+msgid "Manufacturer"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__message_has_error
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__message_has_error
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__message_has_error
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__message_has_error
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__message_has_error
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__message_has_error
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__message_has_error
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__message_has_error
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__message_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__message_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__message_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__message_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__message_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__message_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__message_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__message_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__mobile
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__mobile
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__mobile
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__visitor_mobile
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__mobile
+msgid "Mobile"
+msgstr "الجوال"
+
+#. module: osoul_security_guards
+#: code:addons/osoul_security_guards/models/osoul_security_visitor_enter_exit.py:0
+#, python-format
+msgid "Mobile number must be exactly 10 digits and numeric."
+msgstr "!يجب أن يتكون رقم الجوال من 10 أرقام"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "نهاية الوقت المعين للنشاط"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_poultry_gates__gate_name
+msgid "Name of the poultry gate"
+msgstr "إسم البوابة"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__country_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__country_id
+msgid "Nationality"
+msgstr "الجنسية"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__activity_summary
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__activity_summary
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__activity_summary
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__activity_summary
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__activity_summary
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__activity_summary
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__activity_summary
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__activity_summary
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__activity_type_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__activity_type_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__activity_type_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__activity_type_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__activity_type_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__activity_type_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__activity_type_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__activity_type_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_exit_enter__exit_type__normal_exit
+msgid "Normal Exit"
+msgstr "خروج عادي"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_poultry_gates__gate_location__north_side
+msgid "North Side"
+msgstr "الجهة الشمالية"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__note
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__note
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء "
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emergency_visit__message_needaction_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_enter_exit__message_needaction_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_exit_enter__message_needaction_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter__message_needaction_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter_permission__message_needaction_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_vehicle_exit__message_needaction_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter__message_needaction_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_exit__message_needaction_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_permission__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emergency_visit__message_has_error_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_enter_exit__message_has_error_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_exit_enter__message_has_error_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter__message_has_error_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter_permission__message_has_error_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_vehicle_exit__message_has_error_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter__message_has_error_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_exit__message_has_error_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_permission__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emergency_visit__message_unread_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_enter_exit__message_unread_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_exit_enter__message_unread_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter__message_unread_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter_permission__message_unread_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_vehicle_exit__message_unread_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter__message_unread_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_exit__message_unread_counter
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_permission__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة "
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__operation_type
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__operation_type
+msgid "Operation Type"
+msgstr "نوع العملية"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_enter_exit__state__out_permission
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_exit_enter__state__out_permission
+msgid "Out Permission"
+msgstr "خروج بإذن"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emergency_visit__state__outside_osoul
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_enter_exit__state__outside_osoul
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_exit_enter__state__outside_osoul
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_supplier_enter__state__outside_osoul
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_visitor_enter__state__outside_osoul
+msgid "Outside Osoul"
+msgstr "خارج أصول"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_enter_exit__exit_reason__permission
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_exit_enter__exit_type__permission
+msgid "Permission"
+msgstr "أستئذان"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__permission_code
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__permission_code_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__permission_code
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__permission_code
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__permission_code_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__permission_code
+msgid "Permission Code"
+msgstr "رمز التصريح"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_visitor_enter
+msgid "Permission Information"
+msgstr "معلومات الصلاحيات"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__permission_state
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__permission_state
+msgid "Permission Status"
+msgstr "حالة التصريح"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__permission_time
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__permission_time_exit
+msgid "Permission Time"
+msgstr "تاريخ الإستئذان"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_securit_visitor_enter_permission
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_supplier_enter
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_supplier_enter_permission
+msgid "Permit Information"
+msgstr "معلومات التصريح"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.view_security_vehicle_exit_form
+msgid "Permit Informations"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__permit_issuer_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__permit_issuer_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__permit_issuer_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__permit_issuer_id
+msgid "Permit Issuer"
+msgstr "محرر التصريح"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__emp_phone
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__emp_phone
+msgid "Phone No"
+msgstr "رقم التواصل"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__plate_letters
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__plate_letters
+msgid "Plate Letters"
+msgstr "أحرف اللوحة المرورية"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__plate_no
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__plate_no
+msgid "Plate No"
+msgstr "أرقام اللوحة المرورية"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__position
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emergency_visits_form_view
+msgid "Position Name"
+msgstr "الوظيفة"
+
+#. module: osoul_security_guards
+#: model:ir.actions.act_window,name:osoul_security_guards.securitry_poultry_gates_action
+msgid "Poultry Security Gates"
+msgstr "بوابات أصول اﻷمنية"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__progress
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__progress
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__progress
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__progress
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__progress
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__progress
+msgid "Progress"
+msgstr "حالة العملية"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__purpose
+msgid "Purpose"
+msgstr "الغرض من الزيارة"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__record_no
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__record_no
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__record_no
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__record_no
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__record_no
+msgid "Record No"
+msgstr "رقم السجل"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_enter_exit_form_view
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emp_exit_enter_form
+msgid "Records"
+msgstr "السجلات"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_vehicle_exit__color__red
+msgid "Red"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__sequence
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__related_employee_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__related_employee_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__related_employee_id
+msgid "Related Employee"
+msgstr "الموظف المرتبط"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__activity_user_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__activity_user_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__activity_user_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__activity_user_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__activity_user_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__activity_user_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__activity_user_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__activity_user_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_supplier_enter_permission__state__running
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_visitor_enter_permission__state__running
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_securit_visitor_enter_permission
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_supplier_enter_permission
+msgid "Running"
+msgstr "ساري الصلاحية"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__message_has_sms_error
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__message_has_sms_error
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__message_has_sms_error
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__message_has_sms_error
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__message_has_sms_error
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__message_has_sms_error
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__message_has_sms_error
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__message_has_sms_error
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: osoul_security_guards
+#: model:ir.ui.menu,name:osoul_security_guards.security_poultry_gates_menu
+msgid "Secrity Gates"
+msgstr "بوابة اﻷمن"
+
+#. module: osoul_security_guards
+#: model:ir.model,name:osoul_security_guards.model_osoul_security_emp_enter_exit
+msgid "Security Employee Entry and Exit"
+msgstr "دخول وخروج الموظفين"
+
+#. module: osoul_security_guards
+#: model:ir.model,name:osoul_security_guards.model_osoul_security_emp_exit_enter
+msgid "Security Employee Exit and Entry"
+msgstr "خروج و دخول الموظفين"
+
+#. module: osoul_security_guards
+#: model:ir.module.category,description:osoul_security_guards.module_category_security_guards
+msgid "Security Guards"
+msgstr "الحراسات الامنية"
+
+#. module: osoul_security_guards
+#: model:ir.ui.menu,name:osoul_security_guards.menu_security_guards
+msgid "Security Guards Osoul"
+msgstr "الحراسات الامنية"
+
+#. module: osoul_security_guards
+#: model:ir.module.category,name:osoul_security_guards.module_category_security_guards
+msgid "Security Guards Permission Groups"
+msgstr "مجموعات الحراسات الامنية"
+
+#. module: osoul_security_guards
+#: model:ir.model,name:osoul_security_guards.model_osoul_security_poultry_gates
+msgid "Security Poultry Gates"
+msgstr "بوابات أصول"
+
+#. module: osoul_security_guards
+#: code:addons/osoul_security_guards/models/osoul_vehicle_exit.py:0
+#: model:ir.model,name:osoul_security_guards.model_osoul_security_vehicle_exit
+#, python-format
+msgid "Security Vehicle Exit"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model,name:osoul_security_guards.model_osoul_security_visitor_enter_exit
+msgid "Security Visitor Entry and Exit"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_poultry_gates__gate_location__south_side
+msgid "South Side"
+msgstr "الجهة الجنوبية"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_enter_exit__entry_reason__start_of_work
+msgid "Start of work"
+msgstr "بداية دوام"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__state
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__state
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__state
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__state
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__state
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__in_out_status
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__in_out_status
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__in_out_state
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__state
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__in_out_state
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emergency_visit__activity_state
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_enter_exit__activity_state
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_exit_enter__activity_state
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter__activity_state
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter_permission__activity_state
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_vehicle_exit__activity_state
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter__activity_state
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_exit__activity_state
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_permission__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: osoul_security_guards
+#: model:res.groups,name:osoul_security_guards.group_security_supervisor
+msgid "Supervisor"
+msgstr "المشرف"
+
+#. module: osoul_security_guards
+#: model:ir.actions.act_window,name:osoul_security_guards.action_security_supplier_enter
+msgid "Supplier Enter"
+msgstr "دخول المورد"
+
+#. module: osoul_security_guards
+#: model:ir.actions.act_window,name:osoul_security_guards.action_security_supplier_enter_permission
+#: model:ir.ui.menu,name:osoul_security_guards.menu_security_supplier_enter_permission
+msgid "Supplier Enter Permission"
+msgstr "تصريح دخول المورد"
+
+#. module: osoul_security_guards
+#: model:res.groups,name:osoul_security_guards.group_security_supplier_permission
+msgid "Supplier Entry Permission"
+msgstr "تصريح دخول المورد"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_supplier_enter
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_supplier_enter_permission
+msgid "Supplier Information"
+msgstr "معلومات المورد"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__supplier_name
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__supplier_name
+msgid "Supplier Name"
+msgstr "إسم المورد"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_supplier_enter_permission__enter_exit_permission__supplier_out
+msgid "Supplier Out"
+msgstr "تم خروج المورد"
+
+#. module: osoul_security_guards
+#: model:ir.ui.menu,name:osoul_security_guards.menu_security_supplier_enter
+msgid "Supplier enter"
+msgstr "دخول المورد"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__supply_type_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__supply_type_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supply_type__supply_type
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supply_types__supply_type
+msgid "Supply Type"
+msgstr "نوع الخدمة"
+
+#. module: osoul_security_guards
+#: model:ir.actions.act_window,name:osoul_security_guards.security_supply_types_action
+#: model:ir.ui.menu,name:osoul_security_guards.security_supply_types_menu
+msgid "Supply Types"
+msgstr "انوع الخدمة"
+
+#. module: osoul_security_guards
+#: model:res.groups,name:osoul_security_guards.group_security_guards_system_manager
+msgid "System Manager"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__time_difference
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__time_difference
+msgid "Time Difference (Hours)"
+msgstr "عدد الساعات المأخوذة من الأستئذان"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__time_spent_inside
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__time_spent_inside
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__time_spent_inside
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__time_spent_inside
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__time_spent_inside
+msgid "Time Spent Inside"
+msgstr "الوقت المقضي داخل أصول"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__time_spent_outsidee
+msgid "Time Spent Outside"
+msgstr "الوقت المقضي خارج أصول"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emergency_visit__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_enter_exit__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_exit_enter__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter_permission__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_vehicle_exit__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_exit__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_permission__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي المسجل."
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__message_unread
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__message_unread
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__message_unread
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__message_unread
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__message_unread
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__message_unread
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__message_unread
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__message_unread
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل غير المقروءة "
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل غير المقروءة "
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emp_exit_enter__exit_type__vacation
+msgid "Vacation"
+msgstr "إجازة"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__vehicle_available
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__vehicle_available
+msgid "Vehicle Availability"
+msgstr "توفر مركبة"
+
+#. module: osoul_security_guards
+#: model:ir.actions.act_window,name:osoul_security_guards.action_security_vehicle_exit
+#: model:ir.ui.menu,name:osoul_security_guards.security_security_vehicle_exit_menu
+msgid "Vehicle Exit"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__vehicle_id
+msgid "Vehicle Info"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_securit_visitor_enter_permission
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_supplier_enter_permission
+msgid "Vehicle Information"
+msgstr "معلومات المركبة"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.view_security_vehicle_exit_form
+msgid "Vehicle Informations"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__plate_letters
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__plate_letters
+msgid "Vehicle Plate Letter"
+msgstr "أحرف اللوحة المرورية"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__plate_no
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__plate_no
+msgid "Vehicle Plate No"
+msgstr "أرقام اللوحة المرورية"
+
+#. module: osoul_security_guards
+#: code:addons/osoul_security_guards/models/osoul_vehicle_exit.py:0
+#, python-format
+msgid "Vehicle exit permission has been successfully allowed."
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visits_types__visit_code
+msgid "Visit Code"
+msgstr "رمز الزيارة"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__visitor_type_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__visit_type_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__v_type_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__visit_type_id
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visits_types__visit_type
+msgid "Visit Type"
+msgstr "نوع الزيارة"
+
+#. module: osoul_security_guards
+#: model:ir.actions.act_window,name:osoul_security_guards.action_security_visitor_enter
+#: model:ir.ui.menu,name:osoul_security_guards.menu_security_visitor_enter
+msgid "Visitor Enter"
+msgstr "دخول الزائر"
+
+#. module: osoul_security_guards
+#: model:ir.actions.act_window,name:osoul_security_guards.action_securit_visitor_enter_permission
+#: model:ir.ui.menu,name:osoul_security_guards.menu_action_name
+msgid "Visitor Enter Permission"
+msgstr "تصاريح دخول الزوار"
+
+#. module: osoul_security_guards
+#: model:res.groups,name:osoul_security_guards.group_security_visitor_permission
+msgid "Visitor Entry Permission"
+msgstr "تصريح دخول الزائر"
+
+#. module: osoul_security_guards
+#: model:ir.actions.act_window,name:osoul_security_guards.action_security_visitor
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.view_security_visitor_form
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.view_security_visitor_tree
+msgid "Visitor Entry/Exit"
+msgstr "دخول وخروج الزوار"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_securit_visitor_enter_permission
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_visitor_enter
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.security_emergency_visits_form_view
+msgid "Visitor Information"
+msgstr "معلومات الزائر"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__visito_name
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__visitor_name
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__visitor_name
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__visitor_name
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__visitor_name
+msgid "Visitor Name"
+msgstr "إسم الزائر"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_emergency_visit__enter_exit_permission__visitor_out
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_visitor_enter_permission__enter_exit_permission__visitor_out
+msgid "Visitor Out"
+msgstr "تم خروج الزائر"
+
+#. module: osoul_security_guards
+#: model:ir.ui.menu,name:osoul_security_guards.security_visitor_menu
+msgid "Visitor Records"
+msgstr "سجلات الزوار"
+
+#. module: osoul_security_guards
+#: model:ir.ui.menu,name:osoul_security_guards.security_visitors_records_menu
+msgid "Visitors Records"
+msgstr "سجلات الزوار"
+
+#. module: osoul_security_guards
+#: model:ir.actions.act_window,name:osoul_security_guards.security_visits_types_action
+#: model:ir.ui.menu,name:osoul_security_guards.security_visits_types_menu
+msgid "Visits Types"
+msgstr "نوع الزيارة"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.view_security_visitor_form
+msgid "Vistor Info"
+msgstr "معلومات الزائر"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emergency_visit__website_message_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__website_message_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_exit_enter__website_message_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter__website_message_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_supplier_enter_permission__website_message_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__website_message_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter__website_message_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_exit__website_message_ids
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_visitor_enter_permission__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emergency_visit__website_message_ids
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_enter_exit__website_message_ids
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_emp_exit_enter__website_message_ids
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter__website_message_ids
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_supplier_enter_permission__website_message_ids
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_vehicle_exit__website_message_ids
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter__website_message_ids
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_exit__website_message_ids
+#: model:ir.model.fields,help:osoul_security_guards.field_osoul_security_visitor_enter_permission__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_poultry_gates__gate_location__west_side
+msgid "West Side"
+msgstr "الجهة الغربية"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields.selection,name:osoul_security_guards.selection__osoul_security_vehicle_exit__color__white
+msgid "White"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_supplier_enter
+msgid ""
+"With Your Approval Entery Permission Will be Expired and Supplier Will Be "
+"Allowed To Access Osoul ?"
+msgstr "السماح بدخول المورد الى أصول"
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_visitor_enter
+msgid ""
+"With Your Approval Entery Permission Will be Expired and Visitor Will Be "
+"Allowed To Access Osoul ?"
+msgstr "السماح بدخول الزائر الى أصول"
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_emp_enter_exit__work_location_id
+msgid "Work Location"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model.fields,field_description:osoul_security_guards.field_osoul_security_vehicle_exit__year
+msgid "Year"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_securit_visitor_enter_permission
+#: model_terms:ir.ui.view,arch_db:osoul_security_guards.form_security_supplier_enter_permission
+msgid "You Will Approved Supplier Exiting From Osoul ?"
+msgstr "السماح بخروج المورد من أصول ؟"
+
+#. module: osoul_security_guards
+#: code:addons/osoul_security_guards/models/security_supplier_enter_permission.py:0
+#, python-format
+msgid "You cannot delete a permission record in 'running' or 'expired' state."
+msgstr "فقط يمكنك حذف السجل اذا كان مسودة"
+
+#. module: osoul_security_guards
+#: code:addons/osoul_security_guards/models/security_visitor_enter_permission.py:0
+#, python-format
+msgid "You cannot delete a record that is not in 'Draft' state."
+msgstr "فقط يمكنك حذف السجل اذا كان مسودة"
+
+#. module: osoul_security_guards
+#: model:ir.model,name:osoul_security_guards.model_osoul_security_emergency_visit
+msgid "osoul.security.emergency.visit"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model,name:osoul_security_guards.model_osoul_security_supplier_enter
+msgid "osoul.security.supplier.enter"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model,name:osoul_security_guards.model_osoul_security_supplier_enter_permission
+msgid "osoul.security.supplier.enter.permission"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model,name:osoul_security_guards.model_osoul_security_supply_type
+msgid "osoul.security.supply.type"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model,name:osoul_security_guards.model_osoul_security_supply_types
+msgid "osoul.security.supply.types"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model,name:osoul_security_guards.model_osoul_security_visitor_enter
+msgid "osoul.security.visitor.enter"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model,name:osoul_security_guards.model_osoul_security_visitor_enter_permission
+msgid "osoul.security.visitor.enter.permission"
+msgstr ""
+
+#. module: osoul_security_guards
+#: model:ir.model,name:osoul_security_guards.model_osoul_security_visits_types
+msgid "osoul.security.visits.types"
+msgstr ""

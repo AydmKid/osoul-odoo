@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="1">
+        <record id="seq_osoul_occu_violation" model="ir.sequence">
+            <field name="name">Occupational Violation Sequence</field>
+            <field name="code">osoul.occu.violation</field>
+            <field name="prefix">VIOL-</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="seq_osoul_occu_incident" model="ir.sequence">
+            <field name="name">Occupational Incident Sequence</field>
+            <field name="code">osoul.occu.incident</field>
+            <field name="prefix">INCD-</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="seq_osoul_occu_work_permit" model="ir.sequence">
+            <field name="name">Occupational Work Permit</field>
+            <field name="code">osoul.occu.work.permit</field>
+            <field name="prefix">PRMT-</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="seq_osoul_occu_checkup" model="ir.sequence">
+            <field name="name">Occupational Checkup</field>
+            <field name="code">osoul.occu.checkup</field>
+            <field name="prefix">CHK-</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="seq_osoul_occu_pump" model="ir.sequence">
+            <field name="name">Pumps Sequence</field>
+            <field name="code">osoul.occu.pump</field>
+            <field name="prefix">PMP-</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="seq_osoul_occu_fap" model="ir.sequence">
+            <field name="name">Fire Panels Sequence</field>
+            <field name="code">osoul.occu.fap</field>
+            <field name="prefix">FAP-</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="seq_osoul_occu_tank" model="ir.sequence">
+            <field name="name">Tanks Sequence</field>
+            <field name="code">osoul.occu.tank</field>
+            <field name="prefix">TNK-</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        
+    </data>
+</odoo>

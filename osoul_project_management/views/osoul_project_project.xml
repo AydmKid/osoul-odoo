@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="osoul_project_project_action" model="ir.actions.act_window">
+        <field name="name">Project</field>
+        <field name="res_model">osoul.project</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="osoul_project_project_tree" model="ir.ui.view">
+        <field name="name">osoul.project.tree</field>
+        <field name="model">osoul.project</field>
+        <field name="arch" type="xml">
+            <tree string="" decoration-danger="state == 'in_progress'" decoration-success="state == 'completed'">
+                <field name="project_id"/>
+                <field name="name"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="project_duration"/>
+                <field name="remaining_days"/>
+                <field name="expected_cost" widget="monetary"/>
+                <field name="actual_cost" widget="monetary"/>
+                <field name="project_owner"/>
+                <field name="project_manager"/>
+                <field name="completion_percentage"/>
+                <field name="state" widget="badge" decoration-danger="state == 'in_progress'" decoration-success="state == 'completed'"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="osoul_project_project_form" model="ir.ui.view">
+        <field name="name">osoul.project.form</field>
+        <field name="model">osoul.project</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_in_progress" type="object" string="Project Start" class="btn-primary" 
+                            confirm="Are You Sure?" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                    <button name="action_complete" type="object" string="Mark as Completed" 
+                            class="btn-success" attrs="{'invisible': [('state', '!=', 'in_progress')]}"/>
+                    <button name="action_cancel" type="object" string="Cancel Project" 
+                            class="btn-danger" attrs="{'invisible': [('state', '!=', 'in_progress')]}"/>
+                    <field name="state" widget="statusbar" />
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <!-- Milestones -->
+                        <button class="oe_stat_button" type="object" name="action_total_milestones" icon="fa-flag-checkered">
+                            <field string="Milestones" name="total_milestones" widget="statinfo"/>
+                        </button>
+                        <!-- Tasks -->
+                        <button class="oe_stat_button" type="object" name="action_total_tasks" icon="fa-tasks">
+                            <field string="Tasks" name="total_tasks" widget="statinfo"/>
+                        </button>
+                        <!-- Expenses -->
+                        <button class="oe_stat_button" type="object" name="action_total_expenses" icon="fa-dollar">
+                            <field string="Expenses" name="total_expenses" widget="statinfo"/>
+                        </button>
+                        <!-- Quotations -->
+                        <button class="oe_stat_button" type="object" name="action_total_quotations" icon="fa-file-text-o">
+                            <field string="Quotations" name="total_quotations" widget="statinfo"/>
+                        </button>
+                        <!-- Contracts -->
+                        <button class="oe_stat_button" type="object" name="action_total_contracts" icon="fa-suitcase">
+                            <field string="Contracts" name="total_contracts" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <div>
+                        <h3>
+                            <field name="project_id"/>
+                        </h3>
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group name="name">
+                        <group string="Project Information">
+                            <field name="name" placeholder="Enter Project Name"
+                                   attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="description" placeholder="Add Description for the project" 
+                                   attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="expected_cost" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="actual_cost"/>
+                        </group>
+                        <group name="name" string="Time and Completion">
+                            <field name="start_date" placeholder="Choose Project Start Date" 
+                                   attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="end_date" placeholder="Choose Project End Date" 
+                                   attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="project_duration"/>
+                            <field name="remaining_days"/>
+                            <field name="completion_percentage"/>
+                        </group>
+                        <group name="name" string="Team Information">
+                            <field name="project_owner" placeholder="Choose Project Owner" 
+                                   attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="project_manager" placeholder="Choose Project Manager"
+                                   attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                        </group>
+                        <group name="name" string="Project Team">
+                            <field name="team_members_ids" widget="many2many_tags" placeholder="Choose Project Team"
+                                   attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <!-- Milestones Tab -->
+                        <page string="Milestones">
+                            <field name="milestone_ids" attrs="{'readonly': [('state', '!=', 'in_progress')]}">
+                                <tree editable="bottom" decoration-primary="state == 'draft'" decoration-warning="state == 'in_progress'" decoration-success="state == 'complete'">
+                                    <field name="project_id"/>
+                                    <field name="name" placeholder="Enter Mailestone" 
+                                           attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="start_date" placeholder="Choose Start Date"
+                                           attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="deadline" placeholder="Choose Dead Line"
+                                           attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="total_tasks"/>
+                                    <field name="completed_task_percentage"/>
+                                    <field name="state" widget="badge" decoration-primary="state == 'draft'" decoration-warning="state == 'in_progress'" decoration-success="state == 'complete'"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <!-- Tasks Tab -->
+                        <page string="Tasks">
+                            <field name="task_ids" attrs="{'readonly': [('state', '!=', 'in_progress')]}">
+                                <tree editable="bottom" decoration-primary="state == 'draft'" decoration-warning="state == 'in_progress'" decoration-success="state == 'complete'">
+                                    <field name="project_id"/>
+                                    <field name="name" placeholder="Enter Task Name"
+                                           attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="milestone_id" placeholder="Choose Parent Milestone"
+                                           attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="priority" placeholder="Choose Priority"
+                                           attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="start_date" placeholder="Choose Start Date"
+                                           attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="end_date" placeholder="Choose End Date"
+                                           attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="task_duration"/>
+                                    <field name="remaining_days"/>
+                                    <field name="warning" widget="badge" decoration-success="warning == 'on_plan'" decoration-danger="warning == 'late'"/>
+                                    <field name="state" widget="badge" decoration-primary="state == 'draft'" decoration-warning="state == 'in_progress'" decoration-success="state == 'complete'"/>
+                                    <button name="action_task_start" type="object" string="Begin" class="btn-danger" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                                    <button name="action_task_complete" type="object" string="Complete" class="btn-success" attrs="{'invisible': [('state', '!=', 'in_progress')]}"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <!-- Expenses Tab -->
+                        <page string="Expenses">
+                            <field name="expense_ids" attrs="{'readonly': [('state', '!=', 'in_progress')]}">
+                                <tree editable="bottom">
+                                    <field name="project_id"/>
+                                    <field name="name" placeholder="Enter Expnses Name"/>
+                                    <field name="description" placeholder="Add Expense Details (Optional)"/>
+                                    <field name="category" placeholder="Choose Category"/>
+                                    <field name="date" placeholder="Choose Expense Date"/>
+                                    <field name="amount"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <!-- Quotations Tab -->
+                        <page string="Quotations">
+                            <field name="quotation_ids" attrs="{'readonly': [('state', '!=', 'in_progress')]}">
+                                <tree editable="bottom" decoration-danger="state == 'rejected'" decoration-success="state == 'accepted'">
+                                    <field name="name" placeholder="Enter Quotation No"/>
+                                    <field name="vendor" placeholder="Enter Quotation No"/>
+                                    <field name="date" placeholder="Enter Quotation No"/>
+                                    <field name="recommendations" placeholder="Enter Quotation No"/>
+                                    <field name="amount" placeholder="Enter Quotation No"/>
+                                    <field name="state" widget="badge" decoration-primary="state == 'draft'" decoration-danger="state == 'rejected'" decoration-success="state == 'accepted'"/>
+                                    <button name="action_rejected" type="object" string="Reject" class="btn-danger" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                                    <button name="action_accepted" type="object" string="Accepts" class="btn-success" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                                </tree>
+                            </field>
+                        </page>
+                        
+                        <!-- Contracts Tab -->
+                        <page string="Contracts">
+                            <field name="contract_ids" attrs="{'readonly': [('state', '!=', 'in_progress')]}">
+                                <tree editable="bottom">
+                                    <field name="name" placeholder="Enter Contract Name"/>
+                                    <field name="description" placeholder="Enter Contract Details (Optional)"/>
+                                    <field name="contractor_name" placeholder="Choose Contractor Name"/>
+                                    <field name="contractor_type" placeholder="Choose Contractor Type"/>
+                                    <field name="start_date" placeholder="Choose Contract Date"/>
+                                    <field name="amount" placeholder="Enter Contract Amount"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page name="name" string="Risk and Challenges">
+                            <field name="risk_ids" attrs="{'readonly': [('state', '!=', 'in_progress')]}">
+                                <tree editable="bottom">
+                                    <field name="project_id" readonly="1"/>
+                                    <field name="name" placeholder="Enter Risk or Challenges Name"/>
+                                    <field name="type" placeholder="Choose type"/>
+                                    <field name="description" placeholder="Enter Risk or Challenges Description (Optional)"/>
+                                    <field name="priority" placeholder="Choose Priority"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="module_category_osoul_buffet_system" model="ir.module.category">
+        <field name="name">Buffet System</field>
+        <field name="description">Manage Buffet Orders and Stocks</field>
+        <field name="sequence" eval="10"/>
+    </record>
+
+    <record id="group_osoul_buffet_user" model="res.groups">
+        <field name="name">Buffet User</field>
+        <field name="category_id" ref="osoul_buffet_system.module_category_osoul_buffet_system"/>
+    </record>
+
+    <record id="group_osoul_buffet_manager" model="res.groups">
+        <field name="name">Buffet Manager</field>
+        <field name="category_id" ref="osoul_buffet_system.module_category_osoul_buffet_system"/>
+    </record>
+
+</odoo>

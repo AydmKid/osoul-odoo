@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="action_transportation_driver" model="ir.actions.act_window">
+        <field name="name">Drivers</field>
+        <field name="res_model">osoul.transportation.driver</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first driver
+            </p>
+        </field>
+    </record>
+
+    <record id="view_transportation_driver_form" model="ir.ui.view">
+        <field name="name">osoul.transportation.driver.form</field>
+        <field name="model">osoul.transportation.driver</field>
+        <field name="arch" type="xml">
+            <form string="Driver">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="emp_id_no"/>
+                            <field name="emp_department_id" readonly="1"/>
+                            <field name="country_id"/>
+                            <field name="license_number"/>
+                            <field name="phone"/>
+                            <field name="email"/>
+                        </group>
+                        <group>
+                            <field name="driver_image" widget="image"/>
+                        </group>
+                        <group>
+                            <field name="address"/>
+                        </group>
+                        <notebook>
+                            <page string="Assigned Vehicles">
+                                <field name="vehicle_ids">
+                                    <tree string="Vehicles">
+                                        <field name="name"/>
+                                        <field name="license_plate"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                        <group>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_transportation_driver_tree" model="ir.ui.view">
+        <field name="name">osoul.transportation.driver.tree</field>
+        <field name="model">osoul.transportation.driver</field>
+        <field name="arch" type="xml">
+            <tree string="Drivers">
+                <field name="name"/>
+                <field name="emp_id_no"/>
+                <field name="emp_department_id" readonly="1"/>
+                <field name="country_id"/>
+                <field name="license_number"/>
+                <field name="phone"/>
+                <field name="email"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    
+
+    <record id="menu_transportation_driver" model="ir.ui.menu">
+        <field name="name">Drivers</field>
+        <field name="sequence" eval="11" />
+        <field name="action" ref="action_transportation_driver" />
+        <field name="parent_id" ref="menu_transportation_drivers"/>
+    </record>
+</odoo>

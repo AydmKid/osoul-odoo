@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="menu_root_osoul_tickets" model="ir.ui.menu" >
+        <field name="name">Osoul Tickets</field>
+        <field name="sequence" eval="11" />
+    </record>
+    
+    <record id="menu_osoul_tickets" model="ir.ui.menu" >
+        <field name="name">Ticket</field>
+        <field name="sequence" eval="4" />
+        <field name="parent_id" ref="menu_root_osoul_tickets" />
+    </record>
+
+    <record id="menu_osoul_tickets_approval" model="ir.ui.menu" >
+        <field name="name">Requests</field>
+        <field name="sequence" eval="5" />
+        <field name="parent_id" ref="menu_root_osoul_tickets" />
+    </record>
+
+    <record id="menu_osoul_osoul_tickets_settings" model="ir.ui.menu" >
+        <field name="name">Settings</field>
+        <field name="sequence" eval="5" />
+        <field name="parent_id" ref="menu_root_osoul_tickets" />
+    </record>
+
+
+</odoo>

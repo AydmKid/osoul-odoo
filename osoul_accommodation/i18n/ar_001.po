@@ -1,0 +1,2133 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* osoul_accommodation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-12 05:19+0000\n"
+"PO-Revision-Date: 2024-09-12 05:19+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: osoul_accommodation
+#: code:addons/osoul_accommodation/wizard/accomm_cotracts.py:0
+#, python-format
+msgid "(No Location)"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.accommodation_floor_view_form
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_building
+msgid "<span class=\"o_stat_text\">Apartment</span>"
+msgstr "الشقق"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_building
+msgid "<span class=\"o_stat_text\">Floors</span>"
+msgstr "الطوابق"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.accommodation_apartment_view_form
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_building
+msgid "<span class=\"o_stat_text\">Rooms</span>"
+msgstr "الغرف"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.model_name_view_kanban
+msgid "<strong>Apartment No: </strong>"
+msgstr "رقم الشقة"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.model_name_view_kanban
+msgid "<strong>Beds No: </strong>"
+msgstr "إجمالي الاسرََة"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.model_name_view_kanban
+msgid "<strong>Building Name: </strong>"
+msgstr "إسم المبنى"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.building_model_name_view_kanban_dash
+msgid "<strong>Building Name:</strong>"
+msgstr "إسم المبنى"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.model_name_view_kanban
+msgid "<strong>Floor No: </strong>"
+msgstr "رقم الطابق"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.building_model_name_view_kanban
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.building_model_name_view_kanban_dash
+msgid "<strong>Housing Percentage :</strong>"
+msgstr "النسبة الحالية للتسكين"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.building_model_name_dash_kanban
+msgid ""
+"<strong>Is Tenant:</strong> <span style=\"font-weight: "
+"bold;\">Property</span>"
+msgstr "ملكية"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.building_model_name_dash_kanban
+msgid "<strong>Is Tenant:</strong> <span style=\"font-weight: bold;\">Yes</span>"
+msgstr "مستأجر"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.building_model_name_view_kanban_dash
+msgid "<strong>Max Capacity :</strong>"
+msgstr "نسبة التسكين"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.building_model_osoul_accommodation_stock_kanban
+msgid "<strong>Quantity :</strong>"
+msgstr "الكمية الحاليه"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.model_name_view_kanban
+msgid "<strong>Residents No: </strong>"
+msgstr "إجمالي المسكنين"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.building_model_name_dash_kanban
+msgid "<strong>Standard Location :</strong>"
+msgstr "إستاندر الموقع"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.model_name_view_kanban
+msgid "<strong>State: </strong>"
+msgstr "الحالة"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.building_model_name_dash_kanban
+msgid "<strong>Total All Residents :</strong>"
+msgstr "إجمالي الساكنين الفعلي"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.building_model_name_view_kanban
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.building_model_name_view_kanban_dash
+msgid "<strong>Total Apartments:</strong>"
+msgstr "إجمالي الشقق"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.building_model_name_view_kanban
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.building_model_name_view_kanban_dash
+msgid "<strong>Total Floors:</strong>"
+msgstr "إجمالي الطوابق"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.building_model_name_dash_kanban
+msgid "<strong>Total Rooms :</strong>"
+msgstr "إجمالي الغرف"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.building_model_name_view_kanban
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.building_model_name_view_kanban_dash
+msgid "<strong>Total Rooms:</strong>"
+msgstr "إجمالي الغرف"
+
+#. module: osoul_accommodation
+#: model:ir.module.category,name:osoul_accommodation.module_category_accommodation
+msgid "Accommodation"
+msgstr "السكن والمطعم"
+
+#. module: osoul_accommodation
+#: model:ir.model,name:osoul_accommodation.model_osoul_accommodation_apartment
+msgid "Accommodation Apartment"
+msgstr "رقم الشقة"
+
+#. module: osoul_accommodation
+#: model:ir.model,name:osoul_accommodation.model_osoul_accommodation_contrats_wizard
+msgid "Accommodation Contract Wizard"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model,name:osoul_accommodation.model_osoul_accommodation_floor
+msgid "Accommodation Floor"
+msgstr "الطوابق"
+
+#. module: osoul_accommodation
+#: model:ir.model,name:osoul_accommodation.model_osoul_accommodation_floor_name
+msgid "Accommodation Floor Name"
+msgstr "إختر الطابق"
+
+#. module: osoul_accommodation
+#: model:ir.model,name:osoul_accommodation.model_osoul_accommodation_log
+msgid "Accommodation Log"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model,name:osoul_accommodation.model_osoul_accommodation_log_line_stock_emp
+msgid "Accommodation Log Line"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model,name:osoul_accommodation.model_osoul_accommodation_log_line_stock_room
+msgid "Accommodation Log Line room"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model,name:osoul_accommodation.model_osoul_accommodation_log_line_stock_apartment
+msgid "Accommodation Log Line stock apartment"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model,name:osoul_accommodation.model_osoul_accommodation_log_line_stock_floor
+msgid "Accommodation Log Line stock floor"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.view_accommodation_stock_form
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.view_accommodation_stock_tree
+msgid "Accommodation Stock"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.module.category,description:osoul_accommodation.module_category_accommodation
+msgid "Accommodation category"
+msgstr "السكن والمطعم"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__message_needaction
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__message_needaction
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__message_needaction
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__message_needaction
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__message_needaction
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__message_needaction
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__message_needaction
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__message_needaction
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__activity_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__activity_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__activity_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__activity_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__activity_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__activity_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__activity_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__activity_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__activity_exception_decoration
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__activity_state
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__activity_state
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__activity_state
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__activity_state
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__activity_state
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__activity_state
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__activity_state
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__activity_state
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__activity_type_icon
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.actions.act_window,name:osoul_accommodation.action_accommodation_apartment
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__apartment_ids
+#: model:ir.ui.menu,name:osoul_accommodation.menu_accommodation_apartment
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.accommodation_floor_view_form
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_building
+msgid "Apartment"
+msgstr "الشقق"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__apartment_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__apartment_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__apartment_id
+msgid "Apartment NO"
+msgstr "رقم الشقة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__apartment_no
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.report_housing_qweb_form
+msgid "Apartment No"
+msgstr "رقم الشقة"
+
+#. module: osoul_accommodation
+#: code:addons/osoul_accommodation/models/accom_apartment.py:0
+#, python-format
+msgid "Apartment No must be unique."
+msgstr "! يوجد شقه بنفس الرقم"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.view_contracts_wizard_form
+msgid "Are You Sure"
+msgstr "هل أنت متأكد ؟"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_room
+msgid "Are you sure ?"
+msgstr "هل تريد الحذف حقاً ؟"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__message_attachment_count
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_apartment__available_quantity
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_emp__available_quantity
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_floor__available_quantity
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_room__available_quantity
+msgid "Available Quantity"
+msgstr "الكميات المتاحة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_beds_control_wizard__bed_count
+msgid "Bed Count"
+msgstr "تعداد اﻷسرََة"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_building_dash
+msgid "Beds Details"
+msgstr "تفاصيل الاسرََة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_stock__product_size__big
+msgid "Big"
+msgstr "كبير"
+
+#. module: osoul_accommodation
+#: model:ir.actions.act_window,name:osoul_accommodation.act_book_housing
+msgid "Book Housing"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_stock__product_type__box
+msgid "Box"
+msgstr "صندوق"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__building_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__building_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__building_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__building_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__building_id
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.accommodation_search_room_view
+msgid "Building"
+msgstr "المبنى"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_room
+msgid "Building Details"
+msgstr "تفاصيل المبنى"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.building_graph
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.building_graph_bar
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.building_graph_pie
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.building_graph_pie_dash
+msgid "Building Graph"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__building_id
+msgid "Building Id"
+msgstr "رمز المبنى"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__image
+msgid "Building Image"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.accommodation_log_view_form
+msgid "Building Information"
+msgstr "معلومات المبنى"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_building__state__building_is_full
+msgid "Building Is Full"
+msgstr "السكن ممتلئ"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__location
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__location
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__building_location
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__building_location
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__building_location
+msgid "Building Location"
+msgstr "إسم الموقع"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__building_name
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__building_name
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__building_name
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__building_name
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__building_name
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__building_name
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__building_name
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.report_housing_qweb_form
+msgid "Building Name"
+msgstr "إسم المبنى"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__building_no
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__building_no
+msgid "Building No"
+msgstr "رقم المبنى"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_building__state__building_not_full
+msgid "Building Not Full"
+msgstr "يوجد مساحة بالسكن"
+
+#. module: osoul_accommodation
+#: model:ir.ui.menu,name:osoul_accommodation.menu_accommodation_rooms_housing
+msgid "Building and Rooms"
+msgstr "المباني والغرف"
+
+#. module: osoul_accommodation
+#: model:ir.model.constraint,message:osoul_accommodation.constraint_osoul_accommodation_building_unique_building_name
+msgid "Building name cannot be null for a specific location."
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.constraint,message:osoul_accommodation.constraint_osoul_accommodation_building_unique_building_name_location
+msgid "Building name must be unique within the location."
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.actions.act_window,name:osoul_accommodation.act_accommodation_building
+#: model:ir.actions.act_window,name:osoul_accommodation.act_accommodation_building_bar
+#: model:ir.actions.act_window,name:osoul_accommodation.act_accommodation_building_pie
+#: model:ir.actions.act_window,name:osoul_accommodation.act_accommodation_building_tree
+#: model:ir.actions.act_window,name:osoul_accommodation.action_accommodation_building
+#: model:ir.ui.menu,name:osoul_accommodation.menu_accommodation_building
+msgid "Buildings"
+msgstr "المباني"
+
+#. module: osoul_accommodation
+#: code:addons/osoul_accommodation/models/accom_room.py:0
+#, python-format
+msgid "Can not start housing without beds availabilty, add beds before"
+msgstr "لاتستطيع بداء التسكين بالغرفة من دون وجود أسرََة, أضف اﻷسرََة أولاً"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.view_room_bed_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_room
+msgid "Caption"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_building
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_building_dash
+msgid "Choose Building Location"
+msgstr "إختر موقع المبنى"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_room
+msgid "Choose Building No"
+msgstr "إختر رقم المبنى"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_room
+msgid "Choose Employee Name"
+msgstr "إختر إسم الموظف"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__city_name
+msgid "City Name"
+msgstr "إسم المدينة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__permission_code
+msgid "Code"
+msgstr "الرمز"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__color
+msgid "Color Index"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.ui.menu,name:osoul_accommodation.menu_accommodation_configuration
+msgid "Configuration"
+msgstr "الإعدادات"
+
+#. module: osoul_accommodation
+#: code:addons/osoul_accommodation/models/accom_kan_dash.py:0
+#, python-format
+msgid "Contract"
+msgstr "العقود"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__promissory_note_copy
+msgid "Contract Copy"
+msgstr "صوة من العقد"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_contrats_wizard__state__contract_expired
+msgid "Contract Expired"
+msgstr "عقد منتهي"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__building_location
+msgid "Contract Location"
+msgstr "موقع العقد"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_contrats_wizard__state__contract_running
+msgid "Contract Running"
+msgstr "عقد ساري"
+
+#. module: osoul_accommodation
+#: model:ir.actions.act_window,name:osoul_accommodation.action_accommodation_contract
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_building_dash
+msgid "Contracts"
+msgstr "العقود"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.view_contracts_wizard_form
+msgid "Contrats Form View"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.view_contracts_wizard_tree
+msgid "Contrats Tree View"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__promissory_note_copy
+msgid "Copy of Promissory Note"
+msgstr "صورة العقد"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__counts_atten
+msgid "Counts Atten"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_custom_department__create_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__create_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_beds_control_wizard__create_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__create_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__create_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__create_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__create_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor_name__create_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__create_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__create_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_apartment__create_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_emp__create_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_floor__create_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_room__create_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__create_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_custom_department__create_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__create_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_beds_control_wizard__create_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__create_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__create_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__create_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__create_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor_name__create_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__create_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__create_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_apartment__create_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_emp__create_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_floor__create_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_room__create_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__create_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__create_date
+msgid "Created on"
+msgstr "تاريخ الأنشاء"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__current_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__current_date
+msgid "Current Date"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.ui.menu,name:osoul_accommodation.menu_accommodation_housing
+msgid "Current Housing View"
+msgstr "بيان السكن الحالي"
+
+#. module: osoul_accommodation
+#: model:ir.model,name:osoul_accommodation.model_custom_department
+msgid "Custom Department"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.actions.act_window,name:osoul_accommodation.action_dashboard_graph
+#: model:ir.ui.menu,name:osoul_accommodation.menu_dashboard_graph
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.view_dashboard_form
+msgid "Dashboard"
+msgstr "لوحة المعلومات"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.view_contracts_wizard_form
+msgid "Date Details"
+msgstr "تفاصيل التاريخ"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_apartment__current_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_emp__current_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_floor__current_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_room__current_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__current_date
+msgid "Date of Receipt"
+msgstr "تاريخ الإستلام"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__department
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__department
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.report_housing_qweb_form
+msgid "Department"
+msgstr "القسم"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_custom_department__name
+msgid "Department Name"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__difference_in_days
+msgid "Difference in Days"
+msgstr "المتبقي على نهاية العقد"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_custom_department__display_name
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__display_name
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_beds_control_wizard__display_name
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__display_name
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__display_name
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__display_name
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__display_name
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor_name__display_name
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__display_name
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__display_name
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_apartment__display_name
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_emp__display_name
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_floor__display_name
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_room__display_name
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__display_name
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_contrats_wizard__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: osoul_accommodation
+#: model:res.groups,name:osoul_accommodation.group_accommodation_employees
+msgid "Employee"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.accommodation_log_view_form
+msgid "Employee Information"
+msgstr "معلومات الموظف"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__employee_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__employee_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__employee_id
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.report_housing_qweb_form
+msgid "Employee Name"
+msgstr "إسم الموظف"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.report_housing_qweb_form
+msgid "Employee No"
+msgstr "الرقم الوظيفي"
+
+#. module: osoul_accommodation
+#: model:res.groups,comment:osoul_accommodation.group_accommodation_employees
+msgid "Employees Group"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__employement_no
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__employement_no
+msgid "Employment No"
+msgstr "الرقم الوظيفي"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__empty_beds_per_location
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__empty_beds
+msgid "Empty Beds"
+msgstr "إجمالي الاسرََة الفارغة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__empty_rooms_per_location
+msgid "Empty Rooms "
+msgstr "إجمالي الغرف الفارغة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__end_date_decade
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__end_date_decade
+msgid "End Date"
+msgstr "نهاية العقد"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_room
+msgid "Enter Apartment"
+msgstr "أدخل الشقة"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_building
+msgid "Enter Building Name"
+msgstr "أدخل إسم المبنى"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_room
+msgid "Enter Floor"
+msgstr "أدخل الطابق"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_room
+msgid "Enter Room No"
+msgstr "أدخل رقم الغرفة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_contrats_wizard__payment_mechanism__every_six_months_
+msgid "Every Six Months"
+msgstr "كل سته أشهر"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_contrats_wizard__payment_mechanism__every_three_months
+msgid "Every Three Months"
+msgstr "كل ثلاث أشهر"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_contrats_wizard__payment_mechanism__every_year_
+msgid "Every Year"
+msgstr "سنوي"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__housing_exit_date
+msgid "Exit Date"
+msgstr "تاريخ الخروج"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__housing_exit_date
+msgid "Expire Date"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_room__state__extra
+msgid "Extra"
+msgstr "فوق الحد"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.view_contracts_wizard_form
+msgid "Finsh"
+msgstr "إنهاء العقد"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_room__floor__first_floor
+msgid "First Floor"
+msgstr "الطابق اﻷول"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__floor_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__building_floor_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__building_floor_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__floor_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__floor_ids
+msgid "Floor"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__floor_id
+msgid "Floor NO"
+msgstr "رقم الطابق"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__floor_name_id
+msgid "Floor Name"
+msgstr "إسم الطابق"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__floor_no
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__floor_no
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__floor_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__floor
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__floor_id
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.report_housing_qweb_form
+msgid "Floor No"
+msgstr "رقم الطابق"
+
+#. module: osoul_accommodation
+#: code:addons/osoul_accommodation/models/accom_building.py:0
+#: code:addons/osoul_accommodation/models/accom_kan_dash.py:0
+#: model:ir.actions.act_window,name:osoul_accommodation.action_accommodation_floor
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__floors_id
+#: model:ir.ui.menu,name:osoul_accommodation.menu_accommodation_floor
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_building
+#, python-format
+msgid "Floors"
+msgstr "الطابق"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__message_follower_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__message_partner_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_apartment__activity_type_icon
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building__activity_type_icon
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building_dash__activity_type_icon
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_contrats_wizard__activity_type_icon
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_floor__activity_type_icon
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_housing__activity_type_icon
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_log__activity_type_icon
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_room__activity_type_icon
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_stock__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_room__floor__forth_floor
+msgid "Forth Floor"
+msgstr "الطابق الرابع"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_stock__product_useage__general
+msgid "General"
+msgstr "عام"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__has_message
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__has_message
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__has_message
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__has_message
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__has_message
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__has_message
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__has_message
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__has_message
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.accommodation_apartment_view_form
+msgid "Honesty"
+msgstr "العهد"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__housing_status
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__housing_status
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__housing_status
+msgid "Hosing Status"
+msgstr "حالة التسكين"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__host_beds_per_location
+msgid "Hosted Beds"
+msgstr "إجمالي الاسرََة المسكونة"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_room
+msgid "Hosted Employees"
+msgstr "تسكين الموظفين"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__host_rooms_per_location
+msgid "Hosted Rooms"
+msgstr "إجمالي الغرف المسكونة"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.housing_calendar
+msgid "Housing Calendar"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__housing_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__housing_date
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.report_housing_qweb_form
+msgid "Housing Date"
+msgstr "تاريخ التسكين"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.view_dashboard_form
+msgid "Housing Percentage"
+msgstr "إجمالي عدد المسكنين لكل مبنى"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__housing_percentage
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__house_percentage
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__housing_percentage
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__housing_percentage
+msgid "Housing Perecentage"
+msgstr "نسبة التسكين"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__housing_relation_ids
+msgid "Housing Relation"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.actions.report,name:osoul_accommodation.action_housing_report
+msgid "Housing Report"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__housing
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__housing
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__housing
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__housing_status
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.report_housing_qweb_form
+msgid "Housing Status"
+msgstr "حالة التسكين"
+
+#. module: osoul_accommodation
+#: model:ir.actions.act_window,name:osoul_accommodation.action_accommodation_housing
+#: model:ir.ui.menu,name:osoul_accommodation.menu_accommodation_housing_view
+msgid "Housing View"
+msgstr "بيان التسكين"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_custom_department__id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_beds_control_wizard__id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor_name__id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_apartment__id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_emp__id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_floor__id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_room__id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__id
+msgid "ID"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__activity_exception_icon
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_apartment__activity_exception_icon
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building__activity_exception_icon
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building_dash__activity_exception_icon
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_contrats_wizard__activity_exception_icon
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_floor__activity_exception_icon
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_housing__activity_exception_icon
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_log__activity_exception_icon
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_room__activity_exception_icon
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_stock__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_apartment__message_needaction
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_apartment__message_unread
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building__message_needaction
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building__message_unread
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building_dash__message_needaction
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building_dash__message_unread
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_contrats_wizard__message_needaction
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_contrats_wizard__message_unread
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_floor__message_needaction
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_floor__message_unread
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_housing__message_needaction
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_housing__message_unread
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_log__message_needaction
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_log__message_unread
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_room__message_needaction
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_room__message_unread
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_stock__message_needaction
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_stock__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_apartment__message_has_error
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_apartment__message_has_sms_error
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building__message_has_error
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building__message_has_sms_error
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building_dash__message_has_error
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building_dash__message_has_sms_error
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_contrats_wizard__message_has_error
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_contrats_wizard__message_has_sms_error
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_floor__message_has_error
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_floor__message_has_sms_error
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_housing__message_has_error
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_housing__message_has_sms_error
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_log__message_has_error
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_log__message_has_sms_error
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_room__message_has_error
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_room__message_has_sms_error
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_stock__message_has_error
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_stock__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.building_model_name_view_kanban
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.building_model_name_view_kanban_dash
+msgid "Image"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_beds_control_wizard__operation_type__increase
+msgid "Increase Beds"
+msgstr "زيادة إجمالي اﻷسرََة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__message_is_follower
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__message_is_follower
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__message_is_follower
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__message_is_follower
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__message_is_follower
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__message_is_follower
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__message_is_follower
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__message_is_follower
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__is_tenant
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__is_tenant
+msgid "Is Tenant"
+msgstr "مستأجر"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__image
+msgid "Item Image"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__job_id
+msgid "Job ID"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__job_title
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__job_title
+msgid "Job Title"
+msgstr "المسمى الوظيفي"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.model_name_view_kanban
+msgid "Lamp Image"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_custom_department____last_update
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment____last_update
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_beds_control_wizard____last_update
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building____last_update
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash____last_update
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard____last_update
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor____last_update
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor_name____last_update
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing____last_update
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log____last_update
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_apartment____last_update
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_emp____last_update
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_floor____last_update
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_room____last_update
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room____last_update
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_custom_department__write_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__write_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_beds_control_wizard__write_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__write_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__write_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__write_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__write_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor_name__write_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__write_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__write_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_apartment__write_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_emp__write_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_floor__write_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_room__write_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__write_uid
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_custom_department__write_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__write_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_beds_control_wizard__write_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__write_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__write_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__write_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__write_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor_name__write_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__write_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__write_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_apartment__write_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_emp__write_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_floor__write_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_room__write_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__write_date
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_stock__product_type__liter
+msgid "Liter"
+msgstr "لتر"
+
+#. module: osoul_accommodation
+#: model:ir.actions.act_window,name:osoul_accommodation.action_accommodation_building_dash
+#: model:ir.ui.menu,name:osoul_accommodation.menu_accommodation_building_dash
+msgid "Location"
+msgstr "المواقع"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_building_dash
+msgid "Location Details"
+msgstr "تفاصيل الموقع"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__image
+msgid "Location Image"
+msgstr "صورة الموقع"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_building_dash__state__location_is_full
+msgid "Location Is Full"
+msgstr "الموقع ممتلئ"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_building_dash__state__location_not_full
+msgid "Location Not Full"
+msgstr "توجد مساحة بالموقع"
+
+#. module: osoul_accommodation
+#: model:ir.model.constraint,message:osoul_accommodation.constraint_osoul_accommodation_building_dash_unique_location
+msgid "Location must be unique."
+msgstr "الموقع موجود بالعفل !"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_apartment__logs_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_emp__log_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_floor__logs_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_room__logs_ids
+msgid "Log"
+msgstr "السجلات"
+
+#. module: osoul_accommodation
+#: model:ir.actions.act_window,name:osoul_accommodation.act_rooms_list
+#: model:ir.actions.act_window,name:osoul_accommodation.action_accommodation_log
+#: model:ir.ui.menu,name:osoul_accommodation.menu_accommodation_log
+msgid "Logs"
+msgstr "السجلات"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__message_main_attachment_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__management_name
+msgid "Management Name"
+msgstr "الإدارة"
+
+#. module: osoul_accommodation
+#: model:res.groups,name:osoul_accommodation.group_accommodation_manager
+msgid "Manager"
+msgstr "مدير"
+
+#. module: osoul_accommodation
+#: model:res.groups,comment:osoul_accommodation.group_accommodation_manager
+msgid "Managers Group"
+msgstr "إجمالية المدراء"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__message_has_error
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__message_has_error
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__message_has_error
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__message_has_error
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__message_has_error
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__message_has_error
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__message_has_error
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__message_has_error
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__message_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__message_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__message_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__message_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__message_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__message_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__message_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__message_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: osoul_accommodation
+#: code:addons/osoul_accommodation/models/accom_room.py:0
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_room
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.view_room_bed_wizard_form
+#, python-format
+msgid "Modify Beds"
+msgstr "تعديل اﻷسرََة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_contrats_wizard__payment_mechanism__monthly
+msgid "Monthly"
+msgstr "شهري"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__my_activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor_name__name
+msgid "Name"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__country_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__country_id
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.report_housing_qweb_form
+msgid "Nationality"
+msgstr "الجنسية"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__activity_date_deadline
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__activity_summary
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__activity_summary
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__activity_summary
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__activity_summary
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__activity_summary
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__activity_summary
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__activity_summary
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__activity_summary
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__activity_type_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__activity_type_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__activity_type_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__activity_type_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__activity_type_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__activity_type_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__activity_type_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__activity_type_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_room__housing_status__not_ready
+msgid "Not Ready"
+msgstr "غير جاهزة"
+
+#. module: osoul_accommodation
+#: code:addons/osoul_accommodation/models/accom_stock.py:0
+#: code:addons/osoul_accommodation/models/accom_stock.py:0
+#: code:addons/osoul_accommodation/models/accom_stock.py:0
+#: code:addons/osoul_accommodation/models/accom_stock.py:0
+#, python-format
+msgid "Not enough stock for {}! Only {} available."
+msgstr "لا يوجد مخزون كاف"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__message_needaction_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__message_has_error_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_apartment__message_needaction_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building__message_needaction_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building_dash__message_needaction_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_contrats_wizard__message_needaction_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_floor__message_needaction_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_housing__message_needaction_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_log__message_needaction_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_room__message_needaction_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_stock__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_apartment__message_has_error_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building__message_has_error_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building_dash__message_has_error_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_contrats_wizard__message_has_error_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_floor__message_has_error_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_housing__message_has_error_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_log__message_has_error_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_room__message_has_error_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_stock__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_apartment__message_unread_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building__message_unread_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building_dash__message_unread_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_contrats_wizard__message_unread_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_floor__message_unread_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_housing__message_unread_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_log__message_unread_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_room__message_unread_counter
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_stock__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: osoul_accommodation
+#: code:addons/osoul_accommodation/wizard/accomm_beds_control.py:0
+#, python-format
+msgid "Operation Error: Cannot reduce beds below the number of residents."
+msgstr "لايمكن تقليل إجمالي اﻷسرََة أقل من إجمالي السكان بالغرفة"
+
+#. module: osoul_accommodation
+#: code:addons/osoul_accommodation/wizard/accomm_beds_control.py:0
+#, python-format
+msgid "Operation Error: Cannot reduce beds more than total beds available."
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_building__location__operation_office
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_building_dash__location__operation_office
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_contrats_wizard__building_location__operation_office
+msgid "Operation Office"
+msgstr "مكتب التشغيل"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_beds_control_wizard__operation_type
+msgid "Operation Type"
+msgstr "نوع العملية"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_building__location__osoul_abha
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_building_dash__location__osoul_abha
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_contrats_wizard__building_location__osoul_abha
+msgid "Osoul Abha"
+msgstr "سكن عمال أبها"
+
+#. module: osoul_accommodation
+#: model:ir.ui.menu,name:osoul_accommodation.menu_root_osoul_accommodation
+msgid "Osoul Accommodation"
+msgstr "وحدة السـكن "
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_building__location__osoul_hatchery
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_building_dash__location__osoul_hatchery
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_contrats_wizard__building_location__osoul_hatchery
+msgid "Osoul Hatchery"
+msgstr "فقاسة تعاونية عسير"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_building__location__osoul_jeddah
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_building_dash__location__osoul_jeddah
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_contrats_wizard__building_location__osoul_jeddah
+msgid "Osoul Jeddah"
+msgstr "سكن عمال جده"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_building__location__osoul_jizan
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_building_dash__location__osoul_jizan
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_contrats_wizard__building_location__osoul_jizan
+msgid "Osoul Jizan"
+msgstr "سكن عمال جيزان"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_building__location__osoul_poultry
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_building_dash__location__osoul_poultry
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_contrats_wizard__building_location__osoul_poultry
+msgid "Osoul Poultry"
+msgstr "مصنع تعاونية عسير"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_stock__product_type__pack
+msgid "Pack"
+msgstr "علبة"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.view_contracts_wizard_form
+msgid "Payment Details"
+msgstr "تفاصيل الدفع"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__payment_mechanism
+msgid "Payment Mechanism"
+msgstr "آلية السداد"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_stock__product_useage__personal
+msgid "Personal"
+msgstr "خاص"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.view_accommodation_stock_form
+msgid "Product Details"
+msgstr "معلومات الصنف"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__product_name
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__product_name
+msgid "Product Name"
+msgstr "إسم الصنف"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__quantity
+msgid "Quantity"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.view_accommodation_stock_form
+msgid "Quantity Details"
+msgstr "معلومات الكميات"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__quantity_spent
+msgid "Quantity Spent"
+msgstr "الكمية المصروفه"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_apartment__quantity_used
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_emp__quantity_used
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_floor__quantity_used
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_room__quantity_used
+msgid "Quantity Used"
+msgstr "الكميات المستخدمة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_room__housing_status__ready
+msgid "Ready"
+msgstr "جاهرة"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.accommodation_log_view_form
+msgid "Records"
+msgstr "السجلات"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_beds_control_wizard__operation_type__reduce
+msgid "Reduce Beds"
+msgstr "تقليل إجمالي اﻷسرََة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__difference_in_days
+msgid "Remaining Days"
+msgstr "الايام المتبقية على نهاية العقد"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_room
+msgid "Remove"
+msgstr "إزالة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__rent_value
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__rent_value
+msgid "Rent value"
+msgstr "قيمة الإيجار"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.report_housing_qweb_form
+msgid "Reports"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__activity_user_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__activity_user_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__activity_user_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__activity_user_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__activity_user_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__activity_user_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__activity_user_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__activity_user_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_beds_control_wizard__room_id
+msgid "Room"
+msgstr "الغرفة"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_room
+msgid "Room Details"
+msgstr "تفاصيل الغرفة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_room__state__room_is_full
+msgid "Room Is Full"
+msgstr "الغرفة ممتلئة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__rooms_no
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__rooms_no
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__room_no
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__room_no
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__room_no
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.report_housing_qweb_form
+msgid "Room No"
+msgstr "رقم الغرفة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__room_relation_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__room_relation_id
+msgid "Room Relation"
+msgstr ""
+
+#. module: osoul_accommodation
+#: code:addons/osoul_accommodation/models/accom_room.py:0
+#: code:addons/osoul_accommodation/models/accom_room.py:0
+#, python-format
+msgid "Room cannot hold new members, add more beds to add a new member"
+msgstr ""
+"! لا يمكن للغرفة استيعاب أعضاء جدد، قم بإضافة المزيد من الأسرة لإضافة عضو "
+"جديد"
+
+#. module: osoul_accommodation
+#: code:addons/osoul_accommodation/models/accom_apartment.py:0
+#: code:addons/osoul_accommodation/models/accom_building.py:0
+#: code:addons/osoul_accommodation/models/accom_kan_dash.py:0
+#: model:ir.actions.act_window,name:osoul_accommodation.action_accommodation_room
+#: model:ir.ui.menu,name:osoul_accommodation.menu_accommodation_room
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.accommodation_apartment_view_form
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_building
+#, python-format
+msgid "Rooms"
+msgstr "الغرف"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_building_dash
+msgid "Rooms Details"
+msgstr "تفاصيل الغرف"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.view_contracts_wizard_form
+msgid "Running"
+msgstr "بدء"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__message_has_sms_error
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__message_has_sms_error
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__message_has_sms_error
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__message_has_sms_error
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__message_has_sms_error
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__message_has_sms_error
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__message_has_sms_error
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__message_has_sms_error
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_room__floor__second_floor
+msgid "Second Floor"
+msgstr "الطابق الثاني"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__product_size
+msgid "Size"
+msgstr "الحجم"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_stock__product_size__small
+msgid "Small"
+msgstr "صغير"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_room__state__space_available
+msgid "Space Available"
+msgstr "المساحة متوفرة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__standard_bed
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__standard_bed_per_location
+msgid "Standard Bed"
+msgstr "معيار الاسرََة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__standard_bed
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__standards_beds
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__standard_bed
+msgid "Standard Beds"
+msgstr "معيار الاسرََة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__standards_beds
+msgid "Standards Beds"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__start_date_decade
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__start_date_decade
+msgid "Start Date"
+msgstr "بداية العقد"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_room
+msgid "Start Housing"
+msgstr "بدء التسكين"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__state
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__state
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_apartment__activity_state
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building__activity_state
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building_dash__activity_state
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_contrats_wizard__activity_state
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_floor__activity_state
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_housing__activity_state
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_log__activity_state
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_room__activity_state
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_stock__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.actions.act_window,name:osoul_accommodation.action_accommodation_stock
+#: model:ir.ui.menu,name:osoul_accommodation.menu_accommodation_stock
+msgid "Stock"
+msgstr "المخزون"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_apartment__stock_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_emp__stock_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_floor__stock_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log_line_stock_room__stock_id
+msgid "Stock Item"
+msgstr "العهد"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__stock_id
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.accommodation_apartment_view_form
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.accommodation_floor_view_form
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.accommodation_log_view_form
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_room
+msgid "Stock Items"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__log_line_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__log_line_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__log_line_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__log_line_ids
+msgid "Stock Items Used"
+msgstr "المنتجات المستخدمة"
+
+#. module: osoul_accommodation
+#: code:addons/osoul_accommodation/models/accom_stock.py:0
+#, python-format
+msgid "Stock for %s is insufficient!"
+msgstr ""
+
+#. module: osoul_accommodation
+#: code:addons/osoul_accommodation/models/accom_stock.py:0
+#: code:addons/osoul_accommodation/models/accom_stock.py:0
+#: code:addons/osoul_accommodation/models/accom_stock.py:0
+#: code:addons/osoul_accommodation/models/accom_stock.py:0
+#, python-format
+msgid "Stock for {} is insufficient!"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_room
+msgid "Stop Housing"
+msgstr "وقف التسكين"
+
+#. module: osoul_accommodation
+#: model:res.groups,name:osoul_accommodation.group_accommodation_supervisor
+msgid "Supervisor"
+msgstr "مشرف"
+
+#. module: osoul_accommodation
+#: model:res.groups,comment:osoul_accommodation.group_accommodation_supervisor
+msgid "Supervisors Group"
+msgstr "إجمالية المشرفين"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.form_accommodation_building_dash
+msgid "Tenant Details"
+msgstr "تفاصيل الإيجار"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_floor__floor_no__first
+msgid "The First"
+msgstr "الاول"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_floor__floor_no__fourth
+msgid "The Fourth"
+msgstr "الرابع"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_floor__floor_no__second
+msgid "The Second"
+msgstr "الثاني"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_floor__floor_no__third
+msgid "The Third"
+msgstr "الثالث"
+
+#. module: osoul_accommodation
+#: code:addons/osoul_accommodation/models/accom_floor.py:0
+#, python-format
+msgid "The floor already exists on this building !"
+msgstr " ! الطابق بالفعل موجود"
+
+#. module: osoul_accommodation
+#: model:ir.model.constraint,message:osoul_accommodation.constraint_osoul_accommodation_stock_product_name_unique
+msgid "The product name must be unique."
+msgstr "يجب أن لا يتكرر نفس إسم المنتج"
+
+#. module: osoul_accommodation
+#: code:addons/osoul_accommodation/models/accom_stock.py:0
+#, python-format
+msgid "The quantity for %s must be greater than zero."
+msgstr ""
+
+#. module: osoul_accommodation
+#: code:addons/osoul_accommodation/models/accom_room.py:0
+#, python-format
+msgid ""
+"There is residents still inside room, you need to remove them before stop "
+"housing in this room"
+msgstr "هناك سكان بالغرفة قم بإزالتهم قبل وقف التكسين بالغرفة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_room__floor__third_floor
+msgid "Third Floor"
+msgstr "الطابق الثالث"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__time_spent_inside
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__time_spent_inside
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__time_spent_inside
+msgid "Time Spent Inside"
+msgstr "إجمالي الايام"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__total_all_residents
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__total_all_residents
+msgid "Total All Residents"
+msgstr "إجمالي السكان"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__total_apartment
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__total_apartments
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__total_apartments
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__total_apartment
+msgid "Total Apartment"
+msgstr "إجمالي الشقق"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__totals_apartments
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__totals_apartments
+msgid "Total Apartments"
+msgstr "إجمالي الشقق"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__total_beds
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__totals_beds
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__total_beds
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__totals_beds
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__total_beds
+msgid "Total Beds"
+msgstr "إجمالي الاسرََة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__total_beds_per_location
+msgid "Total Beds "
+msgstr "إجمالي الاسرََة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__total_buildings_per_location
+msgid "Total Buildings "
+msgstr "إجمالي المباني"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__total_emergency_exits
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__total_emergency_exits
+msgid "Total Emergency Exits"
+msgstr "إجمالي مخارج الطوارئ"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__max_energy
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__max_energy
+msgid "Total Energy"
+msgstr "الطاقة الإستيعابية"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__total_entries
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__total_entries
+msgid "Total Entries"
+msgstr "إجمالي المداخل"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__total_floors
+msgid "Total Flooor"
+msgstr "إجمالي الطوابق"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__total_floors
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__total_floors
+msgid "Total Floor"
+msgstr "إجمالي الطوابق"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__totals_floors
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__totals_floors
+msgid "Total Floors"
+msgstr "إجمالي الطوابق"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.view_dashboard_form
+msgid "Total Number Of Population"
+msgstr "الإجمالي للسكان"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_beds_control_wizard__total_residents
+msgid "Total Residants"
+msgstr "إجمالي السكان"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__total_residents
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__totals_residents
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__total_residents
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__totals_residents
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__total_residents
+msgid "Total Residents"
+msgstr "إجمالي السكان"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__total_rooms
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__total_rooms
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__totals_rooms
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__total_rooms
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__totals_rooms
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.view_dashboard_form
+msgid "Total Rooms"
+msgstr "إجمالي الغرف"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__total_rooms_per_location
+msgid "Total Rooms "
+msgstr "إجمالي الغرف"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__total_wc
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__total_wc
+msgid "Total WC"
+msgstr "إجمالي دورات المياة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__room_id
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__room_id
+msgid "Total room"
+msgstr "إجمالي الغرف"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__product_type
+msgid "Type"
+msgstr "الوصف"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_apartment__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building_dash__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_contrats_wizard__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_floor__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_housing__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_log__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_room__activity_exception_decoration
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_stock__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_room__state__unhoused
+msgid "Unhoused"
+msgstr "غير مسكونة"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__is_unique_per_location
+msgid "Unique Per Location"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__message_unread
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__message_unread
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__message_unread
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__message_unread
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__message_unread
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__message_unread
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__message_unread
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__message_unread
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__message_unread_counter
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.actions.server,name:osoul_accommodation.ir_cron_update_difference_in_days_ir_actions_server
+#: model:ir.cron,cron_name:osoul_accommodation.ir_cron_update_difference_in_days
+#: model:ir.cron,name:osoul_accommodation.ir_cron_update_difference_in_days
+msgid "Update Difference in Days"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__product_useage
+msgid "Usage"
+msgstr "الأستخدام"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__user_id
+msgid "User"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_apartment__website_message_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building__website_message_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_building_dash__website_message_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_contrats_wizard__website_message_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_floor__website_message_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__website_message_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_log__website_message_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_room__website_message_ids
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_stock__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_apartment__website_message_ids
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building__website_message_ids
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_building_dash__website_message_ids
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_contrats_wizard__website_message_ids
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_floor__website_message_ids
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_housing__website_message_ids
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_log__website_message_ids
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_room__website_message_ids
+#: model:ir.model.fields,help:osoul_accommodation.field_osoul_accommodation_stock__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model.fields,field_description:osoul_accommodation.field_osoul_accommodation_housing__mobile_phone
+msgid "Work Phone"
+msgstr "رقم التواصل"
+
+#. module: osoul_accommodation
+#: code:addons/osoul_accommodation/models/accom_building.py:0
+#: code:addons/osoul_accommodation/models/accom_floor.py:0
+#: code:addons/osoul_accommodation/models/accom_kan_dash.py:0
+#, python-format
+msgid "apartment"
+msgstr "الشقق"
+
+#. module: osoul_accommodation
+#: model:ir.model.fields.selection,name:osoul_accommodation.selection__osoul_accommodation_stock__product_type__bit
+msgid "bit"
+msgstr "حبة"
+
+#. module: osoul_accommodation
+#: model_terms:ir.ui.view,arch_db:osoul_accommodation.view_dashboard_form
+msgid "location Details"
+msgstr "تفاصيل المواقع"
+
+#. module: osoul_accommodation
+#: model:ir.model,name:osoul_accommodation.model_osoul_accommodation_beds_control_wizard
+msgid "osoul.accommodation.beds.control.wizard"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model,name:osoul_accommodation.model_osoul_accommodation_building
+msgid "osoul.accommodation.building"
+msgstr "المباني"
+
+#. module: osoul_accommodation
+#: model:ir.model,name:osoul_accommodation.model_osoul_accommodation_building_dash
+msgid "osoul.accommodation.building.dash"
+msgstr ""
+
+#. module: osoul_accommodation
+#: model:ir.model,name:osoul_accommodation.model_osoul_accommodation_housing
+msgid "osoul.accommodation.housing"
+msgstr "التسكين"
+
+#. module: osoul_accommodation
+#: model:ir.model,name:osoul_accommodation.model_osoul_accommodation_room
+msgid "osoul.accommodation.room"
+msgstr "الغرف"
+
+#. module: osoul_accommodation
+#: model:ir.model,name:osoul_accommodation.model_osoul_accommodation_stock
+msgid "osoul.accommodation.stock"
+msgstr ""

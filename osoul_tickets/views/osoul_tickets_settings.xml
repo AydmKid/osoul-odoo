@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.actions.act_window" id="osoul_tickets_settings_action">
+        <field name="name">Issue Location</field>
+        <field name="res_model">osoul.tickets.settings</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.ui.view" id="osoul_tickets_settings_tree_view">
+        <field name="name">osoul.tickets.settings.tree</field>
+        <field name="model">osoul.tickets.settings</field>
+        <field name="arch" type="xml">
+            <tree sample = "1">
+                <field name="issue_location" decoration-bf="1" decoration-success="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="osoul_tickets_settings_form_view">
+        <field name="name">osoul.tickets.settings.form</field>
+        <field name="model">osoul.tickets.settings</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div>
+                        <h4>
+                        </h4>
+                        <h3>
+                            <field name="issue_location" readonly="1" decoration-bf="10" decoration-success="1" />
+                        </h3>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="issue_location" required="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="osoul_tickets_settings_menu" model="ir.ui.menu" >
+        <field name="name">Issue Location</field>
+        <field name="sequence" eval="5" />
+        <field name="action" ref="osoul_tickets_settings_action" />
+        <field name="parent_id" ref="menu_osoul_osoul_tickets_settings" />
+    </record>
+
+</odoo>

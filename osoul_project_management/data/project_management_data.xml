@@ -1,0 +1,15 @@
+
+<odoo>
+    <record id="project_state_draft" model="ir.model.data">
+        <field name="name">draft</field>
+        <field name="model">osoul.project</field>
+    </record>
+    <record id="project_state_in_progress" model="ir.model.data">
+        <field name="name">in_progress</field>
+        <field name="model">osoul.project</field>
+    </record>
+    <record id="project_state_completed" model="ir.model.data">
+        <field name="name">completed</field>
+        <field name="model">osoul.project</field>
+    </record>
+</odoo>

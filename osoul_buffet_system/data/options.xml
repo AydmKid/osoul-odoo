@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="no_suger" model="osoul.buffet.options">
+        <field name="name">No Suger</field>
+    </record>
+
+    <record id="stevia_sweetener" model="osoul.buffet.options">
+        <field name="name">Stevia</field>
+    </record>
+
+    <record id="regular_suger" model="osoul.buffet.options">
+        <field name="name">Regular Suger</field>
+    </record>
+
+    <record id="extra_suger" model="osoul.buffet.options">
+        <field name="name">Extra Suger</field>
+    </record>
+
+    <record id="mint" model="osoul.buffet.options">
+        <field name="name">Mint</field>
+    </record>
+
+    <record id="ginger" model="osoul.buffet.options">
+        <field name="name">Ginger</field>
+    </record>
+
+    <record id="milk" model="osoul.buffet.options">
+        <field name="name">Mikle</field>
+    </record>
+
+    <record id="habaq" model="osoul.buffet.options">
+        <field name="name">Habaq</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,80 @@
+/* Bounce Effect */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Pulse Effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Rotate Effect */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Apply animations */
+.bounce-effect {
+    animation: bounce 1s ease-in-out;
+}
+
+.pulse-effect {
+    animation: pulse 1s ease-in-out;
+}
+
+.rotate-effect {
+    animation: rotate 1s linear;
+}
+
+/* custom_backend.css */
+/* fix tree view header*/
+.o_list_view thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #f9f9f9; /* Set the background color of the sticky header */
+}
+
+.o_list_view th {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+
+.lamp-image {
+    transition: filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lamp-on {
+    filter: brightness(100%);
+    /*box-shadow: 0 0 15px yellow; /* Lamp on glow effect */
+}
+
+.lamp-off {
+    filter: brightness(30%);
+    box-shadow: none; /* No glow when off */
+}
+

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <odoo>
+
+        <record id="action_securit_visitor_enter_permission" model="ir.actions.act_window">
+            <field name="name">Visitor Enter Permission</field>
+            <field name="res_model">osoul.security.visitor.enter.permission</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="security_visitor_enter_permission_search" model="ir.ui.view">
+            <field name="name">security.visitor.enter.permission.search</field>
+            <field name="model">osoul.security.visitor.enter.permission</field>
+            <field name="arch" type="xml">
+                        <search string="">
+                            <field name="permission_code"/>
+                            <field name="identity_no"/>
+                            <field name="employment_no_id"/>
+                        </search>
+                </field>
+        </record>
+
+        <record id="tree_securit_visitor_enter_permission" model="ir.ui.view">
+            <field name="name">Visitor Enter Permission</field>
+            <field name="model">osoul.security.visitor.enter.permission</field>
+            <field name="arch" type="xml">
+                <tree string="" default_order="create_date desc" decoration-info="state == 'draft'" decoration-success="state == 'running'" 
+                                decoration-danger="state =='expired'" decoration-muted="state == 'cancel'" sample = "1">
+                    <field name="create_date"/>
+                    <field name="permission_code"/>
+                    <field name="create_uid"/>
+                    <field name="employment_no_id" width=".8"/>
+                    <field name="department_id" width=".8"/>
+                    <field name="visitor_name"/>
+                    <field name="identity_no"/>
+                    <field name="mobile"/>
+                    <field name="visit_type_id" widget="many2one"/>
+                    <!-- <field name="plate_no"/>
+                    <field name="plate_letters"/> -->
+                    <field name="enter_exit_permission" width=".8"/>
+                    <!-- <field name="permit_issuer_id" width=".8"/> -->
+                    
+                    <!-- <field name="gate_entry_record"/> -->
+                    <!-- <field name="vehicle_available"/> -->
+                    <!-- <field name="progress" widget="progressbar" width=".8"/> -->
+                    <field name="state" widget="badge" decoration-info="state == 'draft'" 
+                                        decoration-success="state == 'running'" decoration-danger="state =='expired'" decoration-muted="state == 'cancel'"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="form_securit_visitor_enter_permission" model="ir.ui.view">
+            <field name="name">Visitor Enter Permission</field>
+            <field name="model">osoul.security.visitor.enter.permission</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                        <button name="action_running_permission" class="btn-success" type="object" states="draft" string="Running"
+                                                                confirm="Are You Sure"/>
+                        <button name="action_allowed_exit" class="btn-success" type="object" string="Allowed Visitor Exit" icon="fa-sign-out" 
+                        attrs="{'invisible': [('enter_exit_permission', '!=', 'exit_not_allowed')]}" confirm="You Will Approved Supplier Exiting From Osoul ?"/>
+                    </header>
+                    <sheet>
+                        <div>
+                            <h4>
+                                <field name="permission_code" readonly="1"/>
+                            </h4>
+                            <h3>
+                                <field name="visitor_name" readonly="1"/>
+                            </h3>
+                        </div>
+                        <group name="name" string="Permit Information" decoration-it="1" decoration-bf="1" decoration-success="1">
+                            <group name="name" string="">
+                                <field name="create_date"/>
+                                <field name="permit_issuer_id" options="{'no_open': True}"/>
+                                <field name="employment_no_id" options="{'no_open': True}"/>
+                                <field name="department_id" options="{'no_open': True}"/>
+                            </group>
+                            <group name="name" string="Visitor Information" decoration-it="1" decoration-bf="1" decoration-success="1">
+                                <field name="visitor_name" options="{'no_open': True, 'no_create': True}" placeholder="Choose Visitor Name" 
+                                                        attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                                <field name="identity_no" options="{'no_open': True}"/>
+                                <field name="mobile" options="{'no_open': True}"/>
+                                <field name="visit_type_id" options="{'no_open': True, 'no_create': True}" placeholder="Choose Visit Type" 
+                                attrs="{'required': [('state', 'in', ['draft'])], 'readonly': [('state', 'not in', ['draft'])]}"/>
+                                <!-- <field name="gate_entry_record"/> -->
+                                <field name="note" placeholder="Add Extra Informations if Needed" attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
+                                <field name="enter_exit_permission" readonly="1" widget="badge" decoration-success="enter_exit_permission == 'allowed_enter'" 
+                                decoration-danger="enter_exit_permission == 'exit_not_allowed'" decoration-warning="enter_exit_permission == 'allowed_exit'" 
+                                decoration-info="enter_exit_permission == 'supplier_out'"/>
+                                
+                            </group>
+                            <group name="name" string="Vehicle Information">
+                                <field name="vehicle_available" attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
+                                <field name="plate_no"  attrs="{'invisible': [('vehicle_available', '=', False)], 'readonly': [('state', 'not in', ['draft'])],'required': [('vehicle_available', '=', True)]}"/>
+                                <field name="plate_letters"  attrs="{'invisible': [('vehicle_available', '=', False)], 'readonly': [('state', 'not in', ['draft'])],'required': [('vehicle_available', '=', True)]}"/>
+                                
+                            </group>
+                            <group name="name" string="">
+                                
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" />
+                        <field name="activity_ids" />
+                        <field name="message_ids" />
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="menu_action_name" model="ir.ui.menu" >
+            <field name="name">Visitor Enter Permission</field>
+            <field name="sequence" eval="10"/>
+            <field name="action" ref="action_securit_visitor_enter_permission"/>
+            <field name="parent_id" ref="security_gate_permissions_menu"/>
+        </record>
+        
+    </odoo>

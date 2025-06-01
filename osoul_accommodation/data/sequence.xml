@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    
+        <record id="accommodation_stock_sequence_code" model="ir.sequence">
+            <field name="name">Accommodation Stock Sequence</field>
+            <field name="code">accommodation_stock_sequence</field>
+            <field name="prefix">IC-</field>
+            <field name="padding">7</field>
+        </record>
+    
+    </data>
+    
+</odoo>

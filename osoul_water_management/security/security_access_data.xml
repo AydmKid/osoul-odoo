@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!--======================================================================================-->
+                                <!-- CATEGORY ACCESS RIGHTS -->
+        <!--======================================================================================-->
+
+        <record id="osoul_water_management_groups_category" model="ir.module.category">
+            <field name="name">Water Management</field>
+            <field name="description">Osoul Water Management Security Category</field>
+        </record>
+
+        <!--======================================================================================-->
+                                <!-- GROUP ACCESS RIGHTS -->
+        <!--======================================================================================-->
+        
+        <!-- ACCESS RIGHTS GROUPS -->
+        <record id="water_management_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="osoul_water_management_groups_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="comment">Comment</field>
+        </record>
+
+        <record id="water_management_operator" model="res.groups">
+            <field name="name">Operator</field>
+            <field name="category_id" ref="osoul_water_management_groups_category"/>
+            <field name="implied_ids" eval="[(4, ref('water_management_manager'))]"/>
+            <field name="comment">Comment</field>
+        </record>
+
+        <record id="water_management_security" model="res.groups">
+            <field name="name">Security</field>
+            <field name="category_id" ref="osoul_water_management_groups_category"/>
+            <field name="implied_ids" eval="[(4, ref('water_management_operator'))]"/>
+            <field name="comment">Comment</field>
+        </record>
+
+        <!--======================================================================================-->
+                                <!-- MODEL ACCESS RIGHTS -->
+        <!--======================================================================================-->
+
+        <!-- WATER TANKER ENTRY ACCESS RIGHTS -->
+        <record id="access_osoul_water_tanker_entry_manager" model="ir.model.access">
+            <field name="name">osoul_water_tanker_entry_manager</field>
+            <field name="model_id" ref="model_osoul_water_tanker_entry"/>
+            <field name="group_id" ref="water_management_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_water_tanker_entry_operator" model="ir.model.access">
+            <field name="name">osoul_water_tanker_entry_operator</field>
+            <field name="model_id" ref="model_osoul_water_tanker_entry"/>
+            <field name="group_id" ref="water_management_operator"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_water_tanker_entry_security" model="ir.model.access">
+            <field name="name">osoul_water_tanker_entry_security</field>
+            <field name="model_id" ref="model_osoul_water_tanker_entry"/>
+            <field name="group_id" ref="water_management_security"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <!-- WATER RECEPTION ACCESS RIGHTS -->
+        <record id="access_osoul_water_reception_manager" model="ir.model.access">
+            <field name="name">osoul_water_reception_manager</field>
+            <field name="model_id" ref="model_osoul_water_reception"/>
+            <field name="group_id" ref="water_management_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_water_reception_operator" model="ir.model.access">
+            <field name="name">osoul_water_reception_operator</field>
+            <field name="model_id" ref="model_osoul_water_reception"/>
+            <field name="group_id" ref="water_management_operator"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_water_reception_security" model="ir.model.access">
+            <field name="name">osoul_water_reception_security</field>
+            <field name="model_id" ref="model_osoul_water_reception"/>
+            <field name="group_id" ref="water_management_security"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <!-- COUNTERS ACCESS RIGHTS -->
+        <record id="access_osoul_water_counter_manager" model="ir.model.access">
+            <field name="name">osoul_water_counter_manager</field>
+            <field name="model_id" ref="model_osoul_water_counter"/>
+            <field name="group_id" ref="water_management_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_water_counter_operator" model="ir.model.access">
+            <field name="name">osoul_water_counter_operator</field>
+            <field name="model_id" ref="model_osoul_water_counter"/>
+            <field name="group_id" ref="water_management_operator"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <!-- WATER PRICE ACCESS RIGHTS -->
+        <record id="access_osoul_water_price_manager" model="ir.model.access">
+            <field name="name">osoul_water_price_manager</field>
+            <field name="model_id" ref="model_osoul_water_price"/>
+            <field name="group_id" ref="water_management_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_water_price_operator" model="ir.model.access">
+            <field name="name">osoul_water_price_operator</field>
+            <field name="model_id" ref="model_osoul_water_price"/>
+            <field name="group_id" ref="water_management_operator"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <!-- OPERATORS ACCESS RIGHTS -->
+        <record id="access_osoul_water_operator_manager" model="ir.model.access">
+            <field name="name">osoul_water_operator_manager</field>
+            <field name="model_id" ref="model_osoul_water_operator"/>
+            <field name="group_id" ref="water_management_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_water_operator_operator" model="ir.model.access">
+            <field name="name">osoul_water_operator_operator</field>
+            <field name="model_id" ref="model_osoul_water_operator"/>
+            <field name="group_id" ref="water_management_operator"/>
+            <field name="perm_read" eval="0"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_osoul_water_operator_security" model="ir.model.access">
+            <field name="name">osoul_water_operator_security</field>
+            <field name="model_id" ref="model_osoul_water_operator"/>
+            <field name="group_id" ref="water_management_security"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <!-- VEHICLE BRAND ACCESS RIGHTS -->
+        <record id="access_osoul_vehicle_brand_manager" model="ir.model.access">
+            <field name="name">osoul_vehicle_brand_manager</field>
+            <field name="model_id" ref="model_osoul_vehicle_brand"/>
+            <field name="group_id" ref="water_management_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_vehicle_brand_operator" model="ir.model.access">
+            <field name="name">osoul_vehicle_brand_operator</field>
+            <field name="model_id" ref="model_osoul_vehicle_brand"/>
+            <field name="group_id" ref="water_management_operator"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+        
+        <!-- VEHICLE MODE ACCESS RIGHTS -->
+        <record id="access_osoul_vehicle_model_manager" model="ir.model.access">
+            <field name="name">osoul_vehicle_model_manager</field>
+            <field name="model_id" ref="model_osoul_vehicle_model"/>
+            <field name="group_id" ref="water_management_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_vehicle_model_operator" model="ir.model.access">
+            <field name="name">osoul_vehicle_model_operator</field>
+            <field name="model_id" ref="model_osoul_vehicle_model"/>
+            <field name="group_id" ref="water_management_operator"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_vehicle_model_security" model="ir.model.access">
+            <field name="name">osoul_vehicle_model_security</field>
+            <field name="model_id" ref="model_osoul_vehicle_model"/>
+            <field name="group_id" ref="water_management_security"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <!-- TANKER DRIVER ACCESS RIGHTS -->
+        <record id="access_osoul_tanker_driver_manager" model="ir.model.access">
+            <field name="name">osoul_tanker_driver_manager</field>
+            <field name="model_id" ref="model_osoul_tanker_driver"/>
+            <field name="group_id" ref="water_management_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_tanker_driver_operator" model="ir.model.access">
+            <field name="name">osoul_tanker_driver_operator</field>
+            <field name="model_id" ref="model_osoul_tanker_driver"/>
+            <field name="group_id" ref="water_management_operator"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_tanker_driver_security" model="ir.model.access">
+            <field name="name">osoul_tanker_driver_security</field>
+            <field name="model_id" ref="model_osoul_tanker_driver"/>
+            <field name="group_id" ref="water_management_security"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+        
+        <!-- WATER TANKER ACCESS RIGHTS -->
+        <record id="access_osoul_water_tanker_manager" model="ir.model.access">
+            <field name="name">osoul_water_tanker_manager</field>
+            <field name="model_id" ref="model_osoul_water_tanker"/>
+            <field name="group_id" ref="water_management_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_water_tanker_operator" model="ir.model.access">
+            <field name="name">osoul_water_tanker_operator</field>
+            <field name="model_id" ref="model_osoul_water_tanker"/>
+            <field name="group_id" ref="water_management_operator"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_water_tanker_security" model="ir.model.access">
+            <field name="name">osoul_water_tanker_security</field>
+            <field name="model_id" ref="model_osoul_water_tanker"/>
+            <field name="group_id" ref="water_management_security"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <!-- WATRE VENDORS ACCESS RIGHTS -->
+        <record id="access_osoul_water_vendor_manager" model="ir.model.access">
+            <field name="name">osoul_water_vendor_manager</field>
+            <field name="model_id" ref="model_osoul_water_vendor"/>
+            <field name="group_id" ref="water_management_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_water_vendor_operator" model="ir.model.access">
+            <field name="name">osoul_water_vendor_operator</field>
+            <field name="model_id" ref="model_osoul_water_vendor"/>
+            <field name="group_id" ref="water_management_operator"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_water_vendor_security" model="ir.model.access">
+            <field name="name">osoul_water_vendor_security</field>
+            <field name="model_id" ref="model_osoul_water_vendor"/>
+            <field name="group_id" ref="water_management_security"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <!-- CONTRACT ACCESS RIGHTS -->
+        <record id="access_osoul_water_contract_manager" model="ir.model.access">
+            <field name="name">osoul_water_contract_manager</field>
+            <field name="model_id" ref="model_osoul_water_contract"/>
+            <field name="group_id" ref="water_management_manager"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_osoul_water_contract_operator" model="ir.model.access">
+            <field name="name">osoul_water_contract_operator</field>
+            <field name="model_id" ref="model_osoul_water_contract"/>
+            <field name="group_id" ref="water_management_operator"/>
+            <field name="perm_read" eval="0"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+        
+    </data>
+</odoo>

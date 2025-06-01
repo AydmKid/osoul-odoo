@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="human_resources_department_form" model="ir.ui.view">
+        <field name="name">Departments Inherit</field>
+        <field name="model">hr.department</field>
+        <field name="inherit_id" ref="hr.view_department_form"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="management_name_id" required="1"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

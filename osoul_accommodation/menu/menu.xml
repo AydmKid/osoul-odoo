@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="menu_root_osoul_accommodation" model="ir.ui.menu" >
+        <field name="name">Osoul Accommodation</field>
+        <field name="sequence" eval="11" />
+    </record>
+    
+    <record id="menu_accommodation_rooms_housing" model="ir.ui.menu" >
+        <field name="name">Building and Rooms</field>
+        <field name="sequence" eval="4" />
+        <field name="parent_id" ref="menu_root_osoul_accommodation" />
+    </record>
+
+    <record id="menu_accommodation_housing_view" model="ir.ui.menu" >
+        <field name="name">Housing View</field>
+        <field name="sequence" eval="6" />
+        <field name="parent_id" ref="menu_root_osoul_accommodation" />
+    </record>
+
+    <record id="menu_accommodation_configuration" model="ir.ui.menu" >
+        <field name="name">Configuration</field>
+        <field name="sequence" eval="7" />
+        <field name="parent_id" ref="menu_root_osoul_accommodation" />
+    </record>
+
+</odoo>

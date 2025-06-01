@@ -1,0 +1,23 @@
+{
+    'name':'Osoul Legal Affairs',
+    'version':'1.0.0',
+    'summary':'',
+    'description':'',
+    'author':'Osoul Information Technology',
+    'category':'Osoul',
+    'website':'www.osoul.sa',
+    'depends':['base','hr','contacts','osoul_human_resources'],
+    'data':['security/security.xml',
+            'security/ir.model.access.csv',
+            'data/sequence.xml',
+            'data/cron.xml',
+            'menu/menu.xml',
+            'views/legal_affairs_contract.xml',
+            'views/legal_affairs_court_case.xml',
+            'views/legal_affairs_court_session.xml',
+            'views/legal_affairs_promissory_note.xml'],
+    'application':True,
+    'auto_install':True,
+    'installable':True,
+    'sequence':4
+}

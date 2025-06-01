@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="action_transportation_consent" model="ir.actions.act_window">
+        <field name="name">Transportation Consent</field>
+        <field name="res_model">osoul.transportation.consent</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_transportation_consent_form" model="ir.ui.view">
+        <field name="name">transportation.consent.form</field>
+        <field name="model">osoul.transportation.consent</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <header>
+                    <button name="action_allowed_exit" confirm="Are You Sure" class="btn-success" type="object" string="Accept"/>
+                </header>
+                <sheet>
+                        <group>
+                            <group>
+                                
+                                <field name="related_employee_id"/>
+                                <field name="employment_no_id"/>
+                                <field name="department_id"/>
+                            
+                            </group>
+                            <group>
+                                
+                                <field name="driver_id"/>
+                                <field name="emp_id_no"/>
+                                <field name="emp_department_id"/>
+                                <field name="country_id"/>
+                            </group>
+                        </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_transportation_consent_tree" model="ir.ui.view">
+        <field name="name">transportation.consent.tree</field>
+        <field name="model">osoul.transportation.consent</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="driver_id"/>
+                
+                <field name="create_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="security_transportation_consent_menu" model="ir.ui.menu" >
+        <field name="name">Consents</field>
+        <field name="sequence" eval="15" />
+        <field name="action" ref="action_transportation_consent" />
+        <field name="parent_id" ref="menu_root_osoul_transportation" />
+    </record>
+    
+
+    
+</odoo>

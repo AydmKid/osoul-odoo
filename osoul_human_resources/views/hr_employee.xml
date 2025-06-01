@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_hr_employee_form_inherit" model="ir.ui.view">
+            <field name="name">hr.employee.form.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <field name="department_id" position="attributes">
+                    <attribute name="options">{'no_open': True, 'no_create': True}</attribute>
+                </field>
+                <field name="department_id" position="before">
+                    <field name="management_name"/>
+                    
+                    <!-- <field name="nationality"/> -->
+                    
+                </field>
+                <field name="country_id" position="after">
+                    <field name="religion"/>
+                </field>
+                <field name="job_title" position="after">
+                    <field name="degree" placeholder="Degree"/>
+                    <field name="category" placeholder="Category"/>
+                </field>
+                <field name="employee_type" position="before">
+                    <!-- <field name="status" required="1"/> -->
+                    <field name="employment_no" required="1"/>
+                    <!-- <field name="emp_no_id"/> -->
+                </field>
+                <notebook>
+                    <page string="Hosting Informations">
+                        <group name="name" string="">
+                            <group name="name" string="">
+                                <field name="housing_location"/>
+                                <field name="host_accom"/>
+                                <field name="in_out_status" widget="badge" decoration-success="in_out_status == 'inside_osoul'" decoration-warning="in_out_status == 'outside_osoul'"/>
+                                
+                                <!-- <field name="in_out_status" widget="badge" decoration-success="in_out_status == 'inside_osoul'"
+                                                                               decoration-warning="in_out_status == 'outside_osoul'"/> -->
+                            </group>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+        <record id="view_hr_employee_tree_inherit" model="ir.ui.view">
+            <field name="name">hr.employee.tree.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_tree"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="management_name"/>
+                    <field name="employment_no"/>
+                    <!-- <field name="emp_no_id"/> -->
+                </field>
+            </field>
+        </record>
+
+        <record id="view_hr_employee_search_inherit" model="ir.ui.view">
+            <field name="name">hr.employee.search.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_filter"/>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="employment_no"/>
+                </search>
+            </field>
+        </record>
+
+
+        
+    </data>
+</odoo>

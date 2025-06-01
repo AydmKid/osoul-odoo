@@ -1,0 +1,312 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* osoul_human_resources
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-14 07:46+0000\n"
+"PO-Revision-Date: 2024-09-14 07:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_hr_employee__status
+#: model:ir.model.fields.selection,name:osoul_human_resources.selection__hr_employee__status__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_hr_employee__category
+#: model_terms:ir.ui.view,arch_db:osoul_human_resources.view_hr_employee_form_inherit
+msgid "Category"
+msgstr "الفئة"
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_hr_employee__citizen
+#: model:ir.model.fields.selection,name:osoul_human_resources.selection__hr_employee__citizen__citizen
+msgid "Citizen"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_hr_employee__contracting_party
+msgid "Contracting Party"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_osoul_hr_managements__create_uid
+#: model:ir.model.fields,field_description:osoul_human_resources.field_osoul_hr_unit__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_osoul_hr_managements__create_date
+#: model:ir.model.fields,field_description:osoul_human_resources.field_osoul_hr_unit__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_hr_employee__degree
+#: model_terms:ir.ui.view,arch_db:osoul_human_resources.view_hr_employee_form_inherit
+msgid "Degree"
+msgstr "الدرجة"
+
+#. module: osoul_human_resources
+#: model:ir.model,name:osoul_human_resources.model_hr_department
+msgid "Department"
+msgstr "القسم"
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_osoul_hr_unit__department_name_id
+msgid "Department Name"
+msgstr "إسم القسم"
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_osoul_hr_managements__display_name
+#: model:ir.model.fields,field_description:osoul_human_resources.field_osoul_hr_unit__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:ir.model.fields.selection,name:osoul_human_resources.selection__hr_employee__in_out_status__draft
+msgid "Draft"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:ir.model,name:osoul_human_resources.model_hr_employee
+#: model:res.groups,name:osoul_human_resources.group_hr_emp
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: osoul_human_resources
+#: model:res.groups,comment:osoul_human_resources.group_hr_emp
+msgid "Employee Group"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_hr_employee__employee_housing
+msgid "Employee Housing"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_hr_employee__employment_no
+msgid "Employment No"
+msgstr "الرقم الوظيفي"
+
+#. module: osoul_human_resources
+#: model:ir.module.category,name:osoul_human_resources.module_category_hr
+msgid "HR"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_hr_employee__hire_date
+msgid "Hire Date"
+msgstr "تاريخ التعين"
+
+#. module: osoul_human_resources
+#: model:ir.model.fields.selection,name:osoul_human_resources.selection__hr_employee__employee_housing__hosted
+#: model:ir.model.fields.selection,name:osoul_human_resources.selection__hr_employee__host_accom__hosted
+#: model:ir.model.fields.selection,name:osoul_human_resources.selection__hr_employee__host_status__hosted
+#: model:ir.model.fields.selection,name:osoul_human_resources.selection__hr_employee__house_emp__hosted
+#: model:ir.model.fields.selection,name:osoul_human_resources.selection__hr_employee__housing__hosted
+msgid "Hosted"
+msgstr "مسكن"
+
+#. module: osoul_human_resources
+#: model_terms:ir.ui.view,arch_db:osoul_human_resources.view_hr_employee_form_inherit
+msgid "Hosting Informations"
+msgstr "معلومات التسكين"
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_hr_employee__host_status
+#: model:ir.model.fields,field_description:osoul_human_resources.field_hr_employee__house_emp
+#: model:ir.model.fields,field_description:osoul_human_resources.field_hr_employee__housing
+msgid "Housing"
+msgstr "السكن"
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_hr_employee__host_accom
+msgid "Housing status Acoom"
+msgstr "حالة التسكين"
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_osoul_hr_managements__id
+#: model:ir.model.fields,field_description:osoul_human_resources.field_osoul_hr_unit__id
+msgid "ID"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_hr_employee__in_out_status
+msgid "In Out Status"
+msgstr "الحاله"
+
+#. module: osoul_human_resources
+#: model:ir.model.fields.selection,name:osoul_human_resources.selection__hr_employee__in_out_status__inside_osoul
+msgid "Inside Osoul"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_hr_employee__join_date
+msgid "Join Date"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_osoul_hr_managements____last_update
+#: model:ir.model.fields,field_description:osoul_human_resources.field_osoul_hr_unit____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_osoul_hr_managements__write_uid
+#: model:ir.model.fields,field_description:osoul_human_resources.field_osoul_hr_unit__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_osoul_hr_managements__write_date
+#: model:ir.model.fields,field_description:osoul_human_resources.field_osoul_hr_unit__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_hr_employee__management_name
+msgid "Management"
+msgstr "الإدارة"
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_osoul_hr_managements__management_code
+msgid "Management Code"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model_terms:ir.ui.view,arch_db:osoul_human_resources.human_resources_managements_kanban
+msgid "Management Code:"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_hr_department__management_name_id
+#: model:ir.model.fields,field_description:osoul_human_resources.field_osoul_hr_managements__management_name
+msgid "Management Name"
+msgstr "إسم الإدارة"
+
+#. module: osoul_human_resources
+#: model_terms:ir.ui.view,arch_db:osoul_human_resources.human_resources_managements_kanban
+msgid "Management Name:"
+msgstr "اسم الإدارة"
+
+#. module: osoul_human_resources
+#: model:ir.actions.act_window,name:osoul_human_resources.human_resources_managements_action
+#: model:ir.ui.menu,name:osoul_human_resources.human_resources_managements_menu
+msgid "Managements"
+msgstr "الإدارات"
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_osoul_hr_managements__manager_name_id
+#: model:res.groups,name:osoul_human_resources.group_hr_manager
+msgid "Manager"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:res.groups,comment:osoul_human_resources.group_hr_manager
+msgid "Managers Group"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:ir.model.fields.selection,name:osoul_human_resources.selection__hr_employee__religion__muslim
+msgid "Muslim"
+msgstr "مسلم"
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_hr_employee__nationality
+msgid "Nationality"
+msgstr "الجنسية"
+
+#. module: osoul_human_resources
+#: model:ir.model.fields.selection,name:osoul_human_resources.selection__hr_employee__status__not_active
+msgid "Not Active"
+msgstr "غير نشط"
+
+#. module: osoul_human_resources
+#: model:ir.model.fields.selection,name:osoul_human_resources.selection__hr_employee__citizen__not_citizen
+msgid "Not Citizen"
+msgstr "غير مواطن"
+
+#. module: osoul_human_resources
+#: model:ir.model.fields.selection,name:osoul_human_resources.selection__hr_employee__host_accom__not_hosted
+#: model:ir.model.fields.selection,name:osoul_human_resources.selection__hr_employee__host_status__not_hosted
+#: model:ir.model.fields.selection,name:osoul_human_resources.selection__hr_employee__house_emp__not_hosted
+msgid "Not Hosted"
+msgstr "غير مسكن"
+
+#. module: osoul_human_resources
+#: model:ir.model.fields.selection,name:osoul_human_resources.selection__hr_employee__religion__not_muslim
+msgid "Not Muslim"
+msgstr "غير مسلم"
+
+#. module: osoul_human_resources
+#: model:ir.model.fields.selection,name:osoul_human_resources.selection__hr_employee__employee_housing__not_hosted
+#: model:ir.model.fields.selection,name:osoul_human_resources.selection__hr_employee__housing__not_hosted
+msgid "Not_Hosted"
+msgstr "غير مسكن"
+
+#. module: osoul_human_resources
+#: model:ir.model.fields.selection,name:osoul_human_resources.selection__hr_employee__in_out_status__outside_osoul
+msgid "Outside Osoul"
+msgstr "خارج اصول"
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_hr_employee__religion
+msgid "Religion"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:res.groups,name:osoul_human_resources.group_hr_supervisor
+msgid "Supervisor"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:res.groups,comment:osoul_human_resources.group_hr_supervisor
+msgid "Supervisors Group"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_osoul_hr_managements__department_counter
+msgid "Total Departments"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:ir.model,name:osoul_human_resources.model_osoul_hr_unit
+#: model:ir.model.fields,field_description:osoul_human_resources.field_hr_employee__unit_name
+msgid "Unit"
+msgstr "الوحدة"
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_osoul_hr_unit__unit_name
+msgid "Unit Name"
+msgstr "إسم الوحدة"
+
+#. module: osoul_human_resources
+#: model:ir.actions.act_window,name:osoul_human_resources.human_resources_unit_action
+#: model:ir.ui.menu,name:osoul_human_resources.human_resources_unitss_menu
+msgid "Units"
+msgstr "الوحدات"
+
+#. module: osoul_human_resources
+#: model:ir.module.category,description:osoul_human_resources.module_category_hr
+msgid "hr"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:ir.model.fields,field_description:osoul_human_resources.field_hr_employee__e_name
+msgid "name"
+msgstr ""
+
+#. module: osoul_human_resources
+#: model:ir.model,name:osoul_human_resources.model_osoul_hr_managements
+msgid "osoul.hr.managements"
+msgstr ""

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_accommodation_housing" model="ir.actions.act_window">
+        <field name="name">Housing View</field>
+        <field name="res_model">osoul.accommodation.housing</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record id="tree_accommodation_housing" model="ir.ui.view">
+        <field name="name">Housing View</field>
+        <field name="model">osoul.accommodation.housing</field>
+        <field name="arch" type="xml">
+            <tree  string="" default_order="create_date desc" create="false" edit="false" delete="false" decoration-success="housing == 'hosted'">
+                <field name="employee_id" />
+                <field name="job_title" widget="badge" decoration-success="housing == 'hosted'"/>
+                <field name="employement_no" widget="badge" decoration-success="housing == 'hosted'"/>
+                <field name="country_id" widget="badge" decoration-success="housing == 'hosted'"/>
+                <field name="management_name" widget="badge" decoration-success="housing == 'hosted'"/>
+                <field name="department" widget="badge" decoration-success="housing == 'hosted'"/>
+                <!-- <field name="housing_status"/> -->
+                <field name="building_name" widget="badge" decoration-success="housing == 'hosted'"/>
+                <!-- <field name="floor_id" widget="badge" decoration-success="housing == 'hosted'"/>
+                <field name="apartment_id" widget="badge" decoration-success="housing == 'hosted'"/> -->
+                <field name="room_no" widget="badge" decoration-success="housing == 'hosted'"/>
+                <!-- <field name="housing_date" widget="badge" decoration-success="housing == 'hosted'"/> -->
+                <!-- <field name="building_id"/> -->
+                <field name="building_location" widget="badge" decoration-success="housing == 'hosted'"/>
+                <field name="housing" widget="badge" decoration-success="housing == 'hosted'"/>
+            </tree>
+        </field>
+    </record>
+
+    
+
+    <record id="accommodation_search_view" model="ir.ui.view">
+            <field name="name">Housing View</field>
+            <field name="model">osoul.accommodation.housing</field>
+            <field name="arch" type="xml">
+                <search > 
+                    <field name="building_location"/> 
+                    <field name="employee_id"/>
+                    <field name="job_title"/>
+                    <field name="employement_no"/>
+                    <field name="building_name"/>
+                    <field name="apartment_id"/>
+                    <field name="room_no"/>
+                    <field name="country_id"/>
+                    <field name="department"/>
+                    <searchpanel> 
+                        <field name="department" icon="fa-users" enable_counters="1"/>
+                    </searchpanel>
+                </search>
+            </field>
+    </record>
+
+    <record id="housing_calendar" model="ir.ui.view">
+            <field name="name">Calendar Housing</field>
+            <field name="model">osoul.accommodation.housing</field>
+            <field name="arch" type="xml">
+                <calendar string="Housing Calendar" date_start="housing_date" color="employee_id">
+                    <field name="employee_id"/>
+                    <field name="employement_no"/>
+                </calendar>
+            </field>
+    </record>
+               
+    
+
+    <record id="menu_accommodation_housing" model="ir.ui.menu" >
+        <field name="name">Current Housing View</field>
+        <field name="sequence" eval="1"/>
+        <field name="action" ref="action_accommodation_housing"/>
+        <field name="parent_id" ref="menu_accommodation_housing_view"/>
+    </record>
+    
+</odoo>

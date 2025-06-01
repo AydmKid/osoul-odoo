@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View osoul.occu.location View Tree -->
+    <record id="view_osoul_occu_location_tree" model="ir.ui.view">
+        <field name="name">view.osoul.occu.location.tree</field>
+        <field name="model">osoul.occu.location</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View osoul.occu.location form -->
+    <record id="view_osoul_occu_location_form" model="ir.ui.view">
+        <field name="name">view.osoul.occu.location.form</field>
+        <field name="model">osoul.occu.location</field>
+        <field name="arch" type="xml">
+            <form string="Osoul Occu Location">
+                <sheet>
+                    <div class="oe_title">
+                        <h3>
+                            <field name="name" readonly="1"/>
+                        </h3>
+                    </div>
+                    <group name="name" string="Lcations and Sites">
+                        <field name="name"/>
+                        <field name="site_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View osoul.occu.location search -->
+    <record id="view_osoul_occu_location_search" model="ir.ui.view">
+        <field name="name">view.osoul.occu.location.search</field>
+        <field name="model">osoul.occu.location</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="1" string="Group By">
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action osoul.occu.location -->
+    <record id="action_osoul_occu_location" model="ir.actions.act_window">
+        <field name="name">Osoul Occu Location</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">osoul.occu.location</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Osoul Occu Location.
+            </p>
+        </field>
+    </record>
+
+</odoo>

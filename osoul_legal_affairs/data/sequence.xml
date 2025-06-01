@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="1">
+    
+        <record id="legal_affairs_contract_sequence" model="ir.sequence">
+            <field name="name">Legal Affairs Contract Sequence</field>
+            <field name="code">legal_affairs_contract_sequence</field>
+            <field name="prefix">LAC-</field>
+            <field name="padding">6</field>
+        </record>
+
+        <record id="legal_affairs_court_case_sequence" model="ir.sequence">
+            <field name="name">Legal Affairs Court Case Sequence</field>
+            <field name="code">legal_affairs_court_case_sequence</field>
+            <field name="prefix">LACC-</field>
+            <field name="padding">6</field>
+        </record>
+    
+    </data>
+    
+
+</odoo>

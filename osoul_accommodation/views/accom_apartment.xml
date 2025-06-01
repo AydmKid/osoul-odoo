@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_accommodation_apartment" model="ir.actions.act_window">
+        <field name="name">Apartment</field>
+        <field name="res_model">osoul.accommodation.apartment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="accommodation_apartment_view_tree" model="ir.ui.view">
+        <field name="name">Apartment</field>
+        <field name="model">osoul.accommodation.apartment</field>
+        <field name="arch" type="xml">
+            <tree string="" default_order="apartment_no asc" decoration-success="1">
+                <field name="apartment_no" widget="badge" decoration-success="1"/>
+                <field name="floors_id" widget="badge" decoration-success="1"/>
+                <!-- <field name="building_id"/> -->
+                <field name="building_name" widget="badge" decoration-success="1"/>
+                <field name="total_rooms" widget="badge" decoration-success="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="accommodation_apartment_view_form" model="ir.ui.view">
+        <field name="name">Apartment</field>
+        <field name="model">osoul.accommodation.apartment</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_open_rooms" type="object" class="oe_stat_button" icon="fa-home">
+                            <field name="total_rooms" width=".8" string="Rooms" widget=""/>
+                            <span class="o_stat_text">Rooms</span>
+                        </button>
+                    </div>
+                    <div>
+                        <h4>
+                            <field name="apartment_no" readonly="1"/>
+                        </h4>
+                        <h3>
+                            <field name="building_id" readonly="1"/>
+                        </h3>
+                    </div>
+
+                   
+                    <group>
+                        <group name="name" string="">
+                            <field name="apartment_no"/>
+                            <field name="building_id"  widget="selection" required="1"/>
+                            <field name="floors_id"  widget="selection"/>
+                            <!-- <field name="total_apartment"/> -->
+                            <field name="total_rooms"/>
+                            <field name="floor_ids" invisible="1"/>
+                        </group>
+                        <group string="Honesty">
+                           <field name="log_line_ids">
+                                <tree string="Stock Items">
+                                    <field name="stock_id" required="1"/>
+                                    <field name="quantity_used" required="1"/>
+                                    <field name="current_date"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </group>
+
+                </sheet>
+                 <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="apartment_accommodation_search_view" model="ir.ui.view">
+            <field name="name">apartment View</field>
+            <field name="model">osoul.accommodation.apartment</field>
+            <field name="arch" type="xml">
+                <search >
+                    <field name="apartment_no"/>
+                    <field name="building_id"/>
+                    <field name="floors_id"/>
+                </search>
+            </field>
+    </record>
+
+    <record id="menu_accommodation_apartment" model="ir.ui.menu">
+        <field name="name">Apartment</field>
+        <field name="sequence" eval="2"/>
+        <field name="action" ref="action_accommodation_apartment"/>
+        <field name="parent_id" ref="menu_accommodation_configuration"/>
+    </record>
+
+</odoo>

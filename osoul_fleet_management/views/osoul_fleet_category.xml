@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View osoul.fleet.category View Tree -->
+    <record id="view_osoul_fleet_category_tree" model="ir.ui.view">
+        <field name="name">view.osoul.fleet.category.tree</field>
+        <field name="model">osoul.fleet.category</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View osoul.fleet.category form -->
+    <record id="view_osoul_fleet_category_form" model="ir.ui.view">
+        <field name="name">view.osoul.fleet.category.form</field>
+        <field name="model">osoul.fleet.category</field>
+        <field name="arch" type="xml">
+            <form string="Osoul Fleet Category">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Name..."/>
+                        </h1>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View osoul.fleet.category search -->
+    <record id="view_osoul_fleet_category_search" model="ir.ui.view">
+        <field name="name">view.osoul.fleet.category.search</field>
+        <field name="model">osoul.fleet.category</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="1" string="Group By">
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action osoul.fleet.category -->
+    <record id="action_osoul_fleet_category" model="ir.actions.act_window">
+        <field name="name">Osoul Fleet Category</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">osoul.fleet.category</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Osoul Fleet Category.
+            </p>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.actions.act_window" id="securitry_poultry_gates_action">
+        <field name="name">Poultry Security Gates</field>
+        <field name="res_model">osoul.security.poultry.gates</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.ui.view" id="securitry_poultry_gates_tree_view">
+        <field name="name">Poultry Security Gates Tree</field>
+        <field name="model">osoul.security.poultry.gates</field>
+        <field name="arch" type="xml">
+            <tree sample = "1">
+                <field name="gate_no" />
+                <field name="gate_name" />
+                <field name="gate_location" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="securitry_poultry_gates_form_view">
+        <field name="name">Poultry Security Gates Form</field>
+        <field name="model">osoul.security.poultry.gates</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div>
+                        <h4>
+                            <field name="gate_no" readonly="1" />
+                        </h4>
+                        <h3>
+                            <field name="gate_name" readonly="1" />
+                        </h3>
+                    </div>
+                    <group name="name" string="Gate Informations">
+                        <field name="gate_no" required="1" placeholder="Enter Gate Number" />
+                        <field name="gate_name" required="1" placeholder="Enter Gate Name" />
+                        <field name="gate_location" required="1" placeholder="Choose Gate Location" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="security_poultry_gates_menu" model="ir.ui.menu">
+        <field name="name">Secrity Gates</field>
+        <field name="sequence" eval="0" />
+        <field name="action" ref="securitry_poultry_gates_action" />
+        <field name="parent_id" ref="security_guards_configurations_menu" />
+    </record>
+
+</odoo>

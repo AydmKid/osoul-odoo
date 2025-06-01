@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="1">
+
+        <record id="legal_affairs_root_menu" model="ir.ui.menu">
+            <field name="name">Legal Affairs</field>
+            <field name="sequence" eval="10" />
+        </record>
+
+        <record id="legal_affairs_cases_and_sessions_menu" model="ir.ui.menu">
+            <field name="name">Cases and Sessions</field>
+            <field name="parent_id" ref="legal_affairs_root_menu"/>
+            <field name="sequence" eval="2"/>
+        </record>
+
+    </data>
+
+</odoo>
