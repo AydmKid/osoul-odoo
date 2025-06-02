@@ -96,8 +96,8 @@
                             </group>
 
                             <group string="Employee Info"> 
-                                <field name="emp_name_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
-                                <field name="emp_department_id"  readonly="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="emp_name_id" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_open': True, 'no_create': True}"/>
+                                <field name="emp_department_id"  readonly="1" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_open': True, 'no_create': True}"/>
                                 <field name="note"/>
                             </group>
 
