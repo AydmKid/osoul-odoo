@@ -137,27 +137,30 @@ class SecurityVisitorEnterExit(models.Model):
             raise UserError(_("Cannot delete record while visitor is still inside."))
         return super(SecurityVisitorEnterExit, self).unlink()
     
-    # @api.constrains('visitor_id_no', 'visitor_mobile')
-    # def _check_unique_id_mobile(self):
-    #     for rec in self:
-    #         # Ensure ID number is exactly 10 digits and numeric
-    #         if not rec.visitor_id_no.isdigit() or len(rec.visitor_id_no) != 10:
-    #             raise ValidationError(_("ID No must be exactly 10 digits and numeric."))
+    @api.constrains('visitor_id_no', 'visitor_mobile')
+    def _check_unique_id_mobile(self):
+        for rec in self:
+            # Ensure ID number is exactly 10 digits and numeric
+            if not rec.visitor_id_no.isdigit() or len(rec.visitor_id_no) != 10:
+                raise ValidationError(_("ID No must be exactly 10 digits and numeric."))
 
-    #         # Ensure mobile number is exactly 10 digits and numeric (if provided)
-    #         if rec.visitor_mobile and (not rec.visitor_mobile.isdigit() or len(rec.visitor_mobile) != 10):
-    #             raise ValidationError(_("Mobile number must be exactly 10 digits and numeric."))
+            # Ensure mobile number is exactly 10 digits and numeric (if provided)
+            if rec.visitor_mobile and (not rec.visitor_mobile.isdigit() or len(rec.visitor_mobile) != 10):
+                raise ValidationError(_("Mobile number must be exactly 10 digits and numeric."))
 
-    #         # Check for duplicate ID number
-    #         if self.search_count([
-    #             ('visitor_id_no', '=', rec.visitor_id_no),
-    #             ('id', '!=', rec.id)
-    #         ]) > 0:
-    #             raise ValidationError(_("A visitor with this ID No already exists."))
+            # Check for duplicate ID number where the state is 'inside'
+            if self.search_count([
+                ('visitor_id_no', '=', rec.visitor_id_no),
+                ('id', '!=', rec.id),
+                ('state', '=', 'inside')
+            ]) > 0:
+                raise ValidationError(_("A visitor with this ID No is already inside Osoul."))
 
-    #         # Check for duplicate mobile number
-    #         if rec.visitor_mobile and self.search_count([
-    #             ('visitor_mobile', '=', rec.visitor_mobile),
-    #             ('id', '!=', rec.id)
-    #         ]) > 0:
-    #             raise ValidationError(_("A visitor with this mobile number already exists."))
+            # Check for duplicate mobile number where the state is 'inside'
+            if rec.visitor_mobile and self.search_count([
+                ('visitor_mobile', '=', rec.visitor_mobile),
+                ('id', '!=', rec.id),
+                ('state', '=', 'inside')
+            ]) > 0:
+                raise ValidationError(_("A visitor with this mobile number is already inside Osoul."))
+
