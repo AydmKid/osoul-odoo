@@ -17,8 +17,8 @@
         <field name="model">osoul.security.visitor.enter.exit</field>
         <field name="arch" type="xml">
             <tree string="Visitor Entry/Exit"
-                decoration-success="state == 'inside'"
-                decoration-danger="state == 'exited'"
+                decoration-warning="state == 'inside'"
+                decoration-success="state == 'exited'"
                 decoration-muted="state == 'draft'" multi_edit="1">
                 
                 <!--  Visitor Info -->
@@ -47,8 +47,8 @@
                 <field name="state"
                     widget="badge"
                     optional="show"
-                    decoration-success="state == 'inside'"
-                    decoration-danger="state == 'exited'"
+                    decoration-warning="state == 'inside'"
+                    decoration-success="state == 'exited'"
                     decoration-muted="state == 'draft'"/>
             </tree>
         </field>
