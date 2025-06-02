@@ -33,5 +33,5 @@
     'installable': True,
     'auto_install': False,
     'application': True,
-    'sequence':-250,
+    'sequence':20,
 }
