@@ -77,7 +77,7 @@
             <tree decoration-warning="state == 'open'" decoration-success="state == 'close'">
                 <field name="sequence" optional="show"/>
                 <field name="employee_id" optional="show"/>
-                <field name="date" optional="show"/>
+                <!-- <field name="date" optional="show"/> -->
                 <field name="site_id" optional="show"/>
                 <field name="location_id" optional="show" widget="many2many_tags" decoration-warning="state == 'open'" decoration-success="state == 'close'"/>
                 <field name="checked_pumps" optional="show" widget="badge" class="info-badge"/>
