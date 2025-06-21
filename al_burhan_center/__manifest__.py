@@ -25,7 +25,7 @@
     ],
     'assets': {
         'web.assets_backend': [ 
-            '/osoul_accommodation/static/src/js/kanban_image_follow.js',
+            
         ],
          
         
