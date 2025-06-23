@@ -51,9 +51,9 @@
                         <group name="name" string="Permit Information">
                             <field name="permit_no" placeholder="Generated permit number" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
                             <field name="name" placeholder="Enter the name of the permit" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
-                            <field name="permit_site" placeholder="Select the permit site" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
-                            <field name="permit_location" placeholder="Select the permit location" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
-                            <field name="permit_for" placeholder="Select the department for this permit" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="permit_site" options="{'no_open': True, 'no_create': True}" placeholder="Select the permit site" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="permit_location" options="{'no_open': True, 'no_create': True}" placeholder="Select the permit location" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="permit_for" options="{'no_open': True, 'no_create': True}" placeholder="Select the department for this permit" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
                         </group>
                         <group name="name" string="Validation and Description">
                             <field name="valid_from" placeholder="Start date and time" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
@@ -62,18 +62,18 @@
                             <field name="description" placeholder="Describe the work for this permit" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
                         </group>
                         <group string="Preparation">
-                            <field name="work_type" widget="many2many_tags" placeholder="Select types of work" 
+                            <field name="work_type" options="{'no_open': True, 'no_create': True}" widget="many2many_tags" placeholder="Select types of work" 
                                                     attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
-                            <field name="hazard_risk" widget="many2many_tags" placeholder="Select applicable hazards and risks" 
+                            <field name="hazard_risk" options="{'no_open': True, 'no_create': True}" widget="many2many_tags" placeholder="Select applicable hazards and risks" 
                                                       attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
-                            <field name="action_taken" widget="many2many_tags" placeholder="Select actions taken to mitigate risks"
+                            <field name="action_taken" options="{'no_open': True, 'no_create': True}" widget="many2many_tags" placeholder="Select actions taken to mitigate risks"
                                                        attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
-                            <field name="protective_equips" widget="many2many_tags" placeholder="Select required protective equipment"
+                            <field name="protective_equips" options="{'no_open': True, 'no_create': True}" widget="many2many_tags" placeholder="Select required protective equipment"
                                                             attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
                             <!-- <field name="permit_image"/> -->
                         </group>
                         <group name="name" string="Excutor and Agreement">
-                            <field name="work_executor" placeholder="Enter the executor responsible for the work"
+                            <field name="work_executor" options="{'no_open': True, 'no_create': True}" placeholder="Enter the executor responsible for the work"
                                                         attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
                             <field name="agreement_date" placeholder="Agreement date"/>
                             <field name="executor_signature" widget="signature" options="{'color': '#000000'}"/>
