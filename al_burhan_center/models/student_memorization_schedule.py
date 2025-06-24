@@ -135,3 +135,15 @@ class StudentMemorizationSchedule(models.Model):
             if circle.teacher_id:
                 vals['teacher_id'] = circle.teacher_id.id
         return super().write(vals)
+
+    # Set to Draft
+    def action_set_draft(self):
+        self.state = 'draft'
+
+    # Set to In Progress
+    def action_set_in_progress(self):
+        self.state = 'in_progress'
+
+    # Set to Done
+    def action_set_done(self):
+        self.state = 'done'

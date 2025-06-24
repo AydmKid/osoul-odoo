@@ -12,7 +12,7 @@
         <field name="name">student.circles.tree</field>
         <field name="model">student.circles</field>
         <field name="arch" type="xml">
-            <tree decoration-success="active" decoration-danger="not active">
+            <tree decoration-success="active" decoration-danger="not active" sample = "1">
                 <field name="sequence" widget="handle"/>
                 <field name="name" optional="show"/>
                 <field name="circle_type" optional="show"/>

@@ -12,7 +12,7 @@
         <field name="name">quran.stage.tree</field>
         <field name="model">quran.stage</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree sample = "1">
                 <field name="sequence" widget="handle"/>
                 <field name="name"/>
                 <field name="surah_count"/>

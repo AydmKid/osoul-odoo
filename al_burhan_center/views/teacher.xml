@@ -59,7 +59,7 @@
         <field name="name">school.teacher.tree</field>
         <field name="model">school.teacher</field>
         <field name="arch" type="xml">
-            <tree decoration-success="active" decoration-danger="not active">
+            <tree decoration-success="active" decoration-danger="not active" sample = "1">
                 <field name="name"/>
                 <field name="identification_number"/>
                 <field name="mobile"/>

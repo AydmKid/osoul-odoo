@@ -14,7 +14,7 @@
         <field name="model">student.schedule.line</field>
         <field name="arch" type="xml">
             <tree create="false" edit="false" delete="false" 
-                decoration-success="state == 'done'" decoration-warning="state == 'in_progress'" decoration-info="state == 'draft'">
+                decoration-success="state == 'done'" decoration-warning="state == 'in_progress'" decoration-info="state == 'draft'" sample = "1">
                 <field name="create_date" optional="show"/>
                  <field name="stage_id" invisible="1"/> 
                 <field name="schedule_id" optional="show"/>

@@ -110,6 +110,13 @@ class StudentRegistrationForm(models.Model):
             if not record.student_identity_no.isdigit() or len(record.student_identity_no) != 10:
                 raise ValidationError(_("Identity No must be exactly 10 digits and contain only numbers."))
 
+            identity_exists = self.search_count([
+                ('student_identity_no', '=', record.student_identity_no),
+                ('id', '!=', record.id)
+            ])
+            if identity_exists:
+                raise ValidationError(_("Identity No already exists!"))
+
             def validate_mobile(value, label):
                 if value and (not value.isdigit() or len(value) != 10):
                     raise ValidationError(_("%s must be exactly 10 digits and contain only numbers.") % label)
@@ -123,7 +130,7 @@ class StudentRegistrationForm(models.Model):
                     ('id', '!=', record.id)
                 ])
                 if exists:
-                    raise ValidationError(_("Parents' mobile number already exists !"))
+                    raise ValidationError(_("Parents' mobile number already exists!"))
 
             if record.other_mobile:
                 exists = self.search_count([
@@ -131,4 +138,5 @@ class StudentRegistrationForm(models.Model):
                     ('id', '!=', record.id)
                 ])
                 if exists:
-                    raise ValidationError(_("Other Mobile Number already exists !"))
+                    raise ValidationError(_("Other Mobile Number already exists!"))
+

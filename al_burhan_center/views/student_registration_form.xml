@@ -15,7 +15,7 @@
         <field name="name">student.registration.form.tree</field>
         <field name="model">student.registration.form</field>
         <field name="arch" type="xml">
-            <tree string="Student Registrations">
+            <tree string="Student Registrations" sample = "1">
                 <field name="student_identity_no" optional="show"/>
                 <field name="student_name" optional="show"/>
                 <field name="nationality" optional="show"/>

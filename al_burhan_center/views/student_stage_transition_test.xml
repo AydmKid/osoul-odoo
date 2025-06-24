@@ -14,7 +14,7 @@
                   decoration-info="state == 'draft'"
                   decoration-success="state == 'promoted'"
                   decoration-warning="state == 'tested'"
-                  decoration-danger="state == 'failed'"> 
+                  decoration-danger="state == 'failed'" sample = "1"> 
                 <field name="test_date" optional="show"/>
                 <field name="teacher_id" optional="show"/>
                 <field name="student_id" optional="show"/>
