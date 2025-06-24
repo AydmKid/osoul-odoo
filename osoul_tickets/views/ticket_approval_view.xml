@@ -232,9 +232,9 @@
                     <!-- <field name="housing_date"/> -->
                     <searchpanel> 
                         <!-- <field name="section_problem" icon="fa-exclamation-triangle" enable_counters="1"/> -->
-                        <field name="responsible_unit" icon="fa-users" enable_counters="1"/>
-                        <field name="state" icon="fa-tasks" enable_counters="1"/>
-                        <field name="priority" icon="fa-star" enable_counters="1"/>
+                        <field name="responsible_unit" icon="fa-users" enable_counters="1" select="multi"/>
+                        <field name="state" icon="fa-tasks" enable_counters="1" select="multi"/>
+                        <field name="priority" icon="fa-star" enable_counters="1" select="multi"/>
                     </searchpanel>
 
                 </search>

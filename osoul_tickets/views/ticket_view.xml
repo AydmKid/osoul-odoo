@@ -273,10 +273,10 @@
                     <field name="state"/>
                     <!-- <field name="housing_date"/> -->
                     <searchpanel> 
-                        <field name="issue_location_id" icon="fa-exclamation-triangle" enable_counters="1"/>
-                        <field name="responsible_unit" icon="fa-users" enable_counters="1"/>
-                        <field name="state" icon="fa-tasks" enable_counters="1"/>
-                        <field name="priority" icon="fa-star" enable_counters="1"/>
+                        <field name="issue_location_id" icon="fa-exclamation-triangle" enable_counters="1" select="multi" order="{'count': 'desc'}"/>
+                        <field name="responsible_unit" icon="fa-users" enable_counters="1" select="multi" order="{'count': 'desc'}"/>
+                        <field name="state" icon="fa-tasks" enable_counters="1" select="multi" order="{'count': 'desc'}"/>
+                        <field name="priority" icon="fa-star" enable_counters="1" select="multi" order="{'count': 'desc'}"/>
                     </searchpanel>
 
                 </search>
