@@ -63,7 +63,9 @@
                                 <tree create="false" delete="false" edit="true" editable="bottom">
                                     <field name="student_name"/>
                                     <field name="student_identity_no"/>
-                                    <field name="parent_mobile"/>
+                                    <field name="age"/>
+                                    <field name="stage_id"/>
+                                    <field name="nationality"/>
                                 </tree>
                             </field>
                         </page>
