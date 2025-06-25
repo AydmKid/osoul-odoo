@@ -140,3 +140,15 @@ class StudentRegistrationForm(models.Model):
                 if exists:
                     raise ValidationError(_("Other Mobile Number already exists!"))
 
+                    
+    @api.constrains('circle_id')
+    def _check_circle_capacity(self):
+        for record in self:
+            if record.circle_id:
+                student_count = self.search_count([('circle_id', '=', record.circle_id.id)])
+                if student_count > record.circle_id.max_students:
+                    raise ValidationError(
+                        _("The circle '%s' is full and cannot accept more than %s students.")
+                        % (record.circle_id.name, record.circle_id.max_students)
+                    )
+
