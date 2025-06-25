@@ -147,3 +147,15 @@ class StudentMemorizationSchedule(models.Model):
     # Set to Done
     def action_set_done(self):
         self.state = 'done'
+
+    @api.model
+    def default_get(self, fields):
+        res = super(StudentMemorizationSchedule, self).default_get(fields)
+        teacher = self.env['school.teacher'].search([('user_id', '=', self.env.uid)], limit=1)
+
+        if teacher:
+            res['teacher_id'] = teacher.id
+            # إذا كان عنده حلقة واحدة فقط نختارها تلقائيًا
+            if teacher.circle_ids:
+                res['circle_id'] = teacher.circle_ids[0].id
+        return res

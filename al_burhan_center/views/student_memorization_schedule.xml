@@ -53,7 +53,7 @@
                 <sheet>
                     <div>
                             <h2>
-                                <field name="sequence" readonly="1"/>
+                                <field name="circle_id" readonly="1"/>
                             </h2>
                             <h5>
                                 
@@ -68,8 +68,8 @@
                     </div>
                     <group>
                         <group string="Circle Info">
-                            <field name="circle_id" options="{'no_open': True, 'no_create': True}"/>
                             <field name="teacher_id" readonly="1" options="{'no_open': True, 'no_create': True}"/>
+                            <field name="circle_id" readonly="1" options="{'no_open': True, 'no_create': True}"/>
                         </group>
                         <group string="More Info"> 
                             <field name="student_count"/>

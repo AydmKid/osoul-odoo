@@ -22,7 +22,13 @@ class SchoolTeacher(models.Model):
     address = fields.Char(string="Address")
 
     # Relations
-    user_id = fields.Many2one('res.users', string="Related User")
+    user_id = fields.Many2one(
+    'res.users',
+    string="Related User",
+    default=lambda self: self.env.user,
+    tracking=True
+    )
+
 
     # Circles the teacher is assigned to
     circle_ids = fields.One2many('student.circles', 'teacher_id', string='Circles')
@@ -56,3 +62,14 @@ class SchoolTeacher(models.Model):
             # Archive related circles
             record.circle_ids.write({'active': False})
         return super(SchoolTeacher, self).unlink()
+
+    @api.model
+    def create(self, vals):
+        if not vals.get('user_id') and self.env.uid:
+            vals['user_id'] = self.env.uid
+        return super(SchoolTeacher, self).create(vals)
+
+    _sql_constraints = [
+    ('unique_user_id', 'unique(user_id)', 'This user is already assigned to a teacher.'),
+    ]
+

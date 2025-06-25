@@ -94,6 +94,7 @@
                             <field name="mobile"/>
                             <field name="email"/>
                             <field name="address"/>
+                            <field name="user_id"/>
                         </group>
 
                         <group>
