@@ -55,9 +55,6 @@
                         </group>
                     </group>
                     <notebook>
-                        <page string="Description">
-                            <field name="description"/>
-                        </page>
                         <page string="Students">
                             <field name="student_ids" mode="tree" context="{'default_circle_id': active_id}">
                                 <tree create="false" delete="false" edit="true" editable="bottom">
@@ -68,6 +65,9 @@
                                     <field name="nationality"/>
                                 </tree>
                             </field>
+                        </page>
+                        <page string="Description">
+                            <field name="description"/>
                         </page>
                     </notebook>
                 </sheet>
