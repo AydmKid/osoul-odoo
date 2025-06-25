@@ -33,16 +33,20 @@
             <form string="Memorization Schedule">
 
                 <header>
-                  
                         <field name="state" widget="statusbar" />
-                        <button name="action_set_draft" string="Set to Draft" type="object"
-                                attrs="{'invisible': [('state', '=', 'draft')]}"/>
-
                         <button name="action_set_in_progress" string="Start Progress" type="object"
-                                attrs="{'invisible': [('state', '=', 'in_progress')]}"/>
+                                attrs="{'invisible': [('state', '!=', 'draft')]}"
+                                states="draft"
+                                class="btn-warning"
+                                icon="fa-play"
+                                confirm="Are You Sure"/>
 
                         <button name="action_set_done" string="Mark as Done" type="object"
-                                attrs="{'invisible': [('state', '=', 'done')]}"/>
+                                attrs="{'invisible': [('state', '!=', 'in_progress')]}"
+                                states="in_progress"
+                                class="btn-success"
+                                icon="fa-check"
+                                confirm="Are You Sure"/>
                 </header>
                 <sheet>
                     <div>
