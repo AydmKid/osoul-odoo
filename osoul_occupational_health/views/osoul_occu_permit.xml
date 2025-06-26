@@ -61,11 +61,11 @@
                             <field name="permit_site" options="{'no_open': True, 'no_create': True}" placeholder="Select the permit site" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
                             <field name="permit_location" options="{'no_open': True, 'no_create': True}" placeholder="Select the permit location" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
                             <field name="permit_for" options="{'no_open': True, 'no_create': True}" placeholder="Select the department for this permit" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
-                            <field name="permit_image"/>
+                            <field name="permit_image" attrs="{'readonly': [('state', 'in', ['rejected', 'closed'])]}"/>
                         </group>
                         <group name="name" string="Validation and Description">
-                            <field name="valid_from" placeholder="Start date and time" attrs="{'required': [('state', '=', 'draft')], 'readonly': ['|',('state', '=', 'rejected'),('state', '=', 'close')]}"/>
-                            <field name="valid_to" placeholder="End date and time" attrs="{'required': [('state', '=', 'draft')], 'readonly': ['|',('state', '=', 'rejected'),('state', '=', 'close')]}"/>
+                            <field name="valid_from" placeholder="Start date and time" attrs="{'readonly': [('state', 'in', ['rejected', 'closed'])]}"/>
+                            <field name="valid_to" placeholder="End date and time" attrs="{'readonly': [('state', 'in', ['rejected', 'closed'])]}"/>
                             <field name="permit_duration" placeholder="Calculated duration" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
                             <field name="description" placeholder="Describe the work for this permit" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
                         </group>
