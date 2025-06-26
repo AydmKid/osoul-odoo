@@ -54,6 +54,7 @@
                             <field name="permit_site" options="{'no_open': True, 'no_create': True}" placeholder="Select the permit site" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
                             <field name="permit_location" options="{'no_open': True, 'no_create': True}" placeholder="Select the permit location" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
                             <field name="permit_for" options="{'no_open': True, 'no_create': True}" placeholder="Select the department for this permit" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="permit_image"/>
                         </group>
                         <group name="name" string="Validation and Description">
                             <field name="valid_from" placeholder="Start date and time" attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>

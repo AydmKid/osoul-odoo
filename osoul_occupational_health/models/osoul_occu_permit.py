@@ -25,6 +25,7 @@ class OsoulOccuWorkPermit(models.Model):
     work_executor = fields.Many2one(comodel_name="hr.employee", string="Work Executor")
     executor_signature = fields.Binary(string="Executor Signature")
     agreement_date = fields.Date(string="Agreement Date", readonly=True)
+    permit_image = fields.Binary("Permit Image", attachment=True)
     work_agreement = fields.Text(string="Work Approval", readonly=True, default="""I have read and understand the above conditions and precautions.
 I accept responsibility for carrying out the work as specified.
 I will ensure the men under my control read, understand and comply with these conditions and precautions.
