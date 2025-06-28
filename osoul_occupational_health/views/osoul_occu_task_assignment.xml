@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <odoo>
+
+        <record id="action_task_assignment" model="ir.actions.act_window">
+            <field name="name">Task Assignments</field>
+            <field name="res_model">osoul.occu.task.assignment</field>
+            <field name="view_mode">kanban,tree,form</field>
+        </record>
+
+        <!-- Kanban View -->
+    <record id="view_task_assignment_kanban" model="ir.ui.view">
+        <field name="name">osoul.occu.task.assignment.kanban</field>
+        <field name="model">osoul.occu.task.assignment</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="id"/>
+                <field name="task_name"/>
+                <field name="assigned_to"/>
+                <field name="due_date"/>
+                <field name="priority"/>
+                <field name="state"/>
+               
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_card oe_kanban_global_click o_kanban_teacher_card" style="padding: 10px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); text-align: center;">
+                            
+                            <div class="oe_kanban_details">
+                                <div class="o_kanban_primary">
+                                    <strong style="font-size: 16px;"><t t-esc="record.assigned_to.value"/></strong>
+                                </div>
+                                <div style="font-size: 13px; color: #888;">Task Name: <t t-esc="record.task_name.value or '-'"/></div>
+                                <div style="font-size: 13px; color: #888;">Priority: <t t-esc="record.priority.value or '-'"/></div>
+                                <div style="font-size: 13px; color: #888;">Priority: <t t-esc="record.state.value or '-'"/></div>
+                                
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+        <record id="view_task_assignment_tree" model="ir.ui.view">
+            <field name="name">osoul.occu.task.assignment.tree</field>
+            <field name="model">osoul.occu.task.assignment</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="task_name"/>
+                    <field name="assigned_to"/>
+                    <field name="due_date"/>
+                    <field name="priority"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_task_assignment_form" model="ir.ui.view">
+            <field name="name">osoul.occu.task.assignment.form</field>
+            <field name="model">osoul.occu.task.assignment</field>
+            <field name="arch" type="xml">
+                <form string="Task Assignment">
+                    <header>
+                        <field name="state" widget="statusbar" readonly="1"/> 
+                        <button name="action_create" type="object" string="Create Task" class="btn-primary" states="draft"/>
+                        <button name="action_start" type="object" string="Start" class="btn-primary" states="task_created"/>
+                        <button name="action_done" type="object" string="Mark as Done" class="btn-primary" states="in_progress"/>
+                        <button name="action_cancel" type="object" string="Cancel" states="draft,task_created,in_progress"/>
+                    </header>
+                    <sheet>
+                        <div>
+                            <h3>
+                                <field name="task_name" readonly="1"/>
+                            </h3>
+                            <h3>
+                                <field name="assigned_to" readonly="1" options="{'no_create': True, 'no_open': True}"/>
+                            </h3>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="task_name"/>
+                                <field name="assigned_to" options="{'no_create': True, 'no_open': True}"/>
+                            </group>
+                            <group>
+                                <field name="due_date"/>
+                                <field name="priority"/>
+                            </group>
+                            <group>
+                                <field name="description"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="menu_teacher_form" model="ir.ui.menu">
+            <field name="name">Tasks</field>
+            <field name="sequence" eval="1"/>
+            <field name="action" ref="action_task_assignment"/>
+            <field name="parent_id" ref="osoul_occu_assignment_menu"/>
+        </record>
+    </odoo>

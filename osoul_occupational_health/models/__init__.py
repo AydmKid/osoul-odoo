@@ -4,5 +4,6 @@ from . import osoul_occu_incident
 from . import osoul_occu_permit
 from . import osoul_occu_options
 from . import osoul_occu_checkup
-from . import osoul_occu_equipment
+from . import osoul_occu_equipment 
 from . import osoul_occu_team
+from . import osoul_occu_task_assignment

@@ -21,8 +21,9 @@
         "views/osoul_occu_fap.xml",
         "views/osoul_occu_pump.xml",
         "views/osoul_occu_tank.xml",
-        "views/osoul_occu_checkup.xml",
+        "views/osoul_occu_checkup.xml", 
         "views/osoul_occu_team.xml",
+        "views/osoul_occu_task_assignment.xml",
         "menu/menu.xml",
     ],
     'assets': {

@@ -37,6 +37,13 @@
         <field name="parent_id" ref="osoul_occ_root_menu" />
     </record>
 
+    <!-- assignment MENU -->
+    <record id="osoul_occu_assignment_menu" model="ir.ui.menu">
+        <field name="name">Assignment</field>
+        <field name="sequence" eval="3" />
+        <field name="parent_id" ref="osoul_occ_root_menu"/>
+    </record>
+
     <record id="osoul_occu_daily_checkup_menu" model="ir.ui.menu" >
         <field name="name">Daily Checkup</field>
         <field name="sequence" eval="0" />

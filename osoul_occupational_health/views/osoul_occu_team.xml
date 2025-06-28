@@ -1,92 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- View osoul.occu.team View Tree -->
-    <record id="view_osoul_occu_team_tree" model="ir.ui.view">
-        <field name="name">view.osoul.occu.team.tree</field>
+    <!-- Team Action -->
+    <record id="action_osoul_occu_team" model="ir.actions.act_window">
+        <field name="name">Occupational Team</field>
+        <field name="res_model">osoul.occu.team</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+    <!-- Kanban View -->
+    <record id="view_school_teacher_kanban" model="ir.ui.view">
+        <field name="name">osoul.occu.team.kanban</field>
         <field name="model">osoul.occu.team</field>
         <field name="arch" type="xml">
-            <tree>
-                <field name="name_id"/>
-                <field name="job_id"/>
-                <field name="join_date"/>
-                <field name="end_date"/>
-                <field name="total_days" widget="badge" class="badge-info"/>
-                <field name="end_date" widget="badge" class="badge-info"/>
-                <field name="state"/>
+            <kanban>
+                <field name="id"/>
+                <field name="name"/>
+                <field name="photo"/>
+                <field name="mobile"/>
+                <field name="active"/>
+               
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_card oe_kanban_global_click o_kanban_teacher_card" style="padding: 10px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); text-align: center;">
+                            <div class="o_kanban_image" style="margin-bottom: 10px;">
+                                <t t-if="record.photo.raw_value">
+                                    <img t-att-src="kanban_image('osoul.occu.team', 'photo', record.id.value)" style="width: 90px; height: 80px; object-fit: cover; border-radius: 50%; border: 2px solid #ccc;"/>
+                                </t>
+                                <t t-if="!record.photo.raw_value">
+                                    <img src="/web/static/src/img/placeholder.png" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; border: 2px solid #ccc;"/>
+                                </t>
+                            </div>
+                            <div class="oe_kanban_details">
+                                <div class="o_kanban_primary">
+                                    <strong style="font-size: 16px;"><t t-esc="record.name.value"/></strong>
+                                </div>
+                                
+                                <div style="font-size: 13px; color: #888;">Mobile: <t t-esc="record.mobile.value or '-'"/></div>
+                                <div style="margin-top: 5px;">
+                                    <span t-if="record.active.raw_value" class="badge bg-success">Active</span>
+                                    <span t-if="!record.active.raw_value" class="badge bg-danger">Archived</span>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+
+    <!-- Team Tree View -->
+    <record id="view_school_teacher_tree" model="ir.ui.view">
+        <field name="name">osoul.occu.team.tree</field>
+        <field name="model">osoul.occu.team</field>
+        <field name="arch" type="xml">
+            <tree decoration-success="active" decoration-danger="not active" sample = "1">
+                <field name="name"/>
+                <field name="mobile"/>
+                <field name="active" invisible="1"/>
             </tree>
         </field>
     </record>
 
-    <!-- View osoul.occu.team form -->
-    <record id="view_osoul_occu_team_form" model="ir.ui.view">
-        <field name="name">view.osoul.occu.team.form</field>
+    <!-- Team Form View -->
+    <record id="view_school_teacher_form" model="ir.ui.view">
+        <field name="name">osoul.occu.team.form</field>
         <field name="model">osoul.occu.team</field>
         <field name="arch" type="xml">
-            <form string="Osoul Occu Team">
-                <header>
-                    <button name="action_active" type="object" string="Active" class="btn-primary" confirm="Are You Sure ?" attrs="{'invisible': [('state', '=', 'active')]}"/>
-                    <button name="action_inactive" type="object" string="Inactive" class="btn-danger" confirm="Are You Sure ?" attrs="{'invisible': [('state', '!=', 'active')]}"/>
-                    <field name="state" widget="statusbar"/>
-                </header>
+            <form string="Teacher">
                 <sheet>
-                    <div>
-                        <h3>
-                            <field name="name_id" readonly="1"/>
-                        </h3>
-                        <h3>
-                            <field name="job_id"/>
-                        </h3>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive" confirm="Are you sure?">
+                            <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                        </button>
                     </div>
-                    <group name="name" string="">
-                        <group name="name" string="Employee Information">
-                            <field name="name_id" placeholder="Select Employee Name" options="{'no_create': True, 'no_open': True}" 
-                                                  attrs="{'required': [('state', '=', 'draft')], 'readonly': [('state', '!=', 'draft')]}"/>
-                            <field name="phone"/>
-                            <field name="job_id" options="{'no_create': True, 'no_open': True}"/>
-                            <field name="join_date"/>
-                            <field name="end_date"/>
+
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Member Name"/>
+                        </h1>
+                    </div>
+
+                    <group>
+                        <group>
+                            <field name="mobile"/>
+                            <field name="email"/>
+                            <field name="address"/>
+                            <field name="user_id"/>
                         </group>
-                        <group name="name" string="Joind and State">
-                            <field name="total_days" widget="badge" class="info-badge"/>
-                            <field name="total_checkups" widget="badge" class="info-badge"/>
+
+                        <group>
+                            <field name="photo" widget="image" class="oe_avatar"/>
                         </group>
                     </group>
                 </sheet>
+
                 <div class="oe_chatter">
-                    <field name="message_follower_ids" widget="mail_followers"/>
-                    <field name="activity_ids" widget="mail_activity"/>
-                    <field name="message_ids" widget="mail_thread"/>
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
                 </div>
             </form>
         </field>
     </record>
 
-    <!-- View osoul.occu.team search -->
-    <record id="view_osoul_occu_team_search" model="ir.ui.view">
-        <field name="name">view.osoul.occu.team.search</field>
-        <field name="model">osoul.occu.team</field>
-        <field name="arch" type="xml">
-            <search>
-                <group expand="1" string="Group By">
-                </group>
-            </search>
-        </field>
-    </record>
 
-    <!-- Action osoul.occu.team -->
-    <record id="action_osoul_occu_team" model="ir.actions.act_window">
-        <field name="name">Osoul Occu Team</field>
-        <field name="type">ir.actions.act_window</field>
-        <field name="res_model">osoul.occu.team</field>
-        <field name="view_mode">tree,form</field>
-        <field name="domain">[]</field>
-        <field name="context">{}</field>
-        <field name="help" type="html">
-            <p class="oe_view_nocontent_create">
-                There is no examples click here to add new Osoul Occu Team.
-            </p>
-        </field>
+    <record id="menu_teacher_form" model="ir.ui.menu">
+        <field name="name">Team</field>
+        <field name="sequence" eval="1"/>
+        <field name="action" ref="action_osoul_occu_team"/>
+        <field name="parent_id" ref="osoul_occu_team_menu"/>
     </record>
-
+   
 </odoo>
