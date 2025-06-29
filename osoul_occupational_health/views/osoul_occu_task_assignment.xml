@@ -7,31 +7,48 @@
             <field name="view_mode">kanban,tree,form</field>
         </record>
 
-        <!-- Kanban View -->
+    <!-- Kanban View -->
     <record id="view_task_assignment_kanban" model="ir.ui.view">
         <field name="name">osoul.occu.task.assignment.kanban</field>
         <field name="model">osoul.occu.task.assignment</field>
         <field name="arch" type="xml">
-            <kanban>
+            <kanban default_order="id desc">
                 <field name="id"/>
                 <field name="task_name"/>
                 <field name="assigned_to"/>
                 <field name="due_date"/>
                 <field name="priority"/>
                 <field name="state"/>
-               
                 <templates>
                     <t t-name="kanban-box">
-                        <div class="oe_kanban_card oe_kanban_global_click o_kanban_teacher_card" style="padding: 10px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); text-align: center;">
+                        <div t-attf-class="oe_kanban_card oe_kanban_global_click"
+                            style="padding: 10px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); text-align: center;">
                             
                             <div class="oe_kanban_details">
+                                <div style="margin-bottom: 8px;">
+                                    <!-- الأيقونات -->
+                                    <t t-if="record.state.raw_value == 'draft'">
+                                        <i class="fa fa-hourglass-half fa-lg text-muted" title="Draft"></i>
+                                    </t>
+                                    <t t-if="record.state.raw_value == 'task_created'">
+                                        <i class="fa fa-tasks fa-lg text-primary" title="Task Created"></i>
+                                    </t>
+                                    <t t-if="record.state.raw_value == 'in_progress'">
+                                        <i class="fa fa-spinner fa-spin fa-lg text-warning" title="In Progress"></i>
+                                    </t>
+                                    <t t-if="record.state.raw_value == 'done'">
+                                        <i class="fa fa-check-circle fa-lg text-success" title="Completed"></i>
+                                    </t>
+                                    <t t-if="record.state.raw_value == 'cancelled'">
+                                        <i class="fa fa-times-circle fa-lg text-danger" title="Cancelled"></i>
+                                    </t>
+                                </div>
                                 <div class="o_kanban_primary">
                                     <strong style="font-size: 16px;"><t t-esc="record.assigned_to.value"/></strong>
                                 </div>
-                                <div style="font-size: 13px; color: #888;">Task Name: <t t-esc="record.task_name.value or '-'"/></div>
-                                <div style="font-size: 13px; color: #888;">Priority: <t t-esc="record.priority.value or '-'"/></div>
-                                <div style="font-size: 13px; color: #888;">Priority: <t t-esc="record.state.value or '-'"/></div>
-                                
+                                <div style="font-size: 13px;">Task Name: <t t-esc="record.task_name.value or '-'"/></div>
+                                <div style="font-size: 13px;">Priority: <t t-esc="record.priority.value or '-'"/></div>
+                                <div style="font-size: 13px;">Status: <t t-esc="record.state.value or '-'"/></div>
                             </div>
                         </div>
                     </t>
@@ -40,16 +57,27 @@
         </field>
     </record>
 
+
+
         <record id="view_task_assignment_tree" model="ir.ui.view">
             <field name="name">osoul.occu.task.assignment.tree</field>
             <field name="model">osoul.occu.task.assignment</field>
             <field name="arch" type="xml">
-                <tree>
-                    <field name="task_name"/>
-                    <field name="assigned_to"/>
-                    <field name="due_date"/>
-                    <field name="priority"/>
-                    <field name="state"/>
+                <tree default_order="id desc"
+                decoration-info="state == 'task_created'"
+                decoration-warning="state == 'in_progress'"
+                decoration-danger="state == 'cancelled'"
+                decoration-success="state == 'done'" sample = "1">
+                    <field name="create_date" optional="show"/>
+                    <field name="task_name" optional="show"/>
+                    <field name="assigned_to" optional="show"/>
+                    <field name="due_date" optional="show"/>
+                    <field name="end_date" optional="show"/>
+                    <field name="priority" optional="show"/>
+                    <field name="state" decoration-info="state == 'task_created'"
+                            decoration-warning="state == 'in_progress'"
+                            decoration-danger="state == 'cancelled'"
+                            decoration-success="state == 'done'" widget="badge" optional="show"/>
                 </tree>
             </field>
         </record>
@@ -69,31 +97,66 @@
                     <sheet>
                         <div>
                             <h3>
+                                <field name="create_date" readonly="1"/>
+                            </h3>
+                            <h3>
                                 <field name="task_name" readonly="1"/>
                             </h3>
                             <h3>
                                 <field name="assigned_to" readonly="1" options="{'no_create': True, 'no_open': True}"/>
                             </h3>
+                            <div>
+                                <field name="priority" widget="selection" style="width: 80px; height: auto; max-height: 40px;"
+                                    options="{'no_open': True, 'no_create': True}" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            </div>
                         </div>
                         <group>
-                            <group>
+                            <group string="Task Info">
                                 <field name="task_name"/>
                                 <field name="assigned_to" options="{'no_create': True, 'no_open': True}"/>
+                                <field name="note" attrs="{'readonly': [('state', '!=', 'in_progress')]}"/>
                             </group>
-                            <group>
-                                <field name="due_date"/>
-                                <field name="priority"/>
+                            <group string="Tracking Info">
+                                <field name="due_date"/> 
+                                <field name="end_date"/>
+                                <field name="actual_done_date"/>
                             </group>
-                            <group>
-                                <field name="description"/>
-                            </group>
+                           
                         </group>
+                        <footer>
+                            <span style="margin: 0 auto;">Add Description</span>
+                            <field name="description" placeholder="Description" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        </footer>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
 
-        <record id="menu_teacher_form" model="ir.ui.menu">
+        <record id="task_assignment_search_view" model="ir.ui.view">
+            <field name="name">osoul.occu.task.assignment view</field>
+            <field name="model">osoul.occu.task.assignment</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="task_name"/>
+                    <field name="priority"/>
+                    <field name="state"/>
+                    <!-- <field name="housing_date"/> -->
+                    <searchpanel> 
+                        <field name="state" icon="fa-tasks" enable_counters="1" select="multi" order="{'count': 'desc'}"/>
+                        <field name="priority" icon="fa-star" enable_counters="1" select="multi" order="{'count': 'desc'}"/>
+                    </searchpanel>
+
+                </search>
+               
+            </field>
+        </record>
+
+        <record id="menu_task_assignment_form" model="ir.ui.menu">
             <field name="name">Tasks</field>
             <field name="sequence" eval="1"/>
             <field name="action" ref="action_task_assignment"/>

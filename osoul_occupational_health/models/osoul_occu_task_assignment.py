@@ -9,8 +9,11 @@ class OsoulOccuTaskAssignment(models.Model):
 
     task_name = fields.Char(string="Task Title", required=True, tracking=True)
     description = fields.Text(string="Task Description")
+    note = fields.Text(string="Note")
     assigned_to = fields.Many2one('osoul.occu.team', string="Assigned To", required=True, tracking=True)
-    due_date = fields.Date(string="Due Date", tracking=True)
+    due_date = fields.Date(string="Start Date",required=True, tracking=True)
+    end_date = fields.Date(string="End Date",required=True, tracking=True)
+    actual_done_date = fields.Datetime(string="Completion Date", readonly=True)
     priority = fields.Selection([
         ('low', 'Low'),
         ('medium', 'Medium'),
@@ -35,6 +38,7 @@ class OsoulOccuTaskAssignment(models.Model):
     def action_done(self):
         for rec in self:
             rec.state = 'done'
+            rec.actual_done_date = fields.Datetime.now()
 
     def action_cancel(self):
         for rec in self:
