@@ -3,7 +3,7 @@
     
     <record id="osoul_occ_root_menu" model="ir.ui.menu">
         <field name="name">Occupational Health</field>
-        <field name="sequence" eval="10" />
+        <field name="sequence" eval="1" />
     </record>
 
     <!-- VIOLATIONS MENU -->
