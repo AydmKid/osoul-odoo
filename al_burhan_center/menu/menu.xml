@@ -3,7 +3,7 @@
 
    <record id="menu_root_burhan_center" model="ir.ui.menu">
         <field name="name">AL Burhan Center</field>
-        <field name="sequence" eval="-11"/>
+        <field name="sequence" eval="20"/>
     </record>
 
     <record id="menu_details_burhan_center" model="ir.ui.menu">
